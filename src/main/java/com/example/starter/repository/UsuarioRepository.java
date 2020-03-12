@@ -1,10 +1,7 @@
 package com.example.starter.repository;
 
 import com.example.starter.model.Usuario;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
-
-public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
-    Optional<Usuario> buscaPorEmail(String email);
+public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
 }

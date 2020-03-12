@@ -1,13 +1,7 @@
 package com.example.starter.repository;
 
 import com.example.starter.model.Agendamento;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
-public interface AgendamentoRepository  extends CrudRepository<Agendamento, Long> {
-    List<Agendamento> buscarPorData(LocalDateTime dataAgendamento);
-    List<Agendamento> buscarPorNome(String nomePaciente);
-    List<Agendamento> buscarPorEspecialidade (String especialidade);
+public interface AgendamentoRepository extends JpaRepository<Agendamento,Long> {
 }

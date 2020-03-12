@@ -1,10 +1,7 @@
 package com.example.starter.repository;
 
 import com.example.starter.model.Especialidade;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
-
-public interface EspecialidadeRepository extends CrudRepository<Especialidade, Long> {
-    Optional<Especialidade> buscarPelaEspecialidade(String especialidade);
+public interface EspecialidadeRepository extends JpaRepository<Especialidade,Long> {
 }

@@ -1,20 +1,33 @@
 package com.example.starter.model;
 
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
-public class Paciente extends Pessoa{
+public class Paciente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nomePaciente;
     @Column(unique = true)
     private String carteiraSUS;
-
-    private int idade;
-
-    private String genero;
-
     @Column(unique = true)
     private String cpf;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNomePaciente() {
+        return nomePaciente;
+    }
+
+    public void setNomePaciente(String nomePaciente) {
+        this.nomePaciente = nomePaciente;
+    }
 
     public String getCarteiraSUS() {
         return carteiraSUS;
@@ -22,22 +35,6 @@ public class Paciente extends Pessoa{
 
     public void setCarteiraSUS(String carteiraSUS) {
         this.carteiraSUS = carteiraSUS;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
     }
 
     public String getCpf() {

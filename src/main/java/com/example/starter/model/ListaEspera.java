@@ -4,12 +4,11 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-public class Agendamento {
+public class ListaEspera {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDateTime dataAgendamento;
-    private LocalDateTime dataCriacao;
+    private LocalDateTime dataEntradaLista = LocalDateTime.now();
     @ManyToOne(cascade = CascadeType.ALL)
     private Paciente paciente;
     @ManyToOne(cascade = CascadeType.ALL)
@@ -25,20 +24,12 @@ public class Agendamento {
         this.id = id;
     }
 
-    public LocalDateTime getDataAgendamento() {
-        return dataAgendamento;
+    public LocalDateTime getDataEntradaLista() {
+        return dataEntradaLista;
     }
 
-    public void setDataAgendamento(LocalDateTime dataAgendamento) {
-        this.dataAgendamento = dataAgendamento;
-    }
-
-    public LocalDateTime getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public void setDataCriacao(LocalDateTime dataCriacao) {
-        this.dataCriacao = dataCriacao;
+    public void setDataEntradaLista(LocalDateTime dataEntradaLista) {
+        this.dataEntradaLista = dataEntradaLista;
     }
 
     public Paciente getPaciente() {
