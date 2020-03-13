@@ -26,20 +26,24 @@ public class PacienteController {
     private PacienteService pacienteService;
 
     @GetMapping("/listar")
-    public ResponseEntity<Page<PacienteDTO>> listarPacientes(@RequestParam(required = false) String nome,
-                                          @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomePaciente")
+    public ResponseEntity<Page<PacienteDTO>> listarPacientes(@PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomePaciente")
                                                   Pageable pageable) {
-        if (nome == null) {
-            Page<Paciente> pacientes = pacienteService.buscarTodos(pageable);
-            return ResponseEntity.ok(PacienteDTO.convert(pacientes));
-        } else {
-            Page<Paciente> pacientes = pacienteService.buscarPorNome(nome, pageable);
-            return ResponseEntity.ok(PacienteDTO.convert(pacientes));
-        }
+        Page<Paciente> pacientes = pacienteService.buscarTodos(pageable);
+        return ResponseEntity.ok(PacienteDTO.convert(pacientes));
+
+    }
+
+    @GetMapping("/buscarPorNome/{nome}")
+    public ResponseEntity<Page<PacienteDTO>> listarPorNome(@PathVariable String nome,
+                                                           @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomePaciente")
+                                                                   Pageable pageable) {
+        String pacienteNome = "%" + nome + "%";
+        Page<Paciente> pacientes = pacienteService.buscarPorNome(pacienteNome, pageable);
+        return ResponseEntity.ok(PacienteDTO.convert(pacientes));
     }
 
     @GetMapping(path = "/buscarCpf/{cpf}")
-    public ResponseEntity<PacienteDTO> buscarCpf(@PathVariable @RequestParam String cpf) {
+    public ResponseEntity<PacienteDTO> buscarCpf(@PathVariable String cpf) {
         try{
             Paciente paciente = pacienteService.buscarPorCpf(cpf);
             return ResponseEntity.ok(PacienteDTO.convert(paciente));
@@ -49,9 +53,9 @@ public class PacienteController {
     }
 
     @GetMapping(path = "/buscarCadastroSUS/{carteiraSUS}")
-    public ResponseEntity<PacienteDTO> buscarCadastroSUS(@PathVariable @RequestParam String carteiraSUS) {
+    public ResponseEntity<PacienteDTO> buscarCadastroSUS(@PathVariable String carteiraSUS) {
         try{
-            Paciente paciente = pacienteService.buscarPorCpf(carteiraSUS);
+            Paciente paciente = pacienteService.buscarPorSUS(carteiraSUS);
             return ResponseEntity.ok(PacienteDTO.convert(paciente));
         } catch (NullPointerException e) {
             return ResponseEntity.badRequest().build();
@@ -75,12 +79,23 @@ public class PacienteController {
     @Transactional
     public ResponseEntity<PacienteDTO> atualizarPaciente(@RequestParam(required = false) String cpf,
                                                          @RequestParam(required = false) String carteiraSUS,
-                                                         @RequestBody @Valid AtualizacaoPacienteFORM pacienteForm) {
-        Paciente objPacienteBusca = new Paciente(cpf, carteiraSUS);
-        PacienteDTO pacienteDTO = pacienteService.alterar(objPacienteBusca, AtualizacaoPacienteFORM);
-
+                                                         @RequestBody AtualizacaoPacienteFORM pacienteForm) {
         try {
-            Paciente paciente = pacienteService.alterar(pacienteForm.convert());
+            Paciente objPacienteBusca = new Paciente(cpf, carteiraSUS);
+            PacienteDTO pacienteDTO = pacienteService.alterar(objPacienteBusca, pacienteForm);
+            return ResponseEntity.ok(pacienteDTO);
+        }catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/deletarCadastro")
+    @Transactional
+    public ResponseEntity<?> deletarCadastro(@RequestParam(required = false) String cpf,
+                                             @RequestParam(required = false) String carteiraSUS) {
+        try {
+            Paciente objPacienteBusca = new Paciente(cpf, carteiraSUS);
+            pacienteService.remover(objPacienteBusca);
             return ResponseEntity.ok().build();
         }catch (Exception e) {
             return ResponseEntity.notFound().build();

@@ -19,9 +19,20 @@ public class Paciente {
         this.carteiraSUS = carteiraSUS;
     }
 
+    public Paciente(Paciente paciente) {
+        this.id = paciente.getId();
+        this.nomePaciente = paciente.getNomePaciente();
+        this.cpf = paciente.getCpf();
+        this.carteiraSUS = paciente.getCarteiraSUS();
+    }
+
     public Paciente(String cpf, String carteiraSUS) {
         this.cpf = cpf;
         this.carteiraSUS = carteiraSUS;
+    }
+
+    public Paciente() {
+
     }
 
     public Long getId() {
@@ -30,6 +41,13 @@ public class Paciente {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.id = paciente.getId();
+        this.nomePaciente = paciente.getNomePaciente();
+        this.cpf = paciente.getCpf();
+        this.carteiraSUS = paciente.getCarteiraSUS();
     }
 
     public String getNomePaciente() {

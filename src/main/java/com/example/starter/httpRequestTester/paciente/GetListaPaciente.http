@@ -1,0 +1,4 @@
+GET http://localhost:8080/pacientes/listar/
+content-type: application/json
+
+###

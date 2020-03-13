@@ -1,5 +1,6 @@
 package com.example.starter.service;
 
+import com.example.starter.dto.PacienteDTO;
 import com.example.starter.form.AtualizacaoPacienteFORM;
 import com.example.starter.model.Paciente;
 import com.example.starter.repository.PacienteRepository;
@@ -43,13 +44,16 @@ public class PacienteService {
         }
     }
 
-    public boolean remover (Paciente paciente) {
-        try {
-            pacienteRepository.deleteById(paciente.getId());
-            return true;
-        }catch (Exception e) {
-            return false;
+    public void remover (Paciente paciente) {
+        Paciente aSerRemovido = new Paciente();
+        if(paciente == null) {
+            return;
+        } else if (paciente.getCpf() != null) {
+            aSerRemovido.setPaciente(pacienteRepository.findByCpf(paciente.getCpf()));
+        } else {
+            aSerRemovido.setPaciente(pacienteRepository.findByCarteiraSUS(paciente.getCarteiraSUS()));
         }
+        pacienteRepository.deleteById(aSerRemovido.getId());
     }
 
     public Paciente buscarPorCpf(String cpf) {
@@ -68,18 +72,29 @@ public class PacienteService {
         }
     }
 
-    public Paciente alterar(Paciente paciente, AtualizacaoPacienteFORM atualizacaoPacienteFORM) {
+    public PacienteDTO alterar(Paciente paciente, AtualizacaoPacienteFORM atualizacaoPacienteFORM) {
         if(paciente == null) {
             return null;
         } else if (paciente.getCpf() != null) {
             Paciente pacienteAtualizado = pacienteRepository.findByCpf(paciente.getCpf());
-            if(!paciente.getNomePaciente().equals(atualizacaoPacienteFORM.getNome()) && atualizacaoPacienteFORM.getNome() != null) {
-                pacienteAtualizado.setNomePaciente(atualizacaoPacienteFORM.getNome());
-            } else if (!paciente.getCpf().equals(atualizacaoPacienteFORM.getCpf()) && atualizacaoPacienteFORM.getCpf() != null) {
-                pacienteAtualizado.setCpf(atualizacaoPacienteFORM.getCpf());
-            }
+            atualizar(pacienteAtualizado,atualizacaoPacienteFORM);
+            return new PacienteDTO(pacienteAtualizado);
         } else {
+            Paciente pacienteAtualizado = pacienteRepository.findByCarteiraSUS(paciente.getCarteiraSUS());
+            atualizar(pacienteAtualizado,atualizacaoPacienteFORM);
+            return new PacienteDTO(pacienteAtualizado);
+        }
+    }
 
+    private void atualizar(Paciente pacienteAtualizado, AtualizacaoPacienteFORM atualizacaoPacienteFORM) {
+        if(!pacienteAtualizado.getNomePaciente().equals(atualizacaoPacienteFORM.getNome()) && atualizacaoPacienteFORM.getNome() != null) {
+            pacienteAtualizado.setNomePaciente(atualizacaoPacienteFORM.getNome());
+        }
+        if(!pacienteAtualizado.getCpf().equals(atualizacaoPacienteFORM.getCpf()) && atualizacaoPacienteFORM.getCpf() != null) {
+            pacienteAtualizado.setCpf(atualizacaoPacienteFORM.getCpf());
+        }
+        if(!pacienteAtualizado.getCarteiraSUS().equals(atualizacaoPacienteFORM.getCarteiraSUS()) && atualizacaoPacienteFORM.getCarteiraSUS() != null) {
+            pacienteAtualizado.setCarteiraSUS(atualizacaoPacienteFORM.getCarteiraSUS());
         }
     }
 }
