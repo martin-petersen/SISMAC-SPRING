@@ -13,6 +13,17 @@ public class Paciente {
     @Column(unique = true)
     private String cpf;
 
+    public Paciente(String nomePaciente, String cpf, String carteiraSUS) {
+        this.nomePaciente = nomePaciente;
+        this.cpf = cpf;
+        this.carteiraSUS = carteiraSUS;
+    }
+
+    public Paciente(String cpf, String carteiraSUS) {
+        this.cpf = cpf;
+        this.carteiraSUS = carteiraSUS;
+    }
+
     public Long getId() {
         return id;
     }
