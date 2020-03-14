@@ -4,7 +4,7 @@ content-type: application/json
   {
     "nome": "Martin Rocha Petersen",
     "cpf": "794.897.370-2",
-    "carteiraSUS": "sus"
+    "carteiraSUS": "999999-9"
   }
 
 ###

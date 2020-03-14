@@ -26,20 +26,19 @@ public class PacienteController {
     private PacienteService pacienteService;
 
     @GetMapping("/listar")
-    public ResponseEntity<Page<PacienteDTO>> listarPacientes(@PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomePaciente")
-                                                  Pageable pageable) {
-        Page<Paciente> pacientes = pacienteService.buscarTodos(pageable);
-        return ResponseEntity.ok(PacienteDTO.convert(pacientes));
+    public ResponseEntity<Page<PacienteDTO>> listarPacientes(@RequestParam(required = false) String nome,
+                                                             @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomePaciente")
+                                                                     Pageable pageable) {
+        if(nome == null){
+            Page<Paciente> pacientes = pacienteService.buscarTodos(pageable);
+            return ResponseEntity.ok(PacienteDTO.convert(pacientes));
+        } else {
+            String pacienteNome = "%" + nome + "%";
+            Page<Paciente> pacientes = pacienteService.buscarPorNome(pacienteNome, pageable);
+            return ResponseEntity.ok(PacienteDTO.convert(pacientes));
+        }
 
-    }
 
-    @GetMapping("/buscarPorNome/{nome}")
-    public ResponseEntity<Page<PacienteDTO>> listarPorNome(@PathVariable String nome,
-                                                           @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomePaciente")
-                                                                   Pageable pageable) {
-        String pacienteNome = "%" + nome + "%";
-        Page<Paciente> pacientes = pacienteService.buscarPorNome(pacienteNome, pageable);
-        return ResponseEntity.ok(PacienteDTO.convert(pacientes));
     }
 
     @GetMapping(path = "/buscarCpf/{cpf}")

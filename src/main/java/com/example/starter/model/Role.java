@@ -5,18 +5,16 @@ import org.springframework.security.core.GrantedAuthority;
 import javax.persistence.*;
 
 @Entity
-public class Perfil implements GrantedAuthority {
+public class Role implements GrantedAuthority {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Enumerated(EnumType.STRING)
-    private PerfilUsuario nomePerfil;
+    private PerfilUsuario id;
+
 
 
     @Override
     public String getAuthority() {
-        return nomePerfil.toString();
+        return id.toString();
     }
 }

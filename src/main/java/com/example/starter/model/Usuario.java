@@ -18,7 +18,7 @@ public class Usuario implements UserDetails {
     private String senha;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private List<Perfil> perfis;
+    private List<Role> perfis;
 
     private Long id_paciente = null;
 
@@ -68,11 +68,11 @@ public class Usuario implements UserDetails {
         this.senha = senha;
     }
 
-    public List<Perfil> getPerfil() {
+    public List<Role> getPerfil() {
         return perfis;
     }
 
-    public void setPerfil(List<Perfil> perfis) {
+    public void setPerfil(List<Role> perfis) {
         this.perfis = perfis;
     }
 

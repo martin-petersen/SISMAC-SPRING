@@ -65,7 +65,7 @@ public class PacienteService {
     }
 
     public Paciente buscarPorSUS(String carteiraSUS) {
-        if(pacienteRepository.findByCpf(carteiraSUS) != null) {
+        if(pacienteRepository.findByCarteiraSUS(carteiraSUS) != null) {
             return pacienteRepository.findByCarteiraSUS(carteiraSUS);
         } else {
             throw new NullPointerException();
