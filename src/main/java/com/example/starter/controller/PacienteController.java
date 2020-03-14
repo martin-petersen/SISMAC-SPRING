@@ -11,10 +11,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.net.URI;
 
@@ -33,7 +33,7 @@ public class PacienteController {
             Page<Paciente> pacientes = pacienteService.buscarTodos(pageable);
             return ResponseEntity.ok(PacienteDTO.convert(pacientes));
         } else {
-            String pacienteNome = "%" + nome + "%";
+            String pacienteNome = "%" + nome.toUpperCase() + "%";
             Page<Paciente> pacientes = pacienteService.buscarPorNome(pacienteNome, pageable);
             return ResponseEntity.ok(PacienteDTO.convert(pacientes));
         }
@@ -66,7 +66,7 @@ public class PacienteController {
     public ResponseEntity<PacienteDTO> cadastrarPaciente(@RequestBody @Valid PacienteFORM pacienteForm, UriComponentsBuilder uriComponentsBuilder) {
         try {
             pacienteService.salvar(pacienteForm.convert());
-            Paciente paciente = pacienteForm.convert();
+            Paciente paciente = pacienteService.buscarPorCpf(pacienteForm.getCpf());
             URI uri = uriComponentsBuilder.path("/pacientes/{id}").buildAndExpand(paciente.getId()).toUri();
             return ResponseEntity.created(uri).body(new PacienteDTO(paciente));
         }catch (Exception e) {

@@ -1,0 +1,4 @@
+GET http://localhost:8080/especialidades/buscarNome?nomeEspecialidade=Neurologia
+content-type: application/json
+
+###

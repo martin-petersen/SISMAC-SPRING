@@ -8,7 +8,7 @@ public class AtualizacaoPacienteFORM {
     private String carteiraSUS;
 
     public String getNome() {
-        return nome;
+        return nome.toUpperCase();
     }
 
     public String getCpf() {
@@ -20,6 +20,6 @@ public class AtualizacaoPacienteFORM {
     }
 
     public Paciente convert() {
-        return new Paciente(getNome(),getCpf(),getCarteiraSUS());
+        return new Paciente(getNome().toUpperCase(),getCpf(),getCarteiraSUS());
     }
 }

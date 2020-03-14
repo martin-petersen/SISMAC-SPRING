@@ -2,16 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082002.201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082152.201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082159.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082349.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082412.403.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082519.201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082524.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082546.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082857.201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T082903.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T083120.201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T083204.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T085441.201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T085535.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T085617.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T085756.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T085841.201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T085843.201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T085904.405.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T090256.201.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T090310.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T090321.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-13T090340.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/StarterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/StarterApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/PacienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/DeletePaciente.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/DeletePaciente.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/GetPacienteporNome.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/GetPacienteporNome.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/PostPaciente.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/PostPaciente.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/UpdatePaciente.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/UpdatePaciente.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Perfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/form/AtualizacaoPacienteFORM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/form/AtualizacaoPacienteFORM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/form/PacienteFORM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/form/PacienteFORM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/GetListaPaciente.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/GetListaPaciente.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/GetPacienteporNome.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/GetPacientePorNome.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Especialidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Especialidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/EspecialidadeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/EspecialidadeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/PacienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/PacienteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/PacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/PacienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/StarterApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/StarterApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/controller/PacienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/controller/PacienteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/model/Especialidade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/model/Especialidade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/repository/EspecialidadeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/repository/EspecialidadeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/repository/PacienteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/repository/PacienteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/service/EspecialidadeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/service/EspecialidadeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/service/PacienteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/service/PacienteService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +71,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -70,9 +104,312 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.starter.form" />
+      <recent name="com.example.starter.dto" />
+    </key>
+  </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080/especialidades/deletarEspecialidade" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nomeEspecialidade" />
+                <option name="value" value="pediatria" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080/especialidades/atualizarEspecialidade" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nomeEspecialidade" />
+                <option name="value" value="NEUROLOGIA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nomeEspecialidade&quot;: &quot;PEDIATRIA&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/especialidades/buscarNome" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nomeEspecialidade" />
+                <option name="value" value="Neurologia" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/especialidades/listar" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/especialidades" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;nomeEspecialidade&quot;: &quot;neurologia&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080/especialidades/deletarEspecialidade" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nomeEspecialidade" />
+                <option name="value" value="PEDIATRIA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080/especialidades/deletarEspecialidade" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nomeEspcialidade" />
+                <option name="value" value="PEDIATRIA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/especialidades/buscarNome" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nomeEspecialidade" />
+                <option name="value" value="NEUROLOGIA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/especialidades" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;nomeEspecialidade&quot;: &quot;NEUROLOGIA&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080/atualizarEspecialidade" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nomeEspecialidade" />
+                <option name="value" value="NEUROLOGIA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nomeEspecialidade&quot;: &quot;PEDIATRIA&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/especialidades/listar/buscarNome" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nomeEspecialidade" />
+                <option name="value" value="NEUROLOGIA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/especialidades/listar" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nomeEspecialidade" />
+                <option name="value" value="NEUROLOGIA" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/especialidades" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;nomeEspecialidade&quot;: &quot;Neurologia&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="  {&#10;    &quot;nome&quot;: &quot;Martin Rocha Petersen&quot;,&#10;    &quot;cpf&quot;: &quot;794.897.370-2&quot;,&#10;    &quot;carteiraSUS&quot;: &quot;999999-9&quot;&#10;  }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8080/pacientes/listar" />
@@ -95,6 +432,139 @@
           </option>
           <option name="parametersEnabled" value="true" />
           <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/pacientes/listar" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="nome" />
+                <option name="value" value="kandell" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/pacientes/buscarCpf/107.375.204-18" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/pacientes/listar/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/pacientes/buscarCpf/794.897.370-20" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Martin Rocha Petersen&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-16&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-5&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Kandell Oliveira&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-17&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-6&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;nome&quot;: &quot;José Augusto do Nascimento&quot;,&#10;&quot;cpf&quot;: &quot;107.375.204-18&quot;,&#10;&quot;carteiraSUS&quot;: &quot;999999-7&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Maria das Virgens Souza&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-19&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-8&quot;&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -143,22 +613,6 @@
           </option>
           <option name="parametersEnabled" value="true" />
           <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="  {&#10;    &quot;nome&quot;: &quot;Martin Rocha Petersen&quot;,&#10;    &quot;cpf&quot;: &quot;794.897.370-2&quot;,&#10;    &quot;carteiraSUS&quot;: &quot;999999-9&quot;&#10;  }" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -234,22 +688,6 @@
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Maria das Virgens Souza&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-19&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-8&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
           <option name="httpMethod" value="PUT" />
           <option name="urlBase" value="http://localhost:8080/pacientes/atualizarCadastro" />
           <option name="urlPath" value="" />
@@ -272,21 +710,6 @@
           <option name="parametersEnabled" value="true" />
           <option name="haveTextToSend" value="true" />
           <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Maria das Virgens Souza&quot;,&#10;  &quot;cpf&quot;: &quot;cpf&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-8&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080/pacientes/listar/" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -421,20 +844,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.GetPacienteporNome#1">
-    <configuration name="DeletePaciente#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/DeletePaciente.http" runType="Run single request">
+  <component name="RunManager" selected="Spring Boot.StarterApplication">
+    <configuration name="DeleteEspecialidade#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/DeleteEspecialidade.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="DeletePaciente#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/DeletePaciente.http" index="2" runType="Run single request">
+    <configuration name="GetEspecialidadePorNome#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/GetEspecialidadePorNome.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="GetPacienteporNome#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/GetPacienteporNome.http" runType="Run single request">
+    <configuration name="GetListaEspecialidade#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/GetListaEspecialidade.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="PostPaciente#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/PostPaciente.http" runType="Run single request">
+    <configuration name="PostEspecialidade#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/PostEspecialidade.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="PostPaciente#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/PostPaciente.http" index="2" runType="Run single request">
+    <configuration name="UpdateEspecialidade#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/UpdateEspecialidade.http" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="StarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -446,11 +869,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.GetPacienteporNome#1" />
-        <item itemvalue="HTTP Request.PostPaciente#1" />
-        <item itemvalue="HTTP Request.DeletePaciente#2" />
-        <item itemvalue="HTTP Request.DeletePaciente#1" />
-        <item itemvalue="HTTP Request.PostPaciente#2" />
+        <item itemvalue="HTTP Request.DeleteEspecialidade#1" />
+        <item itemvalue="HTTP Request.UpdateEspecialidade#1" />
+        <item itemvalue="HTTP Request.GetEspecialidadePorNome#1" />
+        <item itemvalue="HTTP Request.GetListaEspecialidade#1" />
+        <item itemvalue="HTTP Request.PostEspecialidade#1" />
       </list>
     </recent_temporary>
   </component>
@@ -467,6 +890,8 @@
       <workItem from="1583962391833" duration="9450000" />
       <workItem from="1584049148070" duration="7764000" />
       <workItem from="1584141116874" duration="3193000" />
+      <workItem from="1584145197022" duration="8896000" />
+      <workItem from="1584187770510" duration="7534000" />
     </task>
     <servers />
   </component>
@@ -486,10 +911,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="460" y="172" key="#com.intellij.fileTypes.FileTypeChooser/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584141210972" />
-    <state x="488" y="53" key="#com.intellij.ide.util.MemberChooser" timestamp="1584057476443">
+    <state x="488" y="53" key="#com.intellij.ide.util.MemberChooser" timestamp="1584188599208">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="53" key="#com.intellij.ide.util.MemberChooser/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584057476443" />
+    <state x="488" y="53" key="#com.intellij.ide.util.MemberChooser/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584188599208" />
     <state x="324" y="294" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583970742199">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -502,65 +927,81 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1583962677572" />
+    <state width="589" height="466" key="DebuggerActiveHint" timestamp="1584194006083">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="589" height="466" key="DebuggerActiveHint/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584194006083" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1584052456747">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584052456747" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1584144247732">
+    <state width="1323" height="247" key="GridCell.Tab.0.bottom" timestamp="1584201751541">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584144247732" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1584144247732">
+    <state width="1323" height="247" key="GridCell.Tab.0.bottom/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201751541" />
+    <state width="1323" height="247" key="GridCell.Tab.0.center" timestamp="1584201751541">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584144247732" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1584144247732">
+    <state width="1323" height="247" key="GridCell.Tab.0.center/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201751541" />
+    <state width="1323" height="247" key="GridCell.Tab.0.left" timestamp="1584201751541">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584144247732" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1584144247732">
+    <state width="1323" height="247" key="GridCell.Tab.0.left/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201751541" />
+    <state width="1323" height="247" key="GridCell.Tab.0.right" timestamp="1584201751541">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584144247732" />
-    <state width="1323" height="182" key="GridCell.Tab.1.bottom" timestamp="1584144175931">
+    <state width="1323" height="247" key="GridCell.Tab.0.right/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201751541" />
+    <state width="1323" height="247" key="GridCell.Tab.1.bottom" timestamp="1584201696995">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.1.bottom/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584144175931" />
-    <state width="1323" height="182" key="GridCell.Tab.1.center" timestamp="1584144175931">
+    <state width="1323" height="247" key="GridCell.Tab.1.bottom/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201696995" />
+    <state width="1323" height="247" key="GridCell.Tab.1.center" timestamp="1584201696995">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.1.center/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584144175931" />
-    <state width="1323" height="182" key="GridCell.Tab.1.left" timestamp="1584144175931">
+    <state width="1323" height="247" key="GridCell.Tab.1.center/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201696995" />
+    <state width="1323" height="247" key="GridCell.Tab.1.left" timestamp="1584201696995">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.1.left/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584144175931" />
-    <state width="1323" height="182" key="GridCell.Tab.1.right" timestamp="1584144175931">
+    <state width="1323" height="247" key="GridCell.Tab.1.left/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201696995" />
+    <state width="1323" height="247" key="GridCell.Tab.1.right" timestamp="1584201696995">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.1.right/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584144175931" />
-    <state width="1323" height="227" key="GridCell.Tab.2.bottom" timestamp="1584143045504">
+    <state width="1323" height="247" key="GridCell.Tab.1.right/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201696995" />
+    <state width="1323" height="227" key="GridCell.Tab.2.bottom" timestamp="1584201689674">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.2.bottom/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584143045504" />
-    <state width="1323" height="227" key="GridCell.Tab.2.center" timestamp="1584143045504">
+    <state width="1323" height="227" key="GridCell.Tab.2.bottom/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201689674" />
+    <state width="1323" height="227" key="GridCell.Tab.2.center" timestamp="1584201689674">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.2.center/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584143045504" />
-    <state width="1323" height="227" key="GridCell.Tab.2.left" timestamp="1584143045504">
+    <state width="1323" height="227" key="GridCell.Tab.2.center/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201689674" />
+    <state width="1323" height="227" key="GridCell.Tab.2.left" timestamp="1584201689674">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.2.left/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584143045504" />
-    <state width="1323" height="227" key="GridCell.Tab.2.right" timestamp="1584143045504">
+    <state width="1323" height="227" key="GridCell.Tab.2.left/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201689674" />
+    <state width="1323" height="227" key="GridCell.Tab.2.right" timestamp="1584201689674">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.2.right/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584143045504" />
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1583962408106">
+    <state width="1323" height="227" key="GridCell.Tab.2.right/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584201689674" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584187880159">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1583962408106" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1584187880159" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1583963660257">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/-1360.0.1360.738/0.0.1366.738@0.0.1366.738" timestamp="1583963660257" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/starter/controller/EspecialidadeController.java</url>
+          <line>41</line>
+          <properties class="com.example.starter.controller.EspecialidadeController" method="cadastrarEspecialidade" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

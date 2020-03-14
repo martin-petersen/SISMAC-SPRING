@@ -1,0 +1,9 @@
+#IMPORTANTE QUE O VALOR DA CHAVE nomeEspecialidade SEJA TODO EM MAIÚSCULO
+POST http://localhost:8080/especialidades
+content-type: application/json
+
+{
+"nomeEspecialidade": "neurologia"
+}
+
+###

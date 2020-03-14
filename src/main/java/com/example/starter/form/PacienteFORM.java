@@ -15,7 +15,7 @@ public class PacienteFORM {
     private String carteiraSUS;
 
     public String getNome() {
-        return nome;
+        return nome.toUpperCase();
     }
 
     public void setNome(String nome) {
@@ -39,6 +39,6 @@ public class PacienteFORM {
     }
 
     public Paciente convert() {
-        return new Paciente(getNome(), getCpf(), getCarteiraSUS());
+        return new Paciente(getNome().toUpperCase(), getCpf(), getCarteiraSUS());
     }
 }

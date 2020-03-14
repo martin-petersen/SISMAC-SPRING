@@ -24,14 +24,6 @@ public class PacienteService {
         }
     }
 
-    public Paciente buscarUm (Paciente paciente) {
-        try{
-            return pacienteRepository.findById(paciente.getId()).get();
-        }catch (Exception e) {
-            return null;
-        }
-    }
-
     public Page<Paciente> buscarTodos(Pageable pageable) {
         return pacienteRepository.findAll(pageable);
     }

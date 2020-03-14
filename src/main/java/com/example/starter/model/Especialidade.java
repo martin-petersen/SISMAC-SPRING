@@ -8,7 +8,14 @@ public class Especialidade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
-    private String nomeEspacialidade;
+    private String nomeEspecialidade;
+
+    public Especialidade() {
+    }
+
+    public Especialidade(String nomeEspacialidade) {
+        this.nomeEspecialidade = nomeEspacialidade;
+    }
 
     public Long getId() {
         return id;
@@ -19,10 +26,10 @@ public class Especialidade {
     }
 
     public String getNomeEspacialidade() {
-        return nomeEspacialidade;
+        return nomeEspecialidade;
     }
 
     public void setNomeEspacialidade(String nomeEspacialidade) {
-        this.nomeEspacialidade = nomeEspacialidade;
+        this.nomeEspecialidade = nomeEspacialidade;
     }
 }
