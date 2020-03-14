@@ -1,0 +1,288 @@
+GET http://localhost:8080/pacientes/listar?nome=martin
+content-type: application/json
+
+<> 2020-03-13T090340.200.json
+
+###
+
+GET http://localhost:8080/pacientes/buscarPorNome?nome=martin
+content-type: application/json
+
+<> 2020-03-13T090321.404.json
+
+###
+
+GET http://localhost:8080/pacientes/buscarPorNome?martin=
+content-type: application/json
+
+<> 2020-03-13T090310.404.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+<> 2020-03-13T090256.201.json
+
+###
+
+DELETE http://localhost:8080/pacientes/deletarCadastro?cpf=794.897.370-2
+content-type: application/json
+
+###
+
+DELETE http://localhost:8080/pacientes/deletarCadastro?carteiraSUS=999999-8
+content-type: application/json
+
+###
+
+DELETE http://localhost:8080/pacientes/atualizarCadastro?carteiraSUS=999999-8
+content-type: application/json
+
+<> 2020-03-13T085904.405.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "107.375.204-19",
+  "carteiraSUS": "999999-8"
+}
+
+<> 2020-03-13T085843.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+<> 2020-03-13T085841.201.json
+
+###
+
+PUT http://localhost:8080/pacientes/atualizarCadastro?carteiraSUS=999999-8
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "cpf",
+  "carteiraSUS": "999999-8"
+}
+
+<> 2020-03-13T085756.200.json
+
+###
+
+PUT http://localhost:8080/pacientes/atualizarCadastro?carteiraSUS=999999-8
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "cpf",
+  "carteiraSUS": "999999-8"
+}
+
+<> 2020-03-13T085617.200.json
+
+###
+
+GET http://localhost:8080/pacientes/listar/
+content-type: application/json
+
+<> 2020-03-13T085535.200.json
+
+###
+
+PUT http://localhost:8080/pacientes/atualizarCadastro?999999-8=
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "cpf",
+  "carteiraSUS": "999999-8"
+}
+
+###
+
+PUT http://localhost:8080/pacientes/atualizarCadastro?794.897.370-2=
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "cpf",
+  "carteiraSUS": "999999-8"
+}
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "107.375.204-19",
+  "carteiraSUS": "999999-8"
+}
+
+<> 2020-03-13T085441.201.json
+
+###
+
+PUT http://localhost:8080/pacientes/atualizarCadastro/794.897.370-2
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "sus"
+}
+
+<> 2020-03-13T083204.404.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+<> 2020-03-13T083120.201.json
+
+###
+
+PUT http://localhost:8080/pacientes/794.897.370-2
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "sus"
+}
+
+<> 2020-03-13T082903.404.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+<> 2020-03-13T082857.201.json
+
+###
+
+PUT http://localhost:8080/pacientes/794.897.370-2
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "sus"
+}
+
+<> 2020-03-13T082546.404.json
+
+###
+
+GET http://localhost:8080/pacientes/listar/
+content-type: application/json
+
+<> 2020-03-13T082524.200.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+<> 2020-03-13T082519.201.json
+
+###
+
+PUT http://localhost:8080/pacientes/794.897.370-2
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9"
+}
+
+<> 2020-03-13T082412.403.json
+
+###
+
+GET http://localhost:8080/pacientes/listar/
+content-type: application/json
+
+<> 2020-03-13T082349.200.json
+
+###
+
+GET http://localhost:8080/pacientes/buscarCadastroSUS/sus
+content-type: application/json
+
+<> 2020-03-13T082159.200.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "sus"
+  }
+
+<> 2020-03-13T082152.201.json
+
+###
+
+GET http://localhost:8080/pacientes/buscarCadastroSUS/sus
+content-type: application/json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "sus"
+  }
+
+<> 2020-03-13T082002.201.json
+
+###
+
