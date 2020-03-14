@@ -1,0 +1,21 @@
+PUT http://localhost:8080/pacientes/atualizarCadastro?794.897.370-2
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "sus"
+}
+
+###
+
+PUT http://localhost:8080/pacientes/atualizarCadastro?carteiraSUS=999999-8
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "cpf",
+  "carteiraSUS": "999999-8"
+}
+
+###

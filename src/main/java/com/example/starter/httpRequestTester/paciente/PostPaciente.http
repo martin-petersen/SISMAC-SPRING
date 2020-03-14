@@ -1,0 +1,54 @@
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "107.375.204-19",
+  "carteiraSUS": "999999-8"
+}
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+"nome": "José Augusto do Nascimento",
+"cpf": "107.375.204-18",
+"carteiraSUS": "999999-7"
+}
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Kandell Oliveira",
+  "cpf": "107.375.204-17",
+  "carteiraSUS": "999999-6"
+}
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "107.375.204-16",
+  "carteiraSUS": "999999-5"
+}
+
+###

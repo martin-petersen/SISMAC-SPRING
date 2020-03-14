@@ -1,0 +1,4 @@
+GET http://localhost:8080/pacientes/buscarCpf/794.897.370-20
+content-type: application/json
+
+###
