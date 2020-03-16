@@ -7,7 +7,7 @@ public class Especialidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true)
+    @Column(unique = true, name = "especialidade")
     private String nomeEspecialidade;
 
     public Especialidade() {

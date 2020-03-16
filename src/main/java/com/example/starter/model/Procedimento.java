@@ -1,9 +1,7 @@
 package com.example.starter.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Procedimento {
@@ -11,8 +9,10 @@ public class Procedimento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "procedimento")
     private String nomeProcedimento;
-    private Long especialidadeId;
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Especialidade> especialidades;
     private int fichasDiarias;
 
     public Long getId() {
@@ -31,12 +31,12 @@ public class Procedimento {
         this.nomeProcedimento = nomeProcedimento;
     }
 
-    public Long getEspecialidadeId() {
-        return especialidadeId;
+    public List<Especialidade> getEspecialidadeId() {
+        return especialidades;
     }
 
-    public void setEspecialidadeId(Long especialidadeId) {
-        this.especialidadeId = especialidadeId;
+    public void setEspecialidadeId(List<Especialidade> especialidades) {
+        this.especialidades = especialidades;
     }
 
     public int getFichasDiarias() {

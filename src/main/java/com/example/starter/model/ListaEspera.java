@@ -11,9 +11,11 @@ public class ListaEspera {
     private LocalDateTime dataEntradaLista = LocalDateTime.now();
     @ManyToOne(cascade = CascadeType.ALL)
     private Paciente paciente;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
+    @JoinColumn(name = "especialidade")
     private Especialidade especialidade;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
+    @JoinColumn(name = "procedimento")
     private Procedimento procedimento;
 
     public Long getId() {
