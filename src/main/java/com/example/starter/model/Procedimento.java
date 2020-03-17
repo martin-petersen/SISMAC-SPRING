@@ -9,11 +9,13 @@ public class Procedimento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "procedimento")
+    @Column(unique = true, name = "procedimento")
     private String nomeProcedimento;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "procedimento_especialidade",
+    joinColumns = {@JoinColumn(name = "procedimento_especialidade_procedimento_id")},
+    inverseJoinColumns = {@JoinColumn(name = "especialidade_id")})
     private List<Especialidade> especialidades;
-    private int fichasDiarias;
 
     public Long getId() {
         return id;
@@ -37,13 +39,5 @@ public class Procedimento {
 
     public void setEspecialidadeId(List<Especialidade> especialidades) {
         this.especialidades = especialidades;
-    }
-
-    public int getFichasDiarias() {
-        return fichasDiarias;
-    }
-
-    public void setFichasDiarias(int fichasDiarias) {
-        this.fichasDiarias = fichasDiarias;
     }
 }

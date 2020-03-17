@@ -1,6 +1,7 @@
 package com.example.starter.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Especialidade {
@@ -9,6 +10,8 @@ public class Especialidade {
     private Long id;
     @Column(unique = true, name = "especialidade")
     private String nomeEspecialidade;
+    @ManyToMany(mappedBy = "especialidades")
+    private List<Procedimento> procedimentos;
 
     public Especialidade() {
     }
@@ -31,5 +34,13 @@ public class Especialidade {
 
     public void setNomeEspacialidade(String nomeEspacialidade) {
         this.nomeEspecialidade = nomeEspacialidade;
+    }
+
+    public String getNomeEspecialidade() {
+        return nomeEspecialidade;
+    }
+
+    public void setNomeEspecialidade(String nomeEspecialidade) {
+        this.nomeEspecialidade = nomeEspecialidade;
     }
 }
