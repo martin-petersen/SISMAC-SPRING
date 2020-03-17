@@ -1,3 +1,69 @@
+GET http://localhost:8080/pacientes/listar
+content-type: application/json
+
+<> 2020-03-17T053940.200.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+<> 2020-03-17T053934.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+<> 2020-03-17T053913.403.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+<> 2020-03-17T053835.403.json
+
+###
+
+GET http://localhost:8080/pacientes/listar
+content-type: application/json
+
+<> 2020-03-17T053105.200.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+  {
+    "nome": "Martin Rocha Petersen",
+    "cpf": "794.897.370-2",
+    "carteiraSUS": "999999-9"
+  }
+
+<> 2020-03-17T053049.201.json
+
+###
+
 DELETE http://localhost:8080/pacientes/deletarCadastro?carteiraSUS=sus
 content-type: application/json
 
@@ -393,68 +459,6 @@ content-type: application/json
   }
 
 <> 2020-03-14T094517.201.json
-
-###
-
-POST http://localhost:8080/especialidades
-content-type: application/json
-
-{
-"nomeEspecialidade": "Neurologia"
-}
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-  {
-    "nome": "Martin Rocha Petersen",
-    "cpf": "794.897.370-2",
-    "carteiraSUS": "999999-9"
-  }
-
-<> 2020-03-14T092417.201.json
-
-###
-
-POST http://localhost:8080/especialidades
-content-type: application/json
-
-{
-"nomeEspecialidade": "Neurologia"
-}
-
-###
-
-POST http://localhost:8080/especialidades
-content-type: application/json
-
-{
-"nomeEspecialidade": "Neurologia"
-}
-
-<> 2020-03-14T091859.400.json
-
-###
-
-POST http://localhost:8080/especialidades
-content-type: application/json
-
-{
-"nomeEspecialidade": "Neurologia"
-}
-
-<> 2020-03-14T091628.400.json
-
-###
-
-POST http://localhost8080/especialidades
-content-type: application/json
-
-{
-"nomeEspecialidade": "Neurologia"
-}
 
 ###
 
