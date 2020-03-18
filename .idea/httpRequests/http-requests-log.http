@@ -1,152 +1,47 @@
-GET http://localhost:8080/pacientes/listar
-content-type: application/json
-
-<> 2020-03-17T053940.200.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-  {
-    "nome": "Martin Rocha Petersen",
-    "cpf": "794.897.370-2",
-    "carteiraSUS": "999999-9"
-  }
-
-<> 2020-03-17T053934.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-  {
-    "nome": "Martin Rocha Petersen",
-    "cpf": "794.897.370-2",
-    "carteiraSUS": "999999-9"
-  }
-
-<> 2020-03-17T053913.403.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-  {
-    "nome": "Martin Rocha Petersen",
-    "cpf": "794.897.370-2",
-    "carteiraSUS": "999999-9"
-  }
-
-<> 2020-03-17T053835.403.json
-
-###
-
-GET http://localhost:8080/pacientes/listar
-content-type: application/json
-
-<> 2020-03-17T053105.200.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-  {
-    "nome": "Martin Rocha Petersen",
-    "cpf": "794.897.370-2",
-    "carteiraSUS": "999999-9"
-  }
-
-<> 2020-03-17T053049.201.json
-
-###
-
-DELETE http://localhost:8080/pacientes/deletarCadastro?carteiraSUS=sus
-content-type: application/json
-
-###
-
-PUT http://localhost:8080/pacientes/atualizarCadastro?cpf=794.897.370-2
+PUT http://localhost:8080/procedimentos/editarProcedimento/1
 content-type: application/json
 
 {
-  "nome": "Martin Petersen",
-  "cpf": "794.897.370-2",
-  "carteiraSUS": "sus"
+  "nomeProcedimento": "Teste",
+  "especialidades": [2]
 }
 
-<> 2020-03-14T010946.200.json
+<> 2020-03-18T084153.200.json
 
 ###
 
-GET http://localhost:8080/pacientes/listar?nome=martin
-content-type: application/json
-
-<> 2020-03-14T010913.200.json
-
-###
-
-PUT http://localhost:8080/pacientes/atualizarCadastro?794.897.370-2=
+POST http://localhost:8080/procedimentos
 content-type: application/json
 
 {
-  "nome": "Martin Petersen",
-  "cpf": "794.897.370-2",
-  "carteiraSUS": "sus"
+  "nomeProcedimento": "TESTE2",
+  "especialidadesId": [1]
 }
 
-###
-
-GET http://localhost:8080/pacientes/listar?nome=martin
-content-type: application/json
-
-<> 2020-03-14T010731.200.json
+<> 2020-03-18T084134-1.201.json
 
 ###
 
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-  {
-    "nome": "Martin Rocha Petersen",
-    "cpf": "794.897.370-2",
-    "carteiraSUS": "999999-9"
-  }
-
-<> 2020-03-14T010716.201.json
-
-###
-
-DELETE http://localhost:8080/especialidades/deletarEspecialidade?nomeEspecialidade=pediatria
-content-type: application/json
-
-###
-
-PUT http://localhost:8080/especialidades/atualizarEspecialidade?nomeEspecialidade=NEUROLOGIA
+POST http://localhost:8080/procedimentos
 content-type: application/json
 
 {
-  "nomeEspecialidade": "PEDIATRIA"
+  "nomeProcedimento": "Teste",
+  "especialidadesId": [1,2]
 }
 
-<> 2020-03-14T010215.200.json
+<> 2020-03-18T084134.201.json
 
 ###
 
-GET http://localhost:8080/especialidades/buscarNome?nomeEspecialidade=Neurologia
+POST http://localhost:8080/especialidades
 content-type: application/json
 
-<> 2020-03-14T010204.200.json
+{
+  "nomeEspecialidade": "pediatria"
+}
 
-###
-
-GET http://localhost:8080/especialidades/listar
-content-type: application/json
-
-<> 2020-03-14T010144.200.json
+<> 2020-03-18T084128-1.201.json
 
 ###
 
@@ -157,7 +52,66 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-14T010137.201.json
+<> 2020-03-18T084128.201.json
+
+###
+
+DELETE http://localhost:8080/procedimentos/deletarProcedimento?id=1
+content-type: application/json
+
+###
+
+DELETE http://localhost:8080/procedimentos/deletarProcediment?id=1
+content-type: application/json
+
+<> 2020-03-18T084002.404.json
+
+###
+
+PUT http://localhost:8080/procedimentos/editarProcedimento/2
+content-type: application/json
+
+{
+  "nomeProcedimento": "Consulta",
+  "especialidades": [1,2]
+}
+
+<> 2020-03-18T083932.200.json
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "TESTE2",
+  "especialidadesId": [1]
+}
+
+<> 2020-03-18T083710-1.201.json
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "Teste",
+  "especialidadesId": [1,2]
+}
+
+<> 2020-03-18T083710.201.json
+
+###
+
+POST http://localhost:8080/especialidades
+content-type: application/json
+
+{
+  "nomeEspecialidade": "pediatria"
+}
+
+<> 2020-03-18T083554-1.201.json
 
 ###
 
@@ -168,6 +122,62 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
+<> 2020-03-18T083554.201.json
+
+###
+
+DELETE http://localhost:8080/procedimentos/deletarProcedimento/1
+content-type: application/json
+
+<> 2020-03-18T083110.404.json
+
+###
+
+PUT http://localhost:8080/procedimentos/editarProcedimento/2
+content-type: application/json
+
+{
+  "nomeProcedimento": "Consulta",
+  "especialidades": [1,2]
+}
+
+<> 2020-03-18T083101.200.json
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "TESTE2",
+  "especialidadesId": [1]
+}
+
+<> 2020-03-18T082956.201.json
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "Teste",
+  "especialidadesId": [1,2]
+}
+
+<> 2020-03-18T082955.201.json
+
+###
+
+POST http://localhost:8080/especialidades
+content-type: application/json
+
+{
+  "nomeEspecialidade": "pediatria"
+}
+
+<> 2020-03-18T082939.201.json
+
 ###
 
 POST http://localhost:8080/especialidades
@@ -177,49 +187,59 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
+<> 2020-03-18T082938.201.json
+
 ###
 
-DELETE http://localhost:8080/especialidades/deletarEspecialidade?nomeEspecialidade=PEDIATRIA
+DELETE http://localhost:8080/procedimentos/deletarProcedimento/1
 content-type: application/json
 
+<> 2020-03-18T082246.404.json
+
 ###
 
-GET http://localhost:8080/especialidades/listar
+DELETE http://localhost:8080/procedimentos/removerProcedimento/1
 content-type: application/json
 
-<> 2020-03-14T124649.200.json
+<> 2020-03-18T082122.404.json
 
 ###
 
-DELETE http://localhost:8080/especialidades/deletarEspecialidade?nomeEspcialidade=PEDIATRIA
+DELETE http://localhost:8080/procedimentos/removerProcedimento/1
 content-type: application/json
 
-<> 2020-03-14T124551.400.json
+<> 2020-03-18T081938.404.json
 
 ###
 
-PUT http://localhost:8080/especialidades/atualizarEspecialidade?nomeEspecialidade=NEUROLOGIA
+DELETE http://localhost:8080/procedimentos//removerProcedimento/1
+content-type: application/json
+
+<> 2020-03-18T081920.404.json
+
+###
+
+POST http://localhost:8080/procedimentos
 content-type: application/json
 
 {
-  "nomeEspecialidade": "PEDIATRIA"
+  "nomeProcedimento": "TESTE2",
+  "especialidadesId": [1]
 }
 
-<> 2020-03-14T124540.200.json
+<> 2020-03-18T081857.201.json
 
 ###
 
-GET http://localhost:8080/especialidades/buscarNome?nomeEspecialidade=NEUROLOGIA
+POST http://localhost:8080/procedimentos
 content-type: application/json
 
-<> 2020-03-14T124532.200.json
+{
+  "nomeProcedimento": "Teste",
+  "especialidadesId": [1,2]
+}
 
-###
-
-GET http://localhost:8080/especialidades/listar
-content-type: application/json
-
-<> 2020-03-14T124505.200.json
+<> 2020-03-18T081856.201.json
 
 ###
 
@@ -227,32 +247,10 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "NEUROLOGIA"
+  "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-14T124459.201.json
-
-###
-
-PUT http://localhost:8080/especialidades/atualizarEspecialidade?nomeEspecialidade=NEUROLOGIA
-content-type: application/json
-
-{
-  "nomeEspecialidade": "PEDIATRIA"
-}
-
-<> 2020-03-14T105327.200.json
-
-###
-
-PUT http://localhost:8080/atualizarEspecialidade?nomeEspecialidade=NEUROLOGIA
-content-type: application/json
-
-{
-  "nomeEspecialidade": "PEDIATRIA"
-}
-
-<> 2020-03-14T105158.404.json
+<> 2020-03-18T081831.201.json
 
 ###
 
@@ -260,39 +258,53 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "NEUROLOGIA"
+"nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-14T104717.201.json
+<> 2020-03-18T081830.201.json
 
 ###
 
-PUT http://localhost:8080/atualizarEspecialidade?nomeEspecialidade=NEUROLOGIA
+DELETE http://localhost:8080/procedimentos//removerProcedimento/1
+content-type: application/json
+
+<> 2020-03-18T081316.404.json
+
+###
+
+PUT http://localhost:8080/procedimentos/editarProcedimento/2
 content-type: application/json
 
 {
-  "nomeEspecialidade": "PEDIATRIA"
+  "nomeProcedimento": "Consulta",
+  "especialidades": [1,2]
 }
 
-<> 2020-03-14T103155.404.json
+<> 2020-03-18T081130.200.json
 
 ###
 
-PUT http://localhost:8080/atualizarEspecialidade?nomeEspecialidade=NEUROLOGIA
+POST http://localhost:8080/procedimentos
 content-type: application/json
 
 {
-  "nomeEspecialidade": "PEDIATRIA"
+  "nomeProcedimento": "TESTE2",
+  "especialidadesId": [1]
 }
 
-<> 2020-03-14T103146.404.json
+<> 2020-03-18T081111-1.201.json
 
 ###
 
-GET http://localhost:8080/especialidades/listar
+POST http://localhost:8080/procedimentos
 content-type: application/json
 
-<> 2020-03-14T103140.200.json
+{
+  "nomeProcedimento": "Teste",
+  "especialidadesId": [1,2]
+}
+
+<> 2020-03-18T081111.201.json
 
 ###
 
@@ -300,24 +312,10 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "NEUROLOGIA"
+  "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-14T103137.201.json
-
-###
-
-GET http://localhost:8080/especialidades/listar
-content-type: application/json
-
-<> 2020-03-14T102917.200.json
-
-###
-
-GET http://localhost:8080/especialidades/buscarNome?nomeEspecialidade=NEUROLOGIA
-content-type: application/json
-
-<> 2020-03-14T102911.200.json
+<> 2020-03-18T081105-1.201.json
 
 ###
 
@@ -325,24 +323,56 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "NEUROLOGIA"
+"nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-14T102907.201.json
+<> 2020-03-18T081105.201.json
 
 ###
 
-GET http://localhost:8080/especialidades/listar
+PUT http://localhost:8080/procedimentos/editarProcedimento/2
 content-type: application/json
 
-<> 2020-03-14T102641.500.json
+{
+  "nomeProcedimento": "Consulta",
+  "especialidades": [1,2]
+}
+
+<> 2020-03-18T081007.200.json
 
 ###
 
-GET http://localhost:8080/especialidades/buscarNome?nomeEspecialidade=NEUROLOGIA
+PUT http://localhost:8080/procedimentos/editarProcedimento/2
 content-type: application/json
 
-<> 2020-03-14T102616.200.json
+{
+  "nomeProcedimento": "Consulta",
+  "especialidadesId": [1,2]
+}
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "TESTE2",
+  "especialidadesId": [1]
+}
+
+<> 2020-03-18T075947.201.json
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "Teste",
+  "especialidadesId": [1,2]
+}
+
+<> 2020-03-18T075946.201.json
 
 ###
 
@@ -350,10 +380,10 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "NEUROLOGIA"
+  "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-14T102613.201.json
+<> 2020-03-18T075903.201.json
 
 ###
 
@@ -361,17 +391,44 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "NEUROLOGIA"
+"nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-14T102339.201.json
+<> 2020-03-18T075902.201.json
 
 ###
 
-GET http://localhost:8080/especialidades/listar
+PUT http://localhost:8080/procedimentos/editarProcedimento/2
 content-type: application/json
 
-<> 2020-03-14T101057.500.json
+{
+  "nomeProcedimento": "Consulta",
+  "especialidadesId": [1,2]
+}
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "TESTE2",
+  "especialidadesId": [1]
+}
+
+<> 2020-03-18T075303-1.201.json
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "Teste",
+  "especialidadesId": [1,2]
+}
+
+<> 2020-03-18T075303.201.json
 
 ###
 
@@ -379,31 +436,10 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "NEUROLOGIA"
+  "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-14T100904.500.json
-
-###
-
-GET http://localhost:8080/especialidades/listar/buscarNome?nomeEspecialidade=NEUROLOGIA
-content-type: application/json
-
-<> 2020-03-14T100854.404.json
-
-###
-
-GET http://localhost:8080/especialidades/listar?nomeEspecialidade=NEUROLOGIA
-content-type: application/json
-
-<> 2020-03-14T100731.500.json
-
-###
-
-GET http://localhost:8080/especialidades/listar
-content-type: application/json
-
-<> 2020-03-14T100555.500.json
+<> 2020-03-18T075238-1.201.json
 
 ###
 
@@ -411,10 +447,55 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "NEUROLOGIA"
+"nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-14T100327.201.json
+<> 2020-03-18T075238.201.json
+
+###
+
+GET http://localhost:8080/procedimentos//buscarPorEspecialidade?nomeEspecialidade=neurologia
+content-type: application/json
+
+<> 2020-03-18T074345.200.json
+
+###
+
+GET http://localhost:8080/procedimentos/buscaPorNome?nomeProcedimento=TESTE
+content-type: application/json
+
+<> 2020-03-18T074333.200.json
+
+###
+
+GET http://localhost:8080/procedimentos/listar
+content-type: application/json
+
+<> 2020-03-18T074326.200.json
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "TESTE2",
+  "especialidadesId": [1]
+}
+
+<> 2020-03-18T074320-1.201.json
+
+###
+
+POST http://localhost:8080/procedimentos
+content-type: application/json
+
+{
+  "nomeProcedimento": "Teste",
+  "especialidadesId": [1,2]
+}
+
+<> 2020-03-18T074320.201.json
 
 ###
 
@@ -422,10 +503,10 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "NEUROLOGIA"
+  "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-14T100307.201.json
+<> 2020-03-18T074312-1.201.json
 
 ###
 
@@ -433,32 +514,10 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "Neurologia"
+"nomeEspecialidade": "neurologia"
 }
 
-###
-
-POST http://localhost:8080/especialidades
-content-type: application/json
-
-{
-"nomeEspecialidade": "Neurologia"
-}
-
-<> 2020-03-14T094811.500.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-  {
-    "nome": "Martin Rocha Petersen",
-    "cpf": "794.897.370-2",
-    "carteiraSUS": "999999-9"
-  }
-
-<> 2020-03-14T094517.201.json
+<> 2020-03-18T074312.201.json
 
 ###
 

@@ -25,7 +25,8 @@ public class EspecialidadeService {
 
     public Especialidade buscarPorNome(String nomeEspecialidade) {
         try {
-            return especialidadeRepository.findByNomeEspacialidade(nomeEspecialidade);
+            String especialidade = "%" + nomeEspecialidade.toUpperCase() + "%";
+            return especialidadeRepository.findByNomeEspacialidade(especialidade);
         }catch (Exception e) {
             return null;
         }
@@ -33,7 +34,7 @@ public class EspecialidadeService {
 
     public boolean remover (String nomeEspecialidade) {
         try {
-            Especialidade especialidade = especialidadeRepository.findByNomeEspacialidade(nomeEspecialidade);
+            Especialidade especialidade = buscarPorNome(nomeEspecialidade);
             especialidadeRepository.deleteById(especialidade.getId());
             return true;
         }catch (Exception e) {
@@ -47,7 +48,7 @@ public class EspecialidadeService {
 
 
     public Especialidade atualizar(String nomeEspecialidade, EspecialidadeFORM especialidadeForm) {
-        Especialidade especialidade = especialidadeRepository.findByNomeEspacialidade(nomeEspecialidade);
+        Especialidade especialidade = buscarPorNome(nomeEspecialidade);
         especialidade.setNomeEspacialidade(especialidadeForm.getNomeEspecialidade());
         especialidadeRepository.save(especialidade);
         return especialidade;

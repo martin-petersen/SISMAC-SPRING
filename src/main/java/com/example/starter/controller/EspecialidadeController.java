@@ -33,7 +33,7 @@ public class EspecialidadeController {
 
     @GetMapping("/buscarNome")
     public ResponseEntity<EspecialidadeDTO> listarEspecialidades(@RequestParam String nomeEspecialidade) {
-        Especialidade especialidade = especialidadeService.buscarPorNome(nomeEspecialidade.toUpperCase());
+        Especialidade especialidade = especialidadeService.buscarPorNome(nomeEspecialidade);
         return ResponseEntity.ok(EspecialidadeDTO.convert(especialidade));
     }
 

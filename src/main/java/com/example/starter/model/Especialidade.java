@@ -16,6 +16,10 @@ public class Especialidade {
     public Especialidade() {
     }
 
+    public Especialidade(Long id) {
+        this.id = id;
+    }
+
     public Especialidade(String nomeEspacialidade) {
         this.nomeEspecialidade = nomeEspacialidade;
     }
@@ -42,5 +46,13 @@ public class Especialidade {
 
     public void setNomeEspecialidade(String nomeEspecialidade) {
         this.nomeEspecialidade = nomeEspecialidade;
+    }
+
+    public List<Procedimento> getProcedimentos() {
+        return procedimentos;
+    }
+
+    public void setProcedimentos(List<Procedimento> procedimentos) {
+        this.procedimentos = procedimentos;
     }
 }
