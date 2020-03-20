@@ -1,36 +1,61 @@
-PUT http://localhost:8080/procedimentos/editarProcedimento/1
+DELETE http://localhost:8080/medicos/removerMedico?numeroConselho=4442
 content-type: application/json
-
-{
-  "nomeProcedimento": "Teste",
-  "especialidades": [2]
-}
-
-<> 2020-03-18T084153.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+PUT http://localhost:8080/medicos/atualizarMedico?numeroConselho=4442
 content-type: application/json
 
 {
-  "nomeProcedimento": "TESTE2",
-  "especialidadesId": [1]
+  "nomeMedico": "Elsie Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia", "pediatria"]
 }
 
-<> 2020-03-18T084134-1.201.json
+<> 2020-03-19T085552.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "Teste",
-  "especialidadesId": [1,2]
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
 }
 
-<> 2020-03-18T084134.201.json
+<> 2020-03-19T085521-2.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
+}
+
+<> 2020-03-19T085521-1.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
+}
+
+<> 2020-03-19T085521.201.json
 
 ###
 
@@ -41,7 +66,7 @@ content-type: application/json
   "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-18T084128-1.201.json
+<> 2020-03-19T085517-1.201.json
 
 ###
 
@@ -52,55 +77,47 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-18T084128.201.json
+<> 2020-03-19T085517.201.json
 
 ###
 
-DELETE http://localhost:8080/procedimentos/deletarProcedimento?id=1
-content-type: application/json
-
-###
-
-DELETE http://localhost:8080/procedimentos/deletarProcediment?id=1
-content-type: application/json
-
-<> 2020-03-18T084002.404.json
-
-###
-
-PUT http://localhost:8080/procedimentos/editarProcedimento/2
+PUT http://localhost:8080/medicos/atualizarMedico?numeroConselho=4442
 content-type: application/json
 
 {
-  "nomeProcedimento": "Consulta",
-  "especialidades": [1,2]
+  "nomeMedico": "Elsie Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia", "pediatria"]
 }
 
-<> 2020-03-18T083932.200.json
+<> 2020-03-19T085443.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+PUT http://localhost:8080/medicos/atualizarMedico?numeroConselho=4442
 content-type: application/json
 
 {
-  "nomeProcedimento": "TESTE2",
-  "especialidadesId": [1]
+  "nomeMedico": "Elsie Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia, pediatria"]
 }
-
-<> 2020-03-18T083710-1.201.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "Teste",
-  "especialidadesId": [1,2]
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
 }
 
-<> 2020-03-18T083710.201.json
+<> 2020-03-19T085226.201.json
 
 ###
 
@@ -111,7 +128,19 @@ content-type: application/json
   "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-18T083554-1.201.json
+<> 2020-03-19T085224.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
+}
 
 ###
 
@@ -122,50 +151,73 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-18T083554.201.json
+<> 2020-03-19T085223.201.json
 
 ###
 
-DELETE http://localhost:8080/procedimentos/deletarProcedimento/1
-content-type: application/json
-
-<> 2020-03-18T083110.404.json
-
-###
-
-PUT http://localhost:8080/procedimentos/editarProcedimento/2
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "Consulta",
-  "especialidades": [1,2]
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
 }
-
-<> 2020-03-18T083101.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+PUT http://localhost:8080/medicos/atualizarMedico?numeroConselho=4442
 content-type: application/json
 
 {
-  "nomeProcedimento": "TESTE2",
-  "especialidadesId": [1]
+  "nomeMedico": "Elsie Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia, pediatria"]
 }
-
-<> 2020-03-18T082956.201.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "Teste",
-  "especialidadesId": [1,2]
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
 }
 
-<> 2020-03-18T082955.201.json
+<> 2020-03-19T084231.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
+}
+
+<> 2020-03-19T084229.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
+}
+
+<> 2020-03-19T084228.201.json
 
 ###
 
@@ -176,7 +228,7 @@ content-type: application/json
   "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-18T082939.201.json
+<> 2020-03-19T084035.201.json
 
 ###
 
@@ -187,59 +239,75 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-18T082938.201.json
+<> 2020-03-19T084034.201.json
 
 ###
 
-DELETE http://localhost:8080/procedimentos/deletarProcedimento/1
-content-type: application/json
-
-<> 2020-03-18T082246.404.json
-
-###
-
-DELETE http://localhost:8080/procedimentos/removerProcedimento/1
-content-type: application/json
-
-<> 2020-03-18T082122.404.json
-
-###
-
-DELETE http://localhost:8080/procedimentos/removerProcedimento/1
-content-type: application/json
-
-<> 2020-03-18T081938.404.json
-
-###
-
-DELETE http://localhost:8080/procedimentos//removerProcedimento/1
-content-type: application/json
-
-<> 2020-03-18T081920.404.json
-
-###
-
-POST http://localhost:8080/procedimentos
+PUT http://localhost:8080/medicos/atualizarMedico?numeroConselho=4442
 content-type: application/json
 
 {
-  "nomeProcedimento": "TESTE2",
-  "especialidadesId": [1]
+  "nomeMedico": "Elsie Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia, pediatria"]
 }
-
-<> 2020-03-18T081857.201.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+PUT http://localhost:8080/medicos/atualizarMedico?4442=
 content-type: application/json
 
 {
-  "nomeProcedimento": "Teste",
-  "especialidadesId": [1,2]
+  "nomeMedico": "Elsie Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia, pediatria"]
 }
 
-<> 2020-03-18T081856.201.json
+<> 2020-03-19T083436.400.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
+}
+
+<> 2020-03-19T083307-2.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
+}
+
+<> 2020-03-19T083307-1.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
+}
+
+<> 2020-03-19T083307.201.json
 
 ###
 
@@ -250,7 +318,7 @@ content-type: application/json
   "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-18T081831.201.json
+<> 2020-03-19T083258.201.json
 
 ###
 
@@ -261,50 +329,63 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-18T081830.201.json
+<> 2020-03-19T083257.201.json
 
 ###
 
-DELETE http://localhost:8080/procedimentos//removerProcedimento/1
+GET http://localhost:8080/medicos/listarPorEspecialidade?nomeEspecialidade=neurologia
 content-type: application/json
 
-<> 2020-03-18T081316.404.json
+<> 2020-03-19T082405.200.json
 
 ###
 
-PUT http://localhost:8080/procedimentos/editarProcedimento/2
+GET http://localhost:8080/medicos/listarPorNome?nomeMedico=ronaldinho
 content-type: application/json
 
-{
-  "nomeProcedimento": "Consulta",
-  "especialidades": [1,2]
-}
-
-<> 2020-03-18T081130.200.json
+<> 2020-03-19T082327.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "TESTE2",
-  "especialidadesId": [1]
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
 }
 
-<> 2020-03-18T081111-1.201.json
+<> 2020-03-19T082323-2.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "Teste",
-  "especialidadesId": [1,2]
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
 }
 
-<> 2020-03-18T081111.201.json
+<> 2020-03-19T082323-1.200.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
+}
+
+<> 2020-03-19T082323.200.json
 
 ###
 
@@ -315,7 +396,7 @@ content-type: application/json
   "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-18T081105-1.201.json
+<> 2020-03-19T082320-1.201.json
 
 ###
 
@@ -326,53 +407,56 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-18T081105.201.json
+<> 2020-03-19T082320.201.json
 
 ###
 
-PUT http://localhost:8080/procedimentos/editarProcedimento/2
+GET http://localhost:8080/medicos/listar
 content-type: application/json
 
-{
-  "nomeProcedimento": "Consulta",
-  "especialidades": [1,2]
-}
-
-<> 2020-03-18T081007.200.json
+<> 2020-03-19T081931.200.json
 
 ###
 
-PUT http://localhost:8080/procedimentos/editarProcedimento/2
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "Consulta",
-  "especialidadesId": [1,2]
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
 }
+
+<> 2020-03-19T081926-2.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "TESTE2",
-  "especialidadesId": [1]
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
 }
 
-<> 2020-03-18T075947.201.json
+<> 2020-03-19T081926-1.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "Teste",
-  "especialidadesId": [1,2]
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
 }
 
-<> 2020-03-18T075946.201.json
+<> 2020-03-19T081926.200.json
 
 ###
 
@@ -383,7 +467,7 @@ content-type: application/json
   "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-18T075903.201.json
+<> 2020-03-19T081921-1.201.json
 
 ###
 
@@ -394,41 +478,54 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-18T075902.201.json
+<> 2020-03-19T081921.201.json
 
 ###
 
-PUT http://localhost:8080/procedimentos/editarProcedimento/2
+GET http://localhost:8080/medicos/listar
 content-type: application/json
-
-{
-  "nomeProcedimento": "Consulta",
-  "especialidadesId": [1,2]
-}
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "TESTE2",
-  "especialidadesId": [1]
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
 }
 
-<> 2020-03-18T075303-1.201.json
+<> 2020-03-19T081344.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "Teste",
-  "especialidadesId": [1,2]
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
 }
 
-<> 2020-03-18T075303.201.json
+<> 2020-03-19T081323.200.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
+}
+
+<> 2020-03-19T081300.200.json
 
 ###
 
@@ -439,7 +536,7 @@ content-type: application/json
   "nomeEspecialidade": "pediatria"
 }
 
-<> 2020-03-18T075238-1.201.json
+<> 2020-03-19T081223.201.json
 
 ###
 
@@ -450,74 +547,56 @@ content-type: application/json
 "nomeEspecialidade": "neurologia"
 }
 
-<> 2020-03-18T075238.201.json
+<> 2020-03-19T081222.201.json
 
 ###
 
-GET http://localhost:8080/procedimentos//buscarPorEspecialidade?nomeEspecialidade=neurologia
+GET http://localhost:8080/medicos/listar
 content-type: application/json
 
-<> 2020-03-18T074345.200.json
+<> 2020-03-19T080328.200.json
 
 ###
 
-GET http://localhost:8080/procedimentos/buscaPorNome?nomeProcedimento=TESTE
-content-type: application/json
-
-<> 2020-03-18T074333.200.json
-
-###
-
-GET http://localhost:8080/procedimentos/listar
-content-type: application/json
-
-<> 2020-03-18T074326.200.json
-
-###
-
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "TESTE2",
-  "especialidadesId": [1]
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
 }
 
-<> 2020-03-18T074320-1.201.json
+<> 2020-03-19T080325-2.200.json
 
 ###
 
-POST http://localhost:8080/procedimentos
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeProcedimento": "Teste",
-  "especialidadesId": [1,2]
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
 }
 
-<> 2020-03-18T074320.201.json
+<> 2020-03-19T080325-1.200.json
 
 ###
 
-POST http://localhost:8080/especialidades
+POST http://localhost:8080/medicos
 content-type: application/json
 
 {
-  "nomeEspecialidade": "pediatria"
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
 }
 
-<> 2020-03-18T074312-1.201.json
-
-###
-
-POST http://localhost:8080/especialidades
-content-type: application/json
-
-{
-"nomeEspecialidade": "neurologia"
-}
-
-<> 2020-03-18T074312.201.json
+<> 2020-03-19T080325.200.json
 
 ###
 

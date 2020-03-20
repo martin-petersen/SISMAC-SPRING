@@ -1,0 +1,35 @@
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
+}
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
+}
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
+}
+
+###

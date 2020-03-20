@@ -1,0 +1,2 @@
+GET http://localhost:8080/medicos/listarPorNome?nomeMedico=ronaldinho
+content-type: application/json

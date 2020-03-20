@@ -1,0 +1,11 @@
+PUT http://localhost:8080/medicos/atualizarMedico?numeroConselho=4442
+content-type: application/json
+
+{
+  "nomeMedico": "Leonel Messi",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia", "pediatria"]
+}
+
+###

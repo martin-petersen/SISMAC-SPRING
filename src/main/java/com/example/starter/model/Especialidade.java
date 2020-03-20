@@ -12,6 +12,8 @@ public class Especialidade {
     private String nomeEspecialidade;
     @ManyToMany(mappedBy = "especialidades")
     private List<Procedimento> procedimentos;
+    @ManyToMany(mappedBy = "especialidades")
+    private List<Medico> medicos;
 
     public Especialidade() {
     }
@@ -54,5 +56,13 @@ public class Especialidade {
 
     public void setProcedimentos(List<Procedimento> procedimentos) {
         this.procedimentos = procedimentos;
+    }
+
+    public List<Medico> getMedicos() {
+        return medicos;
+    }
+
+    public void setMedicos(List<Medico> medicos) {
+        this.medicos = medicos;
     }
 }
