@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository;
 public interface PacienteRepository extends JpaRepository<Paciente,Long> {
     @Query("from Paciente i where upper(i.nomePaciente) like :nome")
     Page<Paciente> findByNomePaciente(String nome, Pageable pageable);
+    Page<Paciente> findByCpf(String cpf, Pageable pageable);
     Paciente findByCpf(String cpf);
+    Page<Paciente> findByCarteiraSUS(String carteiraSUS, Pageable pageable);
     Paciente findByCarteiraSUS(String carteiraSUS);
 }

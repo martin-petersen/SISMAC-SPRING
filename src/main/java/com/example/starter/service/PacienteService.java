@@ -56,37 +56,33 @@ public class PacienteService {
         }
     }
 
-    public Paciente buscarPorSUS(String carteiraSUS) {
-        if(pacienteRepository.findByCarteiraSUS(carteiraSUS) != null) {
-            return pacienteRepository.findByCarteiraSUS(carteiraSUS);
+    public Page<Paciente> buscarPorCpf(String cpf, Pageable pageable) {
+        if(pacienteRepository.findByCpf(cpf) != null) {
+            return pacienteRepository.findByCpf(cpf, pageable);
         } else {
             throw new NullPointerException();
         }
     }
 
-    public PacienteDTO alterar(Paciente paciente, AtualizacaoPacienteFORM atualizacaoPacienteFORM) {
-        if(paciente == null) {
-            return null;
-        } else if (paciente.getCpf() != null) {
-            Paciente pacienteAtualizado = pacienteRepository.findByCpf(paciente.getCpf());
-            atualizar(pacienteAtualizado,atualizacaoPacienteFORM);
-            return new PacienteDTO(pacienteAtualizado);
+    public Page<Paciente> buscarPorSUS(String carteiraSUS, Pageable pageable) {
+        if(pacienteRepository.findByCarteiraSUS(carteiraSUS) != null) {
+            return pacienteRepository.findByCarteiraSUS(carteiraSUS, pageable);
         } else {
-            Paciente pacienteAtualizado = pacienteRepository.findByCarteiraSUS(paciente.getCarteiraSUS());
-            atualizar(pacienteAtualizado,atualizacaoPacienteFORM);
-            return new PacienteDTO(pacienteAtualizado);
+            throw new NullPointerException();
         }
     }
 
-    private void atualizar(Paciente pacienteAtualizado, AtualizacaoPacienteFORM atualizacaoPacienteFORM) {
-        if(!pacienteAtualizado.getNomePaciente().equals(atualizacaoPacienteFORM.getNome()) && atualizacaoPacienteFORM.getNome() != null) {
-            pacienteAtualizado.setNomePaciente(atualizacaoPacienteFORM.getNome());
-        }
-        if(!pacienteAtualizado.getCpf().equals(atualizacaoPacienteFORM.getCpf()) && atualizacaoPacienteFORM.getCpf() != null) {
-            pacienteAtualizado.setCpf(atualizacaoPacienteFORM.getCpf());
-        }
-        if(!pacienteAtualizado.getCarteiraSUS().equals(atualizacaoPacienteFORM.getCarteiraSUS()) && atualizacaoPacienteFORM.getCarteiraSUS() != null) {
-            pacienteAtualizado.setCarteiraSUS(atualizacaoPacienteFORM.getCarteiraSUS());
+    public PacienteDTO alterar(Paciente paciente) {
+        if(paciente == null) {
+            return null;
+        } else if (pacienteRepository.findByCpf(paciente.getCpf()) != null) {
+            Paciente pacienteAtualizado = pacienteRepository.findByCpf(paciente.getCpf());
+            pacienteAtualizado.setPacienteUpdate(paciente);
+            return new PacienteDTO(pacienteAtualizado);
+        } else {
+            Paciente pacienteAtualizado = pacienteRepository.findByCarteiraSUS(paciente.getCarteiraSUS());
+            pacienteAtualizado.setPacienteUpdate(paciente);
+            return new PacienteDTO(pacienteAtualizado);
         }
     }
 }

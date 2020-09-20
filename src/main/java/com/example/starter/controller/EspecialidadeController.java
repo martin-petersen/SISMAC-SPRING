@@ -17,6 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 
+@CrossOrigin
 @RestController
 @RequestMapping(path = "/especialidades")
 public class EspecialidadeController {

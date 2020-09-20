@@ -9,7 +9,7 @@ public class Agendamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDateTime dataAgendamento;
-    private LocalDateTime dataCriacao;
+    private final LocalDateTime dataCriacao = LocalDateTime.now();
     @ManyToOne(cascade = CascadeType.ALL)
     private Paciente paciente;
     @ManyToOne
@@ -37,10 +37,6 @@ public class Agendamento {
 
     public LocalDateTime getDataCriacao() {
         return dataCriacao;
-    }
-
-    public void setDataCriacao(LocalDateTime dataCriacao) {
-        this.dataCriacao = dataCriacao;
     }
 
     public Paciente getPaciente() {

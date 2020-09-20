@@ -1,4 +1,4 @@
-GET http://localhost:8080/pacientes/buscarCadastroSUS/sus
+GET http://localhost:8080/pacientes?carteiraSUS=999999-6
 content-type: application/json
 
 ###

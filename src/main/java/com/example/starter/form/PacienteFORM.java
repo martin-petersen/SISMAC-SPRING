@@ -13,6 +13,15 @@ public class PacienteFORM {
     private String cpf;
     @NotEmpty @NotNull
     private String carteiraSUS;
+    @NotEmpty @NotNull
+    private String cidade;
+    @NotEmpty @NotNull
+    private String bairro;
+    private String complemento;
+    @NotEmpty @NotNull
+    private String dataNascimento;
+    @NotEmpty @NotNull
+    private String telefone;
 
     public String getNome() {
         return nome.toUpperCase();
@@ -38,7 +47,47 @@ public class PacienteFORM {
         this.carteiraSUS = carteiraSUS;
     }
 
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
     public Paciente convert() {
-        return new Paciente(getNome().toUpperCase(), getCpf(), getCarteiraSUS());
+        return new Paciente(getNome().toUpperCase(), getCarteiraSUS(), getCpf(), getCidade(), getBairro(), getComplemento(), getDataNascimento(), getTelefone());
     }
 }

@@ -1,4 +1,4 @@
-GET http://localhost:8080/pacientes/buscarCpf/794.897.370-20
+GET http://localhost:8080/pacientes?cpf=107.375.204-18
 content-type: application/json
 
 ###

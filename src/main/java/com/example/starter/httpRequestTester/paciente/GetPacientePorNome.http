@@ -1,4 +1,4 @@
-GET http://localhost:8080/pacientes/listar?nome=martin
+GET http://localhost:8080/pacientes?nome=martin
 content-type: application/json
 
 ###
