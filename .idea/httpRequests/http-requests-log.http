@@ -1,3 +1,194 @@
+DELETE http://localhost:8080/pacientes/deletarCadastro?cpf=794.897.370-2
+content-type: application/json
+
+###
+
+DELETE http://localhost:8080/pacientes/deletarCadastro?carteiraSUS=sus
+content-type: application/json
+
+###
+
+PUT http://localhost:8080/pacientes/atualizarCadastro
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "794.897.370-00",
+  "carteiraSUS": "999999-8",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "170"
+}
+
+<> 2020-09-20T104458-2.200.json
+
+###
+
+PUT http://localhost:8080/pacientes/atualizarCadastro
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "cpf",
+  "carteiraSUS": "999999-6",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "170"
+}
+
+<> 2020-09-20T104458-1.200.json
+
+###
+
+PUT http://localhost:8080/pacientes/atualizarCadastro
+content-type: application/json
+
+{
+  "nome": "Martin Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "sus",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "170"
+}
+
+<> 2020-09-20T104458.200.json
+
+###
+
+GET http://localhost:8080/pacientes?carteiraSUS=999999-6
+content-type: application/json
+
+<> 2020-09-20T104454.200.json
+
+###
+
+GET http://localhost:8080/pacientes?nome=martin
+content-type: application/json
+
+<> 2020-09-20T104448.200.json
+
+###
+
+GET http://localhost:8080/pacientes?cpf=107.375.204-18
+content-type: application/json
+
+<> 2020-09-20T104416.200.json
+
+###
+
+GET http://localhost:8080/pacientes
+content-type: application/json
+
+<> 2020-09-20T104409.200.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "107.375.204-16",
+  "carteiraSUS": "999999-5",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-09-20T104404-4.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Kandell Oliveira",
+  "cpf": "107.375.204-17",
+  "carteiraSUS": "999999-6",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-09-20T104404-3.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "José Augusto do Nascimento",
+  "cpf": "107.375.204-18",
+  "carteiraSUS": "999999-7",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+
+}
+
+<> 2020-09-20T104404-2.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "107.375.204-19",
+  "carteiraSUS": "999999-8",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-09-20T104404-1.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-09-20T104404.201.json
+
+###
+
 PUT http://localhost:8080/pacientes/atualizarCadastro
 content-type: application/json
 
@@ -484,140 +675,6 @@ GET http://localhost:8080/pacientes?cpf=107.375.204-18
 content-type: application/json
 
 <> 2020-09-20T052457.200.json
-
-###
-
-GET http://localhost:8080/pacientes
-content-type: application/json
-
-<> 2020-09-20T052452.200.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "Martin Rocha Petersen",
-  "cpf": "107.375.204-16",
-  "carteiraSUS": "999999-5"
-}
-
-<> 2020-09-20T052447-4.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "Kandell Oliveira",
-  "cpf": "107.375.204-17",
-  "carteiraSUS": "999999-6"
-}
-
-<> 2020-09-20T052447-3.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-"nome": "José Augusto do Nascimento",
-"cpf": "107.375.204-18",
-"carteiraSUS": "999999-7"
-}
-
-<> 2020-09-20T052447-2.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "Maria das Virgens Souza",
-  "cpf": "107.375.204-19",
-  "carteiraSUS": "999999-8"
-}
-
-<> 2020-09-20T052447-1.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-  {
-    "nome": "Martin Rocha Petersen",
-    "cpf": "794.897.370-2",
-    "carteiraSUS": "999999-9"
-  }
-
-<> 2020-09-20T052447.201.json
-
-###
-
-GET http://localhost:8080/pacientes
-content-type: application/json
-
-<> 2020-09-20T051024.200.json
-
-###
-
-PUT http://localhost:8080/pacientes/atualizarCadastro?carteiraSUS=999999-6
-content-type: application/json
-
-{
-  "nome": "Maria das Virgens Souza",
-  "cpf": "cpf",
-  "carteiraSUS": "999999-8"
-}
-
-<> 2020-09-20T050945.500.json
-
-###
-
-GET http://localhost:8080/pacientes?carteiraSUS=999999-6
-content-type: application/json
-
-<> 2020-09-20T050851.200.json
-
-###
-
-GET http://localhost:8080/pacientes?nome=martin
-content-type: application/json
-
-<> 2020-09-20T050838.200.json
-
-###
-
-GET http://localhost:8080/pacientes
-content-type: application/json
-
-<> 2020-09-20T050830.200.json
-
-###
-
-GET http://localhost:8080/pacientes?nome=martin
-content-type: application/json
-
-<> 2020-09-20T050821.200.json
-
-###
-
-GET http://localhost:8080/pacientes?cpf=107.375.204-18
-content-type: application/json
-
-<> 2020-09-20T050807.200.json
-
-###
-
-GET http://localhost:8080/pacientes
-content-type: application/json
-
-<> 2020-09-20T050757.200.json
 
 ###
 
