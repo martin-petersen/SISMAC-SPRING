@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="" />
+    <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -1646,7 +1649,7 @@
       <workItem from="1600651834710" duration="8000" />
       <workItem from="1600651862831" duration="12000" />
       <workItem from="1600651901990" duration="1000" />
-      <workItem from="1600651937902" duration="675000" />
+      <workItem from="1600651937902" duration="1029000" />
     </task>
     <servers />
   </component>
