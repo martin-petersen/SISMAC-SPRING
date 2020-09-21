@@ -1,16 +1,17 @@
 POST http://localhost:8080/pacientes
 content-type: application/json
 
-  {
-    "nome": "Martin Rocha Petersen",
-    "cpf": "794.897.370-2",
-    "carteiraSUS": "999999-9",
-    "cidade": "Natal",
-    "bairro": "Pajuçara",
-    "complemento": "Casa de primeiro andar",
-    "dataNascimento": "21/06/1996",
-    "telefone": "(84)99678-4853"
-  }
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
 
 ###
 
@@ -25,7 +26,8 @@ content-type: application/json
   "bairro": "Pajuçara",
   "complemento": "Casa de primeiro andar",
   "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853"
+  "telefone": "(84)99678-4853",
+  "numero": "160"
 }
 
 ###
@@ -41,7 +43,8 @@ content-type: application/json
   "bairro": "Pajuçara",
   "complemento": "Casa de primeiro andar",
   "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853"
+  "telefone": "(84)99678-4853",
+  "numero": "160"
 
 }
 
@@ -58,7 +61,8 @@ content-type: application/json
   "bairro": "Pajuçara",
   "complemento": "Casa de primeiro andar",
   "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853"
+  "telefone": "(84)99678-4853",
+  "numero": "160"
 }
 
 ###
@@ -74,7 +78,8 @@ content-type: application/json
   "bairro": "Pajuçara",
   "complemento": "Casa de primeiro andar",
   "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853"
+  "telefone": "(84)99678-4853",
+  "numero": "160"
 }
 
 ###

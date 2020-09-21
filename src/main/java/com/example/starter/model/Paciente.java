@@ -19,8 +19,9 @@ public class Paciente {
     private String complemento;
     private String dataNascimento;
     private String telefone;
+    private String numero;
 
-    public Paciente(String nomePaciente, String carteiraSUS, String cpf, String cidade, String bairro, String complemento, String dataNascimento, String telefone) {
+    public Paciente(String nomePaciente, String carteiraSUS, String cpf, String cidade, String bairro, String complemento, String dataNascimento, String telefone, String numero) {
         this.nomePaciente = nomePaciente;
         this.carteiraSUS = carteiraSUS;
         this.cpf = cpf;
@@ -29,6 +30,7 @@ public class Paciente {
         this.complemento = complemento;
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
+        this.numero = numero;
     }
 
     public Paciente(String cpf, String carteiraSUS) {
@@ -45,6 +47,7 @@ public class Paciente {
         this.complemento = paciente.getComplemento();
         this.dataNascimento = paciente.getDataNascimento();
         this.telefone = paciente.getTelefone();
+        this.numero = paciente.getNumero();
     }
 
     public Paciente() {
@@ -73,6 +76,8 @@ public class Paciente {
         this.complemento = paciente.getComplemento();
         this.dataNascimento = paciente.getDataNascimento();
         this.telefone = paciente.getTelefone();
+        this.numero = paciente.getNumero();
+
     }
 
     public String getNomePaciente() {
@@ -137,5 +142,13 @@ public class Paciente {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 }
