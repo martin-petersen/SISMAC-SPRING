@@ -11,6 +11,8 @@ public class AtualizacaoPacienteFORM {
     private String complemento;
     private String dataNascimento;
     private String telefone;
+    private String numero;
+
 
     public String getNome() {
         return nome.toUpperCase();
@@ -44,7 +46,11 @@ public class AtualizacaoPacienteFORM {
         return telefone;
     }
 
+    public String getNumero() {
+        return numero;
+    }
+
     public Paciente convert() {
-        return new Paciente(getNome().toUpperCase(),getCarteiraSUS(),getCpf(),getCidade(),getBairro(),getComplemento(),getDataNascimento(),getTelefone());
+        return new Paciente(getNome().toUpperCase(),getCarteiraSUS(),getCpf(),getCidade(),getBairro(),getComplemento(),getDataNascimento(),getTelefone(), getNumero());
     }
 }

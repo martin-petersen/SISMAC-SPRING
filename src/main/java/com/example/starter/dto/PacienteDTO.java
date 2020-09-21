@@ -12,6 +12,8 @@ public class PacienteDTO {
     private final String complemento;
     private final String dataNascimento;
     private final String telefone;
+    private final String numero;
+
 
     public PacienteDTO(Paciente paciente) {
         this.nome = paciente.getNomePaciente();
@@ -22,6 +24,7 @@ public class PacienteDTO {
         this.complemento = paciente.getComplemento();
         this.dataNascimento = paciente.getDataNascimento();
         this.telefone = paciente.getTelefone();
+        this.numero = paciente.getNumero();
     }
 
     public String getNome() {
@@ -54,6 +57,10 @@ public class PacienteDTO {
 
     public String getTelefone() {
         return telefone;
+    }
+
+    public String getNumero() {
+        return numero;
     }
 
     public static Page<PacienteDTO> convert(Page<Paciente> pacientes) {

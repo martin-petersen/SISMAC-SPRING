@@ -22,6 +22,8 @@ public class PacienteFORM {
     private String dataNascimento;
     @NotEmpty @NotNull
     private String telefone;
+    @NotEmpty @NotNull
+    private String numero;
 
     public String getNome() {
         return nome.toUpperCase();
@@ -87,7 +89,11 @@ public class PacienteFORM {
         this.telefone = telefone;
     }
 
+    public String getNumero() {
+        return numero;
+    }
+
     public Paciente convert() {
-        return new Paciente(getNome().toUpperCase(), getCarteiraSUS(), getCpf(), getCidade(), getBairro(), getComplemento(), getDataNascimento(), getTelefone());
+        return new Paciente(getNome().toUpperCase(), getCarteiraSUS(), getCpf(), getCidade(), getBairro(), getComplemento(), getDataNascimento(), getTelefone(), getNumero());
     }
 }
