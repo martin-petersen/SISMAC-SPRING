@@ -1,4 +1,4 @@
-GET http://localhost:8080/procedimentos/listar
+GET http://localhost:8080/procedimentos
 content-type: application/json
 
 ###

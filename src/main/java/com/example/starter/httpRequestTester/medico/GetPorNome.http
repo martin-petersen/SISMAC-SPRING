@@ -1,2 +1,2 @@
-GET http://localhost:8080/medicos/listarPorNome?nomeMedico=ronaldinho
+GET http://localhost:8080/medicos?nomeMedico=ronaldinho
 content-type: application/json

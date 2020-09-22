@@ -2,7 +2,6 @@ package com.example.starter.controller;
 
 import com.example.starter.dto.AtualizacaoProcedimentoDTO;
 import com.example.starter.dto.DetalhamentoProcedimentoDTO;
-import com.example.starter.dto.ProcedimentoDTO;
 import com.example.starter.form.AtualizacaoProcedimentoForm;
 import com.example.starter.form.ProcedimentoForm;
 import com.example.starter.model.Especialidade;
@@ -10,6 +9,8 @@ import com.example.starter.model.Procedimento;
 import com.example.starter.repository.EspecialidadeRepository;
 import com.example.starter.service.ProcedimentoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -36,39 +37,34 @@ public class ProcedimentoController {
     @Autowired
     private EspecialidadeRepository especialidadeRepository;
 
-    @GetMapping(path = "/listar")
-    public ResponseEntity<Page<ProcedimentoDTO>> listarTodosProcedimentos(@PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeProcedimento") Pageable pageable) {
-        Page<ProcedimentoDTO> procedimentoPage = convertInDTO(procedimentoService.listarTodos(),pageable);
-        return ResponseEntity.ok(procedimentoPage);
-    }
-
-    @GetMapping(path = "/buscarPorEspecialidade")
-    public ResponseEntity<Page<ProcedimentoDTO>> procedimentosPorEspcialidade(@RequestParam String nomeEspecialidade,
-                                                                              @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeProcedimento") Pageable pageable) {
-        try {
-            Page<ProcedimentoDTO> procedimentoPage = convertInDTO(procedimentoService.listarPorEspecialidade(nomeEspecialidade),pageable);
+    @GetMapping
+    public ResponseEntity<Page<DetalhamentoProcedimentoDTO>> listarTodosProcedimentos(@RequestParam(required = false) String nomeEspecialidade,
+                                                                       @RequestParam(required = false) String nomeProcedimento,
+                                                                       @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeProcedimento") Pageable pageable) {
+        if(nomeEspecialidade != null) {
+            try {
+                Page<DetalhamentoProcedimentoDTO> procedimentoPage = convertInDetalamentoDTO(procedimentoService.listarPorEspecialidade(nomeEspecialidade),pageable);
+                return ResponseEntity.ok(procedimentoPage);
+            }catch (Exception e) {
+                return ResponseEntity.badRequest().build();
+            }
+        } else if(nomeProcedimento != null) {
+            try {
+                List<Procedimento> procedimentos = procedimentoService.buscarPorNome(new Procedimento(nomeProcedimento));
+                Page<DetalhamentoProcedimentoDTO> detalhamentoProcedimentoDTOPage = convertInDetalamentoDTO(procedimentos, pageable);
+                return ResponseEntity.ok(detalhamentoProcedimentoDTOPage);
+            }catch (Exception e) {
+                return ResponseEntity.badRequest().build();
+            }
+        } else {
+            Page<DetalhamentoProcedimentoDTO> procedimentoPage = convertInDetalamentoDTO(procedimentoService.listarTodos(),pageable);
             return ResponseEntity.ok(procedimentoPage);
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
         }
-    }
-
-    @GetMapping(path = "/buscaPorNome")
-    public ResponseEntity<Page<DetalhamentoProcedimentoDTO>> buscarPorNome(@RequestParam String nomeProcedimento,
-                                                                     @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeProcedimento") Pageable pageable) {
-        try {
-            List<Procedimento> procedimentos = procedimentoService.buscarPorNome(new Procedimento(nomeProcedimento));
-            Page<DetalhamentoProcedimentoDTO> detalhamentoProcedimentoDTOPage = convertInDetalamentoDTO(procedimentos, pageable);
-            return ResponseEntity.ok(detalhamentoProcedimentoDTOPage);
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-
     }
 
     @PostMapping
     @Transactional
-    public ResponseEntity<ProcedimentoDTO> cadastrarProcedimento(@RequestBody @Valid ProcedimentoForm procedimentoForm,
+    public ResponseEntity<DetalhamentoProcedimentoDTO> cadastrarProcedimento(@RequestBody @Valid ProcedimentoForm procedimentoForm,
                                                                  UriComponentsBuilder uriComponentsBuilder) {
         try{
             Procedimento procedimento = new Procedimento();
@@ -80,7 +76,7 @@ public class ProcedimentoController {
             }
             procedimentoService.salvar(procedimento);
             URI uri = uriComponentsBuilder.path("/procedimentos/{id}").buildAndExpand(procedimento.getId()).toUri();
-            ProcedimentoDTO procedimentoDTO = new ProcedimentoDTO(procedimento.getId(), procedimento.getNomeProcedimento());
+            DetalhamentoProcedimentoDTO procedimentoDTO = new DetalhamentoProcedimentoDTO(procedimento.getId(), procedimento.getNomeProcedimento(), procedimento.getEspecialidade());
             return ResponseEntity.created(uri).body(procedimentoDTO);
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
@@ -113,15 +109,6 @@ public class ProcedimentoController {
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
-    }
-
-    private Page<ProcedimentoDTO> convertInDTO (List<Procedimento> lista, Pageable pageable) {
-        List<ProcedimentoDTO> procedimentoDTOList = new ArrayList<>();
-        for (Procedimento p:
-                lista) {
-            procedimentoDTOList.add(new ProcedimentoDTO(p.getId(), p.getNomeProcedimento()));
-        }
-        return new PageImpl<>(procedimentoDTOList,pageable,procedimentoDTOList.size());
     }
 
     private Page<DetalhamentoProcedimentoDTO> convertInDetalamentoDTO (List<Procedimento> lista, Pageable pageable) {

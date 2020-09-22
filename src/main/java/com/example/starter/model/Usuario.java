@@ -1,11 +1,13 @@
 package com.example.starter.model;
 
+import com.example.starter.form.UpdateUsuarioFORM;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
+import java.util.Random;
 
 @Entity
 public class Usuario implements UserDetails {
@@ -14,13 +16,24 @@ public class Usuario implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    @Column(unique = true)
     private String email;
     private String senha;
+    private boolean validate = false;
+    private String validateCode;
 
     @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "usuario_role",
+            joinColumns = {@JoinColumn(name = "usuario_id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private List<Role> perfis;
 
+    @Column(name = "paciente_id")
     private Long id_paciente = null;
+
+    public Usuario() {
+
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -84,6 +97,18 @@ public class Usuario implements UserDetails {
         this.id_paciente = id_paciente;
     }
 
+    public boolean isValidate() {
+        return validate;
+    }
+
+    public void setValidate(boolean validate) {
+        this.validate = validate;
+    }
+
+    public void setPerfis(List<Role> perfis) {
+        this.perfis = perfis;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.perfis;
@@ -117,5 +142,21 @@ public class Usuario implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public String getValidateCode() {
+        return validateCode;
+    }
+
+    public void setValidateCode() {
+        String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        StringBuilder code = new StringBuilder();
+        int index = -1;
+        Random random = new Random();
+        for (int i=0; i<6; ++i) {
+            index = random.nextInt(chars.length());
+            code.append(chars.charAt(index));
+        }
+        this.validateCode = code.toString();
     }
 }

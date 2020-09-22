@@ -6,6 +6,8 @@ import com.example.starter.model.Medico;
 import com.example.starter.repository.EspecialidadeRepository;
 import com.example.starter.repository.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -27,6 +29,9 @@ public class MedicoService {
                  medicoForm.getEspecialidades()) {
                 String especialidade = "%" + s.toUpperCase() + "%";
                 listEspecialidade.add(especialidadeRepository.findByNomeEspacialidade(especialidade));
+            }
+            if(listEspecialidade.contains(null)){
+                return null;
             }
             Medico medico = new Medico(medicoForm);
             medico.setEspecialidade(listEspecialidade);

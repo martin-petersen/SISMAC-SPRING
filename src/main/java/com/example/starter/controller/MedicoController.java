@@ -6,6 +6,8 @@ import com.example.starter.model.Especialidade;
 import com.example.starter.model.Medico;
 import com.example.starter.service.MedicoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -29,59 +31,54 @@ public class MedicoController {
     @Autowired
     private MedicoService medicoService;
 
-    @GetMapping("/listar")
-    public ResponseEntity<Page<MedicoDTO>> listarTodos(@PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeMedico")
+    @Cacheable(value = "listaMedicos")
+    @GetMapping
+    public ResponseEntity<Page<MedicoDTO>> listarTodos(@RequestParam(required = false) String nomeEspecialidade,
+                                                       @RequestParam(required = false) String nomeMedico,
+                                                       @RequestParam(required = false) String numeroConselho,
+                                                       @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeMedico")
                                                                    Pageable pageable) {
-        try {
-            List<Medico> medicos = medicoService.listarTodos();
-            Page<MedicoDTO> medicosDTO = converterListToPageMedicoDTO(medicos,pageable);
-            return ResponseEntity.ok(medicosDTO);
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-
-    @GetMapping("/listarPorEspecialidade")
-    public ResponseEntity<Page<MedicoDTO>> listarTodosPorEspecialidade(@RequestParam String nomeEspecialidade,
-                                                       @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeMedico")
-                                                               Pageable pageable) {
-        try {
-            List<Medico> medicos = medicoService.listarPorEspecialidade(new Especialidade(nomeEspecialidade));
-            Page<MedicoDTO> medicosDTO = converterListToPageMedicoDTO(medicos,pageable);
-            return ResponseEntity.ok(medicosDTO);
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-
-    @GetMapping("/listarPorNome")
-    public ResponseEntity<Page<MedicoDTO>> listarPorNome(@RequestParam String nomeMedico,
-                                                       @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeMedico")
-                                                               Pageable pageable) {
-        try {
-            List<Medico> medicos = medicoService.buscarPorNome(new Medico(nomeMedico));
-            Page<MedicoDTO> medicosDTO = converterListToPageMedicoDTO(medicos,pageable);
-            return ResponseEntity.ok(medicosDTO);
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-    @GetMapping("/buscarPorCredenciais")
-    public ResponseEntity<MedicoDTO> buscarPorConselho(@RequestParam String numeroConselho,
-                                                         @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeMedico")
-                                                                 Pageable pageable) {
-        try {
-            Medico medico = new Medico();
-            medico.setNumeroConselho(numeroConselho);
-            MedicoDTO medicoDTO = new MedicoDTO(medicoService.buscarPorNumeroConselho(medico));
-            return ResponseEntity.ok(medicoDTO);
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
+        if(nomeEspecialidade != null) {
+            try {
+                List<Medico> medicos = medicoService.listarPorEspecialidade(new Especialidade(nomeEspecialidade));
+                Page<MedicoDTO> medicosDTO = converterListToPageMedicoDTO(medicos,pageable);
+                return ResponseEntity.ok(medicosDTO);
+            }catch (Exception e) {
+                return ResponseEntity.badRequest().build();
+            }
+        } else if(nomeMedico != null) {
+            try {
+                List<Medico> medicos = medicoService.buscarPorNome(new Medico(nomeMedico));
+                Page<MedicoDTO> medicosDTO = converterListToPageMedicoDTO(medicos,pageable);
+                return ResponseEntity.ok(medicosDTO);
+            }catch (Exception e) {
+                return ResponseEntity.badRequest().build();
+            }
+        } else if(numeroConselho != null) {
+            try {
+                Medico medico = new Medico();
+                medico.setNumeroConselho(numeroConselho);
+                List<Medico> medicoDTO = new ArrayList<>();
+                medicoDTO.add(medicoService.buscarPorNumeroConselho(medico));
+                Page<MedicoDTO> medicosDTO = converterListToPageMedicoDTO(medicoDTO,pageable);
+                return ResponseEntity.ok(medicosDTO);
+            }catch (Exception e) {
+                return ResponseEntity.badRequest().build();
+            }
+        } else {
+            try {
+                List<Medico> medicos = medicoService.listarTodos();
+                Page<MedicoDTO> medicosDTO = converterListToPageMedicoDTO(medicos,pageable);
+                return ResponseEntity.ok(medicosDTO);
+            }catch (Exception e) {
+                return ResponseEntity.badRequest().build();
+            }
         }
     }
 
     @PostMapping
     @Transactional
+    @CacheEvict(value = "listaMedicos", allEntries = true)
     public ResponseEntity<MedicoDTO> cadastrarMedico(@RequestBody @Valid MedicoForm medicoForm,
                                                      UriComponentsBuilder uriComponentsBuilder) {
         try{
@@ -95,6 +92,7 @@ public class MedicoController {
 
     @PutMapping("/atualizarMedico")
     @Transactional
+    @CacheEvict(value = "listaMedicos", allEntries = true)
     public ResponseEntity<MedicoDTO> atualizarMedico(@RequestParam String numeroConselho, @RequestBody @Valid MedicoForm medicoForm) {
         try{
             Medico medico = medicoService.atualizar(numeroConselho, medicoForm);
@@ -106,6 +104,7 @@ public class MedicoController {
 
     @DeleteMapping("/removerMedico")
     @Transactional
+    @CacheEvict(value = "listaMedicos", allEntries = true)
     public ResponseEntity<?> removerMedico(@RequestParam String numeroConselho) {
         try {
             Medico medico = new Medico();

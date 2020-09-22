@@ -3,6 +3,7 @@ package com.example.starter.model;
 import com.example.starter.form.MedicoForm;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 

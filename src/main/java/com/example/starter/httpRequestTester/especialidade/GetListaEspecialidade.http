@@ -1,4 +1,4 @@
-GET http://localhost:8080/especialidades/listar
+GET http://localhost:8080/especialidades
 content-type: application/json
 
 ###
