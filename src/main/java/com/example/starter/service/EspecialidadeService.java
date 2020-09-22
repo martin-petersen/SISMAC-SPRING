@@ -23,6 +23,15 @@ public class EspecialidadeService {
         }
     }
 
+    public Page<Especialidade> buscarPorNome(String nomeEspecialidade, Pageable pageable) {
+        try {
+            String especialidade = "%" + nomeEspecialidade.toUpperCase() + "%";
+            return especialidadeRepository.findByNomeEspacialidade(especialidade, pageable);
+        }catch (Exception e) {
+            return null;
+        }
+    }
+
     public Especialidade buscarPorNome(String nomeEspecialidade) {
         try {
             String especialidade = "%" + nomeEspecialidade.toUpperCase() + "%";

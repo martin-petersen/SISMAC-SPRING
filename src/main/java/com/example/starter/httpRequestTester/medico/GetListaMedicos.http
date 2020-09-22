@@ -1,4 +1,4 @@
-GET http://localhost:8080/medicos/listar
+GET http://localhost:8080/medicos
 content-type: application/json
 
 ###

@@ -1,7 +1,5 @@
 package com.example.starter.service;
 
-import com.example.starter.dto.PacienteDTO;
-import com.example.starter.form.AtualizacaoPacienteFORM;
 import com.example.starter.model.Paciente;
 import com.example.starter.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,17 +70,17 @@ public class PacienteService {
         }
     }
 
-    public PacienteDTO alterar(Paciente paciente) {
+    public Paciente alterar(Paciente paciente) {
         if(paciente == null) {
             return null;
         } else if (pacienteRepository.findByCpf(paciente.getCpf()) != null) {
             Paciente pacienteAtualizado = pacienteRepository.findByCpf(paciente.getCpf());
             pacienteAtualizado.setPacienteUpdate(paciente);
-            return new PacienteDTO(pacienteAtualizado);
+            return pacienteAtualizado;
         } else {
             Paciente pacienteAtualizado = pacienteRepository.findByCarteiraSUS(paciente.getCarteiraSUS());
             pacienteAtualizado.setPacienteUpdate(paciente);
-            return new PacienteDTO(pacienteAtualizado);
+            return pacienteAtualizado;
         }
     }
 }

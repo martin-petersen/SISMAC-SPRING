@@ -8,10 +8,25 @@ import javax.persistence.*;
 public class Role implements GrantedAuthority {
 
     @Id
-    @Enumerated(EnumType.STRING)
-    private PerfilUsuario id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String perfil;
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(String perfil) {
+        this.perfil = perfil;
+    }
 
     @Override
     public String getAuthority() {

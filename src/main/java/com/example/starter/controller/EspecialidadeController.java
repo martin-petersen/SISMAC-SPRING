@@ -1,10 +1,11 @@
 package com.example.starter.controller;
 
-import com.example.starter.dto.EspecialidadeDTO;
 import com.example.starter.form.EspecialidadeFORM;
 import com.example.starter.model.Especialidade;
 import com.example.starter.service.EspecialidadeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -25,28 +26,29 @@ public class EspecialidadeController {
     @Autowired
     private EspecialidadeService especialidadeService;
 
-    @GetMapping("/listar")
-    public ResponseEntity<Page<EspecialidadeDTO>> listarEspecialidades(@PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeEspecialidade")
-                                                                 Pageable pageable) {
-        Page<Especialidade> listaEspecialidades = especialidadeService.buscarTodos(pageable);
-        return ResponseEntity.ok(EspecialidadeDTO.convert(listaEspecialidades));
-    }
-
-    @GetMapping("/buscarNome")
-    public ResponseEntity<EspecialidadeDTO> listarEspecialidades(@RequestParam String nomeEspecialidade) {
-        Especialidade especialidade = especialidadeService.buscarPorNome(nomeEspecialidade);
-        return ResponseEntity.ok(EspecialidadeDTO.convert(especialidade));
+    @Cacheable(value = "listaEspecialidades")
+    @GetMapping
+    public ResponseEntity<Page<Especialidade>> listarEspecialidades(@RequestParam(required = false) String nomeEspecialidade,
+                                                                    @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeEspecialidade") Pageable pageable) {
+        if(nomeEspecialidade != null) {
+            Page<Especialidade> especialidade = especialidadeService.buscarPorNome(nomeEspecialidade, pageable);
+            return ResponseEntity.ok(especialidade);
+        } else {
+            Page<Especialidade> listaEspecialidades = especialidadeService.buscarTodos(pageable);
+            return ResponseEntity.ok(listaEspecialidades);
+        }
     }
 
     @PostMapping
     @Transactional
-    public ResponseEntity<EspecialidadeDTO> cadastrarEspecialidade(@RequestBody @Valid EspecialidadeFORM especialidadeForm,
+    @CacheEvict(value = "listaEspecialidades", allEntries = true)
+    public ResponseEntity<Especialidade> cadastrarEspecialidade(@RequestBody @Valid EspecialidadeFORM especialidadeForm,
                                                                    UriComponentsBuilder uriComponentsBuilder) {
         try{
             especialidadeService.salvar(especialidadeForm.convert());
             Especialidade especialidade = especialidadeService.buscarPorNome(especialidadeForm.getNomeEspecialidade());
             URI uri = uriComponentsBuilder.path("/especialidades/{id}").buildAndExpand(especialidade.getId()).toUri();
-            return ResponseEntity.created(uri).body(EspecialidadeDTO.convert(especialidade));
+            return ResponseEntity.created(uri).body(especialidade);
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
@@ -54,11 +56,12 @@ public class EspecialidadeController {
 
     @PutMapping("/atualizarEspecialidade")
     @Transactional
-    public ResponseEntity<EspecialidadeDTO> atualizarEspecialidade(@RequestParam String nomeEspecialidade,
+    @CacheEvict(value = "listaEspecialidades", allEntries = true)
+    public ResponseEntity<Especialidade> atualizarEspecialidade(@RequestParam String nomeEspecialidade,
                                                                    @RequestBody EspecialidadeFORM especialidadeForm) {
         try {
             Especialidade especialidade = especialidadeService.atualizar(nomeEspecialidade.toUpperCase(), especialidadeForm);
-            return ResponseEntity.ok(EspecialidadeDTO.convert(especialidade));
+            return ResponseEntity.ok(especialidade);
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
@@ -66,6 +69,7 @@ public class EspecialidadeController {
 
     @DeleteMapping("/deletarEspecialidade")
     @Transactional
+    @CacheEvict(value = "listaEspecialidades", allEntries = true)
     public ResponseEntity<?> removerEspecialidade(@RequestParam String nomeEspecialidade) {
         try {
             especialidadeService.remover(nomeEspecialidade.toUpperCase());
