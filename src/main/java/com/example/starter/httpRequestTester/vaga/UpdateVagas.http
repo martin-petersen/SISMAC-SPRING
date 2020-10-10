@@ -1,0 +1,6 @@
+PUT http://localhost:8080/vagas/editarVaga/2
+content-type: application/json
+
+{
+  "novaData": "18/10/2020"
+}

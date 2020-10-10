@@ -19,4 +19,14 @@ public class EmailSender {
         simpleMailMessage.setText("Seu token de validação: " + usuario.getValidateCode());
         javaMailSender.send(simpleMailMessage);
     }
+
+    public void recoverPassword(Usuario usuario, String newPassword) {
+        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+        simpleMailMessage.setTo(usuario.getEmail());
+        simpleMailMessage.setSubject("Recuperação de conta SISMAC");
+        simpleMailMessage.setText("Sua senha atual é: " + newPassword);
+        simpleMailMessage.setText("IMPORTANTE!!!");
+        simpleMailMessage.setText("A senha atual é pouco segura, recomendamos que troque assim que efetuar o próxímo login");
+        javaMailSender.send(simpleMailMessage);
+    }
 }

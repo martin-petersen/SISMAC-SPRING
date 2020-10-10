@@ -1,5 +1,6 @@
 package com.example.starter.controller;
 
+import com.example.starter.dto.EspecialidadeDTO;
 import com.example.starter.form.EspecialidadeFORM;
 import com.example.starter.model.Especialidade;
 import com.example.starter.service.EspecialidadeService;
@@ -17,6 +18,9 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.Iterator;
+import java.util.List;
+import java.util.function.Function;
 
 @CrossOrigin
 @RestController
@@ -28,27 +32,30 @@ public class EspecialidadeController {
 
     @Cacheable(value = "listaEspecialidades")
     @GetMapping
-    public ResponseEntity<Page<Especialidade>> listarEspecialidades(@RequestParam(required = false) String nomeEspecialidade,
+    public ResponseEntity<Page<EspecialidadeDTO>> listarEspecialidades(@RequestParam(required = false) String nomeEspecialidade,
                                                                     @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeEspecialidade") Pageable pageable) {
         if(nomeEspecialidade != null) {
             Page<Especialidade> especialidade = especialidadeService.buscarPorNome(nomeEspecialidade, pageable);
-            return ResponseEntity.ok(especialidade);
+            Page<EspecialidadeDTO> especialidadeDTOS = especialidade.map(EspecialidadeDTO::new);
+            return ResponseEntity.ok(especialidadeDTOS);
         } else {
             Page<Especialidade> listaEspecialidades = especialidadeService.buscarTodos(pageable);
-            return ResponseEntity.ok(listaEspecialidades);
+            Page<EspecialidadeDTO> especialidadeDTOS = listaEspecialidades.map(EspecialidadeDTO::new);
+            return ResponseEntity.ok(especialidadeDTOS);
         }
     }
 
     @PostMapping
     @Transactional
     @CacheEvict(value = "listaEspecialidades", allEntries = true)
-    public ResponseEntity<Especialidade> cadastrarEspecialidade(@RequestBody @Valid EspecialidadeFORM especialidadeForm,
+    public ResponseEntity<EspecialidadeDTO> cadastrarEspecialidade(@RequestBody @Valid EspecialidadeFORM especialidadeForm,
                                                                    UriComponentsBuilder uriComponentsBuilder) {
         try{
             especialidadeService.salvar(especialidadeForm.convert());
             Especialidade especialidade = especialidadeService.buscarPorNome(especialidadeForm.getNomeEspecialidade());
             URI uri = uriComponentsBuilder.path("/especialidades/{id}").buildAndExpand(especialidade.getId()).toUri();
-            return ResponseEntity.created(uri).body(especialidade);
+            EspecialidadeDTO especialidadeDTO = new EspecialidadeDTO(especialidade);
+            return ResponseEntity.created(uri).body(especialidadeDTO);
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }

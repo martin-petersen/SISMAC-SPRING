@@ -1,0 +1,16 @@
+POST http://localhost:8080/exames
+content-type: application/json
+
+{
+  "nomeExame": "Teste"
+}
+
+###
+POST http://localhost:8080/exames
+content-type: application/json
+
+{
+  "nomeExame": "TESTE2"
+}
+
+###

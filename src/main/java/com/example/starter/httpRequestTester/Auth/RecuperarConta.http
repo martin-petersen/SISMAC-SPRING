@@ -1,0 +1,9 @@
+POST http://localhost:8080/auth/recoverPassword
+content-type: application/json
+
+{
+  "email": "petersen.martin.imd@gmail.com",
+  "nome": "martin petersen"
+}
+
+###

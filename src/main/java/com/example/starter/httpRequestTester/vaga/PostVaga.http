@@ -1,0 +1,101 @@
+POST http://localhost:8080/vagas
+content-type: application/json
+
+{
+  "data": "10/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":"cardiologia",
+  "exame": "",
+  "consulta": true
+}
+
+###
+
+POST http://localhost:8080/vagas
+content-type: application/json
+
+{
+  "data": "08/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":"cardiologia",
+  "exame": "",
+  "consulta": true
+}
+
+###
+
+POST http://localhost:8080/vagas
+content-type: application/json
+
+{
+  "data": "14/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":"cardiologia",
+  "exame": "",
+  "consulta": true
+}
+
+###
+
+POST http://localhost:8080/vagas
+content-type: application/json
+
+{
+  "data": "07/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":"cardiologia",
+  "exame": "",
+  "consulta": true
+}
+
+###
+
+POST http://localhost:8080/vagas
+content-type: application/json
+
+{
+  "data": "10/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":"cardiologia",
+  "exame": "teste",
+  "consulta": false
+}
+
+###
+
+POST http://localhost:8080/vagas
+content-type: application/json
+
+{
+  "data": "11/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":"cardiologia",
+  "exame": "teste",
+  "consulta": false
+}
+
+###
+
+POST http://localhost:8080/vagas
+content-type: application/json
+
+{
+  "data": "08/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":"cardiologia",
+  "exame": "teste",
+  "consulta": false
+}
+
+###
+
+POST http://localhost:8080/vagas
+content-type: application/json
+
+{
+  "data": "13/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":"cardiologia",
+  "exame": "teste",
+  "consulta": false
+}

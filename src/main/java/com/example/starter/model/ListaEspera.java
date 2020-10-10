@@ -14,9 +14,10 @@ public class ListaEspera {
     @ManyToOne
     @JoinColumn(name = "especialidade")
     private Especialidade especialidade;
-    @ManyToOne
-    @JoinColumn(name = "procedimento")
-    private Procedimento procedimento;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Exame exame = null;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Consulta consulta = null;
 
     public Long getId() {
         return id;
@@ -50,11 +51,19 @@ public class ListaEspera {
         this.especialidade = especialidade;
     }
 
-    public Procedimento getProcedimento() {
-        return procedimento;
+    public Exame getExame() {
+        return exame;
     }
 
-    public void setProcedimento(Procedimento procedimento) {
-        this.procedimento = procedimento;
+    public void setExame(Exame exame) {
+        this.exame = exame;
+    }
+
+    public Consulta getConsulta() {
+        return consulta;
+    }
+
+    public void setConsulta(Consulta consulta) {
+        this.consulta = consulta;
     }
 }
