@@ -1,0 +1,6 @@
+POST http://localhost:8080/auth/validate/2
+content-type: application/json
+
+{
+  "token" : "oiORC9"
+}

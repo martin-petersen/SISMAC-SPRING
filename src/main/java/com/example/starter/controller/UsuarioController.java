@@ -63,6 +63,19 @@ public class UsuarioController {
         }
     }
 
+    @PutMapping("/vinculo/{id}")
+    @Transactional
+    public ResponseEntity<UsuarioDTO> vincularPaciente(@PathVariable Long id,
+                                                       @RequestParam(required = true) String cpf) {
+        try {
+            Usuario usuario = usuarioService.criarVinculo(id,cpf);
+            UsuarioDTO usuarioDTO = new UsuarioDTO(usuario);
+            return ResponseEntity.ok(usuarioDTO);
+        }catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
     @PutMapping(path = "/{id}")
     @Transactional
     public ResponseEntity<UsuarioDTO> atualizarUser(@PathVariable Long id,
@@ -80,7 +93,7 @@ public class UsuarioController {
         List<UsuarioDTO> listaUsuarios = new ArrayList<>();
         for (Usuario m:
                 usuarios) {
-            listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getId_paciente()));
+            listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getPaciente().getId()));
         }
         return new PageImpl<>(listaUsuarios,pageable,listaUsuarios.size());
     }

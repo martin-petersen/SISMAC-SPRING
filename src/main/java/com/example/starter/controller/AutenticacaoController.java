@@ -44,7 +44,7 @@ public class AutenticacaoController {
                 validate = true;
             }
             String token = tokenService.createToken(authentication);
-            return ResponseEntity.ok(new TokenDTO(token,"Bearer", validate));
+            return ResponseEntity.ok(new TokenDTO(token,"Bearer", validate,usuarioService.getID(authentication)));
         } catch (AuthenticationException authenticationException) {
             return ResponseEntity.badRequest().build();
         }
@@ -56,6 +56,7 @@ public class AutenticacaoController {
                                                    @RequestBody @Valid ValidateTokenFORM validateTokenFORM) {
         Usuario usuario = usuarioService.validate(id,validateTokenFORM);
         if(usuario != null) {
+            usuario.setValidate(true);
             UsuarioDTO usuarioDTO = new UsuarioDTO(usuario);
             return ResponseEntity.ok(usuarioDTO);
         } else {

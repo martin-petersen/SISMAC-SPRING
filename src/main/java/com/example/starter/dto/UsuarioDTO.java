@@ -16,7 +16,8 @@ public class UsuarioDTO {
         this.id = usuario.getId();
         this.username = usuario.getEmail();
         this.nome = usuario.getNome();
-        this.paciente_id = usuario.getId_paciente();
+        this.paciente_id = usuario.getPaciente().getId();
+        this.validate = usuario.isValidate();
     }
 
     public UsuarioDTO(Long id, String username, String nome, Long paciente_id) {

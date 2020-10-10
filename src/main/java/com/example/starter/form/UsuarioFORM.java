@@ -10,6 +10,7 @@ public class UsuarioFORM {
     private String email;
     @NotNull @NotBlank
     private String senha;
+    private String paciente_id;
 
     public String getNome() {
         return nome;
@@ -33,5 +34,13 @@ public class UsuarioFORM {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getPaciente_id() {
+        return paciente_id;
+    }
+
+    public void setPaciente_id(String paciente_id) {
+        this.paciente_id = paciente_id;
     }
 }

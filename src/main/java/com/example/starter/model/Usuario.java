@@ -28,8 +28,8 @@ public class Usuario implements UserDetails {
             inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private List<Role> perfis;
 
-    @Column(name = "paciente_id")
-    private Long id_paciente = null;
+    @ManyToOne
+    private Paciente paciente;
 
     public Usuario() {
 
@@ -89,12 +89,12 @@ public class Usuario implements UserDetails {
         this.perfis = perfis;
     }
 
-    public Long getId_paciente() {
-        return id_paciente;
+    public Paciente getPaciente() {
+        return paciente;
     }
 
-    public void setId_paciente(Long id_paciente) {
-        this.id_paciente = id_paciente;
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
 
     public boolean isValidate() {

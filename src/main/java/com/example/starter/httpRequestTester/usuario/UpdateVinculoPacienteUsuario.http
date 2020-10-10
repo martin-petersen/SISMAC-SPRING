@@ -1,0 +1,2 @@
+PUT http://localhost:8080/user/vinculo/1?cpf=107.375.204-19
+content-type: application/json

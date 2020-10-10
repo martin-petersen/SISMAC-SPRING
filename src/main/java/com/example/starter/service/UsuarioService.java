@@ -4,7 +4,9 @@ import com.example.starter.form.RecuperarUsuarioFORM;
 import com.example.starter.form.UpdateUsuarioFORM;
 import com.example.starter.form.UsuarioFORM;
 import com.example.starter.form.ValidateTokenFORM;
+import com.example.starter.model.Paciente;
 import com.example.starter.model.Usuario;
+import com.example.starter.repository.PacienteRepository;
 import com.example.starter.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -21,6 +23,9 @@ public class UsuarioService {
 
     @Autowired
     private EmailSender emailSender;
+
+    @Autowired
+    private PacienteRepository pacienteRepository;
 
     public List<Usuario> buscarTodos() {
         return usuarioRepository.findAll();
@@ -49,9 +54,13 @@ public class UsuarioService {
         usuario.setSenha(new BCryptPasswordEncoder().encode(usuarioFORM.getSenha()));
         usuario.setValidateCode();
 
+        if(usuarioFORM.getPaciente_id() != null) {
+            Long id = Long.parseLong(usuarioFORM.getPaciente_id());
+            Paciente paciente = pacienteRepository.findById(id).get();
+            usuario.setPaciente(paciente);
+        }
         usuarioRepository.save(usuario);
         emailSender.send(usuario);
-
         return usuario;
     }
 
@@ -59,13 +68,16 @@ public class UsuarioService {
         Usuario usuario = usuarioRepository.findById(id).get();
         if(!updateUsuarioFORM.getNome().equals(usuario.getNome())) {
             usuario.setNome(updateUsuarioFORM.getNome().toUpperCase());
-        } else if(!updateUsuarioFORM.getEmail().equals(usuario.getEmail())) {
+        }
+        if(!updateUsuarioFORM.getEmail().equals(usuario.getEmail())) {
             usuario.setEmail(updateUsuarioFORM.getEmail());
-        } else if(updateUsuarioFORM.getSenha() != null) {
+        }
+        if(updateUsuarioFORM.getSenha() != null) {
             String password = usuario.getPassword();
-            String newPassword = new BCryptPasswordEncoder().encode(updateUsuarioFORM.getSenha());
-            if(!password.equals(newPassword)) {
-                usuario.setSenha(new BCryptPasswordEncoder().encode(updateUsuarioFORM.getSenha()));
+            String newPassword = updateUsuarioFORM.getSenha();
+            boolean isMatch = new BCryptPasswordEncoder().matches(newPassword,password);
+            if(!isMatch) {
+                usuario.setSenha(new BCryptPasswordEncoder().encode(newPassword));
             }
         }
         usuarioRepository.save(usuario);
@@ -111,6 +123,18 @@ public class UsuarioService {
         } else {
             return null;
         }
+        return usuario;
+    }
+
+    public Long getID(Authentication authentication) {
+        Usuario logado = (Usuario) authentication.getPrincipal();
+        return logado.getId();
+    }
+
+    public Usuario criarVinculo(Long id, String cpf) {
+        Usuario usuario = usuarioRepository.findById(id).get();
+        Paciente paciente = pacienteRepository.findByCpf(cpf);
+        usuario.setPaciente(paciente);
         return usuario;
     }
 }

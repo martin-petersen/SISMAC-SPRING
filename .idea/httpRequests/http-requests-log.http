@@ -1,43 +1,677 @@
-PUT http://localhost:8080/vagas/editarVaga/2
+GET http://localhost:8080/user?email=petersen.martin.imd@gmail.com
+content-type: application/json
+
+<> 2020-10-10T071805.200.json
+
+###
+
+GET http://localhost:8080/user?nome=MIRO
+content-type: application/json
+
+<> 2020-10-10T071800.200.json
+
+###
+
+GET http://localhost:8080/user
+content-type: application/json
+
+<> 2020-10-10T071625.200.json
+
+###
+
+POST http://localhost:8080/auth
 content-type: application/json
 
 {
-  "novaData": "18/10/2020"
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "123456"
 }
 
-<> 2020-10-10T051959.200.json
+<> 2020-10-10T070900.200.json
 
 ###
 
-POST http://localhost:8080/vagas/editarVaga/2
+POST http://localhost:8080/auth
 content-type: application/json
 
 {
-  "novaData": "18/10/2020"
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "20121042060301"
 }
 
-<> 2020-10-10T051945.405.json
+###
+
+PUT http://localhost:8080/user/1
+content-type: application/json
+
+{
+  "nome": "Miro das Candongas",
+  "email" : "petersen.martin.imd@gmail.com",
+  "senha" : "123456"
+}
+
+<> 2020-10-10T070848.200.json
 
 ###
 
-GET http://localhost:8080/vagas?nomeExame=teste&consulta=false
+PUT http://localhost:8080/user/vinculo/1?cpf=107.375.204-19
 content-type: application/json
 
-<> 2020-10-10T051420.200.json
+<> 2020-10-10T070813.200.json
 
 ###
 
-GET http://localhost:8080/vagas?consulta=true
+POST http://localhost:8080/pacientes
 content-type: application/json
 
-<> 2020-10-10T051316.200.json
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "107.375.204-16",
+  "carteiraSUS": "999999-5",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T070633-4.201.json
 
 ###
 
-GET http://localhost:8080/vagas?consulta=false
+POST http://localhost:8080/pacientes
 content-type: application/json
 
-<> 2020-10-10T051259.200.json
+{
+  "nome": "Kandell Oliveira",
+  "cpf": "107.375.204-17",
+  "carteiraSUS": "999999-6",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T070633-3.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "José Augusto do Nascimento",
+  "cpf": "107.375.204-18",
+  "carteiraSUS": "999999-7",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+
+}
+
+<> 2020-10-10T070633-2.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "107.375.204-19",
+  "carteiraSUS": "999999-8",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T070633-1.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T070633.201.json
+
+###
+
+GET http://localhost:8080/pacientes
+content-type: application/json
+
+<> 2020-10-10T064843.200.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "107.375.204-16",
+  "carteiraSUS": "999999-5",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T064832-4.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Kandell Oliveira",
+  "cpf": "107.375.204-17",
+  "carteiraSUS": "999999-6",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T064832-3.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "José Augusto do Nascimento",
+  "cpf": "107.375.204-18",
+  "carteiraSUS": "999999-7",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+
+}
+
+<> 2020-10-10T064832-2.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "107.375.204-19",
+  "carteiraSUS": "999999-8",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T064832-1.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T064832.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "123456"
+}
+
+<> 2020-10-10T063647.200.json
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "20121042060301"
+}
+
+###
+
+PUT http://localhost:8080/user/1
+content-type: application/json
+
+{
+  "nome": "Miro das Candongas",
+  "email" : "petersen.martin.imd@gmail.com",
+  "senha" : "123456"
+}
+
+<> 2020-10-10T063622.200.json
+
+###
+
+PUT http://localhost:8080/user/1
+content-type: application/json
+
+{
+  "nome": "Miro das Candongas",
+  "email" : "petersen.martin.imd@gmail.com",
+  "senha" : "123456"
+}
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "20121042060301"
+}
+
+<> 2020-10-10T062859.200.json
+
+###
+
+PUT http://localhost:8080/user/1
+content-type: application/json
+
+{
+  "nome": "Miro das Candongas",
+  "email" : "petersen.martin.imd@gmail.com",
+  "senha" : "123456"
+}
+
+<> 2020-10-10T062843.200.json
+
+###
+
+PUT http://localhost:8080/user/1
+content-type: application/json
+
+{
+  "nome": "Miro das Candongas",
+  "email" : "petersen.martin.imd@gmail.com",
+  "senha" : "123456"
+}
+
+<> 2020-10-10T062633.200.json
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "20121042060301"
+}
+
+<> 2020-10-10T062442.200.json
+
+###
+
+PUT http://localhost:8080/user/1
+content-type: application/json
+
+{
+  "nome": "Miro das Candongas",
+  "email" : "petersen.martin.imd@gmail.com",
+  "senha" : "123456"
+}
+
+<> 2020-10-10T062411.200.json
+
+###
+
+PUT http://localhost:8080/user/2
+content-type: application/json
+
+{
+  "nome": "Miro das Candongas",
+  "email" : "petersen.martin.imd@gmail.com",
+  "senha" : "123456"
+}
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "20121042060301"
+}
+
+<> 2020-10-10T062348.200.json
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "martinrpetersen171@gmail.com",
+  "password": "987654321"
+}
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "martinrpetersen171@gmail.com",
+  "password": "123456"
+}
+
+<> 2020-10-10T061225.200.json
+
+###
+
+PUT http://localhost:8080/user/2
+content-type: application/json
+
+{
+  "nome": "Miro das Candongas",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "987654321"
+}
+
+<> 2020-10-10T061211.200.json
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "martinrpetersen171@gmail.com",
+  "password": "123456"
+}
+
+<> 2020-10-10T060856.200.json
+
+###
+
+POST http://localhost:8080/auth/validate/2
+content-type: application/json
+
+{
+  "token" : "oiORC9"
+}
+
+<> 2020-10-10T060833.200.json
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "martinrpetersen171@gmail.com",
+  "password": "123456"
+}
+
+<> 2020-10-10T060707.200.json
+
+###
+
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "nome": "Maria Petersen",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "123456"
+}
+
+<> 2020-10-10T060454.201.json
+
+###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "20121042060301"
+}
+
+<> 2020-10-10T060404.200.json
+
+###
+
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "nome": "Maria Nercy",
+  "email" : "marrysouza2@gmail.com",
+  "senha" : "123456"
+}
+
+<> 2020-10-10T055520.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Ronaldinho",
+  "conselho": "CRM",
+  "numeroConselho": "5454",
+  "especialidades": ["neurologia","pediatria"]
+}
+
+<> 2020-10-10T054904-2.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Ronaldinho Gaúcho",
+  "conselho": "CRM",
+  "numeroConselho": "4488",
+  "especialidades": ["pediatria"]
+}
+
+<> 2020-10-10T054904-1.201.json
+
+###
+
+POST http://localhost:8080/medicos
+content-type: application/json
+
+{
+  "nomeMedico": "Martin Petersen",
+  "conselho": "CRM",
+  "numeroConselho": "4442",
+  "especialidades": ["neurologia"]
+}
+
+<> 2020-10-10T054904.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "107.375.204-16",
+  "carteiraSUS": "999999-5",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T054859-4.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Kandell Oliveira",
+  "cpf": "107.375.204-17",
+  "carteiraSUS": "999999-6",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T054859-3.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "José Augusto do Nascimento",
+  "cpf": "107.375.204-18",
+  "carteiraSUS": "999999-7",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+
+}
+
+<> 2020-10-10T054859-2.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Maria das Virgens Souza",
+  "cpf": "107.375.204-19",
+  "carteiraSUS": "999999-8",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T054859-1.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-10T054859.201.json
 
 ###
 
@@ -52,571 +686,7 @@ content-type: application/json
   "consulta": false
 }
 
-<> 2020-10-10T051217-7.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "08/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-<> 2020-10-10T051217-6.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "11/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-<> 2020-10-10T051217-5.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "10/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-<> 2020-10-10T051217-4.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "07/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T051217-3.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "14/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T051217-2.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "08/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T051217-1.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "10/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T051217.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2"
-}
-
-<> 2020-10-10T051214-1.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "Teste"
-}
-
-<> 2020-10-10T051214.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "11/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "11/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "13/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "08/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "11/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "10/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "07/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T050835-3.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "14/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T050835-2.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "08/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T050835-1.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "10/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T050835.201.json
-
-###
-
-GET http://localhost:8080/vagas?consulta=true
-content-type: application/json
-
-<> 2020-10-10T050049.200.json
-
-###
-
-GET http://localhost:8080/vagas?consulta=false
-content-type: application/json
-
-<> 2020-10-10T050026.200.json
-
-###
-
-GET http://localhost:8080/vagas
-content-type: application/json
-
-<> 2020-10-10T050005.400.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-<> 2020-10-10T045731.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T045715.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2"
-}
-
-<> 2020-10-10T045702-1.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "Teste"
-}
-
-<> 2020-10-10T045702.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2"
-}
-
-<> 2020-10-10T045321-1.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "Teste"
-}
-
-<> 2020-10-10T045321.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "teste",
-  "consulta": false
-}
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2"
-}
-
-<> 2020-10-10T045134-1.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "Teste"
-}
-
-<> 2020-10-10T045134.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T045112.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T041918.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T041705.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T041412.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-
-  "vagasOfertadas": "10",
-  "especialidade":"cardiologia",
-  "exame": "",
-  "consulta": true
-}
-
-<> 2020-10-10T041230.201.json
-
-###
-
-DELETE http://localhost:8080/exames?id=1
-content-type: application/json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2"
-}
-
-<> 2020-10-10T040636-1.201.json
+<> 2020-10-10T054302.201.json
 
 ###
 

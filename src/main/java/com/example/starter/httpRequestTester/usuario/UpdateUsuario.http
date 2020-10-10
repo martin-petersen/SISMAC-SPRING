@@ -1,0 +1,8 @@
+PUT http://localhost:8080/user/1
+content-type: application/json
+
+{
+  "nome": "Miro das Candongas",
+  "email" : "petersen.martin.imd@gmail.com",
+  "senha" : "123456"
+}
