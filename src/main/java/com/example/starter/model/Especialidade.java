@@ -1,6 +1,7 @@
 package com.example.starter.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -10,8 +11,11 @@ public class Especialidade {
     private Long id;
     @Column(unique = true, name = "especialidade")
     private String nomeEspecialidade;
-    @ManyToMany(mappedBy = "especialidades")
-    private List<Procedimento> procedimentos;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "especialidade_consulta",
+            joinColumns = {@JoinColumn(name = "especialidade_id")},
+            inverseJoinColumns = {@JoinColumn(name = "consulta_id")})
+    private List<Consulta> consultas = new ArrayList<>();
     @ManyToMany(mappedBy = "especialidades")
     private List<Medico> medicos;
 
@@ -50,12 +54,16 @@ public class Especialidade {
         this.nomeEspecialidade = nomeEspecialidade;
     }
 
-    public List<Procedimento> getProcedimentos() {
-        return procedimentos;
+    public List<Consulta> getConsultas() {
+        return consultas;
     }
 
-    public void setProcedimentos(List<Procedimento> procedimentos) {
-        this.procedimentos = procedimentos;
+    public void setCosultas(List<Consulta> cosultas) {
+        this.consultas = cosultas;
+    }
+
+    public void setCosulta(Consulta cosulta) {
+        this.consultas.add(cosulta);
     }
 
     public List<Medico> getMedicos() {

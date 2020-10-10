@@ -2,9 +2,10 @@ package com.example.starter.model;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
-public class Vagas {
+public class Vaga {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,7 +14,9 @@ public class Vagas {
     @ManyToOne(cascade = CascadeType.ALL)
     private Especialidade especialidade;
     @ManyToOne(cascade = CascadeType.ALL)
-    private Procedimento procedimento;
+    private Exame exame = null;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Consulta consulta = null;
 
     public Long getId() {
         return id;
@@ -37,5 +40,29 @@ public class Vagas {
 
     public void setVagas(Integer vagas) {
         this.vagas = vagas;
+    }
+
+    public Especialidade getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(Especialidade especialidade) {
+        this.especialidade = especialidade;
+    }
+
+    public Exame getExame() {
+        return exame;
+    }
+
+    public void setExame(Exame exame) {
+        this.exame = exame;
+    }
+
+    public Consulta getConsulta() {
+        return consulta;
+    }
+
+    public void setConsulta(Consulta consulta) {
+        this.consulta = consulta;
     }
 }

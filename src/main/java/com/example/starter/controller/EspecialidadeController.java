@@ -1,5 +1,6 @@
 package com.example.starter.controller;
 
+import com.example.starter.dto.EspecialidadeDTO;
 import com.example.starter.form.EspecialidadeFORM;
 import com.example.starter.model.Especialidade;
 import com.example.starter.service.EspecialidadeService;
@@ -42,13 +43,14 @@ public class EspecialidadeController {
     @PostMapping
     @Transactional
     @CacheEvict(value = "listaEspecialidades", allEntries = true)
-    public ResponseEntity<Especialidade> cadastrarEspecialidade(@RequestBody @Valid EspecialidadeFORM especialidadeForm,
+    public ResponseEntity<EspecialidadeDTO> cadastrarEspecialidade(@RequestBody @Valid EspecialidadeFORM especialidadeForm,
                                                                    UriComponentsBuilder uriComponentsBuilder) {
         try{
             especialidadeService.salvar(especialidadeForm.convert());
             Especialidade especialidade = especialidadeService.buscarPorNome(especialidadeForm.getNomeEspecialidade());
             URI uri = uriComponentsBuilder.path("/especialidades/{id}").buildAndExpand(especialidade.getId()).toUri();
-            return ResponseEntity.created(uri).body(especialidade);
+            EspecialidadeDTO especialidadeDTO = new EspecialidadeDTO(especialidade);
+            return ResponseEntity.created(uri).body(especialidadeDTO);
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }

@@ -7,3 +7,11 @@ content-type: application/json
 }
 
 ###
+
+POST http://localhost:8080/auth
+content-type: application/json
+
+{
+  "username": "petersen.martin.imd@gmail.com",
+  "password": "moc.liamg@dmi.nitram.nesretep"
+}

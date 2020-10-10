@@ -5,138 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_12_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_12_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_18_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_1_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_2_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/StarterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/StarterApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/AutenticacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/AutenticacaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/EspecialidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/EspecialidadeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/MedicoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/MedicoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/PacienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/ProcedimentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/ProcedimentoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/PacienteDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/ProcedimentoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/GetEspecialidadePorNome.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/GetEspecialidadePorNome.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/GetListaEspecialidade.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/GetListaEspecialidade.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/UpdateEspecialidade.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/UpdateEspecialidade.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/medico/GetListaMedicos.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/medico/GetListaMedicos.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/medico/GetPorEspecialidade.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/medico/GetPorEspecialidade.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/medico/GetPorNome.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/medico/GetPorNome.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/procedimento/GetListaProcedimentos.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/procedimento/GetListaProcedimentos.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Medico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Medico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/PerfilUsuario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/EspecialidadeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/EspecialidadeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/ProcedimentoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/AtualizacaoProcedimentoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/DetalhamentoProcedimentoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/TokenDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/TokenDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/error/ErrorFile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/form/AtualizacaoProcedimentoForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/form/ProcedimentoForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Autenticação.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Autenticação.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Agendamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Agendamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Especialidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Especialidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/ListaEspera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/ListaEspera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Procedimento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Vagas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Vaga.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/ProcedimentoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/VagasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/VagaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EmailSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/MedicoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/MedicoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/PacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/PacienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/starter/StarterApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/starter/StarterApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/StarterApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/StarterApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/ProcedimentoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/config/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/controller/PacienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/controller/PacienteController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/dto/PacienteDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/model/PerfilUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/model/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/repository/EspecialidadeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/repository/EspecialidadeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/repository/UsuarioRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/model/Agendamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/model/Agendamento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/model/Especialidade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/model/Especialidade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/model/ListaEspera.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/model/ListaEspera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/model/Procedimento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/repository/ProcedimentoRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/service/EspecialidadeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/service/EspecialidadeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/service/PacienteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/service/PacienteService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,8 +62,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="HTTP Request" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -173,7 +74,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Users\marti\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+        <option name="mavenHome" value="$USER_HOME$/.m2/wrapper/dists/apache-maven-3.6.3-bin/1iopthnavndlasol9gbrbg6bf2/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -199,21 +100,403 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTTP Request" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../curso-spring-boot-master/curso-spring-boot-master" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.starter.form" />
       <recent name="com.example.starter.dto" />
+      <recent name="com.example.starter.service" />
+      <recent name="com.example.starter.form" />
       <recent name="com.example.starter.config" />
     </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/auth" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;username&quot;: &quot;petersen.martin.imd@gmail.com&quot;,&#10;  &quot;password&quot;: &quot;moc.liamg@dmi.nitram.nesretep&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/auth" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;username&quot;: &quot;petersen.martin.imd@gmail.com&quot;,&#10;  &quot;password&quot;: &quot;20121042060301&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/auth/recoverPassword" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;petersen.martin.imd@gmail.com&quot;,&#10;  &quot;nome&quot;: &quot;martin petersen&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/recoverPassword" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;petersen.martin.imd@gmail.com&quot;,&#10;  &quot;nome&quot;: &quot;martin petersen&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/especialidades" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nomeEspecialidade&quot;: &quot;pediatria&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/especialidades" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;nomeEspecialidade&quot;: &quot;neurologia&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Martin Rocha Petersen&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-16&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-5&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;,&#10;  &quot;numero&quot;: &quot;160&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Kandell Oliveira&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-17&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-6&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;,&#10;  &quot;numero&quot;: &quot;160&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;José Augusto do Nascimento&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-18&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-7&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;,&#10;  &quot;numero&quot;: &quot;160&quot;&#10;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Maria das Virgens Souza&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-19&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-8&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;,&#10;  &quot;numero&quot;: &quot;160&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/pacientes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Martin Rocha Petersen&quot;,&#10;  &quot;cpf&quot;: &quot;794.897.370-2&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-9&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;,&#10;  &quot;numero&quot;: &quot;160&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/procedimentos" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/procedimentos" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nomeProcedimento&quot;: &quot;TESTE2&quot;,&#10;  &quot;especialidadesId&quot;: [1]&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/procedimentos" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nomeProcedimento&quot;: &quot;Teste&quot;,&#10;  &quot;especialidadesId&quot;: [1,2]&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -286,60 +569,6 @@
             </list>
           </option>
           <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Martin Rocha Petersen&quot;,&#10;  &quot;cpf&quot;: &quot;794.897.370-2&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-9&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;,&#10;  &quot;numero&quot;: &quot;160&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/auth" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;username&quot;: &quot;petersen.martin.imd@gmail.com&quot;,&#10;  &quot;password&quot;: &quot;20121042060301&quot;&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -1402,361 +1631,12 @@
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="nome" />
-                <option name="value" value="martin" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="cpf" />
-                <option name="value" value="107.375.204-18" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="PUT" />
-          <option name="urlBase" value="http://localhost:8080/pacientes/atualizarCadastro" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Maria das Virgens Souza&quot;,&#10;  &quot;cpf&quot;: &quot;794.897.370-00&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-8&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="PUT" />
-          <option name="urlBase" value="http://localhost:8080/pacientes/atualizarCadastro" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Maria das Virgens Souza&quot;,&#10;  &quot;cpf&quot;: &quot;cpf&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-6&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="PUT" />
-          <option name="urlBase" value="http://localhost:8080/pacientes/atualizarCadastro" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Martin Petersen&quot;,&#10;  &quot;cpf&quot;: &quot;794.897.370-2&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;sus&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Martin Rocha Petersen&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-16&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-5&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Kandell Oliveira&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-17&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-6&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;José Augusto do Nascimento&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-18&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-7&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;&#10;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Maria das Virgens Souza&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-19&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-8&quot;,&#10;  &quot;cidade&quot;: &quot;Natal&quot;,&#10;  &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;  &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;  &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;  &quot;telefone&quot;: &quot;(84)99678-4853&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="  {&#10;    &quot;nome&quot;: &quot;Martin Rocha Petersen&quot;,&#10;    &quot;cpf&quot;: &quot;794.897.370-2&quot;,&#10;    &quot;carteiraSUS&quot;: &quot;999999-9&quot;,&#10;    &quot;cidade&quot;: &quot;Natal&quot;,&#10;    &quot;bairro&quot;: &quot;Pajuçara&quot;,&#10;    &quot;complemento&quot;: &quot;Casa de primeiro andar&quot;,&#10;    &quot;dataNascimento&quot;: &quot;21/06/1996&quot;,&#10;    &quot;telefone&quot;: &quot;(84)99678-4853&quot;&#10;  }" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/pacientes" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;Maria das Virgens Souza&quot;,&#10;  &quot;cpf&quot;: &quot;107.375.204-19&quot;,&#10;  &quot;carteiraSUS&quot;: &quot;999999-8&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="2F2FC98E583BF7399DCC3148B3B33C40" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="PUT" />
-          <option name="urlBase" value="http://localhost:8080/medicos/atualizarMedico" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="numeroConselho" />
-                <option name="value" value="4442" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nomeMedico&quot;: &quot;Elsie Petersen&quot;,&#10;  &quot;conselho&quot;: &quot;CRM&quot;,&#10;  &quot;numeroConselho&quot;: &quot;4442&quot;,&#10;  &quot;especialidades&quot;: [&quot;neurologia&quot;, &quot;pediatria&quot;]&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.StarterApplication">
-    <configuration name="Usuario" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.starter.model.Usuario" />
+    <configuration name="Vagas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.starter.model.Vagas" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
@@ -1768,43 +1648,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in PostPaciente" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/PostPaciente.http">
+    <configuration name="All in Autenticação" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Autenticação.http">
       <method v="2" />
     </configuration>
     <configuration name="Autenticação#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Autenticação.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="PostPaciente#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/paciente/PostPaciente.http" runType="Run single request">
+    <configuration name="Autenticação#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Autenticação.http" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="StarterApplicationTests.enviarEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.starter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.starter" />
-      <option name="MAIN_CLASS_NAME" value="com.example.starter.StarterApplicationTests" />
-      <option name="METHOD_NAME" value="enviarEmail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="PostEspecialidade#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/PostEspecialidade.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="RecuperarConta#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/RecuperarConta.http" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="StarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
@@ -1815,11 +1672,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StarterApplicationTests.enviarEmail" />
-        <item itemvalue="Application.Usuario" />
-        <item itemvalue="HTTP Request.PostPaciente#1" />
+        <item itemvalue="Application.Vagas" />
+        <item itemvalue="HTTP Request.Autenticação#2" />
         <item itemvalue="HTTP Request.Autenticação#1" />
-        <item itemvalue="HTTP Request.All in PostPaciente" />
+        <item itemvalue="HTTP Request.RecuperarConta#1" />
+        <item itemvalue="HTTP Request.PostEspecialidade#2" />
       </list>
     </recent_temporary>
   </component>
@@ -1851,7 +1708,17 @@
       <workItem from="1600651937902" duration="1579000" />
       <workItem from="1600688471718" duration="4048000" />
       <workItem from="1600719692797" duration="23159000" />
-      <workItem from="1600773082724" duration="17194000" />
+      <workItem from="1600773082724" duration="19484000" />
+      <workItem from="1600854278360" duration="4034000" />
+      <workItem from="1600893287001" duration="946000" />
+      <workItem from="1600894238955" duration="241000" />
+      <workItem from="1600894506550" duration="1468000" />
+      <workItem from="1600902630295" duration="480000" />
+      <workItem from="1600956449395" duration="598000" />
+      <workItem from="1601424595902" duration="283000" />
+      <workItem from="1602206496156" duration="15191000" />
+      <workItem from="1602306723370" duration="687000" />
+      <workItem from="1602339045673" duration="2264000" />
     </task>
     <servers />
   </component>
@@ -1859,78 +1726,82 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1600798469405">
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1602217771327">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1600798469405" />
-    <state x="413" y="145" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1600779845693">
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1602217771327" />
+    <state x="413" y="145" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1602339279116">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="145" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1600779845693" />
-    <state x="239" y="293" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600637452100">
+    <state x="413" y="145" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1602339279116" />
+    <state x="239" y="293" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1602219843137">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="239" y="293" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1600637452100" />
-    <state x="466" y="238" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1600635764762">
+    <state x="239" y="293" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1602219843137" />
+    <state x="466" y="238" width="447" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1602209044722">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="466" y="238" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.738@0.0.1366.738" timestamp="1600635764762" />
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600793605355">
+    <state x="466" y="238" width="447" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.738@0.0.1366.738" timestamp="1602209044722" />
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602211285652">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1600793605355" />
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1602211285652" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1600746856573">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1600746856573" />
-    <state width="1323" height="383" key="GridCell.Tab.0.bottom" timestamp="1600797355952">
+    <state width="1323" height="240" key="GridCell.Tab.0.bottom" timestamp="1602310941991">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="383" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1600797355952" />
-    <state width="1323" height="383" key="GridCell.Tab.0.center" timestamp="1600797355952">
+    <state width="1323" height="240" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602310941991" />
+    <state width="1323" height="240" key="GridCell.Tab.0.center" timestamp="1602310941990">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="383" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1600797355952" />
-    <state width="1323" height="383" key="GridCell.Tab.0.left" timestamp="1600797355952">
+    <state width="1323" height="240" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1602310941990" />
+    <state width="1323" height="240" key="GridCell.Tab.0.left" timestamp="1602310941990">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="383" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1600797355952" />
-    <state width="1323" height="383" key="GridCell.Tab.0.right" timestamp="1600797355952">
+    <state width="1323" height="240" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1602310941990" />
+    <state width="1323" height="240" key="GridCell.Tab.0.right" timestamp="1602310941990">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="383" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1600797355952" />
-    <state width="1323" height="383" key="GridCell.Tab.1.bottom" timestamp="1600797355952">
+    <state width="1323" height="240" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1602310941990" />
+    <state width="1323" height="240" key="GridCell.Tab.1.bottom" timestamp="1602310941991">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="383" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1600797355952" />
-    <state width="1323" height="383" key="GridCell.Tab.1.center" timestamp="1600797355952">
+    <state width="1323" height="240" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602310941991" />
+    <state width="1323" height="240" key="GridCell.Tab.1.center" timestamp="1602310941991">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="383" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1600797355952" />
-    <state width="1323" height="383" key="GridCell.Tab.1.left" timestamp="1600797355952">
+    <state width="1323" height="240" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1602310941991" />
+    <state width="1323" height="240" key="GridCell.Tab.1.left" timestamp="1602310941991">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="383" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1600797355952" />
-    <state width="1323" height="383" key="GridCell.Tab.1.right" timestamp="1600797355952">
+    <state width="1323" height="240" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1602310941991" />
+    <state width="1323" height="240" key="GridCell.Tab.1.right" timestamp="1602310941991">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="383" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1600797355952" />
-    <state width="1323" height="227" key="GridCell.Tab.2.bottom" timestamp="1600746815214">
+    <state width="1323" height="240" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1602310941991" />
+    <state width="1323" height="226" key="GridCell.Tab.2.bottom" timestamp="1602219536689">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1600746815214" />
-    <state width="1323" height="227" key="GridCell.Tab.2.center" timestamp="1600746815214">
+    <state width="1323" height="226" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602219536689" />
+    <state width="1323" height="226" key="GridCell.Tab.2.center" timestamp="1602219536689">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1600746815214" />
-    <state width="1323" height="227" key="GridCell.Tab.2.left" timestamp="1600746815214">
+    <state width="1323" height="226" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1602219536689" />
+    <state width="1323" height="226" key="GridCell.Tab.2.left" timestamp="1602219536689">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1600746815214" />
-    <state width="1323" height="227" key="GridCell.Tab.2.right" timestamp="1600746815214">
+    <state width="1323" height="226" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1602219536689" />
+    <state width="1323" height="226" key="GridCell.Tab.2.right" timestamp="1602219536689">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1600746815214" />
+    <state width="1323" height="226" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1602219536689" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1602215463915">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1602215463915" />
     <state x="468" y="66" key="VCS.ChangeListViewerDialog" timestamp="1600652856285">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1947,5 +1818,17 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="478" y="116" key="refactoring.ChangeSignatureDialog/0.0.1366.738@0.0.1366.738" timestamp="1600737739169" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/starter/controller/AutenticacaoController.java</url>
+          <line>67</line>
+          <properties class="com.example.starter.controller.AutenticacaoController" method="recover" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,11 +1,13 @@
 package com.example.starter.service;
 
+import com.example.starter.form.RecuperarUsuarioFORM;
 import com.example.starter.form.UpdateUsuarioFORM;
 import com.example.starter.form.UsuarioFORM;
 import com.example.starter.form.ValidateTokenFORM;
 import com.example.starter.model.Usuario;
 import com.example.starter.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -42,7 +44,7 @@ public class UsuarioService {
 
     public Usuario salvar(UsuarioFORM usuarioFORM) {
         Usuario usuario = new Usuario();
-        usuario.setNome(usuarioFORM.getNome());
+        usuario.setNome(usuarioFORM.getNome().toUpperCase());
         usuario.setEmail(usuarioFORM.getEmail());
         usuario.setSenha(new BCryptPasswordEncoder().encode(usuarioFORM.getSenha()));
         usuario.setValidateCode();
@@ -56,7 +58,7 @@ public class UsuarioService {
     public Usuario alterarUser(Long id, UpdateUsuarioFORM updateUsuarioFORM) {
         Usuario usuario = usuarioRepository.findById(id).get();
         if(!updateUsuarioFORM.getNome().equals(usuario.getNome())) {
-            usuario.setNome(updateUsuarioFORM.getNome());
+            usuario.setNome(updateUsuarioFORM.getNome().toUpperCase());
         } else if(!updateUsuarioFORM.getEmail().equals(usuario.getEmail())) {
             usuario.setEmail(updateUsuarioFORM.getEmail());
         } else if(updateUsuarioFORM.getSenha() != null) {
@@ -88,5 +90,27 @@ public class UsuarioService {
         } else {
             return null;
         }
+    }
+
+    public boolean authenticated(Authentication authentication) {
+        Usuario logado = (Usuario) authentication.getPrincipal();
+        if(logado.isValidate())
+            return true;
+        else
+            return false;
+    }
+
+    public Usuario recuperarSenha(RecuperarUsuarioFORM recuperarUsuarioFORM) {
+        List<Usuario> usuarios = usuarioRepository.findByEmail(recuperarUsuarioFORM.getEmail());
+        Usuario usuario = usuarios.get(0);
+        if(usuario.getNome().equals(recuperarUsuarioFORM.getNome().toUpperCase())) {
+            String newPassword = new StringBuffer(recuperarUsuarioFORM.getEmail()).reverse().toString();
+            usuario.setSenha(new BCryptPasswordEncoder().encode(newPassword));
+            usuarioRepository.save(usuario);
+            emailSender.recoverPassword(usuario,newPassword);
+        } else {
+            return null;
+        }
+        return usuario;
     }
 }
