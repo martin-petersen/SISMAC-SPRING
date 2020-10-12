@@ -57,7 +57,8 @@ public class UsuarioController {
         try {
             Usuario usuario = usuarioService.salvar(usuarioFORM);
             URI uri = uriComponentsBuilder.path("/user/{id}").buildAndExpand(usuario.getId()).toUri();
-            return ResponseEntity.created(uri).body(new UsuarioDTO(usuario));
+            UsuarioDTO usuarioDTO = new UsuarioDTO(usuario.getId(),usuario.getEmail(),usuario.getNome(),usuario.isValidate());
+            return ResponseEntity.created(uri).body(usuarioDTO);
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
@@ -89,15 +90,6 @@ public class UsuarioController {
         }
     }
 
-    private Page<UsuarioDTO> converterListToPageUsuarioDTO(List<Usuario> usuarios, Pageable pageable) {
-        List<UsuarioDTO> listaUsuarios = new ArrayList<>();
-        for (Usuario m:
-                usuarios) {
-            listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getPaciente().getId()));
-        }
-        return new PageImpl<>(listaUsuarios,pageable,listaUsuarios.size());
-    }
-
     @DeleteMapping(path = "/{id}")
     @Transactional
     public ResponseEntity<?> removerUser(@PathVariable Long id) {
@@ -107,5 +99,14 @@ public class UsuarioController {
         } else {
             return ResponseEntity.badRequest().build();
         }
+    }
+
+    private Page<UsuarioDTO> converterListToPageUsuarioDTO(List<Usuario> usuarios, Pageable pageable) {
+        List<UsuarioDTO> listaUsuarios = new ArrayList<>();
+        for (Usuario m:
+                usuarios) {
+            listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getPaciente().getId()));
+        }
+        return new PageImpl<>(listaUsuarios,pageable,listaUsuarios.size());
     }
 }

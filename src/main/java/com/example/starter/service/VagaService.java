@@ -64,7 +64,7 @@ public class VagaService {
             if(v.getConsulta() != null) {
                 vagaDTOList.add(new VagaDTO(v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getEspecialidade(),v.getConsulta()));
             } else {
-                vagaDTOList.add(new VagaDTO(v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getEspecialidade(),v.getExame()));
+                vagaDTOList.add(new VagaDTO(v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getExame()));
             }
         }
         return new PageImpl<>(vagaDTOList,pageable,vagaDTOList.size());
@@ -78,27 +78,19 @@ public class VagaService {
         if (vagaFORM.isConsulta()) {
             Consulta consulta = consultaRepository.findById(Long.parseLong("1")).get();
             novaVaga.setConsulta(consulta);
-        } else {
-            try {
-                List<Exame> exames = exameRepository.findByNomeExame(vagaFORM.getExame().toUpperCase());
-                if (exames.isEmpty())
-                    return null;
-                for (Exame e:
-                     exames) {
-                    if(e.getNomeExame().equals(vagaFORM.getExame().toUpperCase()))
-                        novaVaga.setExame(e);
-                    else
-                        return null;
-                }
-            } catch (Exception e) {
+            if(especialidadeRepository.findById(vagaFORM.getEspecialidade()).isPresent()) {
+                Especialidade especialidade = especialidadeRepository.findById(vagaFORM.getEspecialidade()).get();
+                novaVaga.setEspecialidade(especialidade);
+            } else {
                 return null;
             }
-        }
-        try {
-            Especialidade especialidade = especialidadeRepository.findByNomeEspacialidade(vagaFORM.getEspecialidade().toUpperCase());
-            novaVaga.setEspecialidade(especialidade);
-        } catch (Exception e) {
-            return null;
+        } else {
+            if(exameRepository.findById(vagaFORM.getExame()).isPresent()) {
+                Exame exame = exameRepository.findById(vagaFORM.getExame()).get();
+                novaVaga.setExame(exame);
+            } else {
+                return null;
+            }
         }
         novaVaga.setVagasOfertadas(vagaFORM.getVagasOfertadas());
         novaVaga.setVagasRestantes(vagaFORM.getVagasOfertadas());

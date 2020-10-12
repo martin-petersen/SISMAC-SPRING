@@ -18,6 +18,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Function;
@@ -43,6 +44,17 @@ public class EspecialidadeController {
             Page<EspecialidadeDTO> especialidadeDTOS = listaEspecialidades.map(EspecialidadeDTO::new);
             return ResponseEntity.ok(especialidadeDTOS);
         }
+    }
+
+    @GetMapping("/todasEspecialidades")
+    public ResponseEntity<List<EspecialidadeDTO>> listarEspecialidadesSemPaginacao() {
+        List<Especialidade> listaEspecialidades = especialidadeService.buscarTodosSemPaginacao();
+        List<EspecialidadeDTO> especialidadeDTOS = new ArrayList<>();
+        for (Especialidade e:
+             listaEspecialidades) {
+            especialidadeDTOS.add(new EspecialidadeDTO(e));
+        }
+        return ResponseEntity.ok(especialidadeDTOS);
     }
 
     @PostMapping

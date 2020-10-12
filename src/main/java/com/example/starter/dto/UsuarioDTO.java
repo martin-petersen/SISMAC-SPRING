@@ -27,6 +27,13 @@ public class UsuarioDTO {
         this.paciente_id = paciente_id;
     }
 
+    public UsuarioDTO(Long id, String username, String nome, boolean validate) {
+        this.id = id;
+        this.username = username;
+        this.nome = nome;
+        this.validate = validate;
+    }
+
 
 
     public Long getId() {

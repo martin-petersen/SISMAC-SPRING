@@ -1,5 +1,6 @@
 package com.example.starter.service;
 
+import com.example.starter.form.ExameFORM;
 import com.example.starter.model.Exame;
 import com.example.starter.repository.ExameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,14 +23,20 @@ public class ExameService {
         return exameRepository.findAll();
     }
 
-    public Exame salvar(Exame exame) {
+    public List<Exame> listarAutorizacao(boolean autorizacao) {
+        return exameRepository.findByAutorizacao(autorizacao);
+    }
+
+    public Exame salvar(ExameFORM exameFORM) {
+        Exame exame = new Exame(exameFORM);
         exameRepository.save(exame);
         return exame;
     }
 
-    public Exame atualizar(Exame exame) {
-        Exame oldExame = exameRepository.findById(exame.getId()).get();
-        oldExame.setNomeExame(exame.getNomeExame());
+    public Exame atualizar(Long id, ExameFORM exameFORM) {
+        Exame oldExame = exameRepository.findById(id).get();
+        oldExame.setNomeExame(exameFORM.getNomeExame().toUpperCase());
+        oldExame.setAutorizacao(exameFORM.isAutorizacao());
         exameRepository.save(oldExame);
         return oldExame;
     }

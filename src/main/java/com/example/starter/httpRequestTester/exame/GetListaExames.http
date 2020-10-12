@@ -2,3 +2,11 @@ GET http://localhost:8080/exames
 content-type: application/json
 
 ###
+
+GET http://localhost:8080/exames/listaExames
+content-type: application/json
+
+###
+
+GET http://localhost:8080/exames/autorizacaoExame?autorizacao=false
+content-type: application/json

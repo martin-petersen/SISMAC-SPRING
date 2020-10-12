@@ -1,6 +1,6 @@
-POST http://localhost:8080/auth/validate/2
+POST http://localhost:8080/auth/validate/3
 content-type: application/json
 
 {
-  "token" : "oiORC9"
+  "token" : "lPv6cF"
 }

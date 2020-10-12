@@ -10,6 +10,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EspecialidadeService {
 
@@ -62,6 +64,9 @@ public class EspecialidadeService {
         return especialidadeRepository.findAll(pageable);
     }
 
+    public List<Especialidade> buscarTodosSemPaginacao() {
+        return especialidadeRepository.findAll();
+    }
 
     public Especialidade atualizar(String nomeEspecialidade, EspecialidadeFORM especialidadeForm) {
         Especialidade especialidade = buscarPorNome(nomeEspecialidade);

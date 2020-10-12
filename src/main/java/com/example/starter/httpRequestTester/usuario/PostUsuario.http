@@ -2,9 +2,32 @@ POST http://localhost:8080/user
 content-type: application/json
 
 {
-  "nome": "Maria Petersen",
-  "email" : "martinrpetersen171@gmail.com",
-  "senha" : "123456"
+  "nome": "Rodolfo Dantas de Oliveira Bezarra",
+  "email" : "rodolfobti15@gmail.com",
+  "senha" : "123456",
+  "role": 1
 }
 
 ###
+
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "nome": "Kandell Oliveira",
+  "email" : "martin@gmail.com",
+  "senha" : "123456",
+  "role": 2
+}
+
+###
+
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "nome": "Kandell Oliveira",
+  "email" : "jjwt@gmail.com",
+  "senha" : "123456",
+  "role": 3
+}

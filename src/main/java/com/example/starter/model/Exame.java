@@ -1,5 +1,7 @@
 package com.example.starter.model;
 
+import com.example.starter.form.ExameFORM;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,7 @@ public class Exame {
     private Long id;
     @Column(unique = true)
     private String nomeExame;
+    private boolean autorizacao = true;
 
     public Exame() {
     }
@@ -18,9 +21,14 @@ public class Exame {
         this.id = id;
     }
 
-    public Exame(Long id, String nomeExame) {
-        this.id = id;
-        this.nomeExame = nomeExame;
+    public Exame(Long id, ExameFORM exameFORM) {
+        this.nomeExame = exameFORM.getNomeExame().toUpperCase();
+        this.autorizacao = exameFORM.isAutorizacao();
+    }
+
+    public Exame(ExameFORM exameFORM) {
+        this.nomeExame = exameFORM.getNomeExame().toUpperCase();
+        this.autorizacao = exameFORM.isAutorizacao();
     }
 
     public Long getId() {
@@ -37,5 +45,13 @@ public class Exame {
 
     public void setNomeExame(String nomeExame) {
         this.nomeExame = nomeExame;
+    }
+
+    public boolean isAutorizacao() {
+        return autorizacao;
+    }
+
+    public void setAutorizacao(boolean autotizacao) {
+        this.autorizacao = autotizacao;
     }
 }

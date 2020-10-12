@@ -1,10 +1,12 @@
 package com.example.starter.model;
 
 import com.example.starter.form.UpdateUsuarioFORM;
+import org.springframework.lang.Nullable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Random;
@@ -26,8 +28,9 @@ public class Usuario implements UserDetails {
     @JoinTable(name = "usuario_role",
             joinColumns = {@JoinColumn(name = "usuario_id")},
             inverseJoinColumns = {@JoinColumn(name = "role_id")})
-    private List<Role> perfis;
+    private List<Role> perfis = new ArrayList<>();
 
+    @Nullable
     @ManyToOne
     private Paciente paciente;
 
@@ -85,8 +88,8 @@ public class Usuario implements UserDetails {
         return perfis;
     }
 
-    public void setPerfil(List<Role> perfis) {
-        this.perfis = perfis;
+    public void setPerfil(Role role) {
+        this.perfis.add(role);
     }
 
     public Paciente getPaciente() {

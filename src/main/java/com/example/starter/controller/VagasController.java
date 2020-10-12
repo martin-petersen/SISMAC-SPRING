@@ -56,7 +56,7 @@ public class VagasController {
             if(vaga.getConsulta() != null) {
                 return ResponseEntity.created(uri).body(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getConsulta()));
             } else {
-                return ResponseEntity.created(uri).body(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getExame()));
+                return ResponseEntity.created(uri).body(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getExame()));
             }
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
@@ -72,7 +72,7 @@ public class VagasController {
             if(vaga.getConsulta() != null) {
                 return ResponseEntity.ok(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getConsulta()));
             } else {
-                return ResponseEntity.ok(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getExame()));
+                return ResponseEntity.ok(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getExame()));
             }
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();

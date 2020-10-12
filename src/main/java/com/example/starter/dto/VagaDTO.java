@@ -14,11 +14,10 @@ public class VagaDTO {
     private String exame = null;
     private String consulta = null;
 
-    public VagaDTO(LocalDate data, Integer vagasOfertadas, Integer vagasRestantes, Especialidade especialidade, Exame exame) {
+    public VagaDTO(LocalDate data, Integer vagasOfertadas, Integer vagasRestantes, Exame exame) {
         this.data = data;
         this.vagasOfertadas = vagasOfertadas;
         this.vagasRestantes = vagasRestantes;
-        this.especialidade = especialidade.getNomeEspecialidade();
         this.exame = exame.getNomeExame();
     }
 

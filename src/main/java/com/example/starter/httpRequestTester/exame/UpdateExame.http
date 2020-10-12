@@ -2,7 +2,8 @@ PUT http://localhost:8080/exames/editarExame/2
 content-type: application/json
 
 {
-  "nomeExame": "biopsia"
+  "nomeExame": "biopsia",
+  "autorizacao": true
 }
 
 ###
@@ -11,7 +12,8 @@ PUT http://localhost:8080/exames/editarExame/1
 content-type: application/json
 
 {
-  "nomeExame": "ecocardiograma"
+  "nomeExame": "ecocardiograma",
+  "autorizacao": false
 }
 
 ###

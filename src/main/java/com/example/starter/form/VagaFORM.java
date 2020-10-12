@@ -7,9 +7,8 @@ public class VagaFORM {
     private String data;
     @NotNull
     private Integer vagasOfertadas;
-    @NotNull
-    private String especialidade;
-    private String exame;
+    private Long especialidade;
+    private Long exame;
     private boolean consulta;
 
     public String getData() {
@@ -20,11 +19,11 @@ public class VagaFORM {
         return vagasOfertadas;
     }
 
-    public String getEspecialidade() {
+    public Long getEspecialidade() {
         return especialidade;
     }
 
-    public String getExame() {
+    public Long getExame() {
         return exame;
     }
 

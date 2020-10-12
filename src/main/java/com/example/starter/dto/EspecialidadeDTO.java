@@ -13,6 +13,10 @@ public class EspecialidadeDTO {
         this.nomeEspecialidade = especialidade.getNomeEspacialidade();
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getNomeEspecialidade() {
         return nomeEspecialidade;
     }

@@ -11,4 +11,5 @@ import java.util.List;
 public interface ExameRepository extends JpaRepository<Exame,Long> {
     @Query("from Exame i where upper(i.nomeExame) like :nomeExame")
     List<Exame> findByNomeExame(String nomeExame);
+    List<Exame> findByAutorizacao(boolean autorizacao);
 }

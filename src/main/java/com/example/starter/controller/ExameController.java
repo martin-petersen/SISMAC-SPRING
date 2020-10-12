@@ -46,16 +46,36 @@ public class ExameController {
         }
     }
 
+    @GetMapping("/autorizacaoExame")
+    public ResponseEntity<List<ExameDTO>>autorizacaoExame(@RequestParam(required = true) boolean autorizacao) {
+        List<Exame> exames = exameService.listarAutorizacao(autorizacao);
+        List<ExameDTO> examesDTO = new ArrayList<>();
+        for (Exame e:
+                exames) {
+            examesDTO.add(new ExameDTO(e));
+        }
+        return ResponseEntity.ok(examesDTO);
+    }
+
+    @GetMapping("/listaExames")
+    public ResponseEntity<List<ExameDTO>>listarTodosExames() {
+        List<Exame> exames = exameService.listarTodos();
+        List<ExameDTO> examesDTO = new ArrayList<>();
+        for (Exame e:
+             exames) {
+            examesDTO.add(new ExameDTO(e));
+        }
+        return ResponseEntity.ok(examesDTO);
+    }
+
     @PostMapping
     @Transactional
     public ResponseEntity<ExameDTO> cadastrarExame(@RequestBody @Valid ExameFORM exameFORM,
                                                    UriComponentsBuilder uriComponentsBuilder) {
         try{
-            Exame exame = new Exame();
-            exame.setNomeExame(exameFORM.getNomeExame().toUpperCase());
-            Exame novoExame = exameService.salvar(exame);
-            URI uri = uriComponentsBuilder.path("/exames/{id}").buildAndExpand(exame.getId()).toUri();
-            ExameDTO exameDTO = new ExameDTO(novoExame.getId(),novoExame.getNomeExame());
+            Exame novoExame = exameService.salvar(exameFORM);
+            URI uri = uriComponentsBuilder.path("/exames/{id}").buildAndExpand(novoExame.getId()).toUri();
+            ExameDTO exameDTO = new ExameDTO(novoExame.getId(),novoExame.getNomeExame(),novoExame.isAutorizacao());
             return ResponseEntity.created(uri).body(exameDTO);
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
@@ -67,8 +87,8 @@ public class ExameController {
     public ResponseEntity<ExameDTO> editarProcedimento(@PathVariable Long id,
                                                        @RequestBody ExameFORM exameFORM) {
         try {
-            Exame exame = exameService.atualizar(new Exame(id,exameFORM.getNomeExame().toUpperCase()));
-            return ResponseEntity.ok(new ExameDTO(exame.getId(),exame.getNomeExame()));
+            Exame exame = exameService.atualizar(id,exameFORM);
+            return ResponseEntity.ok(new ExameDTO(exame.getId(),exame.getNomeExame(),exame.isAutorizacao()));
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
@@ -76,7 +96,7 @@ public class ExameController {
 
     @DeleteMapping
     @Transactional
-    public ResponseEntity<?> removerProcedimento(@RequestParam Long id) {
+    public ResponseEntity<?> removerExame(@RequestParam Long id) {
         if(exameService.remover(new Exame(id))) {
             return ResponseEntity.ok().build();
         } else {
@@ -88,7 +108,7 @@ public class ExameController {
         List<ExameDTO> exameDTOList = new ArrayList<>();
         for (Exame e:
                 lista) {
-            exameDTOList.add(new ExameDTO(e.getId(),e.getNomeExame()));
+            exameDTOList.add(new ExameDTO(e.getId(),e.getNomeExame(),e.isAutorizacao()));
         }
         return new PageImpl<>(exameDTOList,pageable,exameDTOList.size());
     }

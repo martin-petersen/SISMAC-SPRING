@@ -1,5 +1,7 @@
 package com.example.starter.model;
 
+import org.springframework.lang.Nullable;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -11,10 +13,13 @@ public class Vaga {
     private LocalDate data;
     private Integer vagasOfertadas;
     private Integer vagasRestantes;
+    @Nullable
     @ManyToOne(cascade = CascadeType.ALL)
-    private Especialidade especialidade;
+    private Especialidade especialidade = null;
+    @Nullable
     @ManyToOne(cascade = CascadeType.ALL)
     private Exame exame = null;
+    @Nullable
     @ManyToOne(cascade = CascadeType.ALL)
     private Consulta consulta = null;
 

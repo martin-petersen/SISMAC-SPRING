@@ -5,8 +5,10 @@ import com.example.starter.form.UpdateUsuarioFORM;
 import com.example.starter.form.UsuarioFORM;
 import com.example.starter.form.ValidateTokenFORM;
 import com.example.starter.model.Paciente;
+import com.example.starter.model.Role;
 import com.example.starter.model.Usuario;
 import com.example.starter.repository.PacienteRepository;
+import com.example.starter.repository.RoleRepository;
 import com.example.starter.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -26,6 +28,9 @@ public class UsuarioService {
 
     @Autowired
     private PacienteRepository pacienteRepository;
+
+    @Autowired
+    private RoleRepository roleRepository;
 
     public List<Usuario> buscarTodos() {
         return usuarioRepository.findAll();
@@ -53,11 +58,10 @@ public class UsuarioService {
         usuario.setEmail(usuarioFORM.getEmail());
         usuario.setSenha(new BCryptPasswordEncoder().encode(usuarioFORM.getSenha()));
         usuario.setValidateCode();
-
-        if(usuarioFORM.getPaciente_id() != null) {
-            Long id = Long.parseLong(usuarioFORM.getPaciente_id());
-            Paciente paciente = pacienteRepository.findById(id).get();
-            usuario.setPaciente(paciente);
+        Long id = usuarioFORM.getRole();
+        if(roleRepository.findById(id).isPresent()) {
+            Role role = roleRepository.findById(id).get();
+            usuario.setPerfil(role);
         }
         usuarioRepository.save(usuario);
         emailSender.send(usuario);
