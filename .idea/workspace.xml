@@ -4,42 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/EspecialidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/EspecialidadeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/ExameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/ExameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/VagasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/VagasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/EspecialidadeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/EspecialidadeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/ExameDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/ExameDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/UsuarioDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/VagaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/VagaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/form/ExameFORM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/form/ExameFORM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/form/UsuarioFORM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/form/UsuarioFORM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/form/VagaFORM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/form/VagaFORM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Validate.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Validate.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/GetListaEspecialidade.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/GetListaEspecialidade.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/GetListaExames.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/GetListaExames.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/PostExame.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/PostExame.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/UpdateExame.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/UpdateExame.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/usuario/PostUsuario.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/usuario/PostUsuario.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/usuario/UpdateVinculoPacienteUsuario.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/usuario/UpdateVinculoPacienteUsuario.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/vaga/PostVaga.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/vaga/PostVaga.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Exame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Exame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Vaga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/model/Vaga.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/ExameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/ExameRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/ExameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/ExameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/VagaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/VagaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/service/EspecialidadeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/service/EspecialidadeService.class" afterDir="false" />
-    </list>
+    <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,6 +86,87 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/exames" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nomeExame&quot;: &quot;Teste&quot;,&#10;  &quot;autorizacao&quot;: true&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080/exames/editarExame/2" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nomeExame&quot;: &quot;biopsia&quot;,&#10;  &quot;autorizacao&quot;: true&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/exames" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nomeExame&quot;: &quot;TESTE2&quot;,&#10;  &quot;autorizacao&quot;: false&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -216,87 +262,6 @@
           </option>
           <option name="haveTextToSend" value="true" />
           <option name="textToSend" value="{&#10;  &quot;nomeExame&quot;: &quot;ecocardiograma&quot;,&#10;  &quot;autorizacao&quot;: false&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="PUT" />
-          <option name="urlBase" value="http://localhost:8080/exames/editarExame/2" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nomeExame&quot;: &quot;biopsia&quot;,&#10;  &quot;autorizacao&quot;: true&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/exames" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nomeExame&quot;: &quot;TESTE2&quot;,&#10;  &quot;autorizacao&quot;: false&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/exames" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;nomeExame&quot;: &quot;Teste&quot;,&#10;  &quot;autorizacao&quot;: true&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -1618,7 +1583,7 @@
       <workItem from="1602348870524" duration="13245000" />
       <workItem from="1602362457584" duration="5660000" />
       <workItem from="1602375232399" duration="424000" />
-      <workItem from="1602508645214" duration="14312000" />
+      <workItem from="1602508645214" duration="14836000" />
     </task>
     <servers />
   </component>
@@ -1626,11 +1591,11 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1602527343699">
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1602528223430">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="486" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1360.728@0.0.1360.728" timestamp="1602366743628" />
-    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1602527343699" />
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1602528223430" />
     <state x="413" y="145" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1602339279116">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1652,46 +1617,46 @@
     </state>
     <state x="461" y="122" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1602362163591" />
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1600746856573" />
-    <state width="1323" height="240" key="GridCell.Tab.0.bottom" timestamp="1602528138275">
+    <state width="1323" height="240" key="GridCell.Tab.0.bottom" timestamp="1602528246532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="240" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602528138275" />
-    <state width="1323" height="240" key="GridCell.Tab.0.center" timestamp="1602528138275">
+    <state width="1323" height="240" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
+    <state width="1323" height="240" key="GridCell.Tab.0.center" timestamp="1602528246532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="240" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1602528138275" />
-    <state width="1323" height="240" key="GridCell.Tab.0.left" timestamp="1602528138275">
+    <state width="1323" height="240" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
+    <state width="1323" height="240" key="GridCell.Tab.0.left" timestamp="1602528246532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="240" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1602528138275" />
-    <state width="1323" height="240" key="GridCell.Tab.0.right" timestamp="1602528138275">
+    <state width="1323" height="240" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
+    <state width="1323" height="240" key="GridCell.Tab.0.right" timestamp="1602528246532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="240" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1602528138275" />
-    <state width="1323" height="240" key="GridCell.Tab.1.bottom" timestamp="1602527924378">
+    <state width="1323" height="240" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
+    <state width="1323" height="240" key="GridCell.Tab.1.bottom" timestamp="1602528246532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="240" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602527924378" />
-    <state width="1323" height="240" key="GridCell.Tab.1.center" timestamp="1602527924378">
+    <state width="1323" height="240" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
+    <state width="1323" height="240" key="GridCell.Tab.1.center" timestamp="1602528246532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="240" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1602527924378" />
-    <state width="1323" height="240" key="GridCell.Tab.1.left" timestamp="1602527924378">
+    <state width="1323" height="240" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
+    <state width="1323" height="240" key="GridCell.Tab.1.left" timestamp="1602528246532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="240" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1602527924378" />
-    <state width="1323" height="240" key="GridCell.Tab.1.right" timestamp="1602527924378">
+    <state width="1323" height="240" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
+    <state width="1323" height="240" key="GridCell.Tab.1.right" timestamp="1602528246532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="240" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1602527924378" />
+    <state width="1323" height="240" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
     <state width="1323" height="224" key="GridCell.Tab.2.bottom" timestamp="1602515145062">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
