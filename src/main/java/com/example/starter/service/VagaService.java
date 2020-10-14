@@ -6,6 +6,7 @@ import com.example.starter.form.VagaFORM;
 import com.example.starter.model.Consulta;
 import com.example.starter.model.Especialidade;
 import com.example.starter.model.Exame;
+import com.example.starter.model.Especialidade;
 import com.example.starter.model.Vaga;
 import com.example.starter.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +56,9 @@ public class VagaService {
     public Page<VagaDTO> listar(Pageable pageable) {
         LocalDate ontem = LocalDate.now().minusDays(1);
         return convertInDetalhamentoDTO(vagaRepository.findByDataAfter(ontem),pageable);
+    }
+    public List<VagaDTO> listarEspecialidade(Especialidade especialidade,Pageable pageable){
+        return convertInDetalhamentoDTO(vagaRepository.findByEspecialidade(especialidade,pageable);
     }
 
     private Page<VagaDTO> convertInDetalhamentoDTO (List<Vaga> lista, Pageable pageable) {
