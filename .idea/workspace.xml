@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/EspecialidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/EspecialidadeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/ExameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/ExameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/VagasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/VagasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/VagaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/dto/VagaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/UpdateEspecialidade.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/UpdateEspecialidade.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/vaga/GetListaVagasConsultas.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/vaga/GetListaVagasConsultas.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/vaga/GetListaVagasExames.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/vaga/GetListaVagasExames.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/vaga/PostVaga.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/vaga/PostVaga.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/VagaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/repository/VagaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/ExameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/ExameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/VagaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/VagaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/service/EspecialidadeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/service/EspecialidadeService.class" afterDir="false" />
-    </list>
+    <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,6 +125,33 @@
               </Biscuit>
             </list>
           </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/especialidades" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;nomeEspecialidade&quot;: &quot;especialista&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
           <option name="httpMethod" value="PUT" />
           <option name="urlBase" value="http://localhost:8080/especialidades/atualizarEspecialidade" />
           <option name="urlPath" value="" />
@@ -165,33 +174,6 @@
           <option name="parametersEnabled" value="true" />
           <option name="haveTextToSend" value="true" />
           <option name="textToSend" value="{&#10;  &quot;nomeEspecialidade&quot;: &quot;123321&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/especialidades" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;&quot;nomeEspecialidade&quot;: &quot;especialista&quot;&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -1656,7 +1638,7 @@
       <workItem from="1602555060231" duration="170000" />
       <workItem from="1602633895047" duration="2401000" />
       <workItem from="1602640115892" duration="1013000" />
-      <workItem from="1602643691291" duration="4331000" />
+      <workItem from="1602643691291" duration="4996000" />
     </task>
     <servers />
   </component>
@@ -1698,46 +1680,46 @@
     </state>
     <state x="461" y="122" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1602362163591" />
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1602644283605" />
-    <state width="1323" height="299" key="GridCell.Tab.0.bottom" timestamp="1602648027393">
+    <state width="1323" height="299" key="GridCell.Tab.0.bottom" timestamp="1602648083716">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="299" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602648027393" />
-    <state width="1323" height="299" key="GridCell.Tab.0.center" timestamp="1602648027393">
+    <state width="1323" height="299" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602648083716" />
+    <state width="1323" height="299" key="GridCell.Tab.0.center" timestamp="1602648083716">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="299" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1602648027393" />
-    <state width="1323" height="299" key="GridCell.Tab.0.left" timestamp="1602648027393">
+    <state width="1323" height="299" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1602648083716" />
+    <state width="1323" height="299" key="GridCell.Tab.0.left" timestamp="1602648083715">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="299" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1602648027393" />
-    <state width="1323" height="299" key="GridCell.Tab.0.right" timestamp="1602648027393">
+    <state width="1323" height="299" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1602648083715" />
+    <state width="1323" height="299" key="GridCell.Tab.0.right" timestamp="1602648083716">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="299" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1602648027393" />
-    <state width="1323" height="299" key="GridCell.Tab.1.bottom" timestamp="1602647724269">
+    <state width="1323" height="299" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1602648083716" />
+    <state width="1323" height="299" key="GridCell.Tab.1.bottom" timestamp="1602648056091">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="299" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602647724269" />
-    <state width="1323" height="299" key="GridCell.Tab.1.center" timestamp="1602647724269">
+    <state width="1323" height="299" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602648056091" />
+    <state width="1323" height="299" key="GridCell.Tab.1.center" timestamp="1602648056090">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="299" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1602647724269" />
-    <state width="1323" height="299" key="GridCell.Tab.1.left" timestamp="1602647724269">
+    <state width="1323" height="299" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1602648056090" />
+    <state width="1323" height="299" key="GridCell.Tab.1.left" timestamp="1602648056090">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="299" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1602647724269" />
-    <state width="1323" height="299" key="GridCell.Tab.1.right" timestamp="1602647724269">
+    <state width="1323" height="299" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1602648056090" />
+    <state width="1323" height="299" key="GridCell.Tab.1.right" timestamp="1602648056090">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="299" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1602647724269" />
+    <state width="1323" height="299" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1602648056090" />
     <state width="1323" height="217" key="GridCell.Tab.2.bottom" timestamp="1602646691262">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

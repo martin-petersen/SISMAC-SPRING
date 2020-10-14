@@ -78,16 +78,6 @@ public class ExameController {
         return ResponseEntity.ok(examesDTO);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<ExameDTO>buscarUm(@PathVariable Long id) {
-        try {
-            Exame exame = exameService.buscarUm(id);
-            return ResponseEntity.ok(new ExameDTO(exame));
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-
     @PostMapping
     @Transactional
     public ResponseEntity<ExameDTO> cadastrarExame(@RequestBody @Valid ExameFORM exameFORM,
