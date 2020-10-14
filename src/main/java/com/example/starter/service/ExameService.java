@@ -26,6 +26,12 @@ public class ExameService {
     public List<Exame> listarAutorizacao(boolean autorizacao) {
         return exameRepository.findByAutorizacao(autorizacao);
     }
+    public Exame buscarUm(Long id) {
+        if(exameRepository.findById(id).isPresent())
+            return exameRepository.findById(id).get();
+        else
+            return null;
+    }
 
     public Exame salvar(ExameFORM exameFORM) {
         Exame exame = new Exame(exameFORM);
