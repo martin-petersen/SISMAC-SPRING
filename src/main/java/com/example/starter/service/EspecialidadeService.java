@@ -50,6 +50,13 @@ public class EspecialidadeService {
         }
     }
 
+    public Especialidade buscarPorID(Long id) {
+        if(especialidadeRepository.findById(id).isPresent())
+            return especialidadeRepository.findById(id).get();
+        else
+            return null;
+    }
+
     public boolean remover (String nomeEspecialidade) {
         try {
             Especialidade especialidade = buscarPorNome(nomeEspecialidade);

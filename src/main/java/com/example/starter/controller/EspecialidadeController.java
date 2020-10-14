@@ -57,6 +57,17 @@ public class EspecialidadeController {
         return ResponseEntity.ok(especialidadeDTOS);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<EspecialidadeDTO> buscarporID(@PathVariable Long id) {
+        try {
+            Especialidade especialidade = especialidadeService.buscarPorID(id);
+            return ResponseEntity.ok(new EspecialidadeDTO(especialidade));
+        }catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+
+    }
+
     @PostMapping
     @Transactional
     @CacheEvict(value = "listaEspecialidades", allEntries = true)

@@ -2,7 +2,7 @@ POST http://localhost:8080/especialidades
 content-type: application/json
 
 {
-"nomeEspecialidade": "neurologia"
+"nomeEspecialidade": "especialista"
 }
 
 ###

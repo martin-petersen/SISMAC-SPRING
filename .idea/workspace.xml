@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="" />
+    <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/EspecialidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/controller/EspecialidadeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/PostEspecialidade.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/PostEspecialidade.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/service/EspecialidadeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +77,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTTP Request" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Documentos/SISMAC-SPRING" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -86,6 +95,33 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/especialidades" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;nomeEspecialidade&quot;: &quot;especialista&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -1464,58 +1500,20 @@
           <option name="textToSend" value="{&#10;  &quot;data&quot;: &quot;14/10/2020&quot;,&#10;  &quot;vagasOfertadas&quot;: &quot;10&quot;,&#10;  &quot;especialidade&quot;:&quot;cardiologia&quot;,&#10;  &quot;exame&quot;: &quot;&quot;,&#10;  &quot;consulta&quot;: true&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/vagas" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;data&quot;: &quot;08/10/2020&quot;,&#10;  &quot;vagasOfertadas&quot;: &quot;10&quot;,&#10;  &quot;especialidade&quot;:&quot;cardiologia&quot;,&#10;  &quot;exame&quot;: &quot;&quot;,&#10;  &quot;consulta&quot;: true&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.StarterApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All in Autenticação" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Autenticação.http">
       <method v="2" />
     </configuration>
     <configuration name="All in PostExame" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/PostExame.http">
       <method v="2" />
     </configuration>
-    <configuration name="All in UpdateExame" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/UpdateExame.http">
+    <configuration name="GetListaExames#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/GetListaExames.http" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="GetListaExames#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/GetListaExames.http" index="3" runType="Run single request">
+    <configuration name="PostEspecialidade#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/especialidade/PostEspecialidade.http" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="PostExame#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/exame/PostExame.http" runType="Run single request">
@@ -1533,11 +1531,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.PostEspecialidade#1" />
         <item itemvalue="HTTP Request.PostExame#1" />
         <item itemvalue="HTTP Request.UpdateExame#1" />
         <item itemvalue="HTTP Request.All in PostExame" />
         <item itemvalue="HTTP Request.GetListaExames#3" />
-        <item itemvalue="HTTP Request.All in UpdateExame" />
       </list>
     </recent_temporary>
   </component>
@@ -1583,7 +1581,9 @@
       <workItem from="1602348870524" duration="13245000" />
       <workItem from="1602362457584" duration="5660000" />
       <workItem from="1602375232399" duration="424000" />
-      <workItem from="1602508645214" duration="14836000" />
+      <workItem from="1602508645214" duration="17422000" />
+      <workItem from="1602555060231" duration="170000" />
+      <workItem from="1602633895047" duration="311000" />
     </task>
     <servers />
   </component>
@@ -1612,71 +1612,71 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1602211285652" />
-    <state x="461" y="122" key="FileChooserDialogImpl" timestamp="1602362163591">
-      <screen x="0" y="0" width="1360" height="728" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1602530676819">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="461" y="122" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1602362163591" />
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1600746856573" />
-    <state width="1323" height="240" key="GridCell.Tab.0.bottom" timestamp="1602528246532">
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1602530676819" />
+    <state width="1323" height="482" key="GridCell.Tab.0.bottom" timestamp="1602555246800">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="240" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
-    <state width="1323" height="240" key="GridCell.Tab.0.center" timestamp="1602528246532">
+    <state width="1323" height="482" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602555246800" />
+    <state width="1323" height="482" key="GridCell.Tab.0.center" timestamp="1602555246800">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="240" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
-    <state width="1323" height="240" key="GridCell.Tab.0.left" timestamp="1602528246532">
+    <state width="1323" height="482" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1602555246800" />
+    <state width="1323" height="482" key="GridCell.Tab.0.left" timestamp="1602555246800">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="240" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
-    <state width="1323" height="240" key="GridCell.Tab.0.right" timestamp="1602528246532">
+    <state width="1323" height="482" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1602555246800" />
+    <state width="1323" height="482" key="GridCell.Tab.0.right" timestamp="1602555246800">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="240" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
-    <state width="1323" height="240" key="GridCell.Tab.1.bottom" timestamp="1602528246532">
+    <state width="1323" height="482" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1602555246800" />
+    <state width="1323" height="240" key="GridCell.Tab.1.bottom" timestamp="1602555246771">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="240" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
-    <state width="1323" height="240" key="GridCell.Tab.1.center" timestamp="1602528246532">
+    <state width="1323" height="240" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602555246771" />
+    <state width="1323" height="240" key="GridCell.Tab.1.center" timestamp="1602555246771">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="240" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
-    <state width="1323" height="240" key="GridCell.Tab.1.left" timestamp="1602528246532">
+    <state width="1323" height="240" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1602555246771" />
+    <state width="1323" height="240" key="GridCell.Tab.1.left" timestamp="1602555246771">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="240" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
-    <state width="1323" height="240" key="GridCell.Tab.1.right" timestamp="1602528246532">
+    <state width="1323" height="240" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1602555246771" />
+    <state width="1323" height="240" key="GridCell.Tab.1.right" timestamp="1602555246771">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="240" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1602528246532" />
-    <state width="1323" height="224" key="GridCell.Tab.2.bottom" timestamp="1602515145062">
+    <state width="1323" height="240" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1602555246771" />
+    <state width="1323" height="224" key="GridCell.Tab.2.bottom" timestamp="1602548001954">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="226" key="GridCell.Tab.2.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602365769684" />
-    <state width="1323" height="224" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602515145062" />
-    <state width="1323" height="224" key="GridCell.Tab.2.center" timestamp="1602515145062">
+    <state width="1323" height="224" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602548001954" />
+    <state width="1323" height="224" key="GridCell.Tab.2.center" timestamp="1602548001954">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="226" key="GridCell.Tab.2.center/0.0.1360.728@0.0.1360.728" timestamp="1602365769674" />
-    <state width="1323" height="224" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1602515145062" />
-    <state width="1323" height="224" key="GridCell.Tab.2.left" timestamp="1602515145062">
+    <state width="1323" height="224" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1602548001954" />
+    <state width="1323" height="224" key="GridCell.Tab.2.left" timestamp="1602548001954">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="226" key="GridCell.Tab.2.left/0.0.1360.728@0.0.1360.728" timestamp="1602365769674" />
-    <state width="1323" height="224" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1602515145062" />
-    <state width="1323" height="224" key="GridCell.Tab.2.right" timestamp="1602515145062">
+    <state width="1323" height="224" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1602548001954" />
+    <state width="1323" height="224" key="GridCell.Tab.2.right" timestamp="1602548001954">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="226" key="GridCell.Tab.2.right/0.0.1360.728@0.0.1360.728" timestamp="1602365769684" />
-    <state width="1323" height="224" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1602515145062" />
+    <state width="1323" height="224" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1602548001954" />
     <state x="210" y="18" key="Maven.ArtifactSearchDialog" timestamp="1602362509230">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
