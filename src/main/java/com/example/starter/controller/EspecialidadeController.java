@@ -19,9 +19,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.function.Function;
 
 @CrossOrigin
 @RestController
@@ -84,14 +82,14 @@ public class EspecialidadeController {
         }
     }
 
-    @PutMapping("/atualizarEspecialidade")
+    @PutMapping("/atualizarEspecialidade/{id}")
     @Transactional
     @CacheEvict(value = "listaEspecialidades", allEntries = true)
-    public ResponseEntity<Especialidade> atualizarEspecialidade(@RequestParam String nomeEspecialidade,
-                                                                   @RequestBody EspecialidadeFORM especialidadeForm) {
+    public ResponseEntity<EspecialidadeDTO> atualizarEspecialidade(@PathVariable Long id,
+                                                                @RequestBody EspecialidadeFORM especialidadeForm) {
         try {
-            Especialidade especialidade = especialidadeService.atualizar(nomeEspecialidade.toUpperCase(), especialidadeForm);
-            return ResponseEntity.ok(especialidade);
+            Especialidade especialidade = especialidadeService.atualizar(id, especialidadeForm);
+            return ResponseEntity.ok(new EspecialidadeDTO(especialidade));
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }

@@ -2,7 +2,7 @@ POST http://localhost:8080/vagas
 content-type: application/json
 
 {
-  "data": "10/10/2020",
+  "data": "15/10/2020",
   "vagasOfertadas": "10",
   "especialidade":3,
   "exame": null,
@@ -41,7 +41,7 @@ POST http://localhost:8080/vagas
 content-type: application/json
 
 {
-  "data": "07/10/2020",
+  "data": "18/10/2020",
   "vagasOfertadas": "10",
   "especialidade":3,
   "exame":null,
@@ -57,7 +57,7 @@ content-type: application/json
   "data": "10/10/2020",
   "vagasOfertadas": "10",
   "especialidade":null,
-  "exame": "teste",
+  "exame": 1,
   "consulta": false
 }
 
@@ -70,7 +70,7 @@ content-type: application/json
   "data": "11/10/2020",
   "vagasOfertadas": "10",
   "especialidade":null,
-  "exame": "teste",
+  "exame": 1,
   "consulta": false
 }
 
@@ -83,7 +83,7 @@ content-type: application/json
   "data": "08/10/2020",
   "vagasOfertadas": "10",
   "especialidade":null,
-  "exame": "teste",
+  "exame": 1,
   "consulta": false
 }
 
@@ -93,10 +93,10 @@ POST http://localhost:8080/vagas
 content-type: application/json
 
 {
-  "data": "13/10/2020",
+  "data": "17/10/2020",
   "vagasOfertadas": "10",
   "especialidade":null,
-  "exame": "teste",
+  "exame": 1,
   "consulta": false
 }
 
@@ -106,7 +106,7 @@ POST http://localhost:8080/vagas
 content-type: application/json
 
 {
-  "data": "13/10/2020",
+  "data": "18/10/2020",
   "vagasOfertadas": "10",
   "especialidade":null,
   "exame": 1,

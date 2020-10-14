@@ -49,4 +49,11 @@ public class ExameService {
             return false;
         }
     }
+
+    public Exame buscarUm(Long id) {
+        if(exameRepository.findById(id).isPresent())
+            return exameRepository.findById(id).get();
+        else
+            return null;
+    }
 }
