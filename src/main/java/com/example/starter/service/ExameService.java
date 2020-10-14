@@ -32,6 +32,12 @@ public class ExameService {
         exameRepository.save(exame);
         return exame;
     }
+    public Exame buscarUm(Long id) {
+        if(exameRepository.findById(id).isPresent())
+            return exameRepository.findById(id).get();
+        else
+            return null;
+    }
 
     public Exame atualizar(Long id, ExameFORM exameFORM) {
         Exame oldExame = exameRepository.findById(id).get();

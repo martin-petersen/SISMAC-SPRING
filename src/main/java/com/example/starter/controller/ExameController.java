@@ -45,7 +45,17 @@ public class ExameController {
             return ResponseEntity.ok(exameDTO);
         }
     }
-
+    
+    @GetMapping("/{id}")
+    public ResponseEntity<ExameDTO>buscarUm(@PathVariable Long id) {
+        try {
+            Exame exame = exameService.buscarUm(id);
+            return ResponseEntity.ok(new ExameDTO(exame));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+    
     @GetMapping("/autorizacaoExame")
     public ResponseEntity<List<ExameDTO>>autorizacaoExame(@RequestParam(required = true) boolean autorizacao) {
         List<Exame> exames = exameService.listarAutorizacao(autorizacao);
