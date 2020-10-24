@@ -94,6 +94,6 @@ public class PacienteFORM {
     }
 
     public Paciente convert() {
-        return new Paciente(getNome().toUpperCase(), getCarteiraSUS(), getCpf(), getCidade(), getBairro(), getComplemento(), getDataNascimento(), getTelefone(), getNumero());
+        return new Paciente(getNome().toUpperCase(), getCarteiraSUS(), getCpf(), getCidade().toUpperCase(), getBairro().toUpperCase(), getComplemento().toUpperCase(), getDataNascimento(), getTelefone(), getNumero());
     }
 }

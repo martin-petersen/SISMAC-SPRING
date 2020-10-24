@@ -16,8 +16,6 @@ public class Especialidade {
             joinColumns = {@JoinColumn(name = "especialidade_id")},
             inverseJoinColumns = {@JoinColumn(name = "consulta_id")})
     private List<Consulta> consultas = new ArrayList<>();
-    @ManyToMany(mappedBy = "especialidades")
-    private List<Medico> medicos;
 
     public Especialidade() {
     }
@@ -64,13 +62,5 @@ public class Especialidade {
 
     public void setCosulta(Consulta cosulta) {
         this.consultas.add(cosulta);
-    }
-
-    public List<Medico> getMedicos() {
-        return medicos;
-    }
-
-    public void setMedicos(List<Medico> medicos) {
-        this.medicos = medicos;
     }
 }

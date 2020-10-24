@@ -5,7 +5,6 @@ import com.example.starter.dto.TokenDTO;
 import com.example.starter.dto.UsuarioDTO;
 import com.example.starter.form.LoginFORM;
 import com.example.starter.form.RecuperarUsuarioFORM;
-import com.example.starter.form.UsuarioFORM;
 import com.example.starter.form.ValidateTokenFORM;
 import com.example.starter.model.Usuario;
 import com.example.starter.service.UsuarioService;
@@ -19,8 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping(path = "/auth")
 public class AutenticacaoController {
@@ -44,7 +43,7 @@ public class AutenticacaoController {
                 validate = true;
             }
             String token = tokenService.createToken(authentication);
-            return ResponseEntity.ok(new TokenDTO(token,"Bearer", validate,usuarioService.getID(authentication)));
+            return ResponseEntity.ok(new TokenDTO(token,"Bearer", validate,usuarioService.getID(authentication),usuarioService.getRole(authentication)));
         } catch (AuthenticationException authenticationException) {
             return ResponseEntity.badRequest().build();
         }

@@ -109,6 +109,19 @@ content-type: application/json
   "data": "18/10/2020",
   "vagasOfertadas": "10",
   "especialidade":null,
-  "exame": 1,
+  "exame": 2,
   "consulta": false
+}
+
+###
+
+POST http://localhost:8080/vagas
+content-type: application/json
+
+{
+  "data": "18/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":3,
+  "exame": null,
+  "consulta": true
 }

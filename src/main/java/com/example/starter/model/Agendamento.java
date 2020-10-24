@@ -1,5 +1,7 @@
 package com.example.starter.model;
 
+import org.springframework.lang.Nullable;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -11,17 +13,29 @@ public class Agendamento {
     private Long id;
     private LocalDate dataAgendamento;
     private final LocalDateTime dataCriacao = LocalDateTime.now();
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Paciente paciente;
-    @ManyToOne
-    @JoinColumn(name = "especialidade")
-    private Especialidade especialidade;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Exame exame = null;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Consulta consulta = null;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Vaga vaga;
+    private Long paciente_id;
+    @Nullable
+    private Long especialidade_id;
+    @Nullable
+    private Long exame_id;
+    private boolean consulta;
+
+    public Agendamento(LocalDate localDate, ListaEspera listaEspera) {
+        this.dataAgendamento = localDate;
+        this.paciente_id = listaEspera.getPaciente().getId();
+        if(listaEspera.getEspecialidade() != null) {
+            this.consulta = true;
+            this.especialidade_id = listaEspera.getEspecialidade().getId();
+        } else {
+            this.exame_id = listaEspera.getExame().getId();
+            this.consulta = false;
+        }
+
+    }
+
+    public Agendamento() {
+
+    }
 
     public Long getId() {
         return id;
@@ -43,43 +57,33 @@ public class Agendamento {
         return dataCriacao;
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public Long getPaciente_id() {
+        return paciente_id;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPaciente_id(Long paciente_id) {
+        this.paciente_id = paciente_id;
     }
 
-    public Especialidade getEspecialidade() {
-        return especialidade;
+    @Nullable
+    public Long getEspecialidade_id() {
+        return especialidade_id;
     }
 
-    public void setEspecialidade(Especialidade especialidade) {
-        this.especialidade = especialidade;
+    public void setEspecialidade_id(@Nullable Long especialidade_id) {
+        this.especialidade_id = especialidade_id;
     }
 
-    public Exame getExame() {
-        return exame;
+    @Nullable
+    public Long getExame_id() {
+        return exame_id;
     }
 
-    public void setExame(Exame exame) {
-        this.exame = exame;
+    public void setExame_id(@Nullable Long exame_id) {
+        this.exame_id = exame_id;
     }
 
-    public Consulta getConsulta() {
+    public boolean isConsulta() {
         return consulta;
-    }
-
-    public void setConsulta(Consulta consulta) {
-        this.consulta = consulta;
-    }
-
-    public Vaga getVaga() {
-        return vaga;
-    }
-
-    public void setVaga(Vaga vaga) {
-        this.vaga = vaga;
     }
 }
