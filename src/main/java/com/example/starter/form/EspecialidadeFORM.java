@@ -7,7 +7,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 public class EspecialidadeFORM {
-    @NotNull @NotEmpty @Length(max = 30)
+    @NotNull(message = "nome da especialidade não pode ser vazio") @NotEmpty @Length(max = 30)
     private String nomeEspecialidade;
 
     public EspecialidadeFORM() {

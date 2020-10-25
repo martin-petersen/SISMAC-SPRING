@@ -3,9 +3,9 @@ package com.example.starter.form;
 import javax.validation.constraints.NotNull;
 
 public class DeleteFilaFORM {
-    @NotNull
+    @NotNull(message = "id do usuário não pode ser  vazio")
     private Long user_id;
-    @NotNull
+    @NotNull(message = "motivo do cancelamento não pode ser vazio")
     private String motivoCancelamento;
 
     public Long getUser_id() {

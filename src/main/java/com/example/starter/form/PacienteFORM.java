@@ -7,22 +7,22 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 public class PacienteFORM {
-    @NotEmpty @NotNull @Length(max = 40)
+    @NotEmpty @NotNull(message = "nome não pode ser vazio") @Length(max = 40)
     private String nome;
-    @NotEmpty @NotNull
+    @NotEmpty @NotNull(message = "cpf não pode ser vazio")
     private String cpf;
-    @NotEmpty @NotNull
+    @NotEmpty @NotNull(message = "carteira do sus não pode ser vazio")
     private String carteiraSUS;
-    @NotEmpty @NotNull
+    @NotEmpty @NotNull(message = "cidade não pode ser vazio")
     private String cidade;
-    @NotEmpty @NotNull
+    @NotEmpty @NotNull(message = "bairro não pode ser vazio")
     private String bairro;
     private String complemento;
-    @NotEmpty @NotNull
+    @NotEmpty @NotNull(message = "data de nascimento não pode ser vazio")
     private String dataNascimento;
-    @NotEmpty @NotNull
+    @NotEmpty @NotNull(message = "telefone não pode ser vazio")
     private String telefone;
-    @NotEmpty @NotNull
+    @NotEmpty @NotNull(message = "número não pode ser vazio")
     private String numero;
 
     public String getNome() {

@@ -4,11 +4,11 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class UsuarioFORM {
-    @NotNull @NotBlank
+    @NotNull @NotBlank(message = "nome não pode ser vazio")
     private String nome;
-    @NotNull @NotBlank
+    @NotNull @NotBlank(message = "email não pode ser vazio")
     private String email;
-    @NotNull @NotBlank
+    @NotNull @NotBlank(message = "senha não pode ser vazio")
     private String senha;
     private Long role;
 

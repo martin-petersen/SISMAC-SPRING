@@ -3,9 +3,9 @@ package com.example.starter.form;
 import javax.validation.constraints.NotNull;
 
 public class ListaEsperaExameFORM {
-    @NotNull
+    @NotNull(message = "id do paciente não pode ser vazio")
     private Long paciente_id;
-    @NotNull
+    @NotNull(message = "id do usuário não pode ser vazio")
     private Long user_id;
     private Long exame_id;
 
