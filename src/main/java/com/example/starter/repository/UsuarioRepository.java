@@ -1,5 +1,6 @@
 package com.example.starter.repository;
 
+import com.example.starter.model.Paciente;
 import com.example.starter.model.Usuario;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,4 +17,5 @@ public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
     List<Usuario> findByEmail(String email);
     @Query("from Usuario i where upper(i.nome) like :nome")
     List<Usuario> findByNome(String nome);
+    Usuario findByPaciente(Paciente paciente);
 }

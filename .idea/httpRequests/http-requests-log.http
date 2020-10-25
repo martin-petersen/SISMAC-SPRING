@@ -1,353 +1,208 @@
-GET http://localhost:8080/especialidades/3
-content-type: application/json
-
-<> 2020-10-13T091043.200.json
-
-###
-
-POST http://localhost:8080/especialidades
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-"nomeEspecialidade": "especialista"
+  "paciente_id": 6,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T111307.201.json
+<> 2020-10-24T030838-21.201.json
 
 ###
 
-POST http://localhost:8080/exames
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nomeExame": "Teste",
-  "autorizacao": true
+  "paciente_id": 5,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T034354.201.json
+<> 2020-10-24T030838-20.201.json
 
 ###
 
-PUT http://localhost:8080/exames/editarExame/2
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nomeExame": "biopsia",
-  "autorizacao": true
+  "paciente_id": 4,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T034312.200.json
+<> 2020-10-24T030838-19.201.json
 
 ###
 
-POST http://localhost:8080/exames
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nomeExame": "TESTE2",
-  "autorizacao": false
+  "paciente_id": 3,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T034257-1.201.json
+<> 2020-10-24T030838-18.201.json
 
 ###
 
-POST http://localhost:8080/exames
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nomeExame": "Teste",
-  "autorizacao": true
+  "paciente_id": 2,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T034257.201.json
+<> 2020-10-24T030838-17.201.json
 
 ###
 
-GET http://localhost:8080/exames/autorizacaoExame?autorizacao=false
-content-type: application/json
-
-<> 2020-10-12T034028.200.json
-
-###
-
-GET http://localhost:8080/exames/autorizacaoExame?autorizacao=true
-content-type: application/json
-
-<> 2020-10-12T034018.200.json
-
-###
-
-PUT http://localhost:8080/exames/editarExame/1
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nomeExame": "ecocardiograma",
-  "autorizacao": false
+  "paciente_id": 6,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T033848-1.200.json
+<> 2020-10-24T030838-16.201.json
 
 ###
 
-PUT http://localhost:8080/exames/editarExame/2
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nomeExame": "biopsia",
-  "autorizacao": true
+  "paciente_id": 5,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T033848.200.json
+<> 2020-10-24T030838-15.201.json
 
 ###
 
-POST http://localhost:8080/exames
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nomeExame": "TESTE2",
-  "autorizacao": false
+  "paciente_id": 4,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T033844-1.201.json
+<> 2020-10-24T030838-14.201.json
 
 ###
 
-POST http://localhost:8080/exames
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nomeExame": "Teste",
-  "autorizacao": true
+  "paciente_id": 3,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T033844.201.json
+<> 2020-10-24T030838-13.201.json
 
 ###
 
-PUT http://localhost:8080/exames/editarExame/1
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nomeExame": "ecocardiograma",
-  "autorizacao": false
+  "paciente_id": 2,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T033808-1.200.json
+<> 2020-10-24T030838-12.201.json
 
 ###
 
-PUT http://localhost:8080/exames/editarExame/2
+POST http://localhost:8080/filaEspera/filaConsulta
 content-type: application/json
 
 {
-  "nomeExame": "biopsia",
-  "autorizacao": true
+  "paciente_id": 6,
+  "user_id": 1,
+  "especialidade_id": 3
 }
 
-<> 2020-10-12T033808.200.json
+<> 2020-10-24T030838-11.201.json
 
 ###
 
-POST http://localhost:8080/exames
+POST http://localhost:8080/filaEspera/filaConsulta
 content-type: application/json
 
 {
-  "nomeExame": "TESTE2",
-  "autorizacao": false
+  "paciente_id": 5,
+  "user_id": 1,
+  "especialidade_id": 3
 }
 
-<> 2020-10-12T033750-1.201.json
+<> 2020-10-24T030838-10.201.json
 
 ###
 
-POST http://localhost:8080/exames
+POST http://localhost:8080/filaEspera/filaConsulta
 content-type: application/json
 
 {
-  "nomeExame": "Teste",
-  "autorizacao": true
+  "paciente_id": 4,
+  "user_id": 1,
+  "especialidade_id": 3
 }
 
-<> 2020-10-12T033750.201.json
+<> 2020-10-24T030838-9.201.json
 
 ###
 
-PUT http://localhost:8080/exames/editarExame/1
+POST http://localhost:8080/filaEspera/filaConsulta
 content-type: application/json
 
 {
-  "nomeExame": "ecocardiograma",
-  "autorizacao": false
+  "paciente_id": 3,
+  "user_id": 1,
+  "especialidade_id": 3
 }
 
-<> 2020-10-12T033518-1.500.json
+<> 2020-10-24T030838-8.201.json
 
 ###
 
-PUT http://localhost:8080/exames/editarExame/2
+POST http://localhost:8080/filaEspera/filaConsulta
 content-type: application/json
 
 {
-  "nomeExame": "biopsia",
-  "autorizacao": true
+  "paciente_id": 2,
+  "user_id": 1,
+  "especialidade_id": 3
 }
 
-<> 2020-10-12T033518.500.json
+<> 2020-10-24T030838-7.201.json
 
 ###
 
-POST http://localhost:8080/exames
+POST http://localhost:8080/filaEspera/filaConsulta
 content-type: application/json
 
 {
-  "nomeExame": "TESTE2",
-  "autorizacao": false
+  "paciente_id": 1,
+  "user_id": 1,
+  "especialidade_id": 3
 }
 
-<> 2020-10-12T033514-1.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "Teste",
-  "autorizacao": true
-}
-
-<> 2020-10-12T033514.201.json
-
-###
-
-PUT http://localhost:8080/exames/editarExame/1
-content-type: application/json
-
-{
-  "nomeExame": "ecocardiograma",
-  "autorizacao": false
-}
-
-<> 2020-10-12T033349.200.json
-
-###
-
-PUT http://localhost:8080/exames/editarExame/1
-content-type: application/json
-
-{
-  "nomeExame": "ecocardiograma",
-  "autorizacao": false
-}
-
-<> 2020-10-12T033327.200.json
-
-###
-
-PUT http://localhost:8080/exames/editarExame/2
-content-type: application/json
-
-{
-  "nomeExame": "biopsia",
-  "autorizacao": true
-}
-
-<> 2020-10-12T033326.200.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2",
-  "autorizacao": false
-}
-
-<> 2020-10-12T033227-1.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "Teste",
-  "autorizacao": true
-}
-
-<> 2020-10-12T033227.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2",
-  "autorizacao": false
-}
-
-<> 2020-10-12T033048-1.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "Teste",
-  "autorizacao": true
-}
-
-<> 2020-10-12T033048.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2",
-  "autorizacao": false
-}
-
-<> 2020-10-12T032640-1.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "Teste",
-  "autorizacao": null
-}
-
-<> 2020-10-12T032640.201.json
-
-###
-
-POST http://localhost:8080/medicos
-content-type: application/json
-
-{
-  "nomeMedico": "Martin Petersen",
-  "conselho": "CRM",
-  "numeroConselho": "4442",
-  "especialidades": ["neurologia"]
-}
-
-<> 2020-10-12T025302.201.json
-
-###
-
-GET http://localhost:8080/pacientes?carteiraSUS=999999-6
-content-type: application/json
-
-<> 2020-10-12T025022.200.json
+<> 2020-10-24T030838-6.201.json
 
 ###
 
@@ -355,58 +210,53 @@ POST http://localhost:8080/vagas
 content-type: application/json
 
 {
-  "data": "10/10/2020",
+  "data": "26/10/2020",
   "vagasOfertadas": "10",
   "especialidade":3,
   "exame": null,
   "consulta": true
 }
 
-<> 2020-10-12T024251.201.json
+<> 2020-10-24T030838-5.201.json
 
 ###
 
-POST http://localhost:8080/auth/validate/3
+POST http://localhost:8080/vagas
 content-type: application/json
 
 {
-  "token" : "lPv6cF"
+  "data": "26/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":null,
+  "exame": 2,
+  "consulta": false
 }
 
-<> 2020-10-12T023720.200.json
+<> 2020-10-24T030838-4.201.json
 
 ###
 
-POST http://localhost:8080/auth
+POST http://localhost:8080/exames
 content-type: application/json
 
 {
-  "username": "petersen.martin.imd@gmail.com",
-  "password": "20121042060301"
+  "nomeExame": "TESTE2",
+  "autorizacao": false
 }
 
-<> 2020-10-12T023608.200.json
+<> 2020-10-24T030838-3.201.json
 
 ###
 
-PUT http://localhost:8080/user/vinculo/3?cpf=107.375.204-17
-content-type: application/json
-
-<> 2020-10-12T023521.200.json
-
-###
-
-POST http://localhost:8080/user
+POST http://localhost:8080/exames
 content-type: application/json
 
 {
-  "nome": "Kandell Oliveira",
-  "email" : "martin@gmail.com",
-  "senha" : "123456",
-  "role": 2
+  "nomeExame": "ECOCARDIOGRAMA",
+  "autorizacao": true
 }
 
-<> 2020-10-12T023459.201.json
+<> 2020-10-24T030838-2.201.json
 
 ###
 
@@ -425,7 +275,7 @@ content-type: application/json
   "numero": "160"
 }
 
-<> 2020-10-12T023115-4.201.json
+<> 2020-10-24T030838-1.201.json
 
 ###
 
@@ -444,7 +294,7 @@ content-type: application/json
   "numero": "160"
 }
 
-<> 2020-10-12T023115-3.201.json
+<> 2020-10-24T030838.201.json
 
 ###
 
@@ -464,7 +314,7 @@ content-type: application/json
 
 }
 
-<> 2020-10-12T023115-2.201.json
+<> 2020-10-24T030837-2.201.json
 
 ###
 
@@ -483,7 +333,7 @@ content-type: application/json
   "numero": "160"
 }
 
-<> 2020-10-12T023115-1.201.json
+<> 2020-10-24T030837-1.201.json
 
 ###
 
@@ -502,63 +352,215 @@ content-type: application/json
   "numero": "160"
 }
 
-<> 2020-10-12T023115.201.json
+<> 2020-10-24T030837.201.json
 
 ###
 
-POST http://localhost:8080/user
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nome": "Rodolfo Dantas de Oliveira Bezarra",
-  "email" : "rodolfobti15@gmail.com",
-  "senha" : "123456",
-  "role": 1
+  "paciente_id": 6,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T022742.201.json
+<> 2020-10-24T030505-4.201.json
 
 ###
 
-POST http://localhost:8080/user
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nome": "Kandell Oliveira",
-  "email" : "jjwt@gmail.com",
-  "senha" : "123456",
-  "role": 3
+  "paciente_id": 5,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T021730-2.201.json
+<> 2020-10-24T030505-3.201.json
 
 ###
 
-POST http://localhost:8080/user
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nome": "Kandell Oliveira",
-  "email" : "martin@gmail.com",
-  "senha" : "123456",
-  "role": 2
+  "paciente_id": 4,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T021730-1.201.json
+<> 2020-10-24T030505-2.201.json
 
 ###
 
-POST http://localhost:8080/user
+POST http://localhost:8080/filaEspera/filaExame
 content-type: application/json
 
 {
-  "nome": "Kandell Oliveira",
-  "email" : "martinrpetersen171@gmail.com",
-  "senha" : "123456",
-  "role": 1
+  "paciente_id": 3,
+  "user_id": 1,
+  "exame_id": 2
 }
 
-<> 2020-10-12T021730.201.json
+<> 2020-10-24T030505-1.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 2,
+  "user_id": 1,
+  "exame_id": 2
+}
+
+<> 2020-10-24T030505.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 6,
+  "user_id": 1,
+  "exame_id": 2
+}
+
+<> 2020-10-24T030504-19.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 5,
+  "user_id": 1,
+  "exame_id": 2
+}
+
+<> 2020-10-24T030504-18.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 4,
+  "user_id": 1,
+  "exame_id": 2
+}
+
+<> 2020-10-24T030504-17.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 3,
+  "user_id": 1,
+  "exame_id": 2
+}
+
+<> 2020-10-24T030504-16.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 2,
+  "user_id": 1,
+  "exame_id": 2
+}
+
+<> 2020-10-24T030504-15.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaConsulta
+content-type: application/json
+
+{
+  "paciente_id": 6,
+  "user_id": 1,
+  "especialidade_id": 3
+}
+
+<> 2020-10-24T030504-14.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaConsulta
+content-type: application/json
+
+{
+  "paciente_id": 5,
+  "user_id": 1,
+  "especialidade_id": 3
+}
+
+<> 2020-10-24T030504-13.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaConsulta
+content-type: application/json
+
+{
+  "paciente_id": 4,
+  "user_id": 1,
+  "especialidade_id": 3
+}
+
+<> 2020-10-24T030504-12.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaConsulta
+content-type: application/json
+
+{
+  "paciente_id": 3,
+  "user_id": 1,
+  "especialidade_id": 3
+}
+
+<> 2020-10-24T030504-11.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaConsulta
+content-type: application/json
+
+{
+  "paciente_id": 2,
+  "user_id": 1,
+  "especialidade_id": 3
+}
+
+<> 2020-10-24T030504-10.201.json
+
+###
+
+POST http://localhost:8080/filaEspera/filaConsulta
+content-type: application/json
+
+{
+  "paciente_id": 1,
+  "user_id": 1,
+  "especialidade_id": 3
+}
+
+<> 2020-10-24T030504-9.201.json
 
 ###
 
@@ -566,70 +568,149 @@ POST http://localhost:8080/vagas
 content-type: application/json
 
 {
-  "data": "10/10/2020",
+  "data": "26/10/2020",
   "vagasOfertadas": "10",
   "especialidade":3,
   "exame": null,
   "consulta": true
 }
 
-<> 2020-10-12T015035.201.json
+<> 2020-10-24T030504-8.201.json
 
 ###
 
-POST http://localhost:8080/medicos
+POST http://localhost:8080/vagas
 content-type: application/json
 
 {
-  "nomeMedico": "Martin Petersen",
-  "conselho": "CRM",
-  "numeroConselho": "4442",
-  "especialidades": ["neurologia"]
+  "data": "26/10/2020",
+  "vagasOfertadas": "10",
+  "especialidade":null,
+  "exame": 2,
+  "consulta": false
 }
 
-<> 2020-10-12T014954.201.json
+<> 2020-10-24T030504-7.201.json
 
 ###
 
-POST http://localhost:8080/user
+POST http://localhost:8080/exames
+content-type: application/json
+
+{
+  "nomeExame": "TESTE2",
+  "autorizacao": false
+}
+
+<> 2020-10-24T030504-6.201.json
+
+###
+
+POST http://localhost:8080/exames
+content-type: application/json
+
+{
+  "nomeExame": "ECOCARDIOGRAMA",
+  "autorizacao": true
+}
+
+<> 2020-10-24T030504-5.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "107.375.204-16",
+  "carteiraSUS": "999999-5",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-24T030504-4.201.json
+
+###
+
+POST http://localhost:8080/pacientes
 content-type: application/json
 
 {
   "nome": "Kandell Oliveira",
-  "email" : "jjwt@gmail.com",
-  "senha" : "123456",
-  "role": "3"
+  "cpf": "107.375.204-17",
+  "carteiraSUS": "999999-6",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
 }
 
-<> 2020-10-12T123031-2.201.json
+<> 2020-10-24T030504-3.201.json
 
 ###
 
-POST http://localhost:8080/user
+POST http://localhost:8080/pacientes
 content-type: application/json
 
 {
-  "nome": "Kandell Oliveira",
-  "email" : "martin@gmail.com",
-  "senha" : "123456",
-  "role": "2"
+  "nome": "José Augusto do Nascimento",
+  "cpf": "107.375.204-18",
+  "carteiraSUS": "999999-7",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+
 }
 
-<> 2020-10-12T123031-1.201.json
+<> 2020-10-24T030504-2.201.json
 
 ###
 
-POST http://localhost:8080/user
+POST http://localhost:8080/pacientes
 content-type: application/json
 
 {
-  "nome": "Kandell Oliveira",
-  "email" : "martinrpetersen171@gmail.com",
-  "senha" : "123456",
-  "role": "1"
+  "nome": "Maria das Virgens Souza",
+  "cpf": "107.375.204-19",
+  "carteiraSUS": "999999-8",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
 }
 
-<> 2020-10-12T123031.201.json
+<> 2020-10-24T030504-1.201.json
+
+###
+
+POST http://localhost:8080/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-24T030504.201.json
 
 ###
 

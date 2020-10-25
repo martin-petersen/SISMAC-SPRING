@@ -35,16 +35,14 @@ public class VagaService {
     @Autowired
     private EspecialidadeRepository especialidadeRepository;
 
-    public Page<VagaDTO> listarExames(String nomeExame, Pageable pageable) {
+    public Page<VagaDTO> listarExames(Long exame_id, Pageable pageable) {
         LocalDate ontem = LocalDate.now().minusDays(1);
-        List<Exame> exames = exameRepository.findByNomeExame(nomeExame);
-        Exame exame = null;
-        for (Exame e:
-             exames) {
-            if(e.getNomeExame().equals(nomeExame))
-                exame = e;
+        if(exameRepository.findById(exame_id).isPresent()) {
+            Exame exame = exameRepository.findById(exame_id).get();
+            return convertInDetalhamentoDTO(vagaRepository.findByExameAndDataAfter(exame,ontem),pageable);
+        } else {
+            return null;
         }
-        return convertInDetalhamentoDTO(vagaRepository.findByExameAndDataAfter(exame,ontem),pageable);
     }
 
     public Page<VagaDTO> listarConsulta(Pageable pageable) {
@@ -66,12 +64,23 @@ public class VagaService {
         for (Vaga v:
                 lista) {
             if(v.getConsulta() != null) {
-                vagaDTOList.add(new VagaDTO(v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getEspecialidade(),v.getConsulta()));
+                vagaDTOList.add(new VagaDTO(v.getId(),v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getEspecialidade(),v.getConsulta()));
             } else {
-                vagaDTOList.add(new VagaDTO(v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getExame()));
+                vagaDTOList.add(new VagaDTO(v.getId(),v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getExame()));
             }
         }
         return new PageImpl<>(vagaDTOList,pageable,vagaDTOList.size());
+    }
+
+    public Page<VagaDTO> consultasPorEspecialidade(Long especialidade_id,Pageable pageable) {
+        LocalDate ontem = LocalDate.now().minusDays(1);
+        if(especialidadeRepository.findById(especialidade_id).isPresent()) {
+            Especialidade especialidade = especialidadeRepository.findById(especialidade_id).get();
+            List<Vaga> vagas = vagaRepository.findByEspecialidadeAndDataAfter(especialidade,ontem);
+            return convertInDetalhamentoDTO(vagas,pageable);
+        } else {
+            return null;
+        }
     }
 
     public Vaga salvar(VagaFORM vagaFORM) {

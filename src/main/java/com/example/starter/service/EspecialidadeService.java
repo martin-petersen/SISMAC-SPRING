@@ -75,8 +75,8 @@ public class EspecialidadeService {
         return especialidadeRepository.findAll();
     }
 
-    public Especialidade atualizar(String nomeEspecialidade, EspecialidadeFORM especialidadeForm) {
-        Especialidade especialidade = buscarPorNome(nomeEspecialidade);
+    public Especialidade atualizar(Long id, EspecialidadeFORM especialidadeForm) {
+        Especialidade especialidade = especialidadeRepository.findById(id).get();
         especialidade.setNomeEspecialidade(especialidadeForm.getNomeEspecialidade());
         especialidadeRepository.save(especialidade);
         return especialidade;

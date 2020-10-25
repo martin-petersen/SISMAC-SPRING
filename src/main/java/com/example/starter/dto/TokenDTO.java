@@ -5,12 +5,14 @@ public class TokenDTO {
     private String tipo;
     private boolean validate;
     private Long id;
+    private String userRole;
 
-    public TokenDTO(String token, String tipo, boolean validate, Long id) {
+    public TokenDTO(String token, String tipo, boolean validate, Long id, String userRole) {
         this.token = token;
         this.tipo = tipo;
         this.validate = validate;
         this.id = id;
+        this.userRole = userRole;
     }
 
     public String getToken() {
@@ -43,5 +45,13 @@ public class TokenDTO {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
     }
 }

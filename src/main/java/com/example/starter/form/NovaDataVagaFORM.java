@@ -4,7 +4,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class NovaDataVagaFORM {
-    @NotNull @NotBlank
+    @NotNull @NotBlank(message = "data nova não pode ser vazio")
     private String novaData;
 
     public String getNovaData() {

@@ -2,7 +2,7 @@ POST http://localhost:8080/exames
 content-type: application/json
 
 {
-  "nomeExame": "Teste",
+  "nomeExame": "ECOCARDIOGRAMA",
   "autorizacao": true
 }
 

@@ -141,4 +141,9 @@ public class UsuarioService {
         usuario.setPaciente(paciente);
         return usuario;
     }
+
+    public String getRole(Authentication authentication) {
+        Usuario logado = (Usuario) authentication.getPrincipal();
+        return logado.getPerfil().get(0).getPerfil();
+    }
 }

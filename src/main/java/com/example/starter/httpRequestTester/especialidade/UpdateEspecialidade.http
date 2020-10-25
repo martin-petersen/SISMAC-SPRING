@@ -1,15 +1,8 @@
-PUT http://localhost:8080/especialidades/atualizarEspecialidade?nomeEspecialidade=NEUROLOGIA
+PUT http://localhost:8080/especialidades/atualizarEspecialidade/29
 content-type: application/json
 
 {
-  "nomeEspecialidade": "Endocrinologia"
+  "nomeEspecialidade": "123321"
 }
 
 ###
-
-PUT http://localhost:8080/especialidades/atualizarEspecialidade?nomeEspecialidade=Endocrinologia
-content-type: application/json
-
-{
-  "nomeEspecialidade": "Cardiologia"
-}

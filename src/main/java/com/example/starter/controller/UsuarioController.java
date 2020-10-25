@@ -32,7 +32,7 @@ public class UsuarioController {
     @GetMapping
     public ResponseEntity<Page<UsuarioDTO>> listaDeUsers(@RequestParam(required = false) String nome,
                                                         @RequestParam(required = false) String email,
-                                                        @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeEspecialidade") Pageable pageable) {
+                                                        @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nome") Pageable pageable) {
         if(nome != null) {
             String name = "%" + nome.toUpperCase() + "%";
             List<Usuario> usuarios = usuarioService.buscarPorNome(name);

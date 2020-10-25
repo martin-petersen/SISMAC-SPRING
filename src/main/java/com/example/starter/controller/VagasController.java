@@ -28,16 +28,20 @@ public class VagasController {
     private VagaService vagaService;
 
     @GetMapping
-    public ResponseEntity<Page<VagaDTO>> listar(@RequestParam(required = false) String nomeExame,
-                                                @RequestParam(required = true) boolean consulta,
-                                                @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "especialidade") Pageable pageable) {
+    public ResponseEntity<Page<VagaDTO>> listar(@RequestParam(required = false) Long exame_id,
+                                                @RequestParam boolean consulta,
+                                                @RequestParam(required = false) Long especialidade_id,
+                                                @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "data") Pageable pageable) {
         try {
-            if(nomeExame != null && !consulta) {
-                Page<VagaDTO> listagemVagasExames = vagaService.listarExames(nomeExame.toUpperCase(),pageable);
+            if(exame_id != null && !consulta) {
+                Page<VagaDTO> listagemVagasExames = vagaService.listarExames(exame_id,pageable);
                 return ResponseEntity.ok(listagemVagasExames);
-            } else if(nomeExame == null && !consulta) {
+            } else if(exame_id == null && !consulta) {
                 Page<VagaDTO> listagemVagasTotais = vagaService.listar(pageable);
                 return ResponseEntity.ok(listagemVagasTotais);
+            } else if(consulta && especialidade_id != null) {
+                Page<VagaDTO> consultasPorEspecialidade = vagaService.consultasPorEspecialidade(especialidade_id,pageable);
+                return ResponseEntity.ok(consultasPorEspecialidade);
             } else {
                 Page<VagaDTO> listagemVagasConsultas = vagaService.listarConsulta(pageable);
                 return ResponseEntity.ok(listagemVagasConsultas);
@@ -55,9 +59,9 @@ public class VagasController {
             Vaga vaga = vagaService.salvar(vagaFORM);
             URI uri = uriComponentsBuilder.path("/vagas/{id}").buildAndExpand(vaga.getId()).toUri();
             if(vaga.getConsulta() != null) {
-                return ResponseEntity.created(uri).body(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getConsulta()));
+                return ResponseEntity.created(uri).body(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getConsulta()));
             } else {
-                return ResponseEntity.created(uri).body(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getExame()));
+                return ResponseEntity.created(uri).body(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getExame()));
             }
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();
@@ -67,13 +71,13 @@ public class VagasController {
     @PutMapping("/editarVaga/{id}")
     @Transactional
     public ResponseEntity<VagaDTO> editarVaga(@PathVariable Long id,
-                                                       @RequestBody NovaDataVagaFORM novaDataVagaFORM) {
+                                              @RequestBody NovaDataVagaFORM novaDataVagaFORM) {
         try {
             Vaga vaga = vagaService.atualizar(id,novaDataVagaFORM);
             if(vaga.getConsulta() != null) {
-                return ResponseEntity.ok(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getConsulta()));
+                return ResponseEntity.ok(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getConsulta()));
             } else {
-                return ResponseEntity.ok(new VagaDTO(vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getExame()));
+                return ResponseEntity.ok(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getExame()));
             }
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();

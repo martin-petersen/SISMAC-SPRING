@@ -1,0 +1,10 @@
+PUT http://localhost:8080/filaEspera/2
+content-type: application/json
+
+{
+
+  "user_id": 1,
+  "especialidade_id": null,
+  "exame_id": 1
+
+}

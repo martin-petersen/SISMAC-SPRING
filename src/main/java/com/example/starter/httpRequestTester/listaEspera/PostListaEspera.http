@@ -1,0 +1,30 @@
+POST http://localhost:8080/filaEspera/filaConsulta
+content-type: application/json
+
+{
+  "paciente_id": 1,
+  "user_id": 1,
+  "especialidade_id": 3
+}
+
+###
+
+POST http://localhost:8080/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 2,
+  "user_id": 1,
+  "exame_id": 1
+}
+
+###
+
+POST http://localhost:8080/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 3,
+  "user_id": 1,
+  "exame_id": 2
+}
