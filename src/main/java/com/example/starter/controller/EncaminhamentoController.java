@@ -54,7 +54,7 @@ public class EncaminhamentoController {
     public ResponseEntity<EncaminhamentoDTO> updateEncaminhamento(@PathVariable Long id,
                                                                   @RequestParam("file") MultipartFile file) throws ServiceException {
         Anexo anexo = anexoService.salvar(file);
-        Encaminhamento encaminhamento = encaminhamentoService.salvar(id,anexo.getId());
+        Encaminhamento encaminhamento = encaminhamentoService.update(id,anexo.getId());
         EncaminhamentoDTO encaminhamentoDTO = new EncaminhamentoDTO(encaminhamento.getId(),encaminhamento.isAutorizado(),encaminhamento.getMotivo());
         return ResponseEntity.ok(encaminhamentoDTO);
     }
