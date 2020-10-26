@@ -127,35 +127,32 @@ public class JobService {
         }
     }
 
-    //@Scheduled(cron = "0 0 1 1/1 * ?")
-//    @Scheduled(cron = "0 0/3 * 1/1 * ?")
-//    public void enviarEmailConfirmacao() {
-//        List<Agendamento> agendamentos = agendamentoRepository.findByDataAgendamentoAfter(LocalDate.now());
-//        for (Agendamento agendamento:
-//                agendamentos) {
-//            Paciente paciente = pacienteRepository.findById(agendamento.getPaciente_id()).get();
-//            Usuario usuario = usuarioRepository.findByPaciente(paciente);
-//            if(agendamento.isConsulta()) {
-//                assert agendamento.getEspecialidade_id() != null;
-//                Especialidade especialidade = especialidadeRepository.findById(agendamento.getEspecialidade_id()).get();
-//                emailSender.lembreteConsulta(
-//                        usuario.getEmail(),
-//                        paciente.getNomePaciente(),
-//                        agendamento.getDataAgendamento(),
-//                        especialidade.getNomeEspecialidade()
-//                );
-//            } else {
-//                assert agendamento.getExame_id() != null;
-//                Exame exame = exameRepository.findById(agendamento.getExame_id()).get();
-//                emailSender.lembreteExame(
-//                        usuario.getEmail(),
-//                        paciente.getNomePaciente(),
-//                        exame.getNomeExame(),
-//                        agendamento.getDataAgendamento()
-//                        );
-//            }
-//        }
-//    }
+    @Scheduled(cron = "0 0 1 1/1 * ?")
+    public void enviarEmailConfirmacao() {
+        List<Agendamento> agendamentos = agendamentoRepository.findByDataAgendamento(LocalDate.now().plusDays(1));
+        for (Agendamento agendamento:
+                agendamentos) {
+            Paciente paciente = pacienteRepository.findById(agendamento.getPaciente_id()).get();
+            Usuario usuario = usuarioRepository.findByPaciente(paciente);
+            if(agendamento.isConsulta() && agendamento.getEspecialidade_id() != null && especialidadeRepository.findById(agendamento.getEspecialidade_id()).isPresent()) {
+                Especialidade especialidade = especialidadeRepository.findById(agendamento.getEspecialidade_id()).get();
+                emailSender.lembreteConsulta(
+                        usuario.getEmail(),
+                        paciente.getNomePaciente(),
+                        agendamento.getDataAgendamento(),
+                        especialidade.getNomeEspecialidade()
+                );
+            } else if(agendamento.getExame_id() != null && exameRepository.findById(agendamento.getExame_id()).isPresent()){
+                Exame exame = exameRepository.findById(agendamento.getExame_id()).get();
+                emailSender.lembreteExame(
+                        usuario.getEmail(),
+                        paciente.getNomePaciente(),
+                        exame.getNomeExame(),
+                        agendamento.getDataAgendamento()
+                        );
+            }
+        }
+    }
 
     private boolean validate(ListaEspera listaEspera) {
         if(!listaEspera.isRequerAutorizacao()) {

@@ -1,9 +1,11 @@
 package com.example.starter.service;
 
+import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.ExameFORM;
 import com.example.starter.model.Exame;
 import com.example.starter.repository.ExameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,11 +34,11 @@ public class ExameService {
         exameRepository.save(exame);
         return exame;
     }
-    public Exame buscarUm(Long id) {
+    public Exame buscarUm(Long id) throws ServiceException {
         if(exameRepository.findById(id).isPresent())
             return exameRepository.findById(id).get();
         else
-            return null;
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Exame","Não foi encontrado esse exame no sistema");
     }
 
     public Exame atualizar(Long id, ExameFORM exameFORM) {
@@ -47,12 +49,12 @@ public class ExameService {
         return oldExame;
     }
 
-    public boolean remover(Exame exame) {
+    public boolean remover(Exame exame) throws ServiceException {
         try {
             exameRepository.deleteById(exame.getId());
             return true;
         }catch (Exception e) {
-            return false;
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Exame","Houve um erro ao remover esse exame, entre em contato com a administração");
         }
     }
 }
