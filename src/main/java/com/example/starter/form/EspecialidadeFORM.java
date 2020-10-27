@@ -7,6 +7,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 public class EspecialidadeFORM {
+
     @NotNull(message = "não pode ser nulo")
     @NotEmpty(message = "não pode ser vazio")
     @Length(message = "tamanho máximo excedido",max = 30)
