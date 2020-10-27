@@ -2,13 +2,9 @@ INSERT INTO ROLE(perfil) VALUES ('ROLE_PACIENTE');
 INSERT INTO ROLE(perfil) VALUES ('ROLE_FUNCIONARIO');
 INSERT INTO ROLE(perfil) VALUES ('ROLE_ADMIN');
 
-INSERT INTO PACIENTE(bairro,carteirasus,cidade,complemento,cpf,data_nascimento,nome_paciente,numero,telefone) VALUES ('PAJUÇARA','999899-9','NATAL','CASA DE PRIMEIRO ANDAR','107.375.204-69','21/06/1996','MARTIN ROCHA PETERSEN','160','(84)99678-4853');
-
 INSERT INTO USUARIO(nome,email,validate,paciente_id,senha) VALUES ('MARTIN PETERSEN', 'petersen.martin.imd@gmail.com',true, null ,'$2a$10$3XtMirDe94AcNfXkv7Ivh.2LV7HAVZArrw03Yw9PEpj9nZZmQNYvm');
-INSERT INTO USUARIO(nome,email,validate,paciente_id,senha) VALUES ('MARTIN PETERSEN', 'martinrpetersen171@gmail.com',true, 1 ,'$2a$10$3XtMirDe94AcNfXkv7Ivh.2LV7HAVZArrw03Yw9PEpj9nZZmQNYvm');
 
 INSERT INTO USUARIO_ROLE(usuario_id,role_id) VALUES (1,3);
-INSERT INTO USUARIO_ROLE(usuario_id,role_id) VALUES (2,1);
 
 INSERT INTO CONSULTA(nome) VALUES ('CONSULTA');
 

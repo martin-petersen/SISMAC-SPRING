@@ -13,21 +13,21 @@ public class Agendamento {
     private Long id;
     private LocalDate dataAgendamento;
     private final LocalDateTime dataCriacao = LocalDateTime.now();
-    private Long paciente_id;
+    private Long paciente;
     @Nullable
-    private Long especialidade_id;
+    private Long especialidade;
     @Nullable
-    private Long exame_id;
+    private Long exame;
     private boolean consulta;
 
     public Agendamento(LocalDate localDate, ListaEspera listaEspera) {
         this.dataAgendamento = localDate;
-        this.paciente_id = listaEspera.getPaciente().getId();
+        this.paciente = listaEspera.getPaciente().getId();
         if(listaEspera.getEspecialidade() != null) {
             this.consulta = true;
-            this.especialidade_id = listaEspera.getEspecialidade().getId();
+            this.especialidade = listaEspera.getEspecialidade().getId();
         } else {
-            this.exame_id = listaEspera.getExame().getId();
+            this.exame = listaEspera.getExame().getId();
             this.consulta = false;
         }
 
@@ -58,32 +58,36 @@ public class Agendamento {
     }
 
     public Long getPaciente_id() {
-        return paciente_id;
+        return paciente;
     }
 
     public void setPaciente_id(Long paciente_id) {
-        this.paciente_id = paciente_id;
+        this.paciente = paciente_id;
     }
 
     @Nullable
     public Long getEspecialidade_id() {
-        return especialidade_id;
+        return especialidade;
     }
 
     public void setEspecialidade_id(@Nullable Long especialidade_id) {
-        this.especialidade_id = especialidade_id;
+        this.especialidade = especialidade_id;
     }
 
     @Nullable
     public Long getExame_id() {
-        return exame_id;
+        return exame;
     }
 
     public void setExame_id(@Nullable Long exame_id) {
-        this.exame_id = exame_id;
+        this.exame = exame_id;
     }
 
     public boolean isConsulta() {
         return consulta;
+    }
+
+    public void setConsulta(boolean consulta) {
+        this.consulta = consulta;
     }
 }

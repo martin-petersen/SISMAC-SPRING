@@ -1,6 +1,7 @@
 package com.example.starter.controller;
 
 import com.example.starter.dto.ExameDTO;
+import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.ExameFORM;
 import com.example.starter.model.Exame;
 import com.example.starter.service.ExameService;
@@ -47,13 +48,9 @@ public class ExameController {
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<ExameDTO>buscarUm(@PathVariable Long id) {
-        try {
-            Exame exame = exameService.buscarUm(id);
-            return ResponseEntity.ok(new ExameDTO(exame));
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
+    public ResponseEntity<ExameDTO>buscarUm(@PathVariable Long id) throws ServiceException {
+        Exame exame = exameService.buscarUm(id);
+        return ResponseEntity.ok(new ExameDTO(exame));
     }
     
     @GetMapping("/autorizacaoExame")
@@ -106,12 +103,9 @@ public class ExameController {
 
     @DeleteMapping
     @Transactional
-    public ResponseEntity<?> removerExame(@RequestParam Long id) {
-        if(exameService.remover(new Exame(id))) {
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.badRequest().build();
-        }
+    public ResponseEntity<?> removerExame(@RequestParam Long id) throws ServiceException {
+        exameService.remover(new Exame(id));
+        return ResponseEntity.ok().build();
     }
 
     private Page<ExameDTO> convertInDetalhamentoDTO (List<Exame> lista, Pageable pageable) {

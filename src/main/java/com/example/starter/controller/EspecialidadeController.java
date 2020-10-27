@@ -1,6 +1,7 @@
 package com.example.starter.controller;
 
 import com.example.starter.dto.EspecialidadeDTO;
+import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.EspecialidadeFORM;
 import com.example.starter.model.Especialidade;
 import com.example.starter.service.EspecialidadeService;
@@ -32,7 +33,7 @@ public class EspecialidadeController {
     @Cacheable(value = "listaEspecialidades")
     @GetMapping
     public ResponseEntity<Page<EspecialidadeDTO>> listarEspecialidades(@RequestParam(required = false) String nomeEspecialidade,
-                                                                    @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeEspecialidade") Pageable pageable) {
+                                                                    @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeEspecialidade") Pageable pageable) throws ServiceException {
         if(nomeEspecialidade != null) {
             Page<Especialidade> especialidade = especialidadeService.buscarPorNome(nomeEspecialidade, pageable);
             Page<EspecialidadeDTO> especialidadeDTOS = especialidade.map(EspecialidadeDTO::new);
@@ -56,30 +57,21 @@ public class EspecialidadeController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<EspecialidadeDTO> buscarporID(@PathVariable Long id) {
-        try {
-            Especialidade especialidade = especialidadeService.buscarPorID(id);
-            return ResponseEntity.ok(new EspecialidadeDTO(especialidade));
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-
+    public ResponseEntity<EspecialidadeDTO> buscarporID(@PathVariable Long id) throws ServiceException {
+        Especialidade especialidade = especialidadeService.buscarPorID(id);
+        return ResponseEntity.ok(new EspecialidadeDTO(especialidade));
     }
 
     @PostMapping
     @Transactional
     @CacheEvict(value = "listaEspecialidades", allEntries = true)
     public ResponseEntity<EspecialidadeDTO> cadastrarEspecialidade(@RequestBody @Valid EspecialidadeFORM especialidadeForm,
-                                                                   UriComponentsBuilder uriComponentsBuilder) {
-        try{
-            especialidadeService.salvar(especialidadeForm.convert());
-            Especialidade especialidade = especialidadeService.buscarPorNome(especialidadeForm.getNomeEspecialidade());
-            URI uri = uriComponentsBuilder.path("/especialidades/{id}").buildAndExpand(especialidade.getId()).toUri();
-            EspecialidadeDTO especialidadeDTO = new EspecialidadeDTO(especialidade);
-            return ResponseEntity.created(uri).body(especialidadeDTO);
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
+                                                                   UriComponentsBuilder uriComponentsBuilder) throws ServiceException {
+        especialidadeService.salvar(especialidadeForm.convert());
+        Especialidade especialidade = especialidadeService.buscarPorNome(especialidadeForm.getNomeEspecialidade());
+        URI uri = uriComponentsBuilder.path("/especialidades/{id}").buildAndExpand(especialidade.getId()).toUri();
+        EspecialidadeDTO especialidadeDTO = new EspecialidadeDTO(especialidade);
+        return ResponseEntity.created(uri).body(especialidadeDTO);
     }
 
     @PutMapping("/atualizarEspecialidade/{id}")
@@ -98,12 +90,8 @@ public class EspecialidadeController {
     @DeleteMapping("/deletarEspecialidade")
     @Transactional
     @CacheEvict(value = "listaEspecialidades", allEntries = true)
-    public ResponseEntity<?> removerEspecialidade(@RequestParam String nomeEspecialidade) {
-        try {
-            especialidadeService.remover(nomeEspecialidade.toUpperCase());
-            return ResponseEntity.ok().build();
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
+    public ResponseEntity<?> removerEspecialidade(@RequestParam String nomeEspecialidade) throws ServiceException {
+        especialidadeService.remover(nomeEspecialidade.toUpperCase());
+        return ResponseEntity.ok().build();
     }
 }

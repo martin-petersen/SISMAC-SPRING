@@ -1,6 +1,7 @@
 package com.example.starter.handler;
 
 import com.example.starter.error.ApiError;
+import com.example.starter.exceptions.ServiceException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
@@ -26,5 +27,12 @@ public class HandlerException {
             error.put(fieldName,errorMessage);
         });
         return new ResponseEntity<>(new ApiError(error, HttpStatus.BAD_REQUEST,HttpStatus.BAD_REQUEST.value()),HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler({ServiceException.class})
+    public ResponseEntity<ApiError> notFound(final ServiceException e) {
+        Map<String,String> error = new HashMap<>();
+        error.put(e.getObjeto(),e.getMessage());
+        return new ResponseEntity<>(new ApiError(error,e.getStatus(),e.getStatus().value()),e.getStatus());
     }
 }

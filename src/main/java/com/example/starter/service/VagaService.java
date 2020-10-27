@@ -1,6 +1,7 @@
 package com.example.starter.service;
 
 import com.example.starter.dto.VagaDTO;
+import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.NovaDataVagaFORM;
 import com.example.starter.form.VagaFORM;
 import com.example.starter.model.Consulta;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -35,13 +37,13 @@ public class VagaService {
     @Autowired
     private EspecialidadeRepository especialidadeRepository;
 
-    public Page<VagaDTO> listarExames(Long exame_id, Pageable pageable) {
+    public Page<VagaDTO> listarExames(Long exame_id, Pageable pageable) throws ServiceException {
         LocalDate ontem = LocalDate.now().minusDays(1);
         if(exameRepository.findById(exame_id).isPresent()) {
             Exame exame = exameRepository.findById(exame_id).get();
             return convertInDetalhamentoDTO(vagaRepository.findByExameAndDataAfter(exame,ontem),pageable);
         } else {
-            return null;
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Exame","Não foi encontrado esse exame no sistema");
         }
     }
 
@@ -72,18 +74,18 @@ public class VagaService {
         return new PageImpl<>(vagaDTOList,pageable,vagaDTOList.size());
     }
 
-    public Page<VagaDTO> consultasPorEspecialidade(Long especialidade_id,Pageable pageable) {
+    public Page<VagaDTO> consultasPorEspecialidade(Long especialidade_id,Pageable pageable) throws ServiceException {
         LocalDate ontem = LocalDate.now().minusDays(1);
         if(especialidadeRepository.findById(especialidade_id).isPresent()) {
             Especialidade especialidade = especialidadeRepository.findById(especialidade_id).get();
             List<Vaga> vagas = vagaRepository.findByEspecialidadeAndDataAfter(especialidade,ontem);
             return convertInDetalhamentoDTO(vagas,pageable);
         } else {
-            return null;
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Especialidade","Não foi encontrada essa especialidade no sistema");
         }
     }
 
-    public Vaga salvar(VagaFORM vagaFORM) {
+    public Vaga salvar(VagaFORM vagaFORM) throws ServiceException {
         Vaga novaVaga = new Vaga();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate localDate = LocalDate.parse(vagaFORM.getData(), formatter);
@@ -95,14 +97,14 @@ public class VagaService {
                 Especialidade especialidade = especialidadeRepository.findById(vagaFORM.getEspecialidade()).get();
                 novaVaga.setEspecialidade(especialidade);
             } else {
-                return null;
+                throw new ServiceException(HttpStatus.NOT_FOUND,"Especialidade","Não foi encontrada essa especialidade no sistema");
             }
         } else {
             if(exameRepository.findById(vagaFORM.getExame()).isPresent()) {
                 Exame exame = exameRepository.findById(vagaFORM.getExame()).get();
                 novaVaga.setExame(exame);
             } else {
-                return null;
+                throw new ServiceException(HttpStatus.NOT_FOUND,"Exame","Não foi encontrado esse exame no sistema");
             }
         }
         novaVaga.setVagasOfertadas(vagaFORM.getVagasOfertadas());

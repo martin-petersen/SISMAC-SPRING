@@ -3,6 +3,7 @@ package com.example.starter.controller;
 import com.example.starter.config.TokenService;
 import com.example.starter.dto.TokenDTO;
 import com.example.starter.dto.UsuarioDTO;
+import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.LoginFORM;
 import com.example.starter.form.RecuperarUsuarioFORM;
 import com.example.starter.form.ValidateTokenFORM;
@@ -52,25 +53,17 @@ public class AutenticacaoController {
     @PostMapping("/validate/{id}")
     @Transactional
     public ResponseEntity<UsuarioDTO> validateUser(@PathVariable Long id,
-                                                   @RequestBody @Valid ValidateTokenFORM validateTokenFORM) {
+                                                   @RequestBody @Valid ValidateTokenFORM validateTokenFORM) throws ServiceException {
         Usuario usuario = usuarioService.validate(id,validateTokenFORM);
-        if(usuario != null) {
-            usuario.setValidate(true);
-            UsuarioDTO usuarioDTO = new UsuarioDTO(usuario);
-            return ResponseEntity.ok(usuarioDTO);
-        } else {
-            return ResponseEntity.badRequest().build();
-        }
+        usuario.setValidate(true);
+        UsuarioDTO usuarioDTO = new UsuarioDTO(usuario);
+        return ResponseEntity.ok(usuarioDTO);
     }
 
     @PostMapping("/recoverPassword")
     @Transactional
-    public ResponseEntity<Boolean> recover(@RequestBody @Valid RecuperarUsuarioFORM recuperarUsuarioFORM) {
-        try {
-            Usuario usuarios = usuarioService.recuperarSenha(recuperarUsuarioFORM);
-            return ResponseEntity.ok(Boolean.TRUE);
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
+    public ResponseEntity<Boolean> recover(@RequestBody @Valid RecuperarUsuarioFORM recuperarUsuarioFORM) throws ServiceException {
+        usuarioService.recuperarSenha(recuperarUsuarioFORM);
+        return ResponseEntity.ok(Boolean.TRUE);
     }
 }

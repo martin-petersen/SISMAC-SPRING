@@ -1,4 +1,4 @@
-GET http://localhost:8080/especialidades?nomeEspecialidade=Neurologia
+GET http://localhost:8080/especialidades?nomeEspecialidade=ronaldinho
 content-type: application/json
 
 ###

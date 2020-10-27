@@ -1,10 +1,12 @@
 package com.example.starter.service;
 
+import com.example.starter.exceptions.ServiceException;
 import com.example.starter.model.Paciente;
 import com.example.starter.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,23 +16,19 @@ public class PacienteService {
     private PacienteRepository pacienteRepository;
 
     public boolean salvar (Paciente paciente) {
-        try {
-            pacienteRepository.save(paciente);
-            return true;
-        }catch (Exception e) {
-            return false;
-        }
+        pacienteRepository.save(paciente);
+        return true;
     }
 
     public Page<Paciente> buscarTodos(Pageable pageable) {
         return pacienteRepository.findAll(pageable);
     }
 
-    public Page<Paciente> buscarPorNome(String nome, Pageable pageable) {
+    public Page<Paciente> buscarPorNome(String nome, Pageable pageable) throws ServiceException {
         if(pacienteRepository.findByNomePaciente(nome,pageable) != null) {
             return pacienteRepository.findByNomePaciente(nome,pageable);
         } else {
-            throw new NullPointerException();
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Paciente","Não foram encontrados pacientes com esse nome");
         }
     }
 
@@ -46,34 +44,32 @@ public class PacienteService {
         pacienteRepository.deleteById(aSerRemovido.getId());
     }
 
-    public Paciente buscarPorCpf(String cpf) {
+    public Paciente buscarPorCpf(String cpf) throws ServiceException {
         if(pacienteRepository.findByCpf(cpf) != null) {
             return pacienteRepository.findByCpf(cpf);
         } else {
-            throw new NullPointerException();
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Paciente","Não foi encontrado paciente com esse cpf");
         }
     }
 
-    public Page<Paciente> buscarPorCpf(String cpf, Pageable pageable) {
+    public Page<Paciente> buscarPorCpf(String cpf, Pageable pageable) throws ServiceException {
         if(pacienteRepository.findByCpf(cpf) != null) {
             return pacienteRepository.findByCpf(cpf, pageable);
         } else {
-            throw new NullPointerException();
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Paciente","Não foi encontrado paciente com esse cpf");
         }
     }
 
-    public Page<Paciente> buscarPorSUS(String carteiraSUS, Pageable pageable) {
+    public Page<Paciente> buscarPorSUS(String carteiraSUS, Pageable pageable) throws ServiceException {
         if(pacienteRepository.findByCarteiraSUS(carteiraSUS) != null) {
             return pacienteRepository.findByCarteiraSUS(carteiraSUS, pageable);
         } else {
-            throw new NullPointerException();
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Paciente","Não foi encontrado paciente com esse cartãoSUS");
         }
     }
 
     public Paciente alterar(Paciente paciente) {
-        if(paciente == null) {
-            return null;
-        } else if (pacienteRepository.findByCpf(paciente.getCpf()) != null) {
+        if (pacienteRepository.findByCpf(paciente.getCpf()) != null) {
             Paciente pacienteAtualizado = pacienteRepository.findByCpf(paciente.getCpf());
             pacienteAtualizado.setPacienteUpdate(paciente);
             return pacienteAtualizado;

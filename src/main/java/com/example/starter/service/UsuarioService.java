@@ -1,5 +1,6 @@
 package com.example.starter.service;
 
+import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.RecuperarUsuarioFORM;
 import com.example.starter.form.UpdateUsuarioFORM;
 import com.example.starter.form.UsuarioFORM;
@@ -11,6 +12,7 @@ import com.example.starter.repository.PacienteRepository;
 import com.example.starter.repository.RoleRepository;
 import com.example.starter.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -36,19 +38,19 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    public List<Usuario> buscarPorEmail(String email) {
+    public List<Usuario> buscarPorEmail(String email) throws ServiceException {
         if(usuarioRepository.findByEmail(email).size()>0) {
             return usuarioRepository.findByEmail(email);
         } else {
-            throw new NullPointerException();
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Usuario","Não foi encontrado usuario com esse email no sistema");
         }
     }
 
-    public List<Usuario> buscarPorNome(String nome) {
+    public List<Usuario> buscarPorNome(String nome) throws ServiceException {
         if(usuarioRepository.findByNome(nome) != null) {
             return usuarioRepository.findByNome(nome);
         } else {
-            throw new NullPointerException();
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Usuario","Não foram encontrados usuarios com esse nome no sistema");
         }
     }
 
@@ -88,23 +90,26 @@ public class UsuarioService {
         return usuario;
     }
 
-    public boolean remover(Long id) {
-        try {
+    public boolean remover(Long id) throws ServiceException {
+        if(usuarioRepository.findById(id).isPresent()) {
             usuarioRepository.deleteById(id);
             return true;
-        } catch (Exception e) {
-            return false;
+        } else {
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Usuario","Esse usuario não foi encontrado");
         }
     }
 
-    public Usuario validate(Long id, ValidateTokenFORM validateTokenFORM) {
-        Usuario usuario = usuarioRepository.findById(id).get();
-        if(usuario.getValidateCode().equals(validateTokenFORM.getToken())) {
-            usuario.setValidate(true);
-            usuarioRepository.save(usuario);
+    public Usuario validate(Long id, ValidateTokenFORM validateTokenFORM) throws ServiceException {
+        Usuario usuario = new Usuario();
+        if(usuarioRepository.findById(id).isPresent()) {
+            usuario = usuarioRepository.findById(id).get();
+            if(usuario.getValidateCode().equals(validateTokenFORM.getToken())) {
+                usuario.setValidate(true);
+                usuarioRepository.save(usuario);
+            }
             return usuario;
         } else {
-            return null;
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Usuario","Esse usuario não foi encontrado");
         }
     }
 
@@ -116,7 +121,7 @@ public class UsuarioService {
             return false;
     }
 
-    public Usuario recuperarSenha(RecuperarUsuarioFORM recuperarUsuarioFORM) {
+    public void recuperarSenha(RecuperarUsuarioFORM recuperarUsuarioFORM) throws ServiceException {
         List<Usuario> usuarios = usuarioRepository.findByEmail(recuperarUsuarioFORM.getEmail());
         Usuario usuario = usuarios.get(0);
         if(usuario.getNome().equals(recuperarUsuarioFORM.getNome().toUpperCase())) {
@@ -125,9 +130,8 @@ public class UsuarioService {
             usuarioRepository.save(usuario);
             emailSender.recoverPassword(usuario,newPassword);
         } else {
-            return null;
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Usuario","Nome de usuario incorreto");
         }
-        return usuario;
     }
 
     public Long getID(Authentication authentication) {

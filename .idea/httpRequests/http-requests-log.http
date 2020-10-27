@@ -1,343 +1,41 @@
-POST http://localhost:8080/filaEspera/filaExame
+POST http://localhost:8081/agendamento
 content-type: application/json
-
-{
-  "paciente_id": 6,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030838-21.201.json
 
 ###
 
-POST http://localhost:8080/filaEspera/filaExame
+PUT http://localhost:8081/user/vinculo/2?cpf=794.897.370-2
 content-type: application/json
 
-{
-  "paciente_id": 5,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030838-20.201.json
+<> 2020-10-26T053511.200.json
 
 ###
 
-POST http://localhost:8080/filaEspera/filaExame
+POST http://localhost:8081/auth/validate/2
 content-type: application/json
 
 {
-  "paciente_id": 4,
-  "user_id": 1,
-  "exame_id": 2
+  "token" : "oQon8u"
 }
 
-<> 2020-10-24T030838-19.201.json
+<> 2020-10-26T053507.200.json
 
 ###
 
-POST http://localhost:8080/filaEspera/filaExame
+POST http://localhost:8081/user
 content-type: application/json
 
 {
-  "paciente_id": 3,
-  "user_id": 1,
-  "exame_id": 2
+  "nome": "Martin Petersen",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "123456",
+  "role": 1
 }
 
-<> 2020-10-24T030838-18.201.json
+<> 2020-10-26T053443.201.json
 
 ###
 
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 2,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030838-17.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 6,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030838-16.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 5,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030838-15.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 4,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030838-14.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 3,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030838-13.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 2,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030838-12.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 6,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030838-11.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 5,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030838-10.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 4,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030838-9.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 3,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030838-8.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 2,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030838-7.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 1,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030838-6.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "26/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":3,
-  "exame": null,
-  "consulta": true
-}
-
-<> 2020-10-24T030838-5.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "26/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":null,
-  "exame": 2,
-  "consulta": false
-}
-
-<> 2020-10-24T030838-4.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2",
-  "autorizacao": false
-}
-
-<> 2020-10-24T030838-3.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "ECOCARDIOGRAMA",
-  "autorizacao": true
-}
-
-<> 2020-10-24T030838-2.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "Martin Rocha Petersen",
-  "cpf": "107.375.204-16",
-  "carteiraSUS": "999999-5",
-  "cidade": "Natal",
-  "bairro": "Pajuçara",
-  "complemento": "Casa de primeiro andar",
-  "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853",
-  "numero": "160"
-}
-
-<> 2020-10-24T030838-1.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "Kandell Oliveira",
-  "cpf": "107.375.204-17",
-  "carteiraSUS": "999999-6",
-  "cidade": "Natal",
-  "bairro": "Pajuçara",
-  "complemento": "Casa de primeiro andar",
-  "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853",
-  "numero": "160"
-}
-
-<> 2020-10-24T030838.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "José Augusto do Nascimento",
-  "cpf": "107.375.204-18",
-  "carteiraSUS": "999999-7",
-  "cidade": "Natal",
-  "bairro": "Pajuçara",
-  "complemento": "Casa de primeiro andar",
-  "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853",
-  "numero": "160"
-
-}
-
-<> 2020-10-24T030837-2.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "Maria das Virgens Souza",
-  "cpf": "107.375.204-19",
-  "carteiraSUS": "999999-8",
-  "cidade": "Natal",
-  "bairro": "Pajuçara",
-  "complemento": "Casa de primeiro andar",
-  "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853",
-  "numero": "160"
-}
-
-<> 2020-10-24T030837-1.201.json
-
-###
-
-POST http://localhost:8080/pacientes
+POST http://localhost:8081/pacientes
 content-type: application/json
 
 {
@@ -352,350 +50,48 @@ content-type: application/json
   "numero": "160"
 }
 
-<> 2020-10-24T030837.201.json
+<> 2020-10-26T053437.201.json
 
 ###
 
-POST http://localhost:8080/filaEspera/filaExame
+POST http://localhost:8081/agendamento
+content-type: application/json
+
+###
+
+PUT http://localhost:8081/user/vinculo/2?cpf=794.897.370-2
+content-type: application/json
+
+<> 2020-10-26T053320.200.json
+
+###
+
+POST http://localhost:8081/auth/validate/2
 content-type: application/json
 
 {
-  "paciente_id": 6,
-  "user_id": 1,
-  "exame_id": 2
+  "token" : "q2MFHV"
 }
 
-<> 2020-10-24T030505-4.201.json
+<> 2020-10-26T053316.200.json
 
 ###
 
-POST http://localhost:8080/filaEspera/filaExame
+POST http://localhost:8081/user
 content-type: application/json
 
 {
-  "paciente_id": 5,
-  "user_id": 1,
-  "exame_id": 2
+  "nome": "Martin Petersen",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "123456",
+  "role": 1
 }
 
-<> 2020-10-24T030505-3.201.json
+<> 2020-10-26T053257.201.json
 
 ###
 
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 4,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030505-2.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 3,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030505-1.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 2,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030505.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 6,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030504-19.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 5,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030504-18.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 4,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030504-17.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 3,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030504-16.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 2,
-  "user_id": 1,
-  "exame_id": 2
-}
-
-<> 2020-10-24T030504-15.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 6,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030504-14.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 5,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030504-13.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 4,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030504-12.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 3,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030504-11.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 2,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030504-10.201.json
-
-###
-
-POST http://localhost:8080/filaEspera/filaConsulta
-content-type: application/json
-
-{
-  "paciente_id": 1,
-  "user_id": 1,
-  "especialidade_id": 3
-}
-
-<> 2020-10-24T030504-9.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "26/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":3,
-  "exame": null,
-  "consulta": true
-}
-
-<> 2020-10-24T030504-8.201.json
-
-###
-
-POST http://localhost:8080/vagas
-content-type: application/json
-
-{
-  "data": "26/10/2020",
-  "vagasOfertadas": "10",
-  "especialidade":null,
-  "exame": 2,
-  "consulta": false
-}
-
-<> 2020-10-24T030504-7.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2",
-  "autorizacao": false
-}
-
-<> 2020-10-24T030504-6.201.json
-
-###
-
-POST http://localhost:8080/exames
-content-type: application/json
-
-{
-  "nomeExame": "ECOCARDIOGRAMA",
-  "autorizacao": true
-}
-
-<> 2020-10-24T030504-5.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "Martin Rocha Petersen",
-  "cpf": "107.375.204-16",
-  "carteiraSUS": "999999-5",
-  "cidade": "Natal",
-  "bairro": "Pajuçara",
-  "complemento": "Casa de primeiro andar",
-  "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853",
-  "numero": "160"
-}
-
-<> 2020-10-24T030504-4.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "Kandell Oliveira",
-  "cpf": "107.375.204-17",
-  "carteiraSUS": "999999-6",
-  "cidade": "Natal",
-  "bairro": "Pajuçara",
-  "complemento": "Casa de primeiro andar",
-  "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853",
-  "numero": "160"
-}
-
-<> 2020-10-24T030504-3.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "José Augusto do Nascimento",
-  "cpf": "107.375.204-18",
-  "carteiraSUS": "999999-7",
-  "cidade": "Natal",
-  "bairro": "Pajuçara",
-  "complemento": "Casa de primeiro andar",
-  "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853",
-  "numero": "160"
-
-}
-
-<> 2020-10-24T030504-2.201.json
-
-###
-
-POST http://localhost:8080/pacientes
-content-type: application/json
-
-{
-  "nome": "Maria das Virgens Souza",
-  "cpf": "107.375.204-19",
-  "carteiraSUS": "999999-8",
-  "cidade": "Natal",
-  "bairro": "Pajuçara",
-  "complemento": "Casa de primeiro andar",
-  "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853",
-  "numero": "160"
-}
-
-<> 2020-10-24T030504-1.201.json
-
-###
-
-POST http://localhost:8080/pacientes
+POST http://localhost:8081/pacientes
 content-type: application/json
 
 {
@@ -710,7 +106,521 @@ content-type: application/json
   "numero": "160"
 }
 
-<> 2020-10-24T030504.201.json
+<> 2020-10-26T053251.201.json
+
+###
+
+POST http://localhost:8081/agendamento
+content-type: application/json
+
+###
+
+PUT http://localhost:8081/user/vinculo/2?cpf=794.897.370-2
+content-type: application/json
+
+<> 2020-10-26T053213.200.json
+
+###
+
+PUT http://localhost:8080/user/vinculo/2?cpf=794.897.370-2
+content-type: application/json
+
+<> 2020-10-26T053137.404.html
+
+###
+
+POST http://localhost:8081/auth/validate/2
+content-type: application/json
+
+{
+  "token" : "7AxdAD"
+}
+
+<> 2020-10-26T053123.200.json
+
+###
+
+POST http://localhost:8081/user
+content-type: application/json
+
+{
+  "nome": "Martin Petersen",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "123456",
+  "role": 1
+}
+
+<> 2020-10-26T053013.201.json
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T053005.201.json
+
+###
+
+PUT http://localhost:8080/user/vinculo/2?cpf=794.897.370-2
+content-type: application/json
+
+<> 2020-10-26T052840.404.html
+
+###
+
+POST http://localhost:8081/auth/validate/2
+content-type: application/json
+
+{
+  "token" : "FEEMcz"
+}
+
+<> 2020-10-26T052831.200.json
+
+###
+
+POST http://localhost:8081/user
+content-type: application/json
+
+{
+  "nome": "Martin Petersen",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "123456",
+  "role": 1
+}
+
+<> 2020-10-26T052811.201.json
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T052804.201.json
+
+###
+
+POST http://localhost:8081/auth/validate/2
+content-type: application/json
+
+{
+  "token" : "60TWaV"
+}
+
+<> 2020-10-26T052741.500.json
+
+###
+
+POST http://localhost:8081/user
+content-type: application/json
+
+{
+  "nome": "Martin Petersen",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "123456",
+  "role": 1
+}
+
+<> 2020-10-26T052426.201.json
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T052418.201.json
+
+###
+
+POST http://localhost:8081/auth/validate/2
+content-type: application/json
+
+{
+  "token" : "2tIgfY"
+}
+
+<> 2020-10-26T052235.500.json
+
+###
+
+POST http://localhost:8081/user
+content-type: application/json
+
+{
+  "nome": "Martin Petersen",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "123456",
+  "role": 1
+}
+
+<> 2020-10-26T052128.201.json
+
+###
+
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "nome": "Martin Petersen",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "123456",
+  "role": 1
+}
+
+<> 2020-10-26T052113.404.html
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T052105.201.json
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T045824.201.json
+
+###
+
+GET http://localhost:8081/especialidades?nomeEspecialidade=ronaldinho
+content-type: application/json
+
+<> 2020-10-26T035232.200.json
+
+###
+
+GET http://localhost:8081/especialidades?nomeEspecialidade=Neurologias
+content-type: application/json
+
+<> 2020-10-26T035203.200.json
+
+###
+
+GET http://localhost:8081/especialidades/30
+content-type: application/json
+
+<> 2020-10-26T035144.404.json
+
+###
+
+GET http://localhost:8081/especialidades/3
+content-type: application/json
+
+<> 2020-10-26T035137.200.json
+
+###
+
+GET http://localhost:8080/especialidades/3
+content-type: application/json
+
+<> 2020-10-26T035121.404.html
+
+###
+
+POST http://localhost:8081/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 1,
+  "user_id": 1,
+  "exame_id": 1
+}
+
+<> 2020-10-26T025418-2.201.json
+
+###
+
+POST http://localhost:8081/exames
+content-type: application/json
+
+{
+  "nomeExame": "ECOCARDIOGRAMA",
+  "autorizacao": true
+}
+
+<> 2020-10-26T025418-1.201.json
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T025418.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 1,
+  "user_id": 1,
+  "exame_id": 1
+}
+
+<> 2020-10-26T025153.201.json
+
+###
+
+POST http://localhost:8081/exames
+content-type: application/json
+
+{
+  "nomeExame": "ECOCARDIOGRAMA",
+  "autorizacao": true
+}
+
+<> 2020-10-26T025146.201.json
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T025142.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 1,
+  "user_id": 1,
+  "exame_id": 1
+}
+
+<> 2020-10-26T024601.201.json
+
+###
+
+POST http://localhost:8081/exames
+content-type: application/json
+
+{
+  "nomeExame": "ECOCARDIOGRAMA",
+  "autorizacao": true
+}
+
+<> 2020-10-26T024555.201.json
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T024551.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 1,
+  "user_id": 1,
+  "exame_id": 1
+}
+
+<> 2020-10-26T024031-2.201.json
+
+###
+
+POST http://localhost:8081/exames
+content-type: application/json
+
+{
+  "nomeExame": "ECOCARDIOGRAMA",
+  "autorizacao": true
+}
+
+<> 2020-10-26T024031-1.201.json
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T024031.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 1,
+  "user_id": 1,
+  "exame_id": 1
+}
+
+<> 2020-10-26T023836.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 2,
+  "user_id": 1,
+  "exame_id": 1
+}
+
+###
+
+POST http://localhost:8081/exames
+content-type: application/json
+
+{
+  "nomeExame": "ECOCARDIOGRAMA",
+  "autorizacao": true
+}
+
+<> 2020-10-26T023725-1.201.json
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+<> 2020-10-26T023725.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 2,
+  "user_id": 1,
+  "exame_id": 1
+}
+
+<> 2020-10-26T111448-2.201.json
 
 ###
 
