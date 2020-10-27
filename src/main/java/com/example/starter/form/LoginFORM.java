@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class LoginFORM {
-    @NotNull @NotBlank(message = "nome do usuário não pode ser vazio")
+    @NotNull(message = "nome do usuário não pode ser nulo") @NotBlank(message = "nome do usuário não pode ser vazio")
     private String username;
     private String password;
 
