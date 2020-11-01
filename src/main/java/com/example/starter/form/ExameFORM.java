@@ -3,7 +3,7 @@ package com.example.starter.form;
 import javax.validation.constraints.NotNull;
 
 public class ExameFORM {
-    @NotNull(message  = "nome do exame não pode ser nulo")
+    @NotNull
     private String nomeExame;
     private boolean autorizacao;
 

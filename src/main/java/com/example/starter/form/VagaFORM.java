@@ -3,9 +3,9 @@ package com.example.starter.form;
 import javax.validation.constraints.NotNull;
 
 public class VagaFORM {
-    @NotNull(message = "data não pode ser vazio")
+    @NotNull
     private String data;
-    @NotNull(message = "vagas ofertadas não pode ser vazio")
+    @NotNull
     private Integer vagasOfertadas;
     private Long especialidade;
     private Long exame;

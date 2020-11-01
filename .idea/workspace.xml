@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94b0b7b8-195d-4d9c-b032-c183988706c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/StarterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/StarterApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/config/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/config/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/starter/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/starter/config/SecurityConfiguration.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +94,33 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8081/auth" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;username&quot;: &quot;petersen.martin.imd@gmail.com&quot;,&#10;  &quot;password&quot;: &quot;20121042060301&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -1461,33 +1487,6 @@
           <option name="textToSend" value="{&#10;  &quot;data&quot;: &quot;08/10/2020&quot;,&#10;  &quot;vagasOfertadas&quot;: &quot;10&quot;,&#10;  &quot;especialidade&quot;:null,&#10;  &quot;exame&quot;: 1,&#10;  &quot;consulta&quot;: false&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/vagas" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;data&quot;: &quot;11/10/2020&quot;,&#10;  &quot;vagasOfertadas&quot;: &quot;10&quot;,&#10;  &quot;especialidade&quot;:null,&#10;  &quot;exame&quot;: 1,&#10;  &quot;consulta&quot;: false&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -1519,10 +1518,10 @@
     <configuration name="All in Autenticação" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Autenticação.http">
       <method v="2" />
     </configuration>
-    <configuration name="ronal#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/ronal.http" runType="Run single request">
+    <configuration name="Autenticação#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/Auth/Autenticação.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="ronal#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/ronal.http" index="2" runType="Run single request">
+    <configuration name="PostUsuario#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/usuario/PostUsuario.http" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="ronal#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/example/starter/ronal.http" index="3" runType="Run single request">
@@ -1537,7 +1536,6 @@
     <configuration name="StarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.starter.StarterApplication" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=8081" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1546,20 +1544,20 @@
     <list>
       <item itemvalue="Application.JobConfig" />
       <item itemvalue="HTTP Request.All in Autenticação" />
-      <item itemvalue="Spring Boot.StarterApplication" />
-      <item itemvalue="HTTP Request.ronal#1" />
-      <item itemvalue="HTTP Request.ronal#2" />
       <item itemvalue="HTTP Request.ronal#3" />
       <item itemvalue="HTTP Request.ronal#4" />
       <item itemvalue="HTTP Request.ronal#5" />
+      <item itemvalue="HTTP Request.Autenticação#1" />
+      <item itemvalue="Spring Boot.StarterApplication" />
+      <item itemvalue="HTTP Request.PostUsuario#2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.PostUsuario#2" />
+        <item itemvalue="HTTP Request.Autenticação#1" />
         <item itemvalue="HTTP Request.ronal#5" />
         <item itemvalue="HTTP Request.ronal#4" />
         <item itemvalue="HTTP Request.ronal#3" />
-        <item itemvalue="HTTP Request.ronal#2" />
-        <item itemvalue="HTTP Request.ronal#1" />
       </list>
     </recent_temporary>
   </component>
@@ -1621,7 +1619,10 @@
       <workItem from="1603451260135" duration="22802000" />
       <workItem from="1603512475297" duration="7932000" />
       <workItem from="1603563940798" duration="1096000" />
-      <workItem from="1603712403007" duration="24517000" />
+      <workItem from="1603712403007" duration="27189000" />
+      <workItem from="1603812873740" duration="1143000" />
+      <workItem from="1604065528009" duration="726000" />
+      <workItem from="1604249083736" duration="196000" />
     </task>
     <servers />
   </component>
@@ -1629,10 +1630,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603721493676">
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604249280084">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1603721493676" />
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1604249280084" />
     <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1603741802095">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1667,66 +1668,66 @@
     </state>
     <state x="461" y="122" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1602362163591" />
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1603198498379" />
-    <state width="1323" height="295" key="GridCell.Tab.0.bottom" timestamp="1603748383832">
+    <state width="1323" height="295" key="GridCell.Tab.0.bottom" timestamp="1604249243193">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="295" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603748383832" />
-    <state width="1323" height="295" key="GridCell.Tab.0.center" timestamp="1603748383832">
+    <state width="1323" height="295" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604249243193" />
+    <state width="1323" height="295" key="GridCell.Tab.0.center" timestamp="1604249243193">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="295" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603748383832" />
-    <state width="1323" height="295" key="GridCell.Tab.0.left" timestamp="1603748383832">
+    <state width="1323" height="295" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1604249243193" />
+    <state width="1323" height="295" key="GridCell.Tab.0.left" timestamp="1604249243193">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="295" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603748383832" />
-    <state width="1323" height="295" key="GridCell.Tab.0.right" timestamp="1603748383832">
+    <state width="1323" height="295" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1604249243193" />
+    <state width="1323" height="295" key="GridCell.Tab.0.right" timestamp="1604249243193">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="295" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603748383832" />
-    <state width="1323" height="295" key="GridCell.Tab.1.bottom" timestamp="1603748383832">
+    <state width="1323" height="295" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1604249243193" />
+    <state width="1323" height="295" key="GridCell.Tab.1.bottom" timestamp="1604249221662">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="295" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603748383832" />
-    <state width="1323" height="295" key="GridCell.Tab.1.center" timestamp="1603748383832">
+    <state width="1323" height="295" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604249221662" />
+    <state width="1323" height="295" key="GridCell.Tab.1.center" timestamp="1604249221662">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="295" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1603748383832" />
-    <state width="1323" height="295" key="GridCell.Tab.1.left" timestamp="1603748383832">
+    <state width="1323" height="295" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1604249221662" />
+    <state width="1323" height="295" key="GridCell.Tab.1.left" timestamp="1604249221662">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="295" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1603748383832" />
-    <state width="1323" height="295" key="GridCell.Tab.1.right" timestamp="1603748383832">
+    <state width="1323" height="295" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1604249221662" />
+    <state width="1323" height="295" key="GridCell.Tab.1.right" timestamp="1604249221662">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="295" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1603748383832" />
-    <state width="1323" height="208" key="GridCell.Tab.2.bottom" timestamp="1603744338858">
+    <state width="1323" height="295" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1604249221662" />
+    <state width="1323" height="208" key="GridCell.Tab.2.bottom" timestamp="1603752983143">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="226" key="GridCell.Tab.2.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602365769684" />
-    <state width="1323" height="208" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603744338858" />
-    <state width="1323" height="208" key="GridCell.Tab.2.center" timestamp="1603744338857">
+    <state width="1323" height="208" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603752983143" />
+    <state width="1323" height="208" key="GridCell.Tab.2.center" timestamp="1603752983143">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="226" key="GridCell.Tab.2.center/0.0.1360.728@0.0.1360.728" timestamp="1602365769674" />
-    <state width="1323" height="208" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1603744338857" />
-    <state width="1323" height="208" key="GridCell.Tab.2.left" timestamp="1603744338857">
+    <state width="1323" height="208" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1603752983143" />
+    <state width="1323" height="208" key="GridCell.Tab.2.left" timestamp="1603752983143">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="226" key="GridCell.Tab.2.left/0.0.1360.728@0.0.1360.728" timestamp="1602365769674" />
-    <state width="1323" height="208" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1603744338857" />
-    <state width="1323" height="208" key="GridCell.Tab.2.right" timestamp="1603744338858">
+    <state width="1323" height="208" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1603752983143" />
+    <state width="1323" height="208" key="GridCell.Tab.2.right" timestamp="1603752983143">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="226" key="GridCell.Tab.2.right/0.0.1360.728@0.0.1360.728" timestamp="1602365769684" />
-    <state width="1323" height="208" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1603744338858" />
+    <state width="1323" height="208" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1603752983143" />
     <state x="210" y="18" key="Maven.ArtifactSearchDialog" timestamp="1602362509230">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -1748,10 +1749,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="144" key="extract.method.dialog/0.0.1366.738@0.0.1366.738" timestamp="1600635898342" />
-    <state x="274" y="28" key="new project wizard" timestamp="1603746241902">
+    <state x="274" y="28" key="new project wizard" timestamp="1604066261706">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="274" y="28" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1603746241902" />
+    <state x="274" y="28" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1604066261706" />
     <state x="478" y="116" key="refactoring.ChangeSignatureDialog" timestamp="1603484055408">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

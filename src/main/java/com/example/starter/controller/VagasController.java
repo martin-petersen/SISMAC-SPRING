@@ -6,7 +6,6 @@ import com.example.starter.form.NovaDataVagaFORM;
 import com.example.starter.form.VagaFORM;
 import com.example.starter.model.Vaga;
 import com.example.starter.service.VagaService;
-import com.example.starter.service.EspecialidadeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -73,18 +72,6 @@ public class VagasController {
                 return ResponseEntity.ok(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getExame()));
             }
         }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-    @GetMapping("/porespecialidade/{id}")
-    public ResponseEntity<Page<VagaDTO>> listarPorEspecialidade(@PathVariable Long id, @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "especialidade") Pageable pageable) {
-        try {
-                
-            EspecialidadeService servico;
-            Page<VagaDTO> listagemVagasEspecialidade = vagaService.listarEspecialidade(servico.buscarPorID(id),pageable);
-                return ResponseEntity.ok(listagemVagasEspecialidade);
-            
-        } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
     }

@@ -14,10 +14,10 @@ POST http://localhost:8080/user
 content-type: application/json
 
 {
-  "nome": "Kandell Oliveira",
-  "email" : "martin@gmail.com",
+  "nome": "martin petersen",
+  "email" : "martinrpetersen171@gmail.com",
   "senha" : "123456",
-  "role": 2
+  "role": 1
 }
 
 ###
