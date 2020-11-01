@@ -9,6 +9,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/config/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/config/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/usuario/PostUsuario.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/starter/httpRequestTester/usuario/PostUsuario.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -94,6 +96,60 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/user" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nome&quot;: &quot;martin petersen&quot;,&#10;  &quot;email&quot; : &quot;martinrpetersen171@gmail.com&quot;,&#10;  &quot;senha&quot; : &quot;123456&quot;,&#10;  &quot;role&quot;: 1&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/auth" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="content-type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;username&quot;: &quot;petersen.martin.imd@gmail.com&quot;,&#10;  &quot;password&quot;: &quot;20121042060301&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -1433,60 +1489,6 @@
           <option name="textToSend" value="{&#10;  &quot;data&quot;: &quot;18/10/2020&quot;,&#10;  &quot;vagasOfertadas&quot;: &quot;10&quot;,&#10;  &quot;especialidade&quot;:null,&#10;  &quot;exame&quot;: 2,&#10;  &quot;consulta&quot;: false&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/vagas" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;data&quot;: &quot;17/10/2020&quot;,&#10;  &quot;vagasOfertadas&quot;: &quot;10&quot;,&#10;  &quot;especialidade&quot;:null,&#10;  &quot;exame&quot;: 1,&#10;  &quot;consulta&quot;: false&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE3BDD0D6ABA6FE5386E28BD9906CAB7" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/vagas" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;data&quot;: &quot;08/10/2020&quot;,&#10;  &quot;vagasOfertadas&quot;: &quot;10&quot;,&#10;  &quot;especialidade&quot;:null,&#10;  &quot;exame&quot;: 1,&#10;  &quot;consulta&quot;: false&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -1622,7 +1624,7 @@
       <workItem from="1603712403007" duration="27189000" />
       <workItem from="1603812873740" duration="1143000" />
       <workItem from="1604065528009" duration="726000" />
-      <workItem from="1604249083736" duration="196000" />
+      <workItem from="1604249083736" duration="1139000" />
     </task>
     <servers />
   </component>
@@ -1668,46 +1670,46 @@
     </state>
     <state x="461" y="122" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1602362163591" />
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1603198498379" />
-    <state width="1323" height="295" key="GridCell.Tab.0.bottom" timestamp="1604249243193">
+    <state width="1323" height="295" key="GridCell.Tab.0.bottom" timestamp="1604249360412">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="295" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604249243193" />
-    <state width="1323" height="295" key="GridCell.Tab.0.center" timestamp="1604249243193">
+    <state width="1323" height="295" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604249360412" />
+    <state width="1323" height="295" key="GridCell.Tab.0.center" timestamp="1604249360412">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="295" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1604249243193" />
-    <state width="1323" height="295" key="GridCell.Tab.0.left" timestamp="1604249243193">
+    <state width="1323" height="295" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1604249360412" />
+    <state width="1323" height="295" key="GridCell.Tab.0.left" timestamp="1604249360412">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="295" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1604249243193" />
-    <state width="1323" height="295" key="GridCell.Tab.0.right" timestamp="1604249243193">
+    <state width="1323" height="295" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1604249360412" />
+    <state width="1323" height="295" key="GridCell.Tab.0.right" timestamp="1604249360412">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1602368071264" />
-    <state width="1323" height="295" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1604249243193" />
-    <state width="1323" height="295" key="GridCell.Tab.1.bottom" timestamp="1604249221662">
+    <state width="1323" height="295" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1604249360412" />
+    <state width="1323" height="295" key="GridCell.Tab.1.bottom" timestamp="1604249296554">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="295" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604249221662" />
-    <state width="1323" height="295" key="GridCell.Tab.1.center" timestamp="1604249221662">
+    <state width="1323" height="295" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604249296554" />
+    <state width="1323" height="295" key="GridCell.Tab.1.center" timestamp="1604249296554">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="295" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1604249221662" />
-    <state width="1323" height="295" key="GridCell.Tab.1.left" timestamp="1604249221662">
+    <state width="1323" height="295" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1604249296554" />
+    <state width="1323" height="295" key="GridCell.Tab.1.left" timestamp="1604249296554">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="295" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1604249221662" />
-    <state width="1323" height="295" key="GridCell.Tab.1.right" timestamp="1604249221662">
+    <state width="1323" height="295" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1604249296554" />
+    <state width="1323" height="295" key="GridCell.Tab.1.right" timestamp="1604249296554">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1316" height="248" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1602367578382" />
-    <state width="1323" height="295" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1604249221662" />
+    <state width="1323" height="295" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1604249296554" />
     <state width="1323" height="208" key="GridCell.Tab.2.bottom" timestamp="1603752983143">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
