@@ -1,4 +1,4 @@
-GET http://localhost:8080/exames?nomeExame=TESTE
+GET http://localhost:8081/exames?nomeExame=biopsia
 content-type: application/json
 
 ###

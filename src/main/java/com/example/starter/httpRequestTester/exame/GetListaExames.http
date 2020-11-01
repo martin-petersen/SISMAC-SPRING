@@ -1,9 +1,9 @@
-GET http://localhost:8080/exames
+GET http://localhost:8081/exames
 content-type: application/json
 
 ###
 
-GET http://localhost:8080/exames/listaExames
+GET http://localhost:8081/exames/listaExames
 content-type: application/json
 
 ###

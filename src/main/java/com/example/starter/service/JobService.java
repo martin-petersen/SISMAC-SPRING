@@ -37,8 +37,10 @@ public class JobService {
 
     @Autowired
     private EmailSender emailSender;
-
-    @Scheduled(cron = "0 0 0 1/1 * ?")
+    // Todos os dias meia noite
+    //@Scheduled(cron = "0 0 0 1/1 * ?")
+    // De um em um minuto
+    @Scheduled(cron = "0 0/1 * 1/1 * ?")
     public void criarAgendamentos() {
         List<ListaEspera> listaEspera = listaEsperaRepository.findByAtivoOrderByDataEntradaLista(true);
         Map<Long,List<ListaEspera>> mapListConsultas = new HashMap<Long,List<ListaEspera>>();
@@ -70,7 +72,7 @@ public class JobService {
                     List<ListaEspera> listaConsultas = mapListConsultas.get(v.getEspecialidade().getId());
                     for (ListaEspera listaConsulta : listaConsultas) {
                         if (v.getVagasRestantes() > 0) {
-                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaConsulta);
+                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaConsulta,v.getMedico(),v.getLugar());
                             agendamentoRepository.save(novoAgendamento);
                             listaConsulta.setAtivo(false);
                             listaEsperaRepository.save(listaConsulta);
@@ -85,7 +87,9 @@ public class JobService {
                                         usuarioRepository.findByPaciente(listaConsulta.getPaciente()).getEmail(),
                                         novoAgendamento.getDataAgendamento(),
                                         paciente.getNomePaciente(),
-                                        especialidade.getNomeEspecialidade()
+                                        especialidade.getNomeEspecialidade(),
+                                        novoAgendamento.getMedico(),
+                                        novoAgendamento.getLugar()
 
                                 );
                             }
@@ -100,7 +104,7 @@ public class JobService {
                     List<ListaEspera> listaExames = mapListExames.get(v.getExame().getId());
                     for (ListaEspera listaExame : listaExames) {
                         if (v.getVagasRestantes() > 0) {
-                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaExame);
+                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaExame, null,v.getLugar());
                             agendamentoRepository.save(novoAgendamento);
                             listaExame.setAtivo(false);
                             listaEsperaRepository.save(listaExame);
@@ -115,7 +119,8 @@ public class JobService {
                                         usuarioRepository.findByPaciente(listaExame.getPaciente()).getEmail(),
                                         novoAgendamento.getDataAgendamento(),
                                         paciente.getNomePaciente(),
-                                        exame.getNomeExame()
+                                        exame.getNomeExame(),
+                                        novoAgendamento.getLugar()
                                 );
                             }
                         } else {
@@ -126,8 +131,10 @@ public class JobService {
             }
         }
     }
-
-    @Scheduled(cron = "0 0 1 1/1 * ?")
+    // Todos os dias 1h da manhã
+    //@Scheduled(cron = "0 0 1 1/1 * ?")
+    // De um em um minuto
+    @Scheduled(cron = "0 0/2 * 1/1 * ?")
     public void enviarEmailConfirmacao() {
         List<Agendamento> agendamentos = agendamentoRepository.findByDataAgendamento(LocalDate.now().plusDays(1));
         for (Agendamento agendamento:
@@ -140,7 +147,9 @@ public class JobService {
                         usuario.getEmail(),
                         paciente.getNomePaciente(),
                         agendamento.getDataAgendamento(),
-                        especialidade.getNomeEspecialidade()
+                        especialidade.getNomeEspecialidade(),
+                        agendamento.getMedico(),
+                        agendamento.getLugar()
                 );
             } else if(agendamento.getExame_id() != null && exameRepository.findById(agendamento.getExame_id()).isPresent()){
                 Exame exame = exameRepository.findById(agendamento.getExame_id()).get();
@@ -148,7 +157,8 @@ public class JobService {
                         usuario.getEmail(),
                         paciente.getNomePaciente(),
                         exame.getNomeExame(),
-                        agendamento.getDataAgendamento()
+                        agendamento.getDataAgendamento(),
+                        agendamento.getLugar()
                         );
             }
         }

@@ -1,4 +1,4 @@
-DELETE http://localhost:8080/exames?id=1
+DELETE http://localhost:8081/exames?id=1
 content-type: application/json
 
 ###

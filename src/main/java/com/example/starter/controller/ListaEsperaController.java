@@ -94,14 +94,7 @@ public class ListaEsperaController {
         List<ListaEsperaDTO> listaEsperaDTO = new ArrayList<>();
         for (ListaEspera e:
                 lista) {
-            listaEsperaDTO.add(new ListaEsperaDTO(e.getId(),
-                    e.getPaciente(),
-                    e.getEspecialidade(),
-                    e.getConsulta(),
-                    e.getExame(),
-                    e.getEncaminhamento(),
-                    e.isRequerAutorizacao(),
-                    e.isAtivo()));
+            listaEsperaDTO.add(new ListaEsperaDTO(e));
         }
         return new PageImpl<>(listaEsperaDTO,pageable,listaEsperaDTO.size());
     }

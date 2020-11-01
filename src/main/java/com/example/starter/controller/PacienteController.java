@@ -59,16 +59,11 @@ public class PacienteController {
         return ResponseEntity.created(uri).body(paciente);
     }
 
-    @PutMapping("/atualizarCadastro")
-    @Transactional
-    public ResponseEntity<Paciente> atualizarPaciente(@RequestBody AtualizacaoPacienteFORM pacienteForm) {
-        try {
-            Paciente objPacienteBusca = new Paciente(pacienteForm);
-            pacienteService.alterar(objPacienteBusca);
-            return ResponseEntity.ok(objPacienteBusca);
-        }catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
+    @PutMapping("/{id}")
+    public ResponseEntity<Paciente> atualizarPaciente(@PathVariable Long id, @RequestBody AtualizacaoPacienteFORM pacienteForm) throws ServiceException {
+        Paciente objPacienteBusca = new Paciente(pacienteForm);
+        Paciente paciente = pacienteService.alterar(id,objPacienteBusca);
+        return ResponseEntity.ok(paciente);
     }
 
     @DeleteMapping("/deletarCadastro")

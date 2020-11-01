@@ -105,6 +105,8 @@ public class VagaService {
         }
         novaVaga.setVagasOfertadas(vagaFORM.getVagasOfertadas());
         novaVaga.setVagasRestantes(vagaFORM.getVagasOfertadas());
+        novaVaga.setMedico(vagaFORM.getMedico());
+        novaVaga.setLugar(vagaFORM.getLugar());
         vagaRepository.save(novaVaga);
         return novaVaga;
     }

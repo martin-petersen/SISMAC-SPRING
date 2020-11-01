@@ -102,7 +102,12 @@ public class UsuarioController {
         List<UsuarioDTO> listaUsuarios = new ArrayList<>();
         for (Usuario m:
                 usuarios) {
-            listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getPaciente().getId()));
+            if(m.getPaciente()!=null) {
+                listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getPaciente().getId()));
+            } else {
+                listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),null));
+            }
+
         }
         return new PageImpl<>(listaUsuarios,pageable,listaUsuarios.size());
     }

@@ -39,7 +39,7 @@ public class ListaEsperaService {
     public List<ListaEspera> listaEsperaConsulta(Long especialidade_id) throws ServiceException {
         if(especialidadeRepository.findById(especialidade_id).isPresent()) {
             Especialidade especialidade = especialidadeRepository.findById(especialidade_id).get();
-            return listaEsperaRepository.findByEspecialidade(especialidade);
+            return listaEsperaRepository.findByEspecialidadeAndAtivo(especialidade,true);
         } else {
             throw new ServiceException(HttpStatus.NOT_FOUND,"Especialidade","Não foi encontrada essa especialidade no sistema");
         }
@@ -48,14 +48,14 @@ public class ListaEsperaService {
     public List<ListaEspera> listaEsperaExame(Long exame_id) throws ServiceException {
         if(exameRepository.findById(exame_id).isPresent()) {
             Exame exame = exameRepository.findById(exame_id).get();
-            return listaEsperaRepository.findByExame(exame);
+            return listaEsperaRepository.findByExameAndAtivo(exame,true);
         } else {
             throw new ServiceException(HttpStatus.NOT_FOUND,"Exame","Não foi encontrado esse exame no sistema");
         }
     }
 
     public List<ListaEspera> listaEspera() {
-        return listaEsperaRepository.findAll();
+        return listaEsperaRepository.findByAtivo(true);
     }
 
     @Transactional
@@ -147,12 +147,13 @@ public class ListaEsperaService {
     public ListaEspera update(Long id, UpdateListaEsperaFORM listaEsperaFORM) throws ServiceException {
         if(listaEsperaRepository.findById(id).isPresent()) {
             ListaEspera listaEspera = listaEsperaRepository.findById(id).get();
-            if(especialidadeRepository.findById(listaEsperaFORM.getEspecilidade_id()).isPresent()) {
+            if(listaEsperaFORM.getEspecilidade_id() != null && especialidadeRepository.findById(listaEsperaFORM.getEspecilidade_id()).isPresent()) {
                 listaEspera.setEspecialidade(especialidadeRepository.findById(listaEsperaFORM.getEspecilidade_id()).get());
             }
-            if(exameRepository.findById(listaEsperaFORM.getExame_id()).isPresent()) {
+            if(listaEsperaFORM.getExame_id() != null &&exameRepository.findById(listaEsperaFORM.getExame_id()).isPresent()) {
                 Exame exame = exameRepository.findById(listaEsperaFORM.getExame_id()).get();
                 listaEspera.setExame(exame);
+                listaEspera.setConsulta(null);
                 listaEspera.setRequerAutorizacao(exame.isAutorizacao());
             }
             if(usuarioRepository.findById(listaEsperaFORM.getUser_id()).isPresent()) {

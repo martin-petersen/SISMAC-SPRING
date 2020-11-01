@@ -19,8 +19,10 @@ public class Agendamento {
     @Nullable
     private Long exame;
     private boolean consulta;
+    private String medico;
+    private String lugar;
 
-    public Agendamento(LocalDate localDate, ListaEspera listaEspera) {
+    public Agendamento(LocalDate localDate, ListaEspera listaEspera, String medico, String lugar) {
         this.dataAgendamento = localDate;
         this.paciente = listaEspera.getPaciente().getId();
         if(listaEspera.getEspecialidade() != null) {
@@ -30,7 +32,8 @@ public class Agendamento {
             this.exame = listaEspera.getExame().getId();
             this.consulta = false;
         }
-
+        this.medico = medico;
+        this.lugar = lugar;
     }
 
     public Agendamento() {
@@ -89,5 +92,21 @@ public class Agendamento {
 
     public void setConsulta(boolean consulta) {
         this.consulta = consulta;
+    }
+
+    public String getMedico() {
+        return medico;
+    }
+
+    public void setMedico(String medico) {
+        this.medico = medico;
+    }
+
+    public String getLugar() {
+        return lugar;
+    }
+
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
     }
 }

@@ -37,7 +37,7 @@ public class EmailSender {
         javaMailSender.send(simpleMailMessage);
     }
 
-    public void consultaConfimada(String email, LocalDate dataAgendamento, String paciente, String especialidade) {
+    public void consultaConfimada(String email, LocalDate dataAgendamento, String paciente, String especialidade, String medico, String lugar) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setTo(email);
@@ -46,6 +46,8 @@ public class EmailSender {
                         "Saudações " + paciente + "\n" +
                         "você está agendado para uma Consulta:" + "\n\n" +
                         "Especialidade: " + especialidade + "\n" +
+                        "Medico: " + medico + "\n" +
+                        "Local: " + lugar + "\n" +
                         "Dia: " + dataAgendamento.format(formatter) + "\n" +
                         "é importante entender que a consulta é por ordem de chegada"
 
@@ -54,7 +56,7 @@ public class EmailSender {
         javaMailSender.send(simpleMailMessage);
     }
 
-    public void exameConfimado(String email, LocalDate dataAgendamento, String paciente, String exame) {
+    public void exameConfimado(String email, LocalDate dataAgendamento, String paciente, String exame, String lugar) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setTo(email);
@@ -63,12 +65,13 @@ public class EmailSender {
                 "Saudações " + paciente + "\n" +
                 "você está agendado para um(a)" + exame + "\n" +
                 "Dia: " + dataAgendamento.format(formatter) + "\n" +
+                "Lugar: " + lugar + "\n" +
                 "é importante entender que a execução do exame acontece por ordem de chegada"
         );
         javaMailSender.send(simpleMailMessage);
     }
 
-    public void lembreteExame(String email, String paciente, String exame, LocalDate dataAgendamento) {
+    public void lembreteExame(String email, String paciente, String exame, LocalDate dataAgendamento, String lugar) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setTo(email);
@@ -77,12 +80,13 @@ public class EmailSender {
                 "Saudações " + paciente + "\n" +
                         "você está agendado para um(a)" + exame + "\n" +
                         "Dia: " + dataAgendamento.format(formatter) + "\n" +
+                        "Lugar: " + lugar + "\n" +
                         "é importante entender que a exacução do exame acontece por ordem de chegada"
         );
         javaMailSender.send(simpleMailMessage);
     }
 
-    public void lembreteConsulta(String email, String paciente, LocalDate dataAgendamento, String especialidade) {
+    public void lembreteConsulta(String email, String paciente, LocalDate dataAgendamento, String especialidade, String medico, String lugar) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setTo(email);
@@ -92,6 +96,8 @@ public class EmailSender {
                         "você está agendado para uma Consulta:" + "\n\n" +
                         "Especialidade: " + especialidade + "\n" +
                         "Dia: " + dataAgendamento.format(formatter) + "\n" +
+                        "Medico: " + medico + "\n" +
+                        "Lugar: " + lugar + "\n" +
                         "é importante entender que a consulta é por ordem de chegada"
 
 

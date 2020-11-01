@@ -1,4 +1,4 @@
-PUT http://localhost:8080/pacientes/atualizarCadastro
+PUT http://localhost:8081/pacientes/1
 content-type: application/json
 
 {

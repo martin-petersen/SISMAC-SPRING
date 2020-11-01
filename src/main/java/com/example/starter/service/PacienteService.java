@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PacienteService {
@@ -68,15 +69,15 @@ public class PacienteService {
         }
     }
 
-    public Paciente alterar(Paciente paciente) {
-        if (pacienteRepository.findByCpf(paciente.getCpf()) != null) {
-            Paciente pacienteAtualizado = pacienteRepository.findByCpf(paciente.getCpf());
-            pacienteAtualizado.setPacienteUpdate(paciente);
-            return pacienteAtualizado;
+    @Transactional
+    public Paciente alterar(Long id, Paciente attPaciente) throws ServiceException {
+        if (pacienteRepository.findById(id).isPresent()) {
+            Paciente paciente = pacienteRepository.findById(id).get();
+            paciente.setPacienteUpdate(attPaciente);
+            pacienteRepository.save(paciente);
+            return paciente;
         } else {
-            Paciente pacienteAtualizado = pacienteRepository.findByCarteiraSUS(paciente.getCarteiraSUS());
-            pacienteAtualizado.setPacienteUpdate(paciente);
-            return pacienteAtualizado;
+            throw new ServiceException(HttpStatus.NOT_FOUND, "Paciente", "Não foi encontrado esse paciente no sistema");
         }
     }
 }

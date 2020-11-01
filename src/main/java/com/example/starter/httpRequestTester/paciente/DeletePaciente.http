@@ -1,4 +1,4 @@
-DELETE http://localhost:8080/pacientes/deletarCadastro?carteiraSUS=sus
+DELETE http://localhost:8081/pacientes/deletarCadastro?carteiraSUS=sus
 content-type: application/json
 
 ###

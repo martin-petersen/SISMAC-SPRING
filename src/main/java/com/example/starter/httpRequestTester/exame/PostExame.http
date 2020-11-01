@@ -1,4 +1,4 @@
-POST http://localhost:8080/exames
+POST http://localhost:8081/exames
 content-type: application/json
 
 {
@@ -7,7 +7,7 @@ content-type: application/json
 }
 
 ###
-POST http://localhost:8080/exames
+POST http://localhost:8081/exames
 content-type: application/json
 
 {

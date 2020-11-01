@@ -1,0 +1,12 @@
+GET http://localhost:8081/filaEspera
+content-type: application/json
+
+###
+
+GET http://localhost:8081/filaEspera?exame_id=1
+content-type: application/json
+
+###
+
+GET http://localhost:8081/filaEspera?especialidade_id=3
+content-type: application/json

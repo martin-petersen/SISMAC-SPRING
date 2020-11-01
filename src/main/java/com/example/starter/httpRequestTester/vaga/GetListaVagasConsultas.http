@@ -1,7 +1,7 @@
-GET http://localhost:8080/vagas?consulta=true
+GET http://localhost:8081/vagas?consulta=true
 content-type: application/json
 
 ###
 
-GET http://localhost:8080/vagas?consulta=true&especialidade_id=3
+GET http://localhost:8081/vagas?consulta=true&especialidade_id=3
 content-type: application/json

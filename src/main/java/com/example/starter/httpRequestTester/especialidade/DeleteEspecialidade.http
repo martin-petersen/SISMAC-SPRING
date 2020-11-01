@@ -1,4 +1,4 @@
-DELETE http://localhost:8080/especialidades/deletarEspecialidade?nomeEspecialidade=pediatria
+DELETE http://localhost:8081/especialidades/deletarEspecialidade?nomeEspecialidade=pediatria
 content-type: application/json
 
 ###

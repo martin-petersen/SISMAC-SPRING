@@ -1,0 +1,102 @@
+POST http://localhost:8081/user
+content-type: application/json
+
+{
+  "nome": "martin petersen",
+  "email" : "martinrpetersen171@gmail.com",
+  "senha" : "123456",
+  "role": 1
+}
+
+###
+
+POST http://localhost:8081/auth/validate/2
+content-type: application/json
+
+{
+  "token" : "U2S0If"
+}
+
+###
+
+POST http://localhost:8081/pacientes
+content-type: application/json
+
+{
+  "nome": "Martin Rocha Petersen",
+  "cpf": "794.897.370-2",
+  "carteiraSUS": "999999-9",
+  "cidade": "Natal",
+  "bairro": "Pajuçara",
+  "complemento": "Casa de primeiro andar",
+  "dataNascimento": "21/06/1996",
+  "telefone": "(84)99678-4853",
+  "numero": "160"
+}
+
+###
+
+PUT http://localhost:8081/user/vinculo/2?cpf=794.897.370-2
+content-type: application/json
+
+###
+
+POST http://localhost:8081/exames
+content-type: application/json
+
+{
+  "nomeExame": "TESTE2",
+  "autorizacao": false
+}
+
+###
+
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+"data": "02/11/2020",
+"vagasOfertadas": "10",
+"especialidade":null,
+"exame": 1,
+"consulta": false,
+"medico": "",
+"lugar": "UPA"
+}
+
+###
+
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+"data": "02/11/2020",
+"vagasOfertadas": "10",
+"especialidade":3,
+"exame": null,
+"consulta": true,
+"medico": "Dr. Doutor",
+"lugar": "UPA"
+}
+
+###
+
+POST http://localhost:8081/filaEspera/filaConsulta
+content-type: application/json
+
+{
+"paciente_id": 1,
+"user_id": 2,
+"especialidade_id": 3
+}
+
+###
+
+POST http://localhost:8081/filaEspera/filaExame
+content-type: application/json
+
+{
+  "paciente_id": 1,
+  "user_id": 1,
+  "exame_id": 1
+}
