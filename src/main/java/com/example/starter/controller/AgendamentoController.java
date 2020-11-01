@@ -38,19 +38,4 @@ public class AgendamentoController {
         Page<AgendamentoDTO> agendamentos = agendamentoService.buscarPorPacienteMobile(id,pageable);
         return ResponseEntity.ok(agendamentos);
     }
-
-    @Autowired
-    private AgendamentoRepository agendamentoRepository;
-
-    @PostMapping
-    public void forcarAgendamento() {
-        Agendamento agendamento = new Agendamento();
-        agendamento.setDataAgendamento(LocalDate.now().plusDays(1));
-        agendamento.setConsulta(true);
-        agendamento.setPaciente_id(Long.parseLong("1"));
-        agendamento.setEspecialidade_id(Long.parseLong("3"));
-        agendamento.setExame_id(null);
-        agendamentoRepository.save(agendamento);
-    }
-
 }
