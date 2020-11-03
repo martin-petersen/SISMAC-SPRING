@@ -1,14 +1,17 @@
 package com.example.starter.service;
 
 import com.example.starter.dto.AgendamentoDTO;
+import com.example.starter.dto.PacienteAgendamentoDTO;
 import com.example.starter.exceptions.ServiceException;
 import com.example.starter.model.Agendamento;
+import com.example.starter.model.Paciente;
 import com.example.starter.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.format.DateTimeFormatter;
@@ -75,5 +78,15 @@ public class AgendamentoService {
             agendamentosDTO.add(agendamentoDTO);
         }
         return new PageImpl<>(agendamentosDTO,pageable,agendamentosDTO.size());
+    }
+
+    public List<PacienteAgendamentoDTO> buscarPorVaga(Long id) {
+        List<Agendamento> agendamentos = agendamentoRepository.findByVaga(id);
+        List<PacienteAgendamentoDTO> pacientes = new ArrayList<>();
+        for (Agendamento a:
+             agendamentos) {
+            pacientes.add(new PacienteAgendamentoDTO(pacienteRepository.findById(a.getPaciente_id()).get()));
+        }
+        return pacientes;
     }
 }

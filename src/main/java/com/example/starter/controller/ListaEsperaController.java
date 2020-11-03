@@ -31,6 +31,12 @@ public class ListaEsperaController {
     @Autowired
     private ListaEsperaService listaEsperaService;
 
+    @GetMapping("/paciente/{id}")
+    public ResponseEntity<List<ListaEsperaDTO>> buscarPorPaciente(@PathVariable Long id) {
+        List<ListaEsperaDTO> listaEspera = listaEsperaService.buscarPorPaciente(id);
+        return ResponseEntity.ok(listaEspera);
+    }
+
     @GetMapping
     public ResponseEntity<Page<ListaEsperaDTO>> buscarLista(@RequestParam(required = false) Long especialidade_id,
                                                             @RequestParam(required = false) Long exame_id,

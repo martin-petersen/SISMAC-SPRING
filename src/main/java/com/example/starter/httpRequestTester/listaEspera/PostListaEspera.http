@@ -3,7 +3,7 @@ content-type: application/json
 
 {
   "paciente_id": 1,
-  "user_id": 2,
+  "user_id": 1,
   "especialidade_id": 3
 }
 

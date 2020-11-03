@@ -1,5 +1,6 @@
 package com.example.starter.service;
 
+import com.example.starter.dto.ListaEsperaDTO;
 import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.DeleteFilaFORM;
 import com.example.starter.form.ListaEsperaConsultaFORM;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -166,5 +168,19 @@ public class ListaEsperaService {
         } else {
             throw new ServiceException(HttpStatus.NOT_FOUND,"ListaEspera","Não foi encontrada essa solicitação de espera no sistema");
         }
+    }
+
+
+    public List<ListaEsperaDTO> buscarPorPaciente(Long id) {
+        Paciente paciente = pacienteRepository.findById(id).get();
+        List<ListaEspera> listaEspera = listaEsperaRepository.findByPacienteAndAtivo(paciente,true);
+        List<ListaEsperaDTO> listaEsperaDTO = new ArrayList<>();
+
+        for (ListaEspera li:
+             listaEspera) {
+            listaEsperaDTO.add(new ListaEsperaDTO(li));
+        }
+
+        return listaEsperaDTO;
     }
 }

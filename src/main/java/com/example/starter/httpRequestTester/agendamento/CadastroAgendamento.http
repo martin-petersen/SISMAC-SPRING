@@ -70,7 +70,7 @@ POST http://localhost:8081/vagas
 content-type: application/json
 
 {
-"data": "02/11/2020",
+"data": "04/11/2020",
 "vagasOfertadas": "10",
 "especialidade":3,
 "exame": null,

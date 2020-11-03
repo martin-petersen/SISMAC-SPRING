@@ -71,8 +71,8 @@ public class JobService {
                 if(mapListConsultas.containsKey(v.getEspecialidade().getId())) {
                     List<ListaEspera> listaConsultas = mapListConsultas.get(v.getEspecialidade().getId());
                     for (ListaEspera listaConsulta : listaConsultas) {
-                        if (v.getVagasRestantes() > 0) {
-                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaConsulta,v.getMedico(),v.getLugar());
+                        if (v.getVagasRestantes() > 0 && listaConsulta.isAtivo()) {
+                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaConsulta,v.getMedico(),v.getLugar(), v.getId());
                             agendamentoRepository.save(novoAgendamento);
                             listaConsulta.setAtivo(false);
                             listaEsperaRepository.save(listaConsulta);
@@ -103,8 +103,8 @@ public class JobService {
                 if(mapListExames.containsKey(v.getExame().getId())) {
                     List<ListaEspera> listaExames = mapListExames.get(v.getExame().getId());
                     for (ListaEspera listaExame : listaExames) {
-                        if (v.getVagasRestantes() > 0) {
-                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaExame, null,v.getLugar());
+                        if (v.getVagasRestantes() > 0 && listaExame.isAtivo()) {
+                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaExame, null,v.getLugar(), v.getId());
                             agendamentoRepository.save(novoAgendamento);
                             listaExame.setAtivo(false);
                             listaEsperaRepository.save(listaExame);
