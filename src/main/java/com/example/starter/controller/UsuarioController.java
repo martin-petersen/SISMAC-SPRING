@@ -103,9 +103,9 @@ public class UsuarioController {
         for (Usuario m:
                 usuarios) {
             if(m.getPaciente()!=null) {
-                listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getPaciente().getId()));
+                listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getPaciente().getId(),m.isValidate()));
             } else {
-                listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),null));
+                listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),null,m.isValidate()));
             }
 
         }

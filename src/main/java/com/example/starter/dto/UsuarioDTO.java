@@ -22,11 +22,12 @@ public class UsuarioDTO {
         this.validate = usuario.isValidate();
     }
 
-    public UsuarioDTO(Long id, String username, String nome, Long paciente_id) {
+    public UsuarioDTO(Long id, String username, String nome, Long paciente_id, boolean validate) {
         this.id = id;
         this.username = username;
         this.nome = nome;
         this.paciente_id = paciente_id;
+        this.validate = validate;
     }
 
     public UsuarioDTO(Long id, String username, String nome, boolean validate) {

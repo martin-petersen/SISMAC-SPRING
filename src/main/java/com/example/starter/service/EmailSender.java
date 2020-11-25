@@ -79,14 +79,15 @@ public class EmailSender extends Notificador {
         javaMailSender.send(simpleMailMessage);
     }
 
-    public void lembrete(String paciente, String email,String especialidade, LocalDate dataAgendamento,String lugar) {
+    LocalDate dataAgendamento
+
+    public void lembrete(String paciente, String email, String especialidade, LocalDate dataAgendamento, String lugar) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setTo(email);
         simpleMailMessage.setSubject("Lembrete de agendamento");
         simpleMailMessage.setText(
                 "Saudações " + paciente + "\n" +
-                        "você está agendado para uma Consulta:" + "\n\n" +
                         "Especialidade: " + especialidade + "\n" +
                         "Dia: " + dataAgendamento.format(formatter) + "\n" +
                         "Lugar: " + lugar + "\n" +

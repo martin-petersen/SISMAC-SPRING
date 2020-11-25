@@ -2,5 +2,5 @@ POST http://localhost:8081/auth/validate/2
 content-type: application/json
 
 {
-  "token" : "yAnadz"
+  "token" : "x2uvhL"
 }

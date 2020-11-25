@@ -21,8 +21,9 @@ public class Agendamento {
     private boolean consulta;
     private String medico;
     private String lugar;
+    private Long vaga;
 
-    public Agendamento(LocalDate localDate, ListaEspera listaEspera, String medico, String lugar) {
+    public Agendamento(LocalDate localDate, ListaEspera listaEspera, String medico, String lugar, Long vaga) {
         this.dataAgendamento = localDate;
         this.paciente = listaEspera.getPaciente().getId();
         if(listaEspera.getEspecialidade() != null) {
@@ -34,6 +35,7 @@ public class Agendamento {
         }
         this.medico = medico;
         this.lugar = lugar;
+        this.vaga = vaga;
     }
 
     public Agendamento() {
@@ -108,5 +110,13 @@ public class Agendamento {
 
     public void setLugar(String lugar) {
         this.lugar = lugar;
+    }
+
+    public Long getVaga() {
+        return vaga;
+    }
+
+    public void setVaga(Long vaga) {
+        this.vaga = vaga;
     }
 }

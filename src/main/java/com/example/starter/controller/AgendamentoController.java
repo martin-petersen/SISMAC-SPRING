@@ -1,8 +1,10 @@
 package com.example.starter.controller;
 
 import com.example.starter.dto.AgendamentoDTO;
+import com.example.starter.dto.PacienteAgendamentoDTO;
 import com.example.starter.exceptions.ServiceException;
 import com.example.starter.model.Agendamento;
+import com.example.starter.model.Paciente;
 import com.example.starter.repository.AgendamentoRepository;
 import com.example.starter.service.AgendamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -37,5 +40,10 @@ public class AgendamentoController {
                                                                   Pageable pageable) throws ServiceException {
         Page<AgendamentoDTO> agendamentos = agendamentoService.buscarPorPacienteMobile(id,pageable);
         return ResponseEntity.ok(agendamentos);
+    }
+
+    @GetMapping("/vaga/{id}")
+    public ResponseEntity<List<PacienteAgendamentoDTO>> agendamentosPorVaga(@PathVariable Long id) throws ServiceException {
+        return ResponseEntity.ok(agendamentoService.buscarPorVaga(id));
     }
 }
