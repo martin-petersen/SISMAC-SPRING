@@ -1,4 +1,4 @@
-GET http://localhost:8080/pacientes?nome=martin
+GET http://localhost:8081/pacientes?nome=petersen
 content-type: application/json
 
 ###

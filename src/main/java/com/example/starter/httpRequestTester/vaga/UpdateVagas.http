@@ -1,6 +1,6 @@
-PUT http://localhost:8080/vagas/editarVaga/2
+PUT http://localhost:8081/vagas/editarVaga/2
 content-type: application/json
 
 {
-  "novaData": "18/10/2020"
+  "novaData": "18/11/2020"
 }

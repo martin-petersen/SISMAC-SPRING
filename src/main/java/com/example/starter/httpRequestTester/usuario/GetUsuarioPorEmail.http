@@ -1,2 +1,2 @@
-GET http://localhost:8080/user?email=petersen.martin.imd@gmail.com
+GET http://localhost:8081/user?email=petersen.martin.imd@gmail.com
 content-type: application/json

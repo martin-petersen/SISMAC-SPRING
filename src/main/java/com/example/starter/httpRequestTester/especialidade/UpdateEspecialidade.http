@@ -1,4 +1,4 @@
-PUT http://localhost:8080/especialidades/atualizarEspecialidade/29
+PUT http://localhost:8081/especialidades/atualizarEspecialidade/29
 content-type: application/json
 
 {

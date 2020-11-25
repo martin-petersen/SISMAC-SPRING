@@ -1,5 +1,6 @@
 package com.example.starter.controller;
 
+import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.AtualizacaoPacienteFORM;
 import com.example.starter.form.PacienteFORM;
 import com.example.starter.model.Paciente;
@@ -32,21 +33,13 @@ public class PacienteController {
                                                           @RequestParam (required = false) String cpf,
                                                           @RequestParam (required = false) String carteiraSUS,
                                                           @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomePaciente")
-                                                                     Pageable pageable) {
+                                                                     Pageable pageable) throws ServiceException {
         if(cpf!=null) {
-            try{
-                Page<Paciente> paciente = pacienteService.buscarPorCpf(cpf, pageable);
-                return ResponseEntity.ok(paciente);
-            } catch (NullPointerException e) {
-                return ResponseEntity.badRequest().build();
-            }
+            Page<Paciente> paciente = pacienteService.buscarPorCpf(cpf, pageable);
+            return ResponseEntity.ok(paciente);
         } else if(carteiraSUS!=null) {
-            try{
-                Page<Paciente> paciente = pacienteService.buscarPorSUS(carteiraSUS, pageable);
-                return ResponseEntity.ok(paciente);
-            } catch (NullPointerException e) {
-                return ResponseEntity.badRequest().build();
-            }
+            Page<Paciente> paciente = pacienteService.buscarPorSUS(carteiraSUS, pageable);
+            return ResponseEntity.ok(paciente);
         } else if(nome!=null) {
             String pacienteNome = "%" + nome.toUpperCase() + "%";
             Page<Paciente> pacientes = pacienteService.buscarPorNome(pacienteNome, pageable);
@@ -59,27 +52,18 @@ public class PacienteController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<Paciente> cadastrarPaciente(@RequestBody @Valid PacienteFORM pacienteForm, UriComponentsBuilder uriComponentsBuilder) {
-        try {
-            pacienteService.salvar(pacienteForm.convert());
-            Paciente paciente = pacienteService.buscarPorCpf(pacienteForm.getCpf());
-            URI uri = uriComponentsBuilder.path("/pacientes/{id}").buildAndExpand(paciente.getId()).toUri();
-            return ResponseEntity.created(uri).body(paciente);
-        }catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
+    public ResponseEntity<Paciente> cadastrarPaciente(@RequestBody @Valid PacienteFORM pacienteForm, UriComponentsBuilder uriComponentsBuilder) throws ServiceException {
+        pacienteService.salvar(pacienteForm.convert());
+        Paciente paciente = pacienteService.buscarPorCpf(pacienteForm.getCpf());
+        URI uri = uriComponentsBuilder.path("/pacientes/{id}").buildAndExpand(paciente.getId()).toUri();
+        return ResponseEntity.created(uri).body(paciente);
     }
 
-    @PutMapping("/atualizarCadastro")
-    @Transactional
-    public ResponseEntity<Paciente> atualizarPaciente(@RequestBody AtualizacaoPacienteFORM pacienteForm) {
-        try {
-            Paciente objPacienteBusca = new Paciente(pacienteForm);
-            pacienteService.alterar(objPacienteBusca);
-            return ResponseEntity.ok(objPacienteBusca);
-        }catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
+    @PutMapping("/{id}")
+    public ResponseEntity<Paciente> atualizarPaciente(@PathVariable Long id, @RequestBody AtualizacaoPacienteFORM pacienteForm) throws ServiceException {
+        Paciente objPacienteBusca = new Paciente(pacienteForm);
+        Paciente paciente = pacienteService.alterar(id,objPacienteBusca);
+        return ResponseEntity.ok(paciente);
     }
 
     @DeleteMapping("/deletarCadastro")

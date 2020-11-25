@@ -1,4 +1,4 @@
-PUT http://localhost:8080/exames/editarExame/2
+PUT http://localhost:8081/exames/editarExame/2
 content-type: application/json
 
 {

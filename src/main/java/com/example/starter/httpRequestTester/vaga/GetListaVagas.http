@@ -1,2 +1,2 @@
-GET http://localhost:8080/vagas?consulta=false
+GET http://localhost:8081/vagas?consulta=false
 content-type: application/json

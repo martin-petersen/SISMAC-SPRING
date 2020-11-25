@@ -1,2 +1,2 @@
-PUT http://localhost:8080/user/vinculo/3?cpf=107.375.204-17
+PUT http://localhost:8081/user/vinculo/2?cpf=794.897.370-2
 content-type: application/json

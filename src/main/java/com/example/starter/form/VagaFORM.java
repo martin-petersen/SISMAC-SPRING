@@ -1,15 +1,22 @@
 package com.example.starter.form;
 
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 public class VagaFORM {
-    @NotNull(message = "data não pode ser vazio")
+    @NotNull(message = "Data não pode ser nula")
+    @NotEmpty(message = "Data não pode ser vazia")
     private String data;
-    @NotNull(message = "vagas ofertadas não pode ser vazio")
+    @NotNull(message = "Quantidade de vagas não pode ser nula")
     private Integer vagasOfertadas;
     private Long especialidade;
     private Long exame;
     private boolean consulta;
+    private String medico;
+    @NotNull(message = "Lugar é obrigatório")
+    @NotEmpty(message = "Lugar é obrigatório")
+    private String lugar;
+
 
     public String getData() {
         return data;
@@ -29,5 +36,13 @@ public class VagaFORM {
 
     public boolean isConsulta() {
         return consulta;
+    }
+
+    public String getMedico() {
+        return medico;
+    }
+
+    public String getLugar() {
+        return lugar;
     }
 }

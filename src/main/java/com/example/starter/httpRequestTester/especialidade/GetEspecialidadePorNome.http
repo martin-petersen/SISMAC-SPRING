@@ -1,7 +1,7 @@
-GET http://localhost:8080/especialidades?nomeEspecialidade=Neurologia
+GET http://localhost:8081/especialidades?nomeEspecialidade=cardiologia
 content-type: application/json
 
 ###
 
-GET http://localhost:8080/especialidades/3
+GET http://localhost:8081/especialidades/3
 content-type: application/json

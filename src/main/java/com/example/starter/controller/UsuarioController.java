@@ -1,6 +1,7 @@
 package com.example.starter.controller;
 
 import com.example.starter.dto.UsuarioDTO;
+import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.UpdateUsuarioFORM;
 import com.example.starter.form.UsuarioFORM;
 import com.example.starter.model.Usuario;
@@ -32,7 +33,7 @@ public class UsuarioController {
     @GetMapping
     public ResponseEntity<Page<UsuarioDTO>> listaDeUsers(@RequestParam(required = false) String nome,
                                                         @RequestParam(required = false) String email,
-                                                        @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nome") Pageable pageable) {
+                                                        @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nome") Pageable pageable) throws ServiceException {
         if(nome != null) {
             String name = "%" + nome.toUpperCase() + "%";
             List<Usuario> usuarios = usuarioService.buscarPorNome(name);
@@ -92,20 +93,21 @@ public class UsuarioController {
 
     @DeleteMapping(path = "/{id}")
     @Transactional
-    public ResponseEntity<?> removerUser(@PathVariable Long id) {
+    public ResponseEntity<?> removerUser(@PathVariable Long id) throws ServiceException {
         boolean done = usuarioService.remover(id);
-        if(done) {
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.badRequest().build();
-        }
+        return ResponseEntity.ok().build();
     }
 
     private Page<UsuarioDTO> converterListToPageUsuarioDTO(List<Usuario> usuarios, Pageable pageable) {
         List<UsuarioDTO> listaUsuarios = new ArrayList<>();
         for (Usuario m:
                 usuarios) {
-            listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getPaciente().getId()));
+            if(m.getPaciente()!=null) {
+                listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),m.getPaciente().getId()));
+            } else {
+                listaUsuarios.add(new UsuarioDTO(m.getId(),m.getEmail(),m.getNome(),null));
+            }
+
         }
         return new PageImpl<>(listaUsuarios,pageable,listaUsuarios.size());
     }

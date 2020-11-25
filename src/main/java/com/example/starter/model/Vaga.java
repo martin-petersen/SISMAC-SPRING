@@ -22,6 +22,8 @@ public class Vaga {
     @Nullable
     @ManyToOne(cascade = CascadeType.ALL)
     private Consulta consulta = null;
+    private String medico;
+    private String lugar;
 
     public Long getId() {
         return id;
@@ -77,5 +79,21 @@ public class Vaga {
 
     public void setConsulta(Consulta consulta) {
         this.consulta = consulta;
+    }
+
+    public String getMedico() {
+        return medico;
+    }
+
+    public void setMedico(String medico) {
+        this.medico = medico;
+    }
+
+    public String getLugar() {
+        return lugar;
+    }
+
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
     }
 }
