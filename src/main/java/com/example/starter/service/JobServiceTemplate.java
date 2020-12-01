@@ -13,27 +13,27 @@ import java.util.Map;
 
 public  abstract class JobServiceTemplate {
     @Autowired
-    private PacienteRepository pacienteRepository;
+    public PacienteRepository pacienteRepository;
 
     @Autowired
-    private EspecialidadeRepository especialidadeRepository;
+    public EspecialidadeRepository especialidadeRepository;
 
     @Autowired
-    private ExameRepository exameRepository;
+    public ExameRepository exameRepository;
 
     @Autowired
-    private ListaEsperaRepository listaEsperaRepository;
+    public ListaEsperaRepository listaEsperaRepository;
 
     @Autowired
-    private VagaRepository vagaRepository;
+    public VagaRepository vagaRepository;
 
     @Autowired
-    private AgendamentoRepository agendamentoRepository;
+    public AgendamentoRepository agendamentoRepository;
 
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    public UsuarioRepository usuarioRepository;
 
-    private Notificacao notificador;
+    public Notificacao notificador;
 
     public void setNotificador(Notificacao notificador){
         this.notificador = notificador;

@@ -5,7 +5,7 @@ import com.example.starter.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-package com.example.starter.service.EmailSender;
+import com.example.starter.service.EmailSender;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,49 +13,54 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@service
-public class JobServiceConcreto extends JobServiceTemplate {
-    @override
-    public Notificacao setarNoficador(){
+@Service
+public class JobServiceConcretoClinica extends JobServiceTemplate {
+    @Override
+    public Notificacao setarNotificador(){
         return EmailSender.getInstancia();
     }
+
+    public EmailSender email = EmailSender.getInstancia();
     
-    @override
+    @Override
     public List<HashMap<Long,List<ListaEspera>>> carregarListas(){
         List<ListaEspera> listaEspera = listaEsperaRepository.findByAtivoOrderByDataEntradaLista(true);
-        List<HashMap<Long,List<ListaEspera>>> resposta = new List<HashMap<Long,List<ListaEspera>>>();
-         for(ListaEspera le:listaEspera){
+        List<HashMap<Long,List<ListaEspera>>> resposta = new ArrayList<HashMap<Long,List<ListaEspera>>>();
+        for(ListaEspera le:listaEspera){
             if(le.getEspecialidade().getId() == 1){
-                if (resposta.containsKey(1)){
-                    resposta[1].add(le);
-                }else{
-                    HashMap<Long,List<ListaEspera>> nova = {1:new List<ListaEspera>();}
-                    reposta[1] = nova;
+                for(HashMap<Long,List<ListaEspera>> mapa : resposta) {
+                    if (mapa.containsKey(1)) {
+                        mapa.get(1).add(le);
+                    } else {
+                        HashMap<Long, List<ListaEspera>> nova = new HashMap<Long, List<ListaEspera>>();
+                        List<ListaEspera> lista = new ArrayList<ListaEspera>();
+                        nova.put((long) 1, lista);
+                        resposta.add(nova);
+                    }
                 }
             }else{
-                if(resposta.containsKey(2)){
-                    resposta[2].add(le);
-                }else{
-                    HashMap<Long,List<ListaEspera>> nova = {2:new List<ListaEspera>();}
-                    reposta[2] = nova;
-
+                for(HashMap<Long,List<ListaEspera>> mapa : resposta) {
+                    if (mapa.containsKey(2)) {
+                        mapa.get(2).add(le);
+                    } else {
+                        HashMap<Long, List<ListaEspera>> nova = new HashMap<Long, List<ListaEspera>>();
+                        List<ListaEspera> lista = new ArrayList<ListaEspera>();
+                        nova.put((long) 2, lista);
+                        resposta.add(nova);
+                    }
                 }
             }
         }
         return resposta;
-            
     }
-        
 
-
-    
-    @override
-    public  abstract boolean validate(ListaEspera lista){
-        if(!listaEspera.isRequerAutorizacao()) {
+    @Override
+    public boolean validate(ListaEspera lista){
+        if(!lista.isRequerAutorizacao()) {
             return true;
         } else {
-            if(listaEspera.getEncaminhamento() != null) {
-                Encaminhamento encaminhamento = listaEspera.getEncaminhamento();
+            if(lista.getEncaminhamento() != null) {
+                Encaminhamento encaminhamento = lista.getEncaminhamento();
                 return encaminhamento.isAutorizado();
             } else {
                 return false;
@@ -63,26 +68,26 @@ public class JobServiceConcreto extends JobServiceTemplate {
         }
 
     }
-    @override
-    public abstract void regraDeAgendamento(HashMap<Long,List<ListaEspera>> lista,Vaga vaga){
+    @Override
+    public void regraDeAgendamento(HashMap<Long,List<ListaEspera>> lista,Vaga vaga){
         //id 1 para consultas 
         if(lista.containsKey(1)){
-                List<ListaEspera> listaConsultas = mapListConsultas.get(v.getEspecialidade().getId());
+                List<ListaEspera> listaConsultas = lista.get(vaga.getEspecialidade().getId());
                 for (ListaEspera listaConsulta : listaConsultas) {
-                    if(listaconsultas[0] == v.getEspecialidadeMedica()){
-                        if (v.getVagasRestantes() > 0) {
-                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaConsulta,v.getMedico(),v.getLugar());
+                    if(listaConsulta.getEspecialidade() == vaga.getEspecialidade()){
+                        if (vaga.getVagasRestantes() > 0) {
+                            Agendamento novoAgendamento = new Agendamento(vaga.getData(), listaConsulta, vaga.getMedico(),vaga.getLugar(), vaga.getId());
                             agendamentoRepository.save(novoAgendamento);
                             listaConsulta.setAtivo(false);
                             listaEsperaRepository.save(listaConsulta);
-                            v.setVagasRestantes(v.getVagasRestantes() - 1);
-                            vagaRepository.save(v);
+                            vaga.setVagasRestantes(vaga.getVagasRestantes() - 1);
+                            vagaRepository.save(vaga);
     
                             if(usuarioRepository.findByPaciente(listaConsulta.getPaciente()) != null) {
                                 assert novoAgendamento.getEspecialidade_id() != null;
                                 Especialidade especialidade = especialidadeRepository.findById(novoAgendamento.getEspecialidade_id()).get();
                                 Paciente paciente = pacienteRepository.findById(novoAgendamento.getPaciente_id()).get();
-                                Notificador.consultaConfimada(
+                                email.consultaConfimada(
                                         usuarioRepository.findByPaciente(listaConsulta.getPaciente()).getEmail(),
                                         novoAgendamento.getDataAgendamento(),
                                         paciente.getNomePaciente(),
@@ -100,23 +105,23 @@ public class JobServiceConcreto extends JobServiceTemplate {
                    
                 }
             }else{
-                    List<ListaEspera> listaExames = mapa.get(v.getEspecialidade().getId());
+                    List<ListaEspera> listaExames = lista.get(vaga.getEspecialidade().getId());
                     for (ListaEspera listaExame : listaExames) {
-                        if(listExame[0]== v.getExameMedico()){
+                        if(listaExame.getExame() == vaga.getExame()){
                         
-                        if (v.getVagasRestantes() > 0) {
-                            Agendamento novoAgendamento = new Agendamento(v.getData(), listaExame, null,v.getLugar());
+                        if (vaga.getVagasRestantes() > 0) {
+                            Agendamento novoAgendamento = new Agendamento(vaga.getData(), listaExame, null,vaga.getLugar(), vaga.getId());
                             agendamentoRepository.save(novoAgendamento);
                             listaExame.setAtivo(false);
                             listaEsperaRepository.save(listaExame);
-                            v.setVagasRestantes(v.getVagasRestantes() - 1);
-                            vagaRepository.save(v);
+                            vaga.setVagasRestantes(vaga.getVagasRestantes() - 1);
+                            vagaRepository.save(vaga);
 
                             if(usuarioRepository.findByPaciente(listaExame.getPaciente()) != null) {
                                 assert novoAgendamento.getExame_id() != null;
                                 Exame exame = exameRepository.findById(novoAgendamento.getExame_id()).get();
                                 Paciente paciente = pacienteRepository.findById(novoAgendamento.getPaciente_id()).get();
-                                notificador.exameConfimado(
+                                email.exameConfimado(
                                         usuarioRepository.findByPaciente(listaExame.getPaciente()).getEmail(),
                                         novoAgendamento.getDataAgendamento(),
                                         paciente.getNomePaciente(),

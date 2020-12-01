@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class EmailSender extends Notificador {
+public class EmailSender extends Notificacao {
 
     @Autowired
     private JavaMailSender javaMailSender;
@@ -79,8 +79,9 @@ public class EmailSender extends Notificador {
         javaMailSender.send(simpleMailMessage);
     }
 
-    LocalDate dataAgendamento
+    LocalDate dataAgendamento;
 
+    @Override
     public void lembrete(String paciente, String email, String especialidade, LocalDate dataAgendamento, String lugar) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();

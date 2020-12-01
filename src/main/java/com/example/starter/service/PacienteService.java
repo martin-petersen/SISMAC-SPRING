@@ -3,6 +3,7 @@ package com.example.starter.service;
 import com.example.starter.exceptions.ServiceException;
 import com.example.starter.model.Paciente;
 import com.example.starter.repository.PacienteRepository;
+import com.example.starter.service.SolicitanteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,7 +22,7 @@ public class PacienteService extends SolicitanteService {
         return true;
     }
 
-    @override
+    @Override
     public Page<Paciente> buscarTodos(Pageable pageable) {
         return pacienteRepository.findAll(pageable);
     }
