@@ -1,16 +1,13 @@
 package com.example.starter.model;
 
 import org.springframework.lang.Nullable;
-
+import com.example.starter.Solicitacao;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-public class Agendamento {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Agendamento extends Solicitacao {
     private LocalDate dataAgendamento;
     private final LocalDateTime dataCriacao = LocalDateTime.now();
     private Long paciente;

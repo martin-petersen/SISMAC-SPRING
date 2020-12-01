@@ -1,14 +1,12 @@
 package com.example.starter.model;
-
+import com.example.starter.model.Solicitante;
 import com.example.starter.form.AtualizacaoPacienteFORM;
 
 import javax.persistence.*;
 
 @Entity
-public class Paciente {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Paciente extends Solicitante {
+    
     private String nomePaciente;
     @Column(unique = true)
     private String carteiraSUS;

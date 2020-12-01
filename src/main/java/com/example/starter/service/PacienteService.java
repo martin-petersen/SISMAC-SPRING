@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class PacienteService {
+public class PacienteService extends SolicitanteService {
 
     @Autowired
     private PacienteRepository pacienteRepository;
@@ -21,6 +21,7 @@ public class PacienteService {
         return true;
     }
 
+    @override
     public Page<Paciente> buscarTodos(Pageable pageable) {
         return pacienteRepository.findAll(pageable);
     }

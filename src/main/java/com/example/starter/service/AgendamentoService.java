@@ -1,5 +1,6 @@
 package com.example.starter.service;
 
+import com.example.starter.service.SolicitacaoService;
 import com.example.starter.dto.AgendamentoDTO;
 import com.example.starter.dto.PacienteAgendamentoDTO;
 import com.example.starter.exceptions.ServiceException;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class AgendamentoService {
+public class AgendamentoService extends SolicitacaoService {
 
     @Autowired
     private AgendamentoRepository agendamentoRepository;
@@ -80,6 +81,7 @@ public class AgendamentoService {
         return new PageImpl<>(agendamentosDTO,pageable,agendamentosDTO.size());
     }
 
+    @Override
     public List<PacienteAgendamentoDTO> buscarPorVaga(Long id) {
         List<Agendamento> agendamentos = agendamentoRepository.findByVaga(id);
         List<PacienteAgendamentoDTO> pacientes = new ArrayList<>();
