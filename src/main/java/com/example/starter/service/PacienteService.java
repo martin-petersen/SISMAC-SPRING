@@ -14,19 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class PacienteService extends SolicitanteService {
 
-    @Autowired
-    private PacienteRepository pacienteRepository;
-
-    public boolean salvar (Paciente paciente) {
-        pacienteRepository.save(paciente);
-        return true;
-    }
-
-    @Override
-    public Page<Paciente> buscarTodos(Pageable pageable) {
-        return pacienteRepository.findAll(pageable);
-    }
-
     public Page<Paciente> buscarPorNome(String nome, Pageable pageable) throws ServiceException {
         if(pacienteRepository.findByNomePaciente(nome,pageable) != null) {
             return pacienteRepository.findByNomePaciente(nome,pageable);
@@ -71,15 +58,5 @@ public class PacienteService extends SolicitanteService {
         }
     }
 
-    @Transactional
-    public Paciente alterar(Long id, Paciente attPaciente) throws ServiceException {
-        if (pacienteRepository.findById(id).isPresent()) {
-            Paciente paciente = pacienteRepository.findById(id).get();
-            paciente.setPacienteUpdate(attPaciente);
-            pacienteRepository.save(paciente);
-            return paciente;
-        } else {
-            throw new ServiceException(HttpStatus.NOT_FOUND, "Paciente", "Não foi encontrado esse paciente no sistema");
-        }
-    }
+    
 }

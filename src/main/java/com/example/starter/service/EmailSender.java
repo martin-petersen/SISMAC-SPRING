@@ -14,17 +14,33 @@ import java.util.List;
 @Service
 public class EmailSender extends Notificacao {
 
-    @Autowired
-    private JavaMailSender javaMailSender;
     
-    //singleton para poder pegar sempre a mesma instância no setNotificador dentro do Jobservice já que o job roda um dia em um dia.
-    private static  final EmailSender instancia = new EmailSender();
+    private static final EmailSender instancia = new EmailSender();
+    
+    public String msg;´
     
     public static EmailSender getInstancia(){
         return instancia;
     }
     
+    @Override
+    public  String configurarMensagem(){
+         return msg;
+    }
 
+    public String setMsg(String paciente, String especialidade, LocalDate dataAgendamento, String medico, String lugar){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        this.msg =   "Saudações " + paciente + "\n" +
+        "Especialidade: " + especialidade + "\n" +
+        "Dia: " + dataAgendamento.format(formatter) + "\n" +
+        "Lugar: " + lugar + "\n" +
+        "é importante entender que o procedimento é por ordem de chegada"
+
+
+
+    }
+    
+    
     public void send(Usuario usuario) {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setTo(usuario.getEmail());

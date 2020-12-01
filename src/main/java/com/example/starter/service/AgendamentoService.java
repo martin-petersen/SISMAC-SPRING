@@ -22,11 +22,6 @@ import java.util.List;
 @Service
 public class AgendamentoService extends SolicitacaoService {
 
-    @Autowired
-    private AgendamentoRepository agendamentoRepository;
-
-    @Autowired
-    private PacienteRepository pacienteRepository;
 
     @Autowired
     private EspecialidadeRepository especialidadeRepository;
@@ -79,16 +74,5 @@ public class AgendamentoService extends SolicitacaoService {
             agendamentosDTO.add(agendamentoDTO);
         }
         return new PageImpl<>(agendamentosDTO,pageable,agendamentosDTO.size());
-    }
-
-    @Override
-    public List<PacienteAgendamentoDTO> buscarPorVaga(Long id) {
-        List<Agendamento> agendamentos = agendamentoRepository.findByVaga(id);
-        List<PacienteAgendamentoDTO> pacientes = new ArrayList<>();
-        for (Agendamento a:
-             agendamentos) {
-            pacientes.add(new PacienteAgendamentoDTO(pacienteRepository.findById(a.getPaciente_id()).get()));
-        }
-        return pacientes;
     }
 }

@@ -2,7 +2,7 @@ package com.example.starter.service;
 
 import com.example.starter.model.*;
 import org.springframework.stereotype.Service;
-
+import com.example.starter.service.EmailSender;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,16 +11,7 @@ import java.util.Map;
 
 @Service
 public class JobServiceConcretoClinica extends JobServiceTemplate {
-    @Override
-    public Notificacao setarNotificador(){
-        return EmailSender.getInstancia();
-    }
-
-    @Override
-    public List<HashMap<Long, List<ListaEspera>>> carregarListas() {
-        return null;
-    }
-
+    
     @Override
     public boolean validate(ListaEspera lista) {
         if(!lista.isRequerAutorizacao()) {
@@ -34,14 +25,6 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
             }
         }
     }
-
-    @Override
-    public void regraDeAgendamento(HashMap<Long, List<ListaEspera>> lista, Vaga vaga) {
-
-    }
-
-    public EmailSender email = EmailSender.getInstancia();
-
     @Override
     public void regraAgendamento() {
         List<ListaEspera> listaEspera = listaEsperaRepository.findByAtivoOrderByDataEntradaLista(true);

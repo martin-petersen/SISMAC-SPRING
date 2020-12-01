@@ -4,6 +4,7 @@ import com.example.starter.model.*;
 import com.example.starter.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
+import com.example.starter.service.EmailSender;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -33,24 +34,10 @@ public  abstract class JobServiceTemplate {
     @Autowired
     public UsuarioRepository usuarioRepository;
 
-    public Notificacao notificador;
-
-    public void setNotificador(Notificacao notificador){
-        this.notificador = notificador;
-    }
-
-    //neste metódo ele indica qual notificador sera usado
-    public abstract Notificacao setarNotificador();
-
-    //neste metódo devesse carregar todas as listas de todos os tipos de solicitações.
-    public abstract  List<HashMap<Long,List<ListaEspera>>> carregarListas();
 
     //neste metódo deve ser implementado uma validacao para a lista de espera.
     public abstract boolean validate(ListaEspera lista);
 
-    //neste metódo contém a regra de agendamento passando a vaga e um mapa que contem as litas de esperas para
-    //a especialidade daquela vaga. 
-    public abstract void  regraDeAgendamento(HashMap<Long,List<ListaEspera>> lista,Vaga vaga);
     
     // Todos os dias meia noite
     //@Scheduled(cron = "0 0 0 1/1 * ?")
@@ -72,7 +59,8 @@ public  abstract class JobServiceTemplate {
             Paciente paciente = pacienteRepository.findById(agendamento.getPaciente_id()).get();
             Usuario usuario = usuarioRepository.findByPaciente(paciente);
             Especialidade especialidade = especialidadeRepository.findById(agendamento.getEspecialidade_id()).get();
-            notificador.lembrete(paciente.getNomePaciente(),usuario.getUsername(),especialidade.getNomeEspecialidade(), agendamento.getDataAgendamento(),agendamento.getLugar());
+            EmailSender.getInstancia().setMsg(paciente.getNomePaciente(),especialidade.getNomeEspecialidade(), agendamento.getDataAgendamento(),agendamento.getMedico(),agendamento.getLugar());
+            EmailSender.getInstancia().enviarEmail(usuario.getUsername(),'LEMBRETE');
         }
     }
 }
