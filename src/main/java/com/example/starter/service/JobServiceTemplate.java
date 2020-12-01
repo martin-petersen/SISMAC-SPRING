@@ -57,36 +57,10 @@ public  abstract class JobServiceTemplate {
     // De um em um minuto
     @Scheduled(cron = "0 0/1 * 1/1 * ?")
     public void criarAgendamentos() {
-        setNotificador(setarNotificador());
-        List<ListaEspera> listaEspera = listaEsperaRepository.findByAtivoOrderByDataEntradaLista(true);
-        List<HashMap<Long,List<ListaEspera>>> listas = carregarListas();
-        List<Vaga> vagas = vagaRepository.findByDataAfter(LocalDate.now());
-
-        for (ListaEspera le:
-                listaEspera) {
-            if(validate(le)) {
-                for(HashMap<Long,List<ListaEspera>> mapa:  listas){
-                    if(mapa.containsKey(le.getEspecialidade().getId())){
-                        mapa.get(le.getEspecialidade().getId()).add(le);
-                    }
-                }
-            }
-        }
-
-        for(Vaga v: vagas){
-            for(HashMap<Long,List<ListaEspera>> mapa:  listas){
-                if(mapa.containsKey(v.getEspecialidade().getId())){
-                    regraDeAgendamento(mapa,v);
-                }
-            }
-        }
-        
-        
-        
-        
-        
-        
+        regraAgendamento();
     }
+
+    public abstract void regraAgendamento();
     // Todos os dias 1h da manhã
     //@Scheduled(cron = "0 0 1 1/1 * ?")
     // De um em um minuto
@@ -99,11 +73,6 @@ public  abstract class JobServiceTemplate {
             Usuario usuario = usuarioRepository.findByPaciente(paciente);
             Especialidade especialidade = especialidadeRepository.findById(agendamento.getEspecialidade_id()).get();
             notificador.lembrete(paciente.getNomePaciente(),usuario.getUsername(),especialidade.getNomeEspecialidade(), agendamento.getDataAgendamento(),agendamento.getLugar());
-            
-            
-            
         }
     }
-
-    
 }
