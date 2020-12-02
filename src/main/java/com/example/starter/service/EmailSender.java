@@ -17,7 +17,7 @@ public class EmailSender extends Notificacao {
     
     private static final EmailSender instancia = new EmailSender();
     
-    public String msg;´
+    public String msg;
     
     public static EmailSender getInstancia(){
         return instancia;
@@ -28,13 +28,13 @@ public class EmailSender extends Notificacao {
          return msg;
     }
 
-    public String setMsg(String paciente, String especialidade, LocalDate dataAgendamento, String medico, String lugar){
+    public void setMsg(String paciente, String especialidade, LocalDate dataAgendamento, String medico, String lugar){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.msg =   "Saudações " + paciente + "\n" +
         "Especialidade: " + especialidade + "\n" +
         "Dia: " + dataAgendamento.format(formatter) + "\n" +
         "Lugar: " + lugar + "\n" +
-        "é importante entender que o procedimento é por ordem de chegada"
+        "é importante entender que o procedimento é por ordem de chegada";
 
 
 
@@ -97,7 +97,6 @@ public class EmailSender extends Notificacao {
 
     LocalDate dataAgendamento;
 
-    @Override
     public void lembrete(String paciente, String email, String especialidade, LocalDate dataAgendamento, String lugar) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();

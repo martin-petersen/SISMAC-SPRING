@@ -27,5 +27,4 @@ public abstract class Notificacao {
         simpleMailMessage.setText(configurarMensagem());
         javaMailSender.send(simpleMailMessage);
     }
-
 }

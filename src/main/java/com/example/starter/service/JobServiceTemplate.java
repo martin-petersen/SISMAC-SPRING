@@ -48,6 +48,7 @@ public  abstract class JobServiceTemplate {
     }
 
     public abstract void regraAgendamento();
+
     // Todos os dias 1h da manhã
     //@Scheduled(cron = "0 0 1 1/1 * ?")
     // De um em um minuto
@@ -60,7 +61,7 @@ public  abstract class JobServiceTemplate {
             Usuario usuario = usuarioRepository.findByPaciente(paciente);
             Especialidade especialidade = especialidadeRepository.findById(agendamento.getEspecialidade_id()).get();
             EmailSender.getInstancia().setMsg(paciente.getNomePaciente(),especialidade.getNomeEspecialidade(), agendamento.getDataAgendamento(),agendamento.getMedico(),agendamento.getLugar());
-            EmailSender.getInstancia().enviarEmail(usuario.getUsername(),'LEMBRETE');
+            EmailSender.getInstancia().enviarEmail(usuario.getUsername(),"LEMBRETE");
         }
     }
 }
