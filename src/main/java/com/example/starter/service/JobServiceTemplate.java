@@ -55,13 +55,10 @@ public  abstract class JobServiceTemplate {
     @Scheduled(cron = "0 0/2 * 1/1 * ?")
     public void enviarConfirmacao() {
         List<Agendamento> agendamentos = agendamentoRepository.findByDataAgendamento(LocalDate.now().plusDays(1));
-        for (Agendamento agendamento:
-                agendamentos) {
-            Paciente paciente = pacienteRepository.findById(agendamento.getPaciente_id()).get();
-            Usuario usuario = usuarioRepository.findByPaciente(paciente);
-            Especialidade especialidade = especialidadeRepository.findById(agendamento.getEspecialidade_id()).get();
-            EmailSender.getInstancia().setMsg(paciente.getNomePaciente(),especialidade.getNomeEspecialidade(), agendamento.getDataAgendamento(),agendamento.getMedico(),agendamento.getLugar());
-            EmailSender.getInstancia().enviarEmail(usuario.getUsername(),"LEMBRETE");
+        for (Agendamento agendamento: agendamentos) {
+            regraDeConfirmacao(agendamento);
         }
     }
+
+    public abstract void regraDeConfirmacao(Agendamento agendamento);
 }

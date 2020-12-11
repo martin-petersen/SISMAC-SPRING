@@ -11,15 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Notificacao {
-    
-    
     @Autowired
     public JavaMailSender javaMailSender;
     
     public abstract String configurarMensagem();
     
     //metódo template
-    public void enviarEmail(String emailDestino,String titulo) {
+    public void enviarEmail(String emailDestino, String titulo) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setTo(emailDestino);

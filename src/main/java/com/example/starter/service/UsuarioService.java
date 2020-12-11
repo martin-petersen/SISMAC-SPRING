@@ -66,7 +66,7 @@ public class UsuarioService {
             usuario.setPerfil(role);
         }
         usuarioRepository.save(usuario);
-        emailSender.send(usuario);
+        emailSender.confirmaEmail(usuario);
         return usuario;
     }
 
@@ -128,7 +128,7 @@ public class UsuarioService {
             String newPassword = new StringBuffer(recuperarUsuarioFORM.getEmail()).reverse().toString();
             usuario.setSenha(new BCryptPasswordEncoder().encode(newPassword));
             usuarioRepository.save(usuario);
-            emailSender.recoverPassword(usuario,newPassword);
+            emailSender.recuperaSenha(usuario,newPassword);
         } else {
             throw new ServiceException(HttpStatus.NOT_FOUND,"Usuario","Nome de usuario incorreto");
         }

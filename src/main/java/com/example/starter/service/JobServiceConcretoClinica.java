@@ -68,14 +68,11 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                                 assert novoAgendamento.getEspecialidade_id() != null;
                                 Especialidade especialidade = especialidadeRepository.findById(novoAgendamento.getEspecialidade_id()).get();
                                 Paciente paciente = pacienteRepository.findById(novoAgendamento.getPaciente_id()).get();
-                                EmailSender.getInstancia().consultaConfimada(
-                                        usuarioRepository.findByPaciente(listaConsulta.getPaciente()).getEmail(),
-                                        novoAgendamento.getDataAgendamento(),
+                                EmailSender.getInstancia().confirmaConsulta(
+                                        usuarioRepository.findByPaciente(listaConsulta.getPaciente()),
+                                        novoAgendamento,
                                         paciente.getNomePaciente(),
-                                        especialidade.getNomeEspecialidade(),
-                                        novoAgendamento.getMedico(),
-                                        novoAgendamento.getLugar()
-
+                                        especialidade.getNomeEspecialidade()
                                 );
                             }
                         } else {
@@ -100,12 +97,11 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                                 assert novoAgendamento.getExame_id() != null;
                                 Exame exame = exameRepository.findById(novoAgendamento.getExame_id()).get();
                                 Paciente paciente = pacienteRepository.findById(novoAgendamento.getPaciente_id()).get();
-                                EmailSender.getInstancia().exameConfimado(
-                                        usuarioRepository.findByPaciente(listaExame.getPaciente()).getEmail(),
-                                        novoAgendamento.getDataAgendamento(),
+                                EmailSender.getInstancia().confirmaExame(
+                                        usuarioRepository.findByPaciente(listaExame.getPaciente()),
+                                        novoAgendamento,
                                         paciente.getNomePaciente(),
-                                        exame.getNomeExame(),
-                                        novoAgendamento.getLugar()
+                                        exame.getNomeExame()
                                 );
                             }
                         } else {
@@ -115,5 +111,13 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                 }
             }
         }
+    }
+
+    @Override
+    public void regraDeConfirmacao(Agendamento agendamento) {
+        Paciente paciente = pacienteRepository.findById(agendamento.getPaciente_id()).get();
+        Usuario usuario = usuarioRepository.findByPaciente(paciente);
+        Especialidade especialidade = especialidadeRepository.findById(agendamento.getEspecialidade_id()).get();
+        EmailSender.getInstancia().lembreteDeMarcacao(usuario, paciente, especialidade, agendamento, "LEMBRETE");
     }
 }
