@@ -43,7 +43,7 @@ public class AgendamentoController {
     }
 
     @GetMapping("/vaga/{id}")
-    public ResponseEntity<List<PacienteAgendamentoDTO>> agendamentosPorVaga(@PathVariable Long id) throws ServiceException {
-        return ResponseEntity.ok(agendamentoService.buscarPorVaga(id));
+    public ResponseEntity<List<Number>> agendamentosPorVaga(@PathVariable Long id) throws ServiceException {
+        return ResponseEntity.ok(agendamentoService.buscarSolicitantesPorListaDeVaga(id));
     }
 }

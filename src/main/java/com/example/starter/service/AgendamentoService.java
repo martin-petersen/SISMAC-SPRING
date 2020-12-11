@@ -21,8 +21,6 @@ import java.util.List;
 
 @Service
 public class AgendamentoService extends SolicitacaoService {
-
-
     @Autowired
     private EspecialidadeRepository especialidadeRepository;
 
@@ -31,6 +29,14 @@ public class AgendamentoService extends SolicitacaoService {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
+
+    @Autowired
+    private PacienteRepository pacienteRepository;
+
+    @Override
+    public Number regraDeBuscaDeSolicitante(Agendamento a) {
+        return a.getPaciente_id();
+    }
 
     public Page<AgendamentoDTO> buscarPorPacienteWeb(Long id, Pageable pageable) throws ServiceException {
         if(pacienteRepository.findById(id).isPresent()) {

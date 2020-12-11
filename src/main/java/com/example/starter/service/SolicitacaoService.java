@@ -15,16 +15,15 @@ public abstract class SolicitacaoService{
     
     @Autowired
     public AgendamentoRepository agendamentoRepository;
-    @Autowired
-    public PacienteRepository pacienteRepository;
-    
-    public List<PacienteAgendamentoDTO> buscarPorVaga(Long id) {
-        List<Agendamento> agendamentos = agendamentoRepository.findByVaga(id);
-        List<PacienteAgendamentoDTO> pacientes = new ArrayList<>();
-        for (Agendamento a:
-             agendamentos) {
-            pacientes.add(new PacienteAgendamentoDTO(pacienteRepository.findById(a.getPaciente_id()).get()));
+
+    public abstract Number regraDeBuscaDeSolicitante(Agendamento agendamento);
+
+    public List<Number> buscarSolicitantesPorListaDeVaga(Long id) {
+        List<Agendamento> solicitacoes = agendamentoRepository.findByVaga(id);
+        List<Number> solicitatesIds = new ArrayList<>();
+        for (Agendamento s: solicitacoes) {
+            solicitatesIds.add(regraDeBuscaDeSolicitante(s));
         }
-        return pacientes;
+        return solicitatesIds;
     }
 }
