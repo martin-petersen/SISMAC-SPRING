@@ -12,7 +12,6 @@ import java.util.List;
 
 
 public abstract class SolicitacaoService{
-    
     @Autowired
     public AgendamentoRepository agendamentoRepository;
 

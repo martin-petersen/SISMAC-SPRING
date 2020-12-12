@@ -34,11 +34,9 @@ public  abstract class JobServiceTemplate {
     @Autowired
     public UsuarioRepository usuarioRepository;
 
-
     //neste metódo deve ser implementado uma validacao para a lista de espera.
     public abstract boolean validate(ListaEspera lista);
 
-    
     // Todos os dias meia noite
     //@Scheduled(cron = "0 0 0 1/1 * ?")
     // De um em um minuto

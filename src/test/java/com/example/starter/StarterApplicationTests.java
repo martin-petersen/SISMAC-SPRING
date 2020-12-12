@@ -21,7 +21,7 @@ class StarterApplicationTests {
         usuario.setValidateCode();
         usuario.setEmail("martinrpetersen171@gmail.com");
 
-        emailSender.send(usuario);
+        emailSender.confirmaEmail(usuario);
     }
 
 }
