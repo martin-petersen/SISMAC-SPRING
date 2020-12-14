@@ -32,25 +32,24 @@ public class EmailSender extends Notificacao {
 
     public void confirmaEmail(Usuario usuario) {
         String corpo = "Seu token de validação: " + usuario.getValidateCode();
-        enviarEmail(usuario.getEmail(), "Confirma seu usuário SISMAC", corpo);
+        enviarEmail(usuario.getEmail(), "Confirma seu usuário BARBEX", corpo);
     }
 
-    public void confirmaCabelo(Usuario usuario, Agendamento agendamento, String paciente, String especialidade) {
+    public void confirmaCabelo(Usuario usuario, Agendamento agendamento, String paciente) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.msg = "Saudações " + paciente + "\n" +
-                    "você está agendado para uma Consulta:" + "\n\n" +
-                    "Especialidade: " + especialidade + "\n" +
+                    "você está agendado para um corte de cabelo!" + "\n" +
                     "Dia: " + agendamento.getDataAgendamento().format(formatter) + "\n" +
-                    "é importante entender que a consulta é por ordem de chegada";
+                    "caso tenha fila no horário de atendimento do dia prioridade para a  sequência da lista de agendamento do dia ca fila";
         enviarEmail(usuario.getEmail(), "Confirmação de agendamento");
     }
 
-    public void confirmaBarba(Usuario usuario, Agendamento agendamento, String paciente, String exame) {
+    public void confirmaBarba(Usuario usuario, Agendamento agendamento, String paciente) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.msg = "Saudações " + paciente + "\n" +
-                    "você está agendado para um(a)" + exame + "\n" +
+                    "você está agendado para barba" + "\n" +
                     "Dia: " + agendamento.getDataAgendamento().format(formatter) + "\n" +
-                    "é importante entender que a execução do exame acontece por ordem de chegada";
+                    "caso tenha fila no  horário de atendimento do dia prioridade para a  sequência da lista de agendamento do dia ca fila";
         enviarEmail(usuario.getEmail(), "Confirmação de agendamento");
     }
 
@@ -58,6 +57,6 @@ public class EmailSender extends Notificacao {
         String corpo = "Sua senha atual é: " + newPassword + "\n" +
                 "IMPORTANTE!!!" + "\n" +
                 "A senha atual é pouco segura, recomendamos que troque assim que efetuar o próxímo login";
-        enviarEmail(usuario.getEmail(), "Recuperação de conta SISMAC", corpo);
+        enviarEmail(usuario.getEmail(), "Recuperação de conta BARBEX", corpo);
     }
 }
