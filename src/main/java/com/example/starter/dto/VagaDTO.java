@@ -1,8 +1,7 @@
 package com.example.starter.dto;
 
-import com.example.starter.model.Consulta;
-import com.example.starter.model.Especialidade;
-import com.example.starter.model.Exame;
+import com.example.starter.model.Cabelo;
+import com.example.starter.model.Barba;
 
 import java.time.LocalDate;
 
@@ -11,25 +10,23 @@ public class VagaDTO {
     private LocalDate data;
     private Integer vagasOfertadas;
     private Integer vagasRestantes;
-    private String especialidade;
-    private String exame = null;
-    private String consulta = null;
+    private String barba = null;
+    private String cabelo = null;
 
-    public VagaDTO(Long id, LocalDate data, Integer vagasOfertadas, Integer vagasRestantes, Exame exame) {
+    public VagaDTO(Long id, LocalDate data, Integer vagasOfertadas, Integer vagasRestantes, Barba barba) {
         this.id = id;
         this.data = data;
         this.vagasOfertadas = vagasOfertadas;
         this.vagasRestantes = vagasRestantes;
-        this.exame = exame.getNomeExame();
+        this.barba = barba.getNome();
     }
 
-    public VagaDTO(Long id, LocalDate data, Integer vagasOfertadas, Integer vagasRestantes, Especialidade especialidade, Consulta consulta) {
+    public VagaDTO(Long id, LocalDate data, Integer vagasOfertadas, Integer vagasRestantes, Cabelo cabelo) {
         this.id = id;
         this.data = data;
         this.vagasOfertadas = vagasOfertadas;
         this.vagasRestantes = vagasRestantes;
-        this.especialidade = especialidade.getNomeEspecialidade();
-        this.consulta = consulta.getNome();
+        this.cabelo = cabelo.getNome();
     }
 
     public Long getId() {
@@ -48,15 +45,11 @@ public class VagaDTO {
         return vagasRestantes;
     }
 
-    public String getEspecialidade() {
-        return especialidade;
+    public String getBarba() {
+        return barba;
     }
 
-    public String getExame() {
-        return exame;
-    }
-
-    public String getConsulta() {
-        return consulta;
+    public String getCabelo() {
+        return cabelo;
     }
 }

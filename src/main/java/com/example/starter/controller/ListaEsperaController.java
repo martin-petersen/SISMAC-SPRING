@@ -2,9 +2,7 @@ package com.example.starter.controller;
 
 import com.example.starter.dto.ListaEsperaDTO;
 import com.example.starter.exceptions.ServiceException;
-import com.example.starter.form.DeleteFilaFORM;
-import com.example.starter.form.ListaEsperaConsultaFORM;
-import com.example.starter.form.ListaEsperaExameFORM;
+import com.example.starter.form.ListaEsperaFORM;
 import com.example.starter.form.UpdateListaEsperaFORM;
 import com.example.starter.model.ListaEspera;
 import com.example.starter.service.ListaEsperaService;
@@ -32,21 +30,21 @@ public class ListaEsperaController {
     private ListaEsperaService listaEsperaService;
 
     @GetMapping("/paciente/{id}")
-    public ResponseEntity<List<ListaEsperaDTO>> buscarPorPaciente(@PathVariable Long id) {
-        List<ListaEsperaDTO> listaEspera = listaEsperaService.buscarPorPaciente(id);
+    public ResponseEntity<List<ListaEsperaDTO>> buscarPorCliente(@PathVariable Long id) {
+        List<ListaEsperaDTO> listaEspera = listaEsperaService.buscarPorCliente(id);
         return ResponseEntity.ok(listaEspera);
     }
 
     @GetMapping
-    public ResponseEntity<Page<ListaEsperaDTO>> buscarLista(@RequestParam(required = false) Long especialidade_id,
-                                                            @RequestParam(required = false) Long exame_id,
-                                                            @PageableDefault(size = 10, direction = Sort.Direction.ASC, sort = {"especialidade","exame"})
+    public ResponseEntity<Page<ListaEsperaDTO>> buscarLista(@RequestParam boolean cabelo,
+                                                            @RequestParam boolean barba,
+                                                            @PageableDefault(size = 10, direction = Sort.Direction.ASC)
                                                                   Pageable pageable) throws ServiceException {
-        if(especialidade_id != null) {
-            List<ListaEspera> listaEspera = listaEsperaService.listaEsperaConsulta(especialidade_id);
+        if(cabelo) {
+            List<ListaEspera> listaEspera = listaEsperaService.listaEsperaCabelo();
             return ResponseEntity.ok(convertInDetalhamentoDTO(listaEspera,pageable));
-        } else if (exame_id != null) {
-            List<ListaEspera> listaEspera = listaEsperaService.listaEsperaExame(exame_id);
+        } else if (barba) {
+            List<ListaEspera> listaEspera = listaEsperaService.listaEsperaBarba();
             return ResponseEntity.ok(convertInDetalhamentoDTO(listaEspera,pageable));
         } else {
             List<ListaEspera> listaEspera = listaEsperaService.listaEspera();
@@ -54,29 +52,28 @@ public class ListaEsperaController {
         }
     }
 
-    @PostMapping("/filaConsulta")
-    public ResponseEntity<ListaEsperaDTO> entrarNaFilaConsulta(@RequestBody @Valid ListaEsperaConsultaFORM listaEsperaFORM,
+    @PostMapping("/filaCabelo")
+    public ResponseEntity<ListaEsperaDTO> entrarNaFilaConsulta(@RequestBody @Valid ListaEsperaFORM listaEsperaFORM,
                                                                UriComponentsBuilder uriComponentsBuilder) throws ServiceException {
-        ListaEspera listaEspera = listaEsperaService.filaConsulta(listaEsperaFORM);
+        ListaEspera listaEspera = listaEsperaService.filaCabelo(listaEsperaFORM);
         URI uri = uriComponentsBuilder.path("/filaEspera/{id}").buildAndExpand(listaEspera.getId()).toUri();
-        ListaEsperaDTO listaEsperaDTO = new ListaEsperaDTO(listaEspera.getId(),
-                listaEspera.getPaciente(),
-                listaEspera.getEspecialidade(),
-                listaEspera.getConsulta(),
+        ListaEsperaDTO listaEsperaDTO = new ListaEsperaDTO(
+                listaEspera.getId(),
+                listaEspera.getCliente(),
+                listaEspera.getCabelo(),
                 listaEspera.isAtivo());
         return ResponseEntity.created(uri).body(listaEsperaDTO);
     }
 
-    @PostMapping("/filaExame")
-    public ResponseEntity<ListaEsperaDTO> entrarNaFilaExame(@RequestBody @Valid ListaEsperaExameFORM listaEsperaFORM,
+    @PostMapping("/filaBarba")
+    public ResponseEntity<ListaEsperaDTO> entrarNaFilaExame(@RequestBody @Valid ListaEsperaFORM listaEsperaFORM,
                                                        UriComponentsBuilder uriComponentsBuilder) throws ServiceException {
-        ListaEspera listaEspera = listaEsperaService.filaExame(listaEsperaFORM);
+        ListaEspera listaEspera = listaEsperaService.filaBarba(listaEsperaFORM);
         URI uri = uriComponentsBuilder.path("/filaEspera/{id}").buildAndExpand(listaEspera.getId()).toUri();
-        ListaEsperaDTO listaEsperaDTO = new ListaEsperaDTO(listaEspera.getId(),
-                listaEspera.getPaciente(),
-                listaEspera.getExame(),
-                listaEspera.getEncaminhamento(),
-                listaEspera.isRequerAutorizacao(),
+        ListaEsperaDTO listaEsperaDTO = new ListaEsperaDTO(
+                listaEspera.getId(),
+                listaEspera.getCliente(),
+                listaEspera.getBarba(),
                 listaEspera.isAtivo());
         return ResponseEntity.created(uri).body(listaEsperaDTO);
     }
@@ -90,8 +87,8 @@ public class ListaEsperaController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<ListaEsperaDTO> deletarCadastro(@PathVariable Long id,
-                                             @RequestBody @Valid DeleteFilaFORM deleteFilaFORM) throws ServiceException {
-        ListaEspera listaEspera = listaEsperaService.removerDaFila(id,deleteFilaFORM);
+                                             @RequestParam Long user) throws ServiceException {
+        ListaEspera listaEspera = listaEsperaService.removerDaFila(id,user);
         ListaEsperaDTO listaEsperaDTO = new ListaEsperaDTO(listaEspera);
         return ResponseEntity.ok(listaEsperaDTO);
     }

@@ -1,4 +1,0 @@
-GET http://localhost:8081/pacientes?nome=petersen
-content-type: application/json
-
-###

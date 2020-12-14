@@ -3,10 +3,9 @@ package com.example.starter.dto;
 public class AgendamentoDTO {
     private Long id;
     private String dataAgendamento;
-    private String nomePaciente;
-    private boolean consulta;
-    private String nomeEspecialidade;
-    private String nomeExame;
+    private String nomeCliente;
+    private boolean cabelo;
+    private boolean barba;
 
     public AgendamentoDTO() {
     }
@@ -15,47 +14,39 @@ public class AgendamentoDTO {
         return id;
     }
 
-    public String getDataAgendamento() {
-        return dataAgendamento;
-    }
-
-    public String getNomePaciente() {
-        return nomePaciente;
-    }
-
-    public boolean isConsulta() {
-        return consulta;
-    }
-
-    public String getNomeEspecialidade() {
-        return nomeEspecialidade;
-    }
-
-    public String getNomeExame() {
-        return nomeExame;
-    }
-
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getDataAgendamento() {
+        return dataAgendamento;
     }
 
     public void setDataAgendamento(String dataAgendamento) {
         this.dataAgendamento = dataAgendamento;
     }
 
-    public void setNomePaciente(String nomePaciente) {
-        this.nomePaciente = nomePaciente;
+    public String getNomeCliente() {
+        return nomeCliente;
     }
 
-    public void setConsulta(boolean consulta) {
-        this.consulta = consulta;
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
     }
 
-    public void setNomeEspecialidade(String nomeEspecialidade) {
-        this.nomeEspecialidade = nomeEspecialidade;
+    public boolean isCabelo() {
+        return cabelo;
     }
 
-    public void setNomeExame(String nomeExame) {
-        this.nomeExame = nomeExame;
+    public void setCabelo(boolean cabelo) {
+        this.cabelo = cabelo;
+    }
+
+    public boolean isBarba() {
+        return barba;
+    }
+
+    public void setBarba(boolean barba) {
+        this.barba = barba;
     }
 }

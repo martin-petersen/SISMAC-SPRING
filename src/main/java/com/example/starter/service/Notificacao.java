@@ -25,4 +25,13 @@ public abstract class Notificacao {
         simpleMailMessage.setText(configurarMensagem());
         javaMailSender.send(simpleMailMessage);
     }
+
+    public void enviarEmail(String emailDestino, String titulo, String corpo) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+        simpleMailMessage.setTo(emailDestino);
+        simpleMailMessage.setSubject(titulo);
+        simpleMailMessage.setText(corpo);
+        javaMailSender.send(simpleMailMessage);
+    }
 }

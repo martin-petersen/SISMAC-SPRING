@@ -2,18 +2,18 @@ package com.example.starter.form;
 
 public class UpdateListaEsperaFORM {
     private Long user_id;
-    private Long especilidade_id;
-    private Long exame_id;
+    private boolean cabelo;
+    private boolean barba;
 
     public Long getUser_id() {
         return user_id;
     }
 
-    public Long getEspecilidade_id() {
-        return especilidade_id;
+    public boolean isCabelo() {
+        return cabelo;
     }
 
-    public Long getExame_id() {
-        return exame_id;
+    public boolean isBarba() {
+        return barba;
     }
 }

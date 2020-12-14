@@ -1,4 +1,0 @@
-DELETE http://localhost:8081/exames?id=1
-content-type: application/json
-
-###

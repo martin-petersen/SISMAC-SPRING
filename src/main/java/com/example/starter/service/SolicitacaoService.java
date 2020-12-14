@@ -1,12 +1,9 @@
 package com.example.starter.service;
 
-import com.example.starter.dto.AgendamentoDTO;
-import com.example.starter.dto.PacienteAgendamentoDTO;
 import com.example.starter.model.Agendamento;
-import com.example.starter.repository.*;
+import com.example.starter.repository.AgendamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.starter.dto.PacienteAgendamentoDTO;
 import java.util.ArrayList;
 import java.util.List;
 

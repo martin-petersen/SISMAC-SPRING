@@ -2,9 +2,7 @@ package com.example.starter.service;
 
 import com.example.starter.dto.ListaEsperaDTO;
 import com.example.starter.exceptions.ServiceException;
-import com.example.starter.form.DeleteFilaFORM;
-import com.example.starter.form.ListaEsperaConsultaFORM;
-import com.example.starter.form.ListaEsperaExameFORM;
+import com.example.starter.form.ListaEsperaFORM;
 import com.example.starter.form.UpdateListaEsperaFORM;
 import com.example.starter.model.*;
 import com.example.starter.repository.*;
@@ -13,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,35 +23,32 @@ public class ListaEsperaService {
     private ListaEsperaRepository listaEsperaRepository;
 
     @Autowired
-    private EspecialidadeRepository especialidadeRepository;
+    private BarbaRepository barbaRepository;
 
     @Autowired
-    private ExameRepository exameRepository;
+    private ClienteRepository clienteRepository;
 
     @Autowired
-    private PacienteRepository pacienteRepository;
-
-    @Autowired
-    private ConsultaRepository consultaRepository;
+    private CabeloRepository cabeloRepository;
 
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    public List<ListaEspera> listaEsperaConsulta(Long especialidade_id) throws ServiceException {
-        if(especialidadeRepository.findById(especialidade_id).isPresent()) {
-            Especialidade especialidade = especialidadeRepository.findById(especialidade_id).get();
-            return listaEsperaRepository.findByEspecialidadeAndAtivo(especialidade,true);
+    public List<ListaEspera> listaEsperaCabelo() throws ServiceException {
+        if(cabeloRepository.findById(1L).isPresent()) {
+            Cabelo cabelo2 = cabeloRepository.findById(1L).get();
+            return listaEsperaRepository.findByCabeloAndAtivo(cabelo2,true);
         } else {
-            throw new ServiceException(HttpStatus.NOT_FOUND,"Especialidade","Não foi encontrada essa especialidade no sistema");
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Cabelo","Um erro acontenceu");
         }
     }
 
-    public List<ListaEspera> listaEsperaExame(Long exame_id) throws ServiceException {
-        if(exameRepository.findById(exame_id).isPresent()) {
-            Exame exame = exameRepository.findById(exame_id).get();
-            return listaEsperaRepository.findByExameAndAtivo(exame,true);
+    public List<ListaEspera> listaEsperaBarba() throws ServiceException {
+        if(barbaRepository.findById(1L).isPresent()) {
+            Barba barba2 = barbaRepository.findById(1L).get();
+            return listaEsperaRepository.findByBarbaAndAtivo(barba2,true);
         } else {
-            throw new ServiceException(HttpStatus.NOT_FOUND,"Exame","Não foi encontrado esse exame no sistema");
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Barba","Um erro aconteceu");
         }
     }
 
@@ -61,15 +57,15 @@ public class ListaEsperaService {
     }
 
     @Transactional
-    public ListaEspera filaExame(ListaEsperaExameFORM listaEsperaFORM) throws ServiceException {
+    public ListaEspera filaBarba(ListaEsperaFORM listaEsperaFORM) throws ServiceException {
         ListaEspera entrada = new ListaEspera();
-        entrada.setDataEntradaLista(LocalDateTime.now());
-        entrada.setLastUpdate(entrada.getDataEntradaLista());
+        entrada.setLastUpdate(LocalDateTime.now());
+        entrada.setDataEntradaLista(LocalDate.now());
 
-        if(pacienteRepository.findById(listaEsperaFORM.getPaciente_id()).isPresent()) {
-            entrada.setPaciente(pacienteRepository.findById(listaEsperaFORM.getPaciente_id()).get());
+        if(clienteRepository.findById(listaEsperaFORM.getCliente_id()).isPresent()) {
+            entrada.setCliente(clienteRepository.findById(listaEsperaFORM.getCliente_id()).get());
         } else {
-            throw new ServiceException(HttpStatus.NOT_FOUND,"Paciente","Não foi encontrado esse paciente no sistema");
+            throw new ServiceException(HttpStatus.NOT_FOUND,"Cliente","Não foi encontrado esse cliente no sistema");
         }
 
         if(usuarioRepository.findById(listaEsperaFORM.getUser_id()).isPresent()) {
@@ -79,16 +75,10 @@ public class ListaEsperaService {
             throw new ServiceException(HttpStatus.NOT_FOUND,"Usuario","Não foi encontrado esse usuario no sistema");
         }
 
-        if(exameRepository.findById(listaEsperaFORM.getExame_id()).isPresent()) {
-            entrada.setExame(exameRepository.findById(listaEsperaFORM.getExame_id()).get());
+        if(listaEsperaFORM.isBarba()) {
+            entrada.setBarba(barbaRepository.findById(1L).get());
         } else {
             throw new ServiceException(HttpStatus.NOT_FOUND,"Exame","Não foi encontrado esse exame no sistema");
-        }
-
-        if(entrada.getExame().isAutorizacao()) {
-            entrada.setRequerAutorizacao(true);
-        } else {
-            entrada.setRequerAutorizacao(false);
         }
 
         entrada.setAtivo(true);
@@ -97,13 +87,12 @@ public class ListaEsperaService {
     }
 
     @Transactional
-    public ListaEspera filaConsulta(ListaEsperaConsultaFORM listaEsperaFORM) throws ServiceException {
+    public ListaEspera filaCabelo(ListaEsperaFORM listaEsperaFORM) throws ServiceException {
         ListaEspera entrada = new ListaEspera();
-        entrada.setDataEntradaLista(LocalDateTime.now());
-        entrada.setLastUpdate(entrada.getDataEntradaLista());
-        entrada.setRequerAutorizacao(false);
-        if(pacienteRepository.findById(listaEsperaFORM.getPaciente_id()).isPresent()) {
-            entrada.setPaciente(pacienteRepository.findById(listaEsperaFORM.getPaciente_id()).get());
+        entrada.setLastUpdate(LocalDateTime.now());
+        entrada.setDataEntradaLista(LocalDate.now());
+        if(clienteRepository.findById(listaEsperaFORM.getCliente_id()).isPresent()) {
+            entrada.setCliente(clienteRepository.findById(listaEsperaFORM.getCliente_id()).get());
         } else {
             throw new ServiceException(HttpStatus.NOT_FOUND,"Paciente","Não foi encontrado esse paciente no sistema");
         }
@@ -115,9 +104,8 @@ public class ListaEsperaService {
             throw new ServiceException(HttpStatus.NOT_FOUND,"Usuario","Não foi encontrado esse usuario no sistema");
         }
 
-        entrada.setConsulta(consultaRepository.findById(Long.parseLong("1")).get());
-        if(especialidadeRepository.findById(listaEsperaFORM.getEspecialidade_id()).isPresent()) {
-            entrada.setEspecialidade(especialidadeRepository.findById(listaEsperaFORM.getEspecialidade_id()).get());
+        if(listaEsperaFORM.isCabelo()) {
+            entrada.setCabelo(cabeloRepository.findById(1L).get());
         } else {
             throw new ServiceException(HttpStatus.NOT_FOUND,"Especialidade","Não foi encontrada essa especialidade no sistema");
         }
@@ -128,17 +116,16 @@ public class ListaEsperaService {
     }
 
     @Transactional
-    public ListaEspera removerDaFila(Long id, DeleteFilaFORM deleteFilaFORM) throws ServiceException {
+    public ListaEspera removerDaFila(Long id, Long user) throws ServiceException {
         if(listaEsperaRepository.findById(id).isPresent()) {
             ListaEspera listaEspera = listaEsperaRepository.findById(id).get();
             listaEspera.setAtivo(false);
             listaEspera.setLastUpdate(LocalDateTime.now());
-            if(usuarioRepository.findById(deleteFilaFORM.getUser_id()).isPresent()) {
-                listaEspera.setUsuarioLastUpdate(usuarioRepository.findById(deleteFilaFORM.getUser_id()).get());
+            if(usuarioRepository.findById(user).isPresent()) {
+                listaEspera.setUsuarioLastUpdate(usuarioRepository.findById(user).get());
             } else {
                 throw new ServiceException(HttpStatus.NOT_FOUND,"Usuario","Não foi encontrado esse usuario no sistema");
             }
-            listaEspera.setMotivoRemocao(deleteFilaFORM.getMotivoCancelamento());
             listaEsperaRepository.save(listaEspera);
             return listaEspera;
         } else {
@@ -149,14 +136,11 @@ public class ListaEsperaService {
     public ListaEspera update(Long id, UpdateListaEsperaFORM listaEsperaFORM) throws ServiceException {
         if(listaEsperaRepository.findById(id).isPresent()) {
             ListaEspera listaEspera = listaEsperaRepository.findById(id).get();
-            if(listaEsperaFORM.getEspecilidade_id() != null && especialidadeRepository.findById(listaEsperaFORM.getEspecilidade_id()).isPresent()) {
-                listaEspera.setEspecialidade(especialidadeRepository.findById(listaEsperaFORM.getEspecilidade_id()).get());
+            if(listaEsperaFORM.isCabelo()) {
+                listaEspera.setCabelo(cabeloRepository.findById(1L).get());
             }
-            if(listaEsperaFORM.getExame_id() != null &&exameRepository.findById(listaEsperaFORM.getExame_id()).isPresent()) {
-                Exame exame = exameRepository.findById(listaEsperaFORM.getExame_id()).get();
-                listaEspera.setExame(exame);
-                listaEspera.setConsulta(null);
-                listaEspera.setRequerAutorizacao(exame.isAutorizacao());
+            if(listaEsperaFORM.isBarba()) {
+                listaEspera.setBarba(barbaRepository.findById(1L).get());
             }
             if(usuarioRepository.findById(listaEsperaFORM.getUser_id()).isPresent()) {
                 listaEspera.setUsuarioLastUpdate(usuarioRepository.findById(listaEsperaFORM.getUser_id()).get());
@@ -171,9 +155,9 @@ public class ListaEsperaService {
     }
 
 
-    public List<ListaEsperaDTO> buscarPorPaciente(Long id) {
-        Paciente paciente = pacienteRepository.findById(id).get();
-        List<ListaEspera> listaEspera = listaEsperaRepository.findByPacienteAndAtivo(paciente,true);
+    public List<ListaEsperaDTO> buscarPorCliente(Long id) {
+        Cliente cliente = clienteRepository.findById(id).get();
+        List<ListaEspera> listaEspera = listaEsperaRepository.findByClienteAndAtivo(cliente,true);
         List<ListaEsperaDTO> listaEsperaDTO = new ArrayList<>();
 
         for (ListaEspera li:

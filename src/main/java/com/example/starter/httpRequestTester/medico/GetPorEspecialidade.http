@@ -1,5 +1,0 @@
-GET http://localhost:8080/medicos?nomeEspecialidade=neurologia
-content-type: application/json
-
-###
-

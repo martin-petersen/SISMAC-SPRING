@@ -5,10 +5,10 @@ import com.example.starter.form.RecuperarUsuarioFORM;
 import com.example.starter.form.UpdateUsuarioFORM;
 import com.example.starter.form.UsuarioFORM;
 import com.example.starter.form.ValidateTokenFORM;
-import com.example.starter.model.Paciente;
+import com.example.starter.model.Cliente;
 import com.example.starter.model.Role;
 import com.example.starter.model.Usuario;
-import com.example.starter.repository.PacienteRepository;
+import com.example.starter.repository.ClienteRepository;
 import com.example.starter.repository.RoleRepository;
 import com.example.starter.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class UsuarioService {
     private EmailSender emailSender;
 
     @Autowired
-    private PacienteRepository pacienteRepository;
+    private ClienteRepository clienteRepository;
 
     @Autowired
     private RoleRepository roleRepository;
@@ -141,8 +141,8 @@ public class UsuarioService {
 
     public Usuario criarVinculo(Long id, String cpf) {
         Usuario usuario = usuarioRepository.findById(id).get();
-        Paciente paciente = pacienteRepository.findByCpf(cpf);
-        usuario.setPaciente(paciente);
+        Cliente cliente = clienteRepository.findByCpf(cpf);
+        usuario.setPaciente(cliente);
         return usuario;
     }
 

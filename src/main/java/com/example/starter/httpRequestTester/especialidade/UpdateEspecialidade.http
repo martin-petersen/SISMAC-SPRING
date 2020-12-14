@@ -1,8 +1,0 @@
-PUT http://localhost:8081/especialidades/atualizarEspecialidade/29
-content-type: application/json
-
-{
-  "nomeEspecialidade": "123321"
-}
-
-###

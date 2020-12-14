@@ -4,9 +4,8 @@ import com.example.starter.dto.VagaDTO;
 import com.example.starter.exceptions.ServiceException;
 import com.example.starter.form.NovaDataVagaFORM;
 import com.example.starter.form.VagaFORM;
-import com.example.starter.model.Consulta;
-import com.example.starter.model.Especialidade;
-import com.example.starter.model.Exame;
+import com.example.starter.model.Cabelo;
+import com.example.starter.model.Barba;
 import com.example.starter.model.Vaga;
 import com.example.starter.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,28 +27,21 @@ public class VagaService {
     private VagaRepository vagaRepository;
 
     @Autowired
-    private ExameRepository exameRepository;
+    private BarbaRepository barbaRepository;
 
     @Autowired
-    private ConsultaRepository consultaRepository;
+    private CabeloRepository cabeloRepository;
 
-    @Autowired
-    private EspecialidadeRepository especialidadeRepository;
-
-    public Page<VagaDTO> listarExames(Long exame_id, Pageable pageable) throws ServiceException {
+    public Page<VagaDTO> listarBarba(Pageable pageable) throws ServiceException {
         LocalDate ontem = LocalDate.now().minusDays(1);
-        if(exameRepository.findById(exame_id).isPresent()) {
-            Exame exame = exameRepository.findById(exame_id).get();
-            return convertInDetalhamentoDTO(vagaRepository.findByExameAndDataAfter(exame,ontem),pageable);
-        } else {
-            throw new ServiceException(HttpStatus.NOT_FOUND,"Exame","Não foi encontrado esse exame no sistema");
-        }
+        Barba barba = barbaRepository.findById(1L).get();
+        return convertInDetalhamentoDTO(vagaRepository.findByBarbaAndDataAfter(barba,ontem),pageable);
     }
 
     public Page<VagaDTO> listarConsulta(Pageable pageable) {
         LocalDate ontem = LocalDate.now().minusDays(1);
-        Consulta consulta = consultaRepository.findById(Long.parseLong("1")).get();
-        return convertInDetalhamentoDTO(vagaRepository.findByConsultaAndDataAfter(consulta,ontem),pageable);
+        Cabelo cabelo = cabeloRepository.findById(1L).get();
+        return convertInDetalhamentoDTO(vagaRepository.findByCabeloAndDataAfter(cabelo,ontem),pageable);
     }
 
     public Page<VagaDTO> listar(Pageable pageable) {
@@ -61,24 +53,13 @@ public class VagaService {
         List<VagaDTO> vagaDTOList = new ArrayList<>();
         for (Vaga v:
                 lista) {
-            if(v.getConsulta() != null) {
-                vagaDTOList.add(new VagaDTO(v.getId(),v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getEspecialidade(),v.getConsulta()));
+            if(v.getCabelo() != null) {
+                vagaDTOList.add(new VagaDTO(v.getId(),v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getCabelo()));
             } else {
-                vagaDTOList.add(new VagaDTO(v.getId(),v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getExame()));
+                vagaDTOList.add(new VagaDTO(v.getId(),v.getData(),v.getVagasOfertadas(),v.getVagasRestantes(),v.getBarba()));
             }
         }
         return new PageImpl<>(vagaDTOList,pageable,vagaDTOList.size());
-    }
-
-    public Page<VagaDTO> consultasPorEspecialidade(Long especialidade_id,Pageable pageable) throws ServiceException {
-        LocalDate ontem = LocalDate.now().minusDays(1);
-        if(especialidadeRepository.findById(especialidade_id).isPresent()) {
-            Especialidade especialidade = especialidadeRepository.findById(especialidade_id).get();
-            List<Vaga> vagas = vagaRepository.findByEspecialidadeAndDataAfter(especialidade,ontem);
-            return convertInDetalhamentoDTO(vagas,pageable);
-        } else {
-            throw new ServiceException(HttpStatus.NOT_FOUND,"Especialidade","Não foi encontrada essa especialidade no sistema");
-        }
     }
 
     public Vaga salvar(VagaFORM vagaFORM) throws ServiceException {
@@ -86,27 +67,15 @@ public class VagaService {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate localDate = LocalDate.parse(vagaFORM.getData(), formatter);
         novaVaga.setData(localDate);
-        if (vagaFORM.isConsulta()) {
-            Consulta consulta = consultaRepository.findById(Long.parseLong("1")).get();
-            novaVaga.setConsulta(consulta);
-            if(especialidadeRepository.findById(vagaFORM.getEspecialidade()).isPresent()) {
-                Especialidade especialidade = especialidadeRepository.findById(vagaFORM.getEspecialidade()).get();
-                novaVaga.setEspecialidade(especialidade);
-            } else {
-                throw new ServiceException(HttpStatus.NOT_FOUND,"Especialidade","Não foi encontrada essa especialidade no sistema");
-            }
+        if (vagaFORM.isCabelo()) {
+            Cabelo cabelo = cabeloRepository.findById(1L).get();
+            novaVaga.setCabelo(cabelo);
         } else {
-            if(exameRepository.findById(vagaFORM.getExame()).isPresent()) {
-                Exame exame = exameRepository.findById(vagaFORM.getExame()).get();
-                novaVaga.setExame(exame);
-            } else {
-                throw new ServiceException(HttpStatus.NOT_FOUND,"Exame","Não foi encontrado esse exame no sistema");
-            }
+            Barba barba = barbaRepository.findById(1L).get();
+            novaVaga.setBarba(barba);
         }
         novaVaga.setVagasOfertadas(vagaFORM.getVagasOfertadas());
         novaVaga.setVagasRestantes(vagaFORM.getVagasOfertadas());
-        novaVaga.setMedico(vagaFORM.getMedico());
-        novaVaga.setLugar(vagaFORM.getLugar());
         vagaRepository.save(novaVaga);
         return novaVaga;
     }

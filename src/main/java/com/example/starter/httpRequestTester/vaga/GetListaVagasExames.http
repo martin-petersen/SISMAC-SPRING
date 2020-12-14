@@ -1,2 +1,0 @@
-GET http://localhost:8081/vagas?exame_id=1&consulta=false
-content-type: application/json

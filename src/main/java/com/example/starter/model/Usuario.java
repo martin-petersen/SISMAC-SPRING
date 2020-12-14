@@ -32,7 +32,7 @@ public class Usuario implements UserDetails {
 
     @Nullable
     @ManyToOne
-    private Paciente paciente;
+    private Cliente cliente;
 
     public Usuario() {
 
@@ -92,12 +92,12 @@ public class Usuario implements UserDetails {
         this.perfis.add(role);
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPaciente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public boolean isValidate() {

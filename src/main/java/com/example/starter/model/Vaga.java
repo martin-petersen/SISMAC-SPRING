@@ -15,15 +15,10 @@ public class Vaga {
     private Integer vagasRestantes;
     @Nullable
     @ManyToOne(cascade = CascadeType.ALL)
-    private Especialidade especialidade = null;
+    private Barba barba = null;
     @Nullable
     @ManyToOne(cascade = CascadeType.ALL)
-    private Exame exame = null;
-    @Nullable
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Consulta consulta = null;
-    private String medico;
-    private String lugar;
+    private Cabelo cabelo = null;
 
     public Long getId() {
         return id;
@@ -57,43 +52,21 @@ public class Vaga {
         this.vagasRestantes = vagasRestantes;
     }
 
-    public Especialidade getEspecialidade() {
-        return especialidade;
+    @Nullable
+    public Barba getBarba() {
+        return barba;
     }
 
-    public void setEspecialidade(Especialidade especialidade) {
-        this.especialidade = especialidade;
+    public void setBarba(@Nullable Barba barba) {
+        this.barba = barba;
     }
 
-    public Exame getExame() {
-        return exame;
+    @Nullable
+    public Cabelo getCabelo() {
+        return cabelo;
     }
 
-    public void setExame(Exame exame) {
-        this.exame = exame;
-    }
-
-    public Consulta getConsulta() {
-        return consulta;
-    }
-
-    public void setConsulta(Consulta consulta) {
-        this.consulta = consulta;
-    }
-
-    public String getMedico() {
-        return medico;
-    }
-
-    public void setMedico(String medico) {
-        this.medico = medico;
-    }
-
-    public String getLugar() {
-        return lugar;
-    }
-
-    public void setLugar(String lugar) {
-        this.lugar = lugar;
+    public void setCabelo(@Nullable Cabelo cabelo) {
+        this.cabelo = cabelo;
     }
 }

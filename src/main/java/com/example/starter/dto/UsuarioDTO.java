@@ -7,7 +7,7 @@ public class UsuarioDTO {
     private String username;
     private String nome;
     private boolean validate;
-    private Long paciente_id;
+    private Long cliente_id;
 
     public UsuarioDTO() {
     }
@@ -16,17 +16,17 @@ public class UsuarioDTO {
         this.id = usuario.getId();
         this.username = usuario.getEmail();
         this.nome = usuario.getNome();
-        if(usuario.getPaciente() != null) {
-            this.paciente_id = usuario.getPaciente().getId();
+        if(usuario.getCliente() != null) {
+            this.cliente_id = usuario.getCliente().getId();
         }
         this.validate = usuario.isValidate();
     }
 
-    public UsuarioDTO(Long id, String username, String nome, Long paciente_id, boolean validate) {
+    public UsuarioDTO(Long id, String username, String nome, Long cliente_id, boolean validate) {
         this.id = id;
         this.username = username;
         this.nome = nome;
-        this.paciente_id = paciente_id;
+        this.cliente_id = cliente_id;
         this.validate = validate;
     }
 
@@ -71,11 +71,11 @@ public class UsuarioDTO {
         this.validate = validate;
     }
 
-    public Long getPaciente_id() {
-        return paciente_id;
+    public Long getCliente_id() {
+        return cliente_id;
     }
 
-    public void setPaciente_id(Long paciente_id) {
-        this.paciente_id = paciente_id;
+    public void setCliente_id(Long cliente_id) {
+        this.cliente_id = cliente_id;
     }
 }

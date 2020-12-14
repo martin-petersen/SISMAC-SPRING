@@ -28,19 +28,15 @@ public class VagasController {
     private VagaService vagaService;
 
     @GetMapping
-    public ResponseEntity<Page<VagaDTO>> listar(@RequestParam(required = false) Long exame_id,
-                                                @RequestParam boolean consulta,
-                                                @RequestParam(required = false) Long especialidade_id,
+    public ResponseEntity<Page<VagaDTO>> listar(@RequestParam boolean barba,
+                                                @RequestParam boolean cabelo,
                                                 @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "data") Pageable pageable) throws ServiceException {
-        if(exame_id != null && !consulta) {
-            Page<VagaDTO> listagemVagasExames = vagaService.listarExames(exame_id,pageable);
+        if(barba) {
+            Page<VagaDTO> listagemVagasExames = vagaService.listarBarba(pageable);
             return ResponseEntity.ok(listagemVagasExames);
-        } else if(exame_id == null && !consulta) {
+        } else if(cabelo) {
             Page<VagaDTO> listagemVagasTotais = vagaService.listar(pageable);
             return ResponseEntity.ok(listagemVagasTotais);
-        } else if(consulta && especialidade_id != null) {
-            Page<VagaDTO> consultasPorEspecialidade = vagaService.consultasPorEspecialidade(especialidade_id,pageable);
-            return ResponseEntity.ok(consultasPorEspecialidade);
         } else {
             Page<VagaDTO> listagemVagasConsultas = vagaService.listarConsulta(pageable);
             return ResponseEntity.ok(listagemVagasConsultas);
@@ -53,10 +49,10 @@ public class VagasController {
                                                    UriComponentsBuilder uriComponentsBuilder) throws ServiceException {
         Vaga vaga = vagaService.salvar(vagaFORM);
         URI uri = uriComponentsBuilder.path("/vagas/{id}").buildAndExpand(vaga.getId()).toUri();
-        if(vaga.getConsulta() != null) {
-            return ResponseEntity.created(uri).body(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getConsulta()));
+        if(vaga.getCabelo() != null) {
+            return ResponseEntity.created(uri).body(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getCabelo()));
         } else {
-            return ResponseEntity.created(uri).body(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getExame()));
+            return ResponseEntity.created(uri).body(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getBarba()));
         }
     }
 
@@ -66,10 +62,10 @@ public class VagasController {
                                               @RequestBody NovaDataVagaFORM novaDataVagaFORM) {
         try {
             Vaga vaga = vagaService.atualizar(id,novaDataVagaFORM);
-            if(vaga.getConsulta() != null) {
-                return ResponseEntity.ok(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getEspecialidade(),vaga.getConsulta()));
+            if(vaga.getCabelo() != null) {
+                return ResponseEntity.ok(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getCabelo()));
             } else {
-                return ResponseEntity.ok(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getExame()));
+                return ResponseEntity.ok(new VagaDTO(vaga.getId(),vaga.getData(),vaga.getVagasOfertadas(),vaga.getVagasRestantes(),vaga.getBarba()));
             }
         }catch (Exception e) {
             return ResponseEntity.badRequest().build();

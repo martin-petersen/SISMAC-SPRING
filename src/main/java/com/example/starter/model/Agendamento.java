@@ -16,28 +16,22 @@ public class Agendamento {
     public Long id;
     private LocalDate dataAgendamento;
     private final LocalDateTime dataCriacao = LocalDateTime.now();
-    private Long paciente;
+    private Long cliente;
     @Nullable
-    private Long especialidade;
-    @Nullable
-    private Long exame;
-    private boolean consulta;
-    private String medico;
-    private String lugar;
+    private boolean barba;
+    private boolean cabelo;
     private Long vaga;
 
-    public Agendamento(LocalDate localDate, ListaEspera listaEspera, String medico, String lugar, Long vaga) {
+    public Agendamento(LocalDate localDate, ListaEspera listaEspera, Long vaga) {
         this.dataAgendamento = localDate;
-        this.paciente = listaEspera.getPaciente().getId();
-        if(listaEspera.getEspecialidade() != null) {
-            this.consulta = true;
-            this.especialidade = listaEspera.getEspecialidade().getId();
+        this.cliente = listaEspera.getCliente().getId();
+        if(listaEspera.getCabelo() != null) {
+            this.cabelo = true;
+            this.barba = false;
         } else {
-            this.exame = listaEspera.getExame().getId();
-            this.consulta = false;
+            this.barba = true;
+            this.cabelo = false;
         }
-        this.medico = medico;
-        this.lugar = lugar;
         this.vaga = vaga;
     }
 
@@ -65,54 +59,28 @@ public class Agendamento {
         return dataCriacao;
     }
 
-    public Long getPaciente_id() {
-        return paciente;
+    public Long getCliente() {
+        return cliente;
     }
 
-    public void setPaciente_id(Long paciente_id) {
-        this.paciente = paciente_id;
+    public void setCliente(Long cliente) {
+        this.cliente = cliente;
     }
 
-    @Nullable
-    public Long getEspecialidade_id() {
-        return especialidade;
+    public boolean isBarba() {
+        return barba;
     }
 
-    public void setEspecialidade_id(@Nullable Long especialidade_id) {
-        this.especialidade = especialidade_id;
+    public void setBarba(boolean barba) {
+        this.barba = barba;
     }
 
-    @Nullable
-    public Long getExame_id() {
-        return exame;
+    public boolean isCabelo() {
+        return cabelo;
     }
 
-    public void setExame_id(@Nullable Long exame_id) {
-        this.exame = exame_id;
-    }
-
-    public boolean isConsulta() {
-        return consulta;
-    }
-
-    public void setConsulta(boolean consulta) {
-        this.consulta = consulta;
-    }
-
-    public String getMedico() {
-        return medico;
-    }
-
-    public void setMedico(String medico) {
-        this.medico = medico;
-    }
-
-    public String getLugar() {
-        return lugar;
-    }
-
-    public void setLugar(String lugar) {
-        this.lugar = lugar;
+    public void setCabelo(boolean cabelo) {
+        this.cabelo = cabelo;
     }
 
     public Long getVaga() {

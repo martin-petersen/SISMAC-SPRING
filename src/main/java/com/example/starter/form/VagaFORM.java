@@ -9,13 +9,8 @@ public class VagaFORM {
     private String data;
     @NotNull(message = "Quantidade de vagas não pode ser nula")
     private Integer vagasOfertadas;
-    private Long especialidade;
-    private Long exame;
-    private boolean consulta;
-    private String medico;
-    @NotNull(message = "Lugar é obrigatório")
-    @NotEmpty(message = "Lugar é obrigatório")
-    private String lugar;
+    private boolean barba;
+    private boolean cabelo;
 
 
     public String getData() {
@@ -26,23 +21,11 @@ public class VagaFORM {
         return vagasOfertadas;
     }
 
-    public Long getEspecialidade() {
-        return especialidade;
+    public boolean isBarba() {
+        return barba;
     }
 
-    public Long getExame() {
-        return exame;
-    }
-
-    public boolean isConsulta() {
-        return consulta;
-    }
-
-    public String getMedico() {
-        return medico;
-    }
-
-    public String getLugar() {
-        return lugar;
+    public boolean isCabelo() {
+        return cabelo;
     }
 }

@@ -4,12 +4,9 @@ import com.example.starter.model.*;
 
 public class ListaEsperaDTO {
     private Long id;
-    private String nomePaciente;
-    private String especialidade;
-    private String nomeExame;
-    private boolean consulta = false;
-    private boolean encaminhamento;
-    private boolean requerEncaminhamento;
+    private String nomeCliente;
+    private boolean barba = false;
+    private boolean cabelo = false;
     private boolean ativo;
 
     public ListaEsperaDTO() {
@@ -17,46 +14,33 @@ public class ListaEsperaDTO {
 
     public ListaEsperaDTO(ListaEspera listaEspera) {
         this.id = listaEspera.getId();
-        this.nomePaciente = listaEspera.getPaciente().getNomePaciente();
-        if(listaEspera.getEspecialidade()!=null)
-            this.especialidade = listaEspera.getEspecialidade().getNomeEspecialidade();
+        this.nomeCliente = listaEspera.getCliente().getNomeCliente();
+        if(listaEspera.getBarba()!=null)
+            this.barba = true;
         else
-            this.especialidade = null;
-        if(listaEspera.getExame()!=null)
-            this.nomeExame = listaEspera.getExame().getNomeExame();
-        else
-            this.nomeExame = null;
-        this.consulta = listaEspera.getConsulta() != null;
-        this.encaminhamento = listaEspera.getEncaminhamento() != null;
-        this.requerEncaminhamento = listaEspera.isRequerAutorizacao();
+            this.cabelo = true;
         this.ativo = listaEspera.isAtivo();
     }
 
-    public ListaEsperaDTO(Long id, Paciente paciente, Especialidade especialidade, Consulta consulta, boolean ativo) {
+    public ListaEsperaDTO(Long id, Cliente cliente, Cabelo cabelo, boolean ativo) {
         this.id = id;
-        this.nomePaciente = paciente.getNomePaciente();
-        this.especialidade = especialidade.getNomeEspecialidade();
-        this.consulta = consulta != null;
+        this.nomeCliente = cliente.getNomeCliente();
+        this.cabelo = cabelo != null;
         this.ativo = ativo;
     }
 
-    public ListaEsperaDTO(Long id, Paciente paciente, Exame exame, Encaminhamento encaminhamento, boolean requerEncaminhamento, boolean ativo) {
+    public ListaEsperaDTO(Long id, Cliente cliente, Barba barba, boolean ativo) {
         this.id = id;
-        this.nomePaciente = paciente.getNomePaciente();
-        this.nomeExame = exame.getNomeExame();
-        this.encaminhamento = encaminhamento != null;
-        this.requerEncaminhamento = requerEncaminhamento;
+        this.nomeCliente = cliente.getNomeCliente();
+        this.barba = barba != null;
         this.ativo = ativo;
     }
 
-    public ListaEsperaDTO(Long id, Paciente paciente, Especialidade especialidade, Consulta consulta, Exame exame, Encaminhamento encaminhamento, boolean requerEncaminhamento, boolean ativo) {
+    public ListaEsperaDTO(Long id, Cliente cliente, Cabelo cabelo, Barba barba, boolean ativo) {
         this.id = id;
-        this.nomePaciente = paciente.getNomePaciente();
-        this.especialidade = especialidade.getNomeEspecialidade();
-        this.consulta = consulta != null;
-        this.nomeExame = exame.getNomeExame();
-        this.encaminhamento = encaminhamento != null;
-        this.requerEncaminhamento = requerEncaminhamento;
+        this.nomeCliente = cliente.getNomeCliente();
+        this.cabelo = cabelo != null;
+        this.barba = barba != null;
         this.ativo = ativo;
     }
 
@@ -64,31 +48,39 @@ public class ListaEsperaDTO {
         return id;
     }
 
-    public String getNomePaciente() {
-        return nomePaciente;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getEspecialidade() {
-        return especialidade;
+    public String getNomeCliente() {
+        return nomeCliente;
     }
 
-    public String getNomeExame() {
-        return nomeExame;
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
     }
 
-    public boolean isConsulta() {
-        return consulta;
+    public boolean isBarba() {
+        return barba;
     }
 
-    public boolean isEncaminhamento() {
-        return encaminhamento;
+    public void setBarba(boolean barba) {
+        this.barba = barba;
     }
 
-    public boolean isRequerEncaminhamento() {
-        return requerEncaminhamento;
+    public boolean isCabelo() {
+        return cabelo;
+    }
+
+    public void setCabelo(boolean cabelo) {
+        this.cabelo = cabelo;
     }
 
     public boolean isAtivo() {
         return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
     }
 }

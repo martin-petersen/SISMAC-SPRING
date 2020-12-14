@@ -1,2 +1,0 @@
-GET http://localhost:8081/user?nome=martin
-content-type: application/json

@@ -1,7 +1,0 @@
-GET http://localhost:8081/especialidades
-content-type: application/json
-
-###
-
-GET http://localhost:8081/especialidades/todasEspecialidades
-content-type: application/json

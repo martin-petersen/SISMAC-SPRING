@@ -1,7 +1,0 @@
-GET http://localhost:8081/especialidades?nomeEspecialidade=cardiologia
-content-type: application/json
-
-###
-
-GET http://localhost:8081/especialidades/3
-content-type: application/json

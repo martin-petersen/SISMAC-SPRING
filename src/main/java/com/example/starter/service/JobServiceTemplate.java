@@ -1,26 +1,20 @@
 package com.example.starter.service;
 
-import com.example.starter.model.*;
+import com.example.starter.model.Agendamento;
+import com.example.starter.model.ListaEspera;
 import com.example.starter.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
-import com.example.starter.service.EmailSender;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public  abstract class JobServiceTemplate {
     @Autowired
-    public PacienteRepository pacienteRepository;
+    public ClienteRepository clienteRepository;
 
     @Autowired
-    public EspecialidadeRepository especialidadeRepository;
-
-    @Autowired
-    public ExameRepository exameRepository;
+    public BarbaRepository barbaRepository;
 
     @Autowired
     public ListaEsperaRepository listaEsperaRepository;
