@@ -31,8 +31,8 @@ public class EmailSender extends Notificacao {
     }
 
     public void confirmaEmail(Usuario usuario) {
-        String corpo = "Seu token de validação: " + usuario.getValidateCode();
-        enviarEmail(usuario.getEmail(), "Confirma seu usuário BARBEX", corpo);
+        this.msg = "Seu token de validação: " + usuario.getValidateCode();
+        enviarEmail(usuario.getEmail(), "Confirma seu usuário BARBEX");
     }
 
     public void confirmaCabelo(Usuario usuario, Agendamento agendamento, String paciente) {
@@ -54,9 +54,9 @@ public class EmailSender extends Notificacao {
     }
 
     public void recuperaSenha(Usuario usuario, String newPassword) {
-        String corpo = "Sua senha atual é: " + newPassword + "\n" +
+        this.msg = "Sua senha atual é: " + newPassword + "\n" +
                 "IMPORTANTE!!!" + "\n" +
                 "A senha atual é pouco segura, recomendamos que troque assim que efetuar o próxímo login";
-        enviarEmail(usuario.getEmail(), "Recuperação de conta BARBEX", corpo);
+        enviarEmail(usuario.getEmail(), "Recuperação de conta BARBEX");
     }
 }
