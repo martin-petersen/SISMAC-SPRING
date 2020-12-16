@@ -1,6 +1,7 @@
 package com.example.starter.service;
 
 import com.example.starter.model.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.starter.service.EmailSender;
 import java.time.LocalDate;
@@ -11,7 +12,8 @@ import java.util.Map;
 
 @Service
 public class JobServiceConcretoClinica extends JobServiceTemplate {
-    
+    @Autowired
+    private EmailSender emailSender;
     @Override
     public boolean validate(ListaEspera lista) {
         if(!lista.isRequerAutorizacao()) {
@@ -68,7 +70,7 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                                 assert novoAgendamento.getEspecialidade_id() != null;
                                 Especialidade especialidade = especialidadeRepository.findById(novoAgendamento.getEspecialidade_id()).get();
                                 Paciente paciente = pacienteRepository.findById(novoAgendamento.getPaciente_id()).get();
-                                EmailSender.getInstancia().confirmaConsulta(
+                                emailSender.confirmaConsulta(
                                         usuarioRepository.findByPaciente(listaConsulta.getPaciente()),
                                         novoAgendamento,
                                         paciente.getNomePaciente(),
@@ -97,7 +99,7 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                                 assert novoAgendamento.getExame_id() != null;
                                 Exame exame = exameRepository.findById(novoAgendamento.getExame_id()).get();
                                 Paciente paciente = pacienteRepository.findById(novoAgendamento.getPaciente_id()).get();
-                                EmailSender.getInstancia().confirmaExame(
+                                emailSender.confirmaExame(
                                         usuarioRepository.findByPaciente(listaExame.getPaciente()),
                                         novoAgendamento,
                                         paciente.getNomePaciente(),
@@ -118,6 +120,6 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
         Paciente paciente = pacienteRepository.findById(agendamento.getPaciente_id()).get();
         Usuario usuario = usuarioRepository.findByPaciente(paciente);
         Especialidade especialidade = especialidadeRepository.findById(agendamento.getEspecialidade_id()).get();
-        EmailSender.getInstancia().lembreteDeMarcacao(usuario, paciente, especialidade, agendamento, "LEMBRETE");
+        emailSender.lembreteDeMarcacao(usuario, paciente, especialidade, agendamento, "LEMBRETE");
     }
 }

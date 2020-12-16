@@ -13,14 +13,8 @@ import java.util.List;
 
 @Service
 public class EmailSender extends Notificacao {
-    private static final EmailSender instancia = new EmailSender();
-    
     public String msg;
-    
-    public static EmailSender getInstancia(){
-        return instancia;
-    }
-    
+
     @Override
     public  String configurarMensagem(){
          return msg;
