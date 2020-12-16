@@ -2,19 +2,15 @@ package com.example.starter.service;
 
 import com.example.starter.model.*;
 import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
-import com.example.starter.service.EmailSender.java;
+import com.example.starter.service.EmailSender;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class JobServiceConcretoClinica extends JobServiceTemplate {
-    
-    @AutoWired
-    EmailSender email;
-    
+public class JobServiceConcretoBarbearia extends JobServiceTemplate {
+
     @Override
     public boolean validate(ListaEspera lista) {
         return true;
@@ -22,17 +18,17 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
     @Override
     public void regraAgendamento() {
         List<ListaEspera> listaEspera = listaEsperaRepository.findByAtivoOrderByDataEntradaLista(true);
-        List<ListaEspera> ListCabelo = new ArrayList<>();
-        List<ListaEspera> ListBarba = new ArrayList<>();
+        List<ListaEspera> listCabelo = new ArrayList<>();
+        List<ListaEspera> listBarba = new ArrayList<>();
         List<Vaga> vagas = vagaRepository.findByDataAfter(LocalDate.now());
 
         for (ListaEspera le:
                 listaEspera) {
             if(validate(le)) {
                 if(le.getCabelo() != null) {
-                    ListCabelo.add(le);
+                    listCabelo.add(le);
                 } else {
-                    ListBarba.add(le);
+                    listBarba.add(le);
                 }
             }
         }
@@ -41,41 +37,41 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                 vagas) {
             if(v.getCabelo() != null) {
                 List<ListaEspera> listaCabeloOrdenada = new ArrayList<>();
+                LocalDate dataAtual = LocalDate.now();
                 //verifica se a lista de cabelo tem pelomenos um elemento para evitar errro
                 //inicializa um data com o dia do 1 da lista para saber quantos terao naquele dia
-                if(listCabelo.lenght >0){
-                    LocalDate  dataAtual = listCabelo[0].getDataEntradaLista();
+                if(listCabelo.size() > 0){
+                    dataAtual = listCabelo.get(0).getDataEntradaLista();
                 }
                  
                 //arrays para serem como auxiliares para cada dia diferente ter os de fidelidade em 1 na lista final
-                List<ListaEspera>  deUmDiaFiel = new ArrayList<>();
-                 List<ListaEspera>  deUmDiaNaoFiel = new ArrayList<>();
-                for (ListaEspera le:
-                     ListCabelo) {
+                List<ListaEspera> deUmDiaFiel = new ArrayList<>();
+                List<ListaEspera> deUmDiaNaoFiel = new ArrayList<>();
+                for (ListaEspera le: listCabelo) {
                     
                     if(le.getDataEntradaLista().isEqual(dataAtual)){
-                        if(le.getCliente().isFidelidade()){
+                        if(le.getCliente().getFidelidade()){
                             deUmDiaFiel.add(le);
                             continue;
                         } else{
-                            deUmNaoFiel.add(le);{
+                            deUmDiaNaoFiel.add(le);
                             continue;
                         }          
-                    }else{
+                    } else {
                         //aconteceu uma mudanca de data de dia hora de colocar todos aqueles do dia na lista final
                         for(ListaEspera l:deUmDiaFiel){
                             listaCabeloOrdenada.add(l);
                         }
-                        for(ListaEspera l:deUmdiaNaoFiel){
+                        for(ListaEspera l: deUmDiaNaoFiel){
                             listaCabeloOrdenada.add(l);
                         }
                         //inicializar as varias novamente e ver em qual se encaixa essa nova do outro dia 
                         deUmDiaFiel = new ArrayList<>();
                         deUmDiaNaoFiel = new ArrayList<>();
-                        if(le.getCliente().isFidelidade()){
+                        if(le.getCliente().getFidelidade()){
                             deUmDiaFiel.add(le);
                         } else{
-                            deUmNaoFiel.add(le);{
+                            deUmDiaNaoFiel.add(le);
                         }
                         dataAtual = le.getDataEntradaLista();
                     }
@@ -92,7 +88,7 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                         if(usuarioRepository.findByCliente(le.getCliente()) != null) {
                             Cliente cliente = clienteRepository.findById(novoAgendamento.getCliente()).get();
                             Usuario usuario = usuarioRepository.findByCliente(cliente);
-                        email.getInstancia().confirmaCabelo(usuario,novoAgendamento, cliente.getNomeCliente());
+                        EmailSender.getInstancia().confirmaCabelo(usuario,novoAgendamento, cliente.getNomeCliente());
                         } else {
                             break;
                         }
@@ -100,24 +96,23 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                 }
             } else {
                 List<ListaEspera> listaBarbaOrdenada = new ArrayList<>();
-                
+                LocalDate dataAtual = LocalDate.now();
                 //verifica se a lista de barba tem pelomenos um elemento para evitar errro
                 //inicializa um data com o dia do 1 da lista para saber quantos terao naquele dia
-                if(listCabelo.lenght >0){
-                    LocalDate  dataAtual = listaBarba[0].getDataEntradaLista();
+                if(listCabelo.size() >0){
+                    dataAtual = listBarba.get(0).getDataEntradaLista();
                 }
                 //arrays para serem como auxiliares para cada dia diferente ter os de fidelidade em 1 na lista final
-                List<ListaEspera>  deUmDiaFiel = new ArrayList<>();
-                 List<ListaEspera>  deUmDiaNaoFiel = new ArrayList<>();
-                for (ListaEspera le:
-                        ListBarba) {
+                List<ListaEspera> deUmDiaFiel = new ArrayList<>();
+                 List<ListaEspera> deUmDiaNaoFiel = new ArrayList<>();
+                for (ListaEspera le: listBarba) {
                
                 if(le.getDataEntradaLista().isEqual(dataAtual)){
-                    if(le.getCliente().isFidelidade()){
+                    if(le.getCliente().getFidelidade()){
                         deUmDiaFiel.add(le);
                         continue;
                     } else{
-                        deUmNaoFiel.add(le);{
+                        deUmDiaNaoFiel.add(le);
                         continue;
                     }          
                 }else{
@@ -125,16 +120,16 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                     for(ListaEspera l:deUmDiaFiel){
                         listaBarbaOrdenada.add(l);
                     }
-                    for(ListaEspera l:deUmdiaNaoFiel){
+                    for(ListaEspera l: deUmDiaNaoFiel){
                         listaBarbaOrdenada.add(l);
                     }
                     //inicializar as varias novamente e ver em qual se encaixa essa nova do outro dia 
                     deUmDiaFiel = new ArrayList<>();
                     deUmDiaNaoFiel = new ArrayList<>();
-                    if(le.getCliente().isFidelidade()){
+                    if(le.getCliente().getFidelidade()){
                         deUmDiaFiel.add(le);
                     } else{
-                        deUmNaoFiel.add(le);
+                        deUmDiaNaoFiel.add(le);
                     }
                     dataAtual = le.getDataEntradaLista();
                 }
@@ -151,7 +146,7 @@ public class JobServiceConcretoClinica extends JobServiceTemplate {
                         if(usuarioRepository.findByCliente(le.getCliente()) != null) {
                             Cliente cliente = clienteRepository.findById(novoAgendamento.getCliente()).get();
                             Usuario usuario = usuarioRepository.findByCliente(cliente);
-                            email.getInstancia().confirmaBarba(usuario,novoAgendamento,cliente.getNomeCliente());                         
+                            EmailSender.getInstancia().confirmaBarba(usuario,novoAgendamento,cliente.getNomeCliente());
                         } else {
                             break;
                         }
