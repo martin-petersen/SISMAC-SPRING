@@ -57,9 +57,9 @@ public class Cliente {
         this.id = id;
     }
 
-    public void setCliente(Cliente paciente) {
-        this.id = paciente.getId();
-        setClienteUpdate(paciente);
+    public void setCliente(Cliente cliente) {
+        this.id = cliente.getId();
+        setClienteUpdate(cliente);
     }
 
     public void setClienteUpdate(Cliente paciente) {
@@ -71,7 +71,7 @@ public class Cliente {
         this.dataNascimento = paciente.getDataNascimento();
         this.telefone = paciente.getTelefone();
         this.numero = paciente.getNumero();
-
+        
     }
 
     public String getNomeCliente() {
@@ -138,8 +138,8 @@ public class Cliente {
         this.numero = numero;
     }
 
-    public boolean isFidelidade() {
-        return fidelidade;
+    public boolean getFidelidade() {
+        return this.fidelidade;
     }
 
     public void setFidelidade(boolean fidelidade) {

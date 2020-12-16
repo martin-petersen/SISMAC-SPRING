@@ -12,7 +12,6 @@ public class AtualizacaoClienteFORM {
     private String telefone;
     private String numero;
 
-
     public String getNome() {
         return nome.toUpperCase();
     }

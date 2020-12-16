@@ -29,7 +29,7 @@ public class ClienteController {
     @GetMapping
     public ResponseEntity<Page<Cliente>> listarClientes(@RequestParam(required = false) String nome,
                                                           @RequestParam (required = false) String cpf,
-                                                          @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomePaciente")
+                                                          @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "nomeCliente")
                                                                      Pageable pageable) throws ServiceException {
         if(cpf!=null) {
             Page<Cliente> clientes = clienteService.buscarPorCpf(cpf, pageable);
@@ -46,15 +46,16 @@ public class ClienteController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<Cliente> cadastrarCliente(@RequestBody @Valid ClienteFORM pacienteForm, UriComponentsBuilder uriComponentsBuilder) throws ServiceException {
-        clienteService.salvar(pacienteForm.convert());
-        Cliente paciente = clienteService.buscarPorCpf(pacienteForm.getCpf());
-        URI uri = uriComponentsBuilder.path("/pacientes/{id}").buildAndExpand(paciente.getId()).toUri();
+    public ResponseEntity<Cliente> cadastrarCliente(@RequestBody @Valid ClienteFORM clienteForm, UriComponentsBuilder uriComponentsBuilder) throws ServiceException {
+        clienteService.salvar(clienteForm.convert());
+        Cliente paciente = clienteService.buscarPorCpf(clienteForm.getCpf());
+        URI uri = uriComponentsBuilder.path("/clientes/{id}").buildAndExpand(paciente.getId()).toUri();
         return ResponseEntity.created(uri).body(paciente);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Cliente> atualizarCliente(@PathVariable Long id, @RequestBody AtualizacaoClienteFORM clienteFORM) throws ServiceException {
+        System.out.println(clienteFORM.convert());
         Cliente objClienteBusca = new Cliente(clienteFORM);
         Cliente paciente = clienteService.alterar(id,objClienteBusca);
         return ResponseEntity.ok(paciente);
