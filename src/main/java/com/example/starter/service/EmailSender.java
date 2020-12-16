@@ -9,13 +9,8 @@ import java.time.format.DateTimeFormatter;
 
 @Service
 public class EmailSender extends Notificacao {
-    private static final EmailSender instancia = new EmailSender();
 
     public String msg;
-    
-    public static EmailSender getInstancia(){
-        return instancia;
-    }
     
     @Override
     public String configurarMensagem(){

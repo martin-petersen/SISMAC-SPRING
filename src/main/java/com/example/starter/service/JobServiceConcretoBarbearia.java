@@ -1,8 +1,8 @@
 package com.example.starter.service;
 
 import com.example.starter.model.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.starter.service.EmailSender;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,6 +10,9 @@ import java.util.List;
 
 @Service
 public class JobServiceConcretoBarbearia extends JobServiceTemplate {
+
+    @Autowired
+    private EmailSender emailSender;
 
     @Override
     public boolean validate(ListaEspera lista) {
@@ -67,7 +70,7 @@ public class JobServiceConcretoBarbearia extends JobServiceTemplate {
                         if (usuarioRepository.findByCliente(le.getCliente()) != null) {
                             Cliente cliente = clienteRepository.findById(novoAgendamento.getCliente()).get();
                             Usuario usuario = usuarioRepository.findByCliente(cliente);
-                            EmailSender.getInstancia().confirmaCabelo(usuario,novoAgendamento, cliente.getNomeCliente());
+                            emailSender.confirmaCabelo(usuario,novoAgendamento, cliente.getNomeCliente());
                         } else {
                             break;
                         }
@@ -108,7 +111,7 @@ public class JobServiceConcretoBarbearia extends JobServiceTemplate {
                         if(usuarioRepository.findByCliente(le.getCliente()) != null) {
                             Cliente cliente = clienteRepository.findById(novoAgendamento.getCliente()).get();
                             Usuario usuario = usuarioRepository.findByCliente(cliente);
-                            EmailSender.getInstancia().confirmaBarba(usuario,novoAgendamento,cliente.getNomeCliente());
+                            emailSender.confirmaBarba(usuario,novoAgendamento,cliente.getNomeCliente());
                         }
                     }
                 }
@@ -120,6 +123,6 @@ public class JobServiceConcretoBarbearia extends JobServiceTemplate {
     public void regraDeConfirmacao(Agendamento agendamento) {
         Cliente cliente = clienteRepository.findById(agendamento.getCliente()).get();
         Usuario usuario = usuarioRepository.findByCliente(cliente);
-        EmailSender.getInstancia().lembreteDeMarcacao(usuario, cliente, agendamento, "LEMBRETE");
+        emailSender.lembreteDeMarcacao(usuario, cliente, agendamento, "LEMBRETE");
     }
 }

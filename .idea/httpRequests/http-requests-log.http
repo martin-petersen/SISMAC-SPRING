@@ -1,3 +1,206 @@
+POST http://localhost:8081/filaEspera/filaBarba
+content-type: application/json
+
+{
+  "cliente_id": 1,
+  "user_id": 1,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T154133-1.201.json
+
+###
+
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+  "data": "28/12/2020",
+  "vagasOfertadas": "10",
+  "exame": null,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T154133.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaBarba
+content-type: application/json
+
+{
+  "cliente_id": 1,
+  "user_id": 1,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T153942-1.201.json
+
+###
+
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+  "data": "28/12/2020",
+  "vagasOfertadas": "10",
+  "exame": null,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T153942.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaBarba
+content-type: application/json
+
+{
+  "cliente_id": 1,
+  "user_id": 1,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T153624-1.201.json
+
+###
+
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+  "data": "28/12/2020",
+  "vagasOfertadas": "10",
+  "exame": null,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T153624.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaBarba
+content-type: application/json
+
+{
+  "cliente_id": 1,
+  "user_id": 1,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T153436-1.201.json
+
+###
+
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+  "data": "28/12/2020",
+  "vagasOfertadas": "10",
+  "exame": null,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T153436.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaBarba
+content-type: application/json
+
+{
+  "cliente_id": 1,
+  "user_id": 1,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T153310-1.201.json
+
+###
+
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+  "data": "28/12/2020",
+  "vagasOfertadas": "10",
+  "exame": null,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T153310.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaBarba
+content-type: application/json
+
+{
+  "cliente_id": 1,
+  "user_id": 1,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T152731-1.201.json
+
+###
+
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+  "data": "28/12/2020",
+  "vagasOfertadas": "10",
+  "exame": null,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T152731.201.json
+
+###
+
+POST http://localhost:8081/filaEspera/filaBarba
+content-type: application/json
+
+{
+  "cliente_id": 1,
+  "user_id": 1,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T151219.201.json
+
+###
+
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+  "data": "28/12/2020",
+  "vagasOfertadas": "10",
+  "exame": null,
+  "barba": true,
+  "cabelo": false
+}
+
+<> 2020-12-16T151208.201.json
+
+###
+
 GET http://localhost:8081/agendamento/vaga/2
 
 <> 2020-11-02T101337.200.json
@@ -451,153 +654,6 @@ content-type: application/json
 }
 
 <> 2020-11-01T044945.404.json
-
-###
-
-POST http://localhost:8081/vagas
-content-type: application/json
-
-{
-"data": "02/11/2020",
-"vagasOfertadas": "10",
-"especialidade":null,
-"exame": 1,
-"consulta": false,
-"medico": "",
-"lugar": "UPA"
-}
-
-<> 2020-11-01T044900.500.json
-
-###
-
-POST http://localhost:8081/exames
-content-type: application/json
-
-{
-  "nomeExame": "TESTE2",
-  "autorizacao": false
-}
-
-<> 2020-11-01T044855.201.json
-
-###
-
-PUT http://localhost:8081/user/vinculo/2?cpf=794.897.370-2
-content-type: application/json
-
-<> 2020-11-01T044851.200.json
-
-###
-
-POST http://localhost:8081/pacientes
-content-type: application/json
-
-{
-  "nome": "Martin Rocha Petersen",
-  "cpf": "794.897.370-2",
-  "carteiraSUS": "999999-9",
-  "cidade": "Natal",
-  "bairro": "Pajuçara",
-  "complemento": "Casa de primeiro andar",
-  "dataNascimento": "21/06/1996",
-  "telefone": "(84)99678-4853",
-  "numero": "160"
-}
-
-<> 2020-11-01T044848.201.json
-
-###
-
-POST http://localhost:8081/auth/validate/2
-content-type: application/json
-
-{
-  "token" : "nH6Clq"
-}
-
-<> 2020-11-01T044842.200.json
-
-###
-
-POST http://localhost:8081/user
-content-type: application/json
-
-{
-  "nome": "martin petersen",
-  "email" : "martinrpetersen171@gmail.com",
-  "senha" : "123456",
-  "role": 1
-}
-
-<> 2020-11-01T044801.201.json
-
-###
-
-GET http://localhost:8081/filaEspera?especialidade_id=3
-content-type: application/json
-
-<> 2020-11-01T042609.200.json
-
-###
-
-GET http://localhost:8081/filaEspera?exame_id=1
-content-type: application/json
-
-<> 2020-11-01T042606.200.json
-
-###
-
-GET http://localhost:8081/filaEspera
-content-type: application/json
-
-<> 2020-11-01T042559.200.json
-
-###
-
-DELETE http://localhost:8081/filaEspera/1
-content-type: application/json
-
-{
-  "user_id": 1,
-  "motivoCancelamento": "paciente morreu"
-}
-
-<> 2020-11-01T042554.200.json
-
-###
-
-GET http://localhost:8081/filaEspera?especialidade_id=3
-content-type: application/json
-
-<> 2020-11-01T042548.200.json
-
-###
-
-GET http://localhost:8081/filaEspera?exame_id=1
-content-type: application/json
-
-<> 2020-11-01T042545.200.json
-
-###
-
-GET http://localhost:8081/filaEspera
-content-type: application/json
-
-<> 2020-11-01T042542.200.json
-
-###
-
-POST http://localhost:8081/filaEspera/filaExame
-content-type: application/json
-
-{
-  "paciente_id": 1,
-  "user_id": 1,
-  "exame_id": 1
-}
-
-<> 2020-11-01T042527.201.json
 
 ###
 
