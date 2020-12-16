@@ -38,7 +38,7 @@ public class VagaService {
         return convertInDetalhamentoDTO(vagaRepository.findByBarbaAndDataAfter(barba,ontem),pageable);
     }
 
-    public Page<VagaDTO> listarConsulta(Pageable pageable) {
+    public Page<VagaDTO> listarCabelo(Pageable pageable) {
         LocalDate ontem = LocalDate.now().minusDays(1);
         Cabelo cabelo = cabeloRepository.findById(1L).get();
         return convertInDetalhamentoDTO(vagaRepository.findByCabeloAndDataAfter(cabelo,ontem),pageable);

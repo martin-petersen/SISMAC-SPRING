@@ -32,14 +32,14 @@ public class VagasController {
                                                 @RequestParam boolean cabelo,
                                                 @PageableDefault(page = 0, size = 10, direction = Sort.Direction.ASC, sort = "data") Pageable pageable) throws ServiceException {
         if(barba) {
-            Page<VagaDTO> listagemVagasExames = vagaService.listarBarba(pageable);
-            return ResponseEntity.ok(listagemVagasExames);
+            Page<VagaDTO> listagemVagasBarba = vagaService.listarBarba(pageable);
+            return ResponseEntity.ok(listagemVagasBarba);
         } else if(cabelo) {
+            Page<VagaDTO> listagemVagasCabelo = vagaService.listarCabelo(pageable);
+            return ResponseEntity.ok(listagemVagasCabelo);
+        } else {
             Page<VagaDTO> listagemVagasTotais = vagaService.listar(pageable);
             return ResponseEntity.ok(listagemVagasTotais);
-        } else {
-            Page<VagaDTO> listagemVagasConsultas = vagaService.listarConsulta(pageable);
-            return ResponseEntity.ok(listagemVagasConsultas);
         }
     }
 
