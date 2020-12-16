@@ -109,8 +109,6 @@ public class JobServiceConcretoBarbearia extends JobServiceTemplate {
                             Cliente cliente = clienteRepository.findById(novoAgendamento.getCliente()).get();
                             Usuario usuario = usuarioRepository.findByCliente(cliente);
                             EmailSender.getInstancia().confirmaBarba(usuario,novoAgendamento,cliente.getNomeCliente());
-                        } else {
-                            break;
                         }
                     }
                 }

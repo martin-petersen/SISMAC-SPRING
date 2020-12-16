@@ -11,6 +11,7 @@ public class AtualizacaoClienteFORM {
     private String dataNascimento;
     private String telefone;
     private String numero;
+    private boolean fidelidade;
 
     public String getNome() {
         return nome.toUpperCase();
@@ -44,7 +45,11 @@ public class AtualizacaoClienteFORM {
         return numero;
     }
 
+    public boolean getFidelidade() {
+        return fidelidade;
+    }
+
     public Cliente convert() {
-        return new Cliente(getNome().toUpperCase(),getCpf(),getCidade(),getBairro(),getComplemento(),getDataNascimento(),getTelefone(), getNumero());
+        return new Cliente(getNome().toUpperCase(),getCpf(),getCidade(),getBairro(),getComplemento(),getDataNascimento(),getTelefone(), getNumero(), getFidelidade());
     }
 }

@@ -20,7 +20,7 @@ public class Cliente {
     private String telefone;
     private String numero;
 
-    public Cliente(String nomeCliente, String cpf, String cidade, String bairro, String complemento, String dataNascimento, String telefone, String numero) {
+    public Cliente(String nomeCliente, String cpf, String cidade, String bairro, String complemento, String dataNascimento, String telefone, String numero, boolean fidelidade) {
         this.nomeCliente = nomeCliente;
         this.cpf = cpf;
         this.cidade = cidade;
@@ -29,6 +29,7 @@ public class Cliente {
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
         this.numero = numero;
+        this.fidelidade = fidelidade;
     }
 
     public Cliente(String cpf) {

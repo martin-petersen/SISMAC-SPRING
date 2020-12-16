@@ -22,6 +22,8 @@ public class ClienteFORM {
     private String telefone;
     @NotEmpty @NotNull(message = "número não pode ser vazio")
     private String numero;
+    @NotNull(message = "fidelidade não pode ser vazio")
+    private boolean fidelidade;
 
     public String getNome() {
         return nome.toUpperCase();
@@ -83,7 +85,15 @@ public class ClienteFORM {
         return numero;
     }
 
+    public void setFidelidade(boolean fidelidade) {
+        this.fidelidade = fidelidade;
+    }
+
+    public boolean getFidelidade() {
+        return fidelidade;
+    }
+
     public Cliente convert() {
-        return new Cliente(getNome().toUpperCase(), getCpf(), getCidade().toUpperCase(), getBairro().toUpperCase(), getComplemento().toUpperCase(), getDataNascimento(), getTelefone(), getNumero());
+        return new Cliente(getNome().toUpperCase(), getCpf(), getCidade().toUpperCase(), getBairro().toUpperCase(), getComplemento().toUpperCase(), getDataNascimento(), getTelefone(), getNumero(), getFidelidade());
     }
 }
