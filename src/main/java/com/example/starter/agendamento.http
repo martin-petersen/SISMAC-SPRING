@@ -1,0 +1,22 @@
+POST http://localhost:8081/vagas
+content-type: application/json
+
+{
+  "data": "28/12/2020",
+  "vagasOfertadas": "10",
+  "exame": null,
+  "barba": true,
+  "cabelo": false
+}
+
+###
+
+POST http://localhost:8081/filaEspera/filaBarba
+content-type: application/json
+
+{
+  "cliente_id": 1,
+  "user_id": 1,
+  "barba": true,
+  "cabelo": false
+}
