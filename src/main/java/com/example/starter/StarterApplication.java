@@ -15,6 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class StarterApplication {
 
     public static void main(String[] args) {
+        System.out.println("Master");
         SpringApplication.run(StarterApplication.class, args);
     }
 
